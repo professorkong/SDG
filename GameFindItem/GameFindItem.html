@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="background">
+    <div class="background" id="display">
         <div class="menu">
             <div class="bar">
                 <div class="outer">
@@ -27,20 +27,32 @@
                     </div>
                     <div class="outer">
                         <div class="inner">
-                            <h1>01:00</h1>
+                            <h1 id="time">01:00</h1>
                         </div> 
                     </div>
             </div>
             <div class="bar">
                 <div class="outer">
                     <div class="inner">
-                        <h1>15000</h1>
+                        <h1 id="point">000</h1>
                     </div> 
                 </div>
                 <h2>คะแนนรวม</้h2>
             </div>
         </div>
-        <div class="bin"></div>
+        <div class="bin" id="bin1" onclick="collect(this)"></div>
+        <div class="bin" id="bin2" onclick="collect(this)"></div>
+        <div class="bin" id="bin3" onclick="collect(this)"></div>
+        <div class="bin" id="bin4" onclick="collect(this)"></div>
+        <div class="bin" id="bin5" onclick="collect(this)"></div>
+        <div class="bin" id="bin6" onclick="collect(this)"></div>
+        <div class="bin" id="bin7" onclick="collect(this)"></div>
+        <div class="bin" id="bin8" onclick="collect(this)"></div>
+        <div class="bin" id="bin9" onclick="collect(this)"></div>
+        <div class="bin" id="bin10" onclick="collect(this)"></div>
+        <div class="bin" id="bin11" onclick="collect(this)"></div>
+        <div class="bin" id="bin12" onclick="collect(this)"></div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

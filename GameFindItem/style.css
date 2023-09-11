@@ -28,56 +28,115 @@ body {
 .bin {
     position: absolute;
     /* background-color: red; */
-    background-image: url(./asset/trash/trash1.png);
+    /* background-image: url(./asset/trash/trash1.png); */
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
-    transform: translateX(0px);
     cursor: pointer;
     animation: linear;
-    animation-name: bin_down_1;
-    animation-duration: 6s;
+    animation-name: bin_down;
+    animation-duration: 60s;
 }
 
-@keyframes bin_down_1 {
-    0%   {top: -400px;}
-    25%  {top: 200px;}
-    50%  {top: 500px;}
-    75%  {top: 800px;}
-    90%  {top: 1000px;}
-    100% {top: 1000px;}
+:root{
+    --posx: 500px;
+    --posy: -200px;
 }
 
-@keyframes bin_down_2 {
+
+#bin1 {
+    background-image: url(./asset/trash/trash1.png);
+    width: 319px;
+    height: 455px;
+    visibility: hidden;
+}
+
+#bin2 {
+    background-image: url(./asset/trash/trash2.png);
+    width: 266px;
+    height: 322px;
+    visibility: hidden;
+}
+
+#bin3 {
+    background-image: url(./asset/trash/trash3.png);
+    width: 242px;
+    height: 148px;
+    visibility: hidden;
+}
+
+#bin4 {
+    background-image: url(./asset/trash/trash4.png);
+    width: 162px;
+    height: 179px;
+    visibility: hidden;
+}
+
+#bin5 {
+    background-image: url(./asset/trash/trash5.png);
+    width: 389px;
+    height: 265px;
+    visibility: hidden;
+}
+
+#bin6 {
+    background-image: url(./asset/trash/trash6.png);
+    width: 113px;
+    height: 129px;
+    visibility: hidden;
+}
+
+#bin7 {
+    background-image: url(./asset/trash/trash7.png);
+    width: 150px;
+    height: 116px;
+    visibility: hidden;
+}
+
+#bin8 {
+    background-image: url(./asset/trash/trash8.png);
+    width: 238px;
+    height: 300px;
+    visibility: hidden;
+}
+
+
+#bin9 {
+    background-image: url(./asset/trash/trash9.png);
+    width: 113px;
+    height: 136px;
+    visibility: hidden;
+}
+
+
+#bin10 {
+    background-image: url(./asset/trash/trash10.png);
+    width: 90px;
+    height: 90px;
+    visibility: hidden;
+}
+
+
+#bin11 {
+    background-image: url(./asset/trash/trash11.png);
+    width: 316px;
+    height: 312px;
+    visibility: hidden;
+}
+
+
+#bin12 {
+    background-image: url(./asset/trash/trash12.png);
+    width: 239px;
+    height: 292px;
+    visibility: hidden;
+}
+
+
+@keyframes bin_down {
     0%   {top: -200px;}
-    25%  {top: 200px;}
-    50%  {top: 500px;}
-    75%  {top: 750px;}
-    100% {top: 1000px;}
-}
-
-@keyframes bin_down_3 {
-    0%   {top: -200px;}
-    25%  {top: 200px;}
-    50%  {top: 500px;}
-    75%  {top: 750px;}
-    100% {top: 1000px;}
-}
-
-@keyframes bin_down_4 {
-    0%   {top: -200px;}
-    25%  {top: 200px;}
-    50%  {top: 500px;}
-    75%  {top: 750px;}
-    100% {top: 1000px;}
-}
-
-@keyframes bin_down_5 {
-    0%   {top: -200px;}
-    25%  {top: 200px;}
-    50%  {top: 500px;}
-    75%  {top: 750px;}
-    100% {top: 1000px;}
+    5%  {top: 750px;}
+    100% {top: 800px;}
 }
 
 .menu {
