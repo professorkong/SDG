@@ -15,34 +15,52 @@ function myFunction_set() {
   r.style.setProperty('--blue', 'lightblue');
 }
 
-console.log("asdasfas")
 
 var point = 0;
-var time = 60;
+// var time = 60;
+var time = 15;
+var topScore = 0;
 var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12"];
 
-setInterval(main, 1000);
+start = start();
+
+function start() {
+  setInterval(main, 1000);
+}
+
+function gameOver(e) {
+  clearInterval(e);
+}
 
 function main(){
     console.log("main___gogogo");
-    time--;
-    document.getElementById("time").innerHTML = '00:' + time;
+    document.getElementById("time").innerHTML = time > 9 ? '00:' + time : '00:0' + time;
+     
+    if (time != 0){
+      var item = Math.floor(Math.random() * 12);
+      var posx = Math.floor(100 + Math.random() * 1800);
 
-    var item = Math.floor(Math.random() * 12);
-    var posx = Math.floor(Math.random() * 1200);
+      console.log(bin[item]);
 
-    console.log(bin[item]);
-
-    var node = document.getElementById(bin[item]);
-    var clone = node.cloneNode(true);
-    clone.style.translate = posx + "px " + "-200px";
-    clone.style.visibility = "visible";
-    document.getElementById("display").appendChild(clone);
-
+      var node = document.getElementById(bin[item]);
+      var clone = node.cloneNode(true);
+      clone.style.translate = posx + "px " + "+300px";
+      clone.style.visibility = "visible";
+      document.getElementById("generate").appendChild(clone);
+      time--;
+    }
+    else{
+      document.getElementById("game_over").style.visibility = "visible";
+      topScore = calTopScore(topScore, point)
+      console.log(topScore);
+      document.getElementById("top-hit").innerHTML = topScore;
+      removeAllChildNodes(document.getElementById("generate"))
+      gameOver(start);
+    }
 }
 
-function start() {
-
+function calTopScore(oldScore, newScore) {
+    return newScore > oldScore ? newScore : oldScore;
 }
 
 function collect(el){
@@ -50,9 +68,22 @@ function collect(el){
     r.style.setProperty('--posy', '-1000px');
     point += 100;
     // el.style.visibility = "hidden";
-    document.getElementById("display").removeChild(el);
+    document.getElementById("generate").removeChild(el);
     document.getElementById("point").innerHTML = point;
     console.log(point);
 
 }
 
+function reset(){
+  point = 0;
+// time = 60;
+  time = 15;
+  document.getElementById("game_over").style.visibility = "hidden";
+  start = start();
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}

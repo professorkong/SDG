@@ -12,7 +12,7 @@
             <div class="bar">
                 <div class="outer">
                     <div class="inner">
-                        <h1>quick</h1>
+                        <h1 id="top-hit">000</h1>
                     </div> 
                 </div>
                 <h2>สถิติ</้h2>
@@ -40,18 +40,33 @@
                 <h2>คะแนนรวม</้h2>
             </div>
         </div>
-        <div class="bin" id="bin1" onclick="collect(this)"></div>
-        <div class="bin" id="bin2" onclick="collect(this)"></div>
-        <div class="bin" id="bin3" onclick="collect(this)"></div>
-        <div class="bin" id="bin4" onclick="collect(this)"></div>
-        <div class="bin" id="bin5" onclick="collect(this)"></div>
-        <div class="bin" id="bin6" onclick="collect(this)"></div>
-        <div class="bin" id="bin7" onclick="collect(this)"></div>
-        <div class="bin" id="bin8" onclick="collect(this)"></div>
-        <div class="bin" id="bin9" onclick="collect(this)"></div>
-        <div class="bin" id="bin10" onclick="collect(this)"></div>
-        <div class="bin" id="bin11" onclick="collect(this)"></div>
-        <div class="bin" id="bin12" onclick="collect(this)"></div>
+        <div id="game_over">
+            <div class="outer">
+                <div class="inner">
+                    <div class="wrapper">
+                        <h1>Game Over</h1>
+                        <span id="reset">
+                            <a onclick="reset()">Reset</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sample">
+            <div class="bin" id="bin1" onclick="collect(this)"></div>
+            <div class="bin" id="bin2" onclick="collect(this)"></div>
+            <div class="bin" id="bin3" onclick="collect(this)"></div>
+            <div class="bin" id="bin4" onclick="collect(this)"></div>
+            <div class="bin" id="bin5" onclick="collect(this)"></div>
+            <div class="bin" id="bin6" onclick="collect(this)"></div>
+            <div class="bin" id="bin7" onclick="collect(this)"></div>
+            <div class="bin" id="bin8" onclick="collect(this)"></div>
+            <div class="bin" id="bin9" onclick="collect(this)"></div>
+            <div class="bin" id="bin10" onclick="collect(this)"></div>
+            <div class="bin" id="bin11" onclick="collect(this)"></div>
+            <div class="bin" id="bin12" onclick="collect(this)"></div>
+        </div>
+        <div id="generate"></div>
     </div>
     <script src="app.js"></script>
 </body>
