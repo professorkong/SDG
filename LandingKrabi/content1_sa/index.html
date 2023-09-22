@@ -11,6 +11,8 @@
         *{
             box-sizing: border-box;
             margin: 0;
+            font-family: FC-Orbit, sans-serif;
+            color: white;
         }
         @font-face {
             font-family: FC-Orbit;
@@ -22,31 +24,56 @@
             --lightGreenH1: #339693;
             --GreenH4: #339693;
             width: 100vw;
-            color: white;
-            font-family: FC-Orbit, sans-serif;
         }
         .container{
-            width: 100%;
+            width: 100vw;
             min-height: 100vh;
             background-position: center;
             background-size: cover;
+            overflow-x: hidden;
         }
+
         h1{font-size: 110px;}
         h2{font-size: 45px;}
         h3{font-size: 35px;}
-        h4{font-size: 30px;}
+        h4{font-size: 25px;}
 
         .textContent{
             max-width: 70%;
             margin: auto;
         }
+        button{
+            background: hsl(1, 100%, 100%, 30%);
+            padding: .5rem 1.5rem;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+        }
+        .boat{
+            background-image: url('../asset/boat.png');
+            background-position: center;
+            background-size: cover;
+            width: 936px;
+            height: 458px;
+            margin-left: 400px;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 
     <div class="container" style="background-image: url('../asset/scene_01.png');">
-        <div class="textContent">
+        <div class="textContent" style="margin-top: 200px;">
             <h1 style="color:var(--greenH1)">ท่องเที่ยวกระบี่</h1>
             <h2 style="color:var(--greenH1)">สายเทคแคร์ เป็นมิตรต่อปะการัง</h2>
         </div>
+        <div class="boat"></div>
+        <div class="center">
+            <button><h4>แตะเพื่อเริ่มต้น</h4></button>
+        </div>
+        
     </div>
 
     <div class="container" style="background-image: url('../asset/scene_02.png');">
