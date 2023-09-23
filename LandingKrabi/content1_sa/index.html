@@ -5,25 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krabi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
+    
     <div class="container" id="page1" style="background-image: url('../asset/scene_01.png');">
-        <div class="light"></div>
+        <div class="asset light"></div>
+        <div class="asset boat"></div>
+        <div class="asset bird"></div>
+        <div class="asset smallbird"></div>
+        <div class="asset cloud1"></div>
+        <div class="asset cloud2"></div>
+        <div class="asset bubble" style="left: 50px; bottom: 200px; width: 200px;"></div>
+        <div class="asset fishNemo one" style="width: 100px; left: 350px; bottom: 100px; opacity: 0.7;"></div>
+        <div class="asset fishNemo two" style="width: 60px; left: 380px; bottom: 70px; opacity: 0.7;"></div>
+        <div class="asset fishNemo three" style="width: 60px; left: 280px; bottom: 170px; opacity: 0.7;"></div>
+        
         <div class="content">
-                <h1 style="color:var(--greenH1); margin-top: 150px;">ท่องเที่ยวกระบี่</h1>
-                <h2 style="color:var(--greenH1)">สายเทคแคร์ เป็นมิตรต่อปะการัง</h2>
-                <div class="boat"></div>
-                <div class="center" style="margin-top: 20px;">
-                    <button onClick="document.getElementById('page2').scrollIntoView();"><h4>แตะเพื่อเริ่มต้น</h4></button>
+                <div style="height: 40%;">
+                    <h1 style="color:var(--greenH1); margin-top: 150px;">ท่องเที่ยวกระบี่</h1>
+                    <h2 style="color:var(--greenH1)">สายเทคแคร์ เป็นมิตรต่อปะการัง</h2>
+                </div>
+                <div class="center" style="height: 40%; align-items: end;">
+                    <button onClick="delayScroll('page2')"><h4>แตะเพื่อเริ่มต้น</h4></button>
                 </div>
         </div>
     </div>
 
     <div class="container" id="page2" style="background-image: url('../asset/scene_02.png');">
+        <div class="asset scene2front"></div>
+        <div class="asset fishGroup"></div>
+        <div class="asset fish2 one" style="top: 300px; right: 200px"></div>
+        <div class="asset fish2 two" style="top: 530px; right: 50px"></div>
+        <div class="asset fish2 three" style="top: 450px; right: 600px"></div>
+        
+        <div class="asset brokeCoral1 one" style="width: 100px; bottom: 60px; left: 10px;"></div>
+        <div class="asset brokeCoral1 two" style="width: 80px; bottom: 350px; left: 120px;"></div>
+
+        <div class="asset brokeCoral2 one" style="width: 70px; bottom: 330px; left: 390px;"></div>
+        <div class="asset brokeCoral2 two" style="width: 130px; bottom: 200px; left: 500px;"></div>
+        <div class="asset brokeCoral2 three" style="width: 100px; bottom: 20px; left: 600px;"></div>
+        
+        <div class="asset brokeCoral3" style="width: 130px; bottom: 20px; left: 200px;"></div>
+
+        <div class="asset brokeCoral4"></div>
+        <div class="asset brokeCoral5"></div>
+
+        <div class="asset bubble" style="left: 0; bottom: 350px; width: 150px;"></div>
+        <div class="asset bubble two" style="left: 100px; bottom: 200px; width: 150px;"></div>
+        <div class="asset bubble three" style="left: 650px; bottom: 100px; width: 150px;"></div>
+        <div class="asset bubble two" style="right: 100px; top: 300px; width: 150px;"></div>
+
+        <div class="asset scene2light1"></div>
+        <div class="asset scene2light2"></div>
+        <div class="asset grain"></div>
+
         <div class="content" style="align-items: end; text-align: center; justify-content: end;">
             <div style="width: 500px;">
                 <h3>ลงจากเรือได้ไม่นานเราก็พบกับ เอ่อ...จริงๆมันควรเป็นแนวปะการังแต่ดูสิ ตอนนี้ปะการังเสียหาย</h3>
-                <h4 style="margin-top: 30px;">
+                <h4 style="margin-top: 30px; padding: 0 1rem;">
                     บ่อยครั้งที่การจอดเรือฝั่งน้ำตื้นตัวเรือจอดทับแนวปะการังเสียหาย เหตุมาจากเรือนำเที่ยวฝ่าฝืนเข้าไปในเขตแนวทุ่นอุทยานซึ่งใต้ท้องเรือนั้นครูดทับอยู่บนแนวปะการังรอบเกาะ !
                 </h4>
                 <div class="center" style="margin-top: 30px; margin-bottom: 170px;">

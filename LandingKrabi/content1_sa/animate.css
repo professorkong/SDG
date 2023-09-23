@@ -1,0 +1,279 @@
+/* moving item */
+
+.asset{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+
+.light{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/light.png');
+    z-index: 1;
+    top: -40px;
+    animation: 
+        oplight 2s infinite alternate,
+        movelight 5s linear infinite;
+}
+
+@keyframes oplight {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+@keyframes movelight {
+    0% {left: -1000px;}
+    100% {left: 1300px;}
+  }
+
+.boat{
+    background-image: url('../asset/boat.png');
+    width: 700px;
+    aspect-ratio: 1093/724;
+    left: 500px;
+    top: 490px;
+    animation: moveboat 2s infinite alternate;
+}
+
+@keyframes moveboat {
+    0% {top: 490px;}
+    100% {top: 500px;}
+    /* อย่าลืมใส่หน่วย */
+}
+
+.bird{
+    background-image: url('../asset/bird.png');
+    width: 300px;
+    aspect-ratio: 1/1;
+    animation: movebird 7s infinite ease-in-out;
+}
+
+.smallbird{
+    background-image: url('../asset/bird.png');
+    width: 150px;
+    opacity: 0.5;
+    aspect-ratio: 1/1;
+    animation: movebird 5s infinite ease-in-out;
+}
+
+@keyframes movebird {
+    0% {left: 103%; top: 300px;}
+    100% {left: -40px; top: -300px;}
+}
+
+.cloud1{
+    background-image: url('../asset/cloud1.png');
+    width: 500px;
+    aspect-ratio: 757/73;
+    top: 150px;
+    right: 100px;
+    animation: 
+        cloudY 1.5s linear infinite alternate,
+        cloudX 20s linear infinite alternate;
+}
+.cloud2{
+    background-image: url('../asset/cloud2.png');
+    width: 300px;
+    aspect-ratio: 757/73;
+    top: 250px;
+    left: 100px;
+    animation: 
+        cloudY 1.8s linear infinite alternate,
+        cloudXreverse 15s linear infinite alternate;
+}
+
+@keyframes cloudY {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(5px);}
+}
+@keyframes cloudX {
+    0% {right: 100px;}
+    100% {right: 700px;}
+}
+@keyframes cloudXreverse {
+    0% {left: 100px;}
+    100% {left: 1000px;}
+}
+
+.bubble{
+    background-image: url('../asset/bubble2.png');
+    aspect-ratio: 1/1;
+    animation: movebubble 3s linear infinite;
+}
+
+.bubble.two{
+    animation: movebubble 5s linear infinite;
+}
+.bubble.three{
+    animation: movebubble 5s 2s linear infinite;
+}
+
+@keyframes movebubble {
+    0% {opacity: 0; transform: translateY(0px);}
+    25% {opacity: .7; transform: translateY(-10px);}
+    75% {opacity: .7; transform: translateY(-50px);}
+    100% {opacity: 0; transform: translateY(-55px);}
+}
+
+.fishNemo{
+    background-image: url('../asset/fish_nemo.png');
+    aspect-ratio: 1/1;
+}
+
+.fishNemo.one{
+    animation: movefish 2s infinite alternate;
+}
+.fishNemo.two{
+    animation: movefish 2s .7s infinite alternate;
+}
+.fishNemo.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+@keyframes movefish {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(5px,-5px);}
+}
+
+.fishGroup{
+    background-image: url('../asset/fish_group.png');
+    width: 400px;
+    top: 200px;
+    left: -400px;
+    aspect-ratio: 589/301;
+    animation: movefishgroup 10s linear infinite;
+}
+
+@keyframes movefishgroup {
+    0% {transform: translate(0px,0px);}
+    70% {transform: translate(1500px,-400px);}
+    100% {transform: translate(1500px,-400px);}
+}
+
+.fish2{
+    background-image: url('../asset/fish2.png');
+    width: 200px;
+    aspect-ratio: 1/1;
+}
+
+.fish2.one{
+    animation: movefish 2s infinite alternate inherit;
+}
+.fish2.two{
+    animation: movefish 2s .7s infinite alternat inherit;
+}
+.fish2.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+.brokeCoral1{
+    background-image: url('../asset/broke\ coral1.png');
+    aspect-ratio: 1/1;
+}
+.brokeCoral1.one{
+    animation: 
+    brokeCoralLeftDown 5s infinite,
+    brokeCoralShow 5s infinite;
+}
+.brokeCoral1.two{
+    animation: 
+    brokeCoralRightUp 5s 3s infinite,
+    brokeCoralShow 5s 3s infinite;
+}
+
+.brokeCoral2{
+    background-image: url('../asset/broke\ coral2.png');
+    aspect-ratio: 1/1;
+}
+.brokeCoral2.one{
+    animation: 
+    brokeCoralLeftUp 5s 4s infinite,
+    brokeCoralShow 5s 4s infinite;
+}
+.brokeCoral2.two{
+    animation: 
+    brokeCoralRightUp 3s infinite,
+    brokeCoralShow 3s infinite;
+}
+.brokeCoral2.three{
+    animation: 
+    brokeCoralRightDown 5s 1s infinite,
+    brokeCoralShow 5s 1s infinite;
+}
+
+.brokeCoral3{
+    background-image: url('../asset/broke\ coral3.png');
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralLeftDown 4s 1s infinite,
+    brokeCoralShow 4s 1s infinite;
+}
+.brokeCoral4{
+    background-image: url('../asset/broke\ coral4.png');
+    width: 130px;
+    left: 350px;
+    bottom: 100px;
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralLeftUp 7s 2s infinite,
+    brokeCoralShow 7s 2s infinite;
+}
+.brokeCoral5{
+    background-image: url('../asset/broke\ coral5.png');
+    width: 150px;
+    left: 330px;
+    bottom: 200px;
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralRightUp 7s 4s infinite,
+    brokeCoralShow 7s 4s infinite;
+}
+
+@keyframes brokeCoralRightUp {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(20px,-20px);}
+}
+@keyframes brokeCoralRightDown {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(20px,20px);}
+}
+@keyframes brokeCoralLeftUp {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-20px,-20px);}
+}
+@keyframes brokeCoralLeftDown {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-20px,20px);}
+}
+@keyframes brokeCoralShow {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    70% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.scene2light1{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_light1.png');
+    animation: oplight 4s infinite alternate;
+}
+.scene2light2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_light2.png');
+    animation: oplight 4s 5s infinite alternate;
+}
+.scene2front{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_front.png');
+}
+.grain{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/grain.png');
+}
+

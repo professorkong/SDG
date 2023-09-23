@@ -19,11 +19,9 @@ body{
     --greenH4: #4CA6C1;
 }
 .container{
-    max-width: 1366px;
-    width: 100%;
-    max-height: 1024px;
-    height: 1024px;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    /* margin: auto; */
     /* aspect-ratio: 4/3; */
 
     background-position: center;
@@ -60,14 +58,7 @@ button{
     border: none;
     cursor: pointer;
 }
-.boat{
-    background-image: url('../asset/boat.png');
-    background-position: center;
-    background-size: cover;
-    width: 1000px;
-    height: 370px;
-    margin-left: 200px;
-}
+
 .center{
     width: 100%;
     display: flex;
@@ -75,34 +66,3 @@ button{
     align-items: center;
     position: relative;
 }
-
-.light{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../asset/light.png');
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-    top: -40px;
-    animation: oplight 2s infinite alternate,
-    movelight 5s linear infinite;
-}
-
-@keyframes oplight {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes movelight {
-    0% {
-      left: -1000px;
-    }
-    100% {
-      left: 1300px;
-    }
-  }
