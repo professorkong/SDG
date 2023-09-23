@@ -22,10 +22,12 @@ var time = 15;
 var topScore = 0;
 var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12"];
 
-start = start();
+document.getElementById('tutorial').style.visibility = 'visible';
 
 function start() {
   setInterval(main, 1000);
+  // document.getElementById('tutorial').style.visibility = 'hidden';
+
 }
 
 function gameOver(e) {
@@ -78,6 +80,7 @@ function reset(){
   point = 0;
 // time = 60;
   time = 15;
+  document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
   start = start();
 }

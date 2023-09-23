@@ -157,7 +157,7 @@ body {
     height: 110px;
     width: 420px;
     border-radius: 3rem;
-    background: linear-gradient(to right ,red, orange, red);
+    background: white;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -220,28 +220,28 @@ h1{
     transform: rotate(230deg) translate(-9px, -20px);
 }
 
-#game_over {
+#game_over, #tutorial {
+    position: absolute;
     height: 300px;
     width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     visibility: hidden;
 }
 
-#game_over .outer{
+#game_over .outer, #tutorial .outer {
     height: 100%;
     width: 100%;
 }
 
-#game_over .inner {
+#game_over .inner , #tutorial .inner {
     height: 260px;
     width: 560px;
 }
 
-#game_over .inner .wrapper {
+#game_over .inner .wrapper , #tutorial .inner .wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
