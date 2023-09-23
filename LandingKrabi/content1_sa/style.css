@@ -66,3 +66,26 @@ button{
     align-items: center;
     position: relative;
 }
+
+.scene2front{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_front.png');
+}
+.grain{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/grain.png');
+}
+.scene3mid{
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-image: url('../asset/scene3_mid.png');
+}
+.scene3front{
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-image: url('../asset/scene3_front.png');
+}

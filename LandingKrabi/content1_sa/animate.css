@@ -46,7 +46,7 @@
     background-image: url('../asset/bird.png');
     width: 300px;
     aspect-ratio: 1/1;
-    animation: movebird 7s infinite ease-in-out;
+    animation: movebird 17s infinite ease-in-out;
 }
 
 .smallbird{
@@ -54,7 +54,7 @@
     width: 150px;
     opacity: 0.5;
     aspect-ratio: 1/1;
-    animation: movebird 5s infinite ease-in-out;
+    animation: movebird 15s infinite ease-in-out;
 }
 
 @keyframes movebird {
@@ -135,20 +135,25 @@
     0% {transform: translate(0px,0px);}
     100% {transform: translate(5px,-5px);}
 }
+@keyframes movefishflip {
+    0% {transform: translate(0px,0px) rotateY(180deg);}
+    100% {transform: translate(5px,-5px) rotateY(180deg);}
+}
 
 .fishGroup{
     background-image: url('../asset/fish_group.png');
     width: 400px;
-    top: 200px;
+    top: 300px;
     left: -400px;
-    aspect-ratio: 589/301;
-    animation: movefishgroup 10s linear infinite;
+    aspect-ratio: 638/209;
+    animation: movefishgroup 20s infinite linear;
 }
 
 @keyframes movefishgroup {
-    0% {transform: translate(0px,0px);}
-    70% {transform: translate(1500px,-400px);}
-    100% {transform: translate(1500px,-400px);}
+    0% {transform: translate(0px,0px) rotate(0deg);}
+    50% {transform: translate(1200px,-300px) rotate(5deg);}
+    70% {transform: translate(1800px,-280px) rotate(10deg);}
+    100% {transform: translate(1800px,-250px) rotate(10deg);}
 }
 
 .fish2{
@@ -266,14 +271,85 @@
     background-image: url('../asset/scene2_light2.png');
     animation: oplight 4s 5s infinite alternate;
 }
-.scene2front{
+.scene3light1{
     width: 100%;
     height: 100%;
-    background-image: url('../asset/scene2_front.png');
+    background-image: url('../asset/scene3_light1.png');
+    animation: oplight 4s infinite alternate;
 }
-.grain{
+.scene3light2{
     width: 100%;
     height: 100%;
-    background-image: url('../asset/grain.png');
+    background-image: url('../asset/scene3_light2.png');
+    animation: oplight 2s infinite alternate,
+    movelight 10s linear infinite;;
 }
 
+/* scene3 */
+
+.fish_brown{
+    background-image: url('../asset/fish_brown.png');
+    width: 150px;
+    aspect-ratio: 262/186;
+}
+.fish_nokyung{
+    background-image: url('../asset/fish_nokyung_red.png');
+    width: 150px;
+    aspect-ratio: 289/216;
+}
+.fish_saba{
+    background-image: url('../asset/fish_saba.png');
+    width: 150px;
+    aspect-ratio: 345/243;
+}
+.fish_yellow{
+    background-image: url('../asset/fish_yellow.png');
+    width: 150px;
+    transform: rotateY(180deg);
+    aspect-ratio: 158/133;
+}
+.fish_rainbow{
+    background-image: url('../asset/fish_rainbow.png');
+    width: 150px;
+    aspect-ratio: 326/264;
+}
+
+.fishNemo.s3one, .fishNemo.s3two, .fish_yellow.three{
+    animation: movefishflip 2s infinite alternate;
+}
+.fish_nokyung, .fishNemo.s3five, .fish_rainbow{
+    animation: movefishmore 3s infinite alternate;
+}
+.fish_yellow.one, .fishNemo.s3three, .fish_brown{
+    animation: movefishmore 3s 1.5s infinite alternate;
+}
+.fish_saba, .fishNemo.s3four{
+    animation: movefishmore 4s 3s infinite alternate;
+}
+
+@keyframes movefishmore {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(20px,-20px);}
+}
+
+.kraben{
+    background-image: url('../asset/kraben.png');
+    width: 150px;
+    aspect-ratio: 367/260;
+    animation: movekraben 15s linear infinite;
+}
+@keyframes movekraben {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-800px,1000px);}
+}
+
+.turtle{
+    background-image: url('../asset/turtle.png');
+    width: 150px;
+    aspect-ratio: 292/232;
+    animation: moveturtle 50s linear infinite;
+}
+@keyframes moveturtle {
+    0% {transform: translate(0px,0px) rotateY(180deg);}
+    100% {transform: translate(1500px,0px) rotateY(180deg);}
+}
