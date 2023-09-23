@@ -9,11 +9,14 @@
     src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
     font-weight: bold;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
+    overflow: hidden;
     --greenH1: #336666;
     --lightGreenH1: #339693;
     --greenH4: #4CA6C1;
-    /* width: 100vw; */
 }
 .container{
     max-width: 1366px;
@@ -48,6 +51,7 @@ h4{font-size: 1.5rem;}
     align-items: start;
     /* deafualt ชิดซ้าย */
     flex-direction: column;
+    z-index: 2;
 }
 button{
     background: hsl(1, 100%, 100%, 30%);
@@ -71,3 +75,34 @@ button{
     align-items: center;
     position: relative;
 }
+
+.light{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/light.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    top: -40px;
+    animation: oplight 2s infinite alternate,
+    movelight 5s linear infinite;
+}
+
+@keyframes oplight {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes movelight {
+    0% {
+      left: -1000px;
+    }
+    100% {
+      left: 1300px;
+    }
+  }
