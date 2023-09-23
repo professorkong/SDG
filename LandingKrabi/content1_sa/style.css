@@ -19,11 +19,11 @@ body{
     --greenH4: #4CA6C1;
 }
 .container{
-    width: 100vw;
-    height: 100vh;
-    /* margin: auto; */
+    width: 1366px;
+    max-width: 1366px;
+    height: 1024px;
+    margin: auto;
     /* aspect-ratio: 4/3; */
-
     background-position: center;
     background-size: cover;
     overflow-x: hidden;
