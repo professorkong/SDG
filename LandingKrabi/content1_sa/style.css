@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: FC-Orbit, sans-serif;
+    color: white;
+}
+@font-face {
+    font-family: FC-Orbit;
+    src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
+    font-weight: bold;
+}
+body{
+    --greenH1: #336666;
+    --lightGreenH1: #339693;
+    --greenH4: #4CA6C1;
+    /* width: 100vw; */
+}
+.container{
+    max-width: 1366px;
+    width: 100%;
+    max-height: 1024px;
+    height: 1024px;
+    margin: auto;
+    /* aspect-ratio: 4/3; */
+
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{font-size: 7rem;}
+h2{font-size: 3rem;}
+h3{font-size: 2rem;}
+h4{font-size: 1.5rem;}
+
+.content{
+    width: 100%;
+    max-width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* deafualt ชิดซ้าย */
+    flex-direction: column;
+}
+button{
+    background: hsl(1, 100%, 100%, 30%);
+    padding: .5rem 1.5rem;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+}
+.boat{
+    background-image: url('../asset/boat.png');
+    background-position: center;
+    background-size: cover;
+    width: 1000px;
+    height: 370px;
+    margin-left: 200px;
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

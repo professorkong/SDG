@@ -7,120 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            font-family: FC-Orbit, sans-serif;
-            color: white;
-        }
-        @font-face {
-            font-family: FC-Orbit;
-            src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
-            font-weight: bold;
-        }
-        body{
-            --greenH1: #336666;
-            --lightGreenH1: #339693;
-            --greenH4: #4CA6C1;
-            /* width: 100vw; */
-        }
-        .container{
-            max-width: 1366px;
-            width: 100%;
-            max-height: 1024px;
-            height: 1024px;
-            margin: auto;
-            /* aspect-ratio: 4/3; */
-            background-position: center;
-            background-size: cover;
-            overflow-x: hidden;
-            position: relative;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        h1{font-size: 7rem;}
-        h2{font-size: 3rem;}
-        h3{font-size: 2rem;}
-        h4{font-size: 1.5rem;}
-
-        .content{
-            width: 100%;
-            max-width: 80%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            flex-direction: column;
-        }
-        button{
-            background: hsl(1, 100%, 100%, 30%);
-            padding: .5rem 1.5rem;
-            border-radius: 60px;
-            border: none;
-            cursor: pointer;
-        }
-        .boat{
-            background-image: url('../asset/boat.png');
-            background-position: center;
-            background-size: cover;
-            width: 1000px;
-            height: 370px;
-            margin-left: 200px;
-        }
-        .center{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-    </style>
-
     <div class="container" style="background-image: url('../asset/scene_01.png');">
         <div class="content">
                 <h1 style="color:var(--greenH1); margin-top: 150px;">ท่องเที่ยวกระบี่</h1>
                 <h2 style="color:var(--greenH1)">สายเทคแคร์ เป็นมิตรต่อปะการัง</h2>
                 <div class="boat"></div>
                 <div class="center" style="margin-top: 20px;">
-                    <button><h4>แตะเพื่อเริ่มต้น</h4></button>
+                    <a href="page2.html"><button><h4>แตะเพื่อเริ่มต้น</h4></button></a>
                 </div>
         </div>
     </div>
-
-    <div class="container" style="background-image: url('../asset/scene_02.png');">
-        <div class="content" style="align-items: end; text-align: center; justify-content: end;">
-            <div style="width: 500px;">
-                <h3>ลงจากเรือได้ไม่นานเราก็พบกับ เอ่อ...จริงๆมันควรเป็นแนวปะการังแต่ดูสิ ตอนนี้ปะการังเสียหาย</h3>
-                <h4 style="margin-top: 30px;">
-                    บ่อยครั้งที่การจอดเรือฝั่งน้ำตื้นตัวเรือจอดทับแนวปะการังเสียหาย เหตุมาจากเรือนำเที่ยวฝ่าฝืนเข้าไปในเขตแนวทุ่นอุทยานซึ่งใต้ท้องเรือนั้นครูดทับอยู่บนแนวปะการังรอบเกาะ !
-                </h4>
-                <div class="center" style="margin-top: 30px; margin-bottom: 170px;">
-                    <button><h4>ออกสำรวจแนวปะการัง</h4></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="background-image: url('../asset/scene_03.png');">
-        <div class="content" style="justify-content: start; margin-top: 100px;">
-            <div style="width: 600px;">
-                <h1 style="color:var(--lightGreenH1)">แนวปะการัง</h1>
-                <h4 style="color:var(--greenH4)"> ปะการังมีความสำคัญต่อ ระบบนิเวศทางทะเล
-                    การประมง และมีส่วนช่วยรักษาสภาพสมดุลธรรมชาติและ ช่วยลดความรุนแรงของคลื่นที่กระทบต่อชายฝั่ง  
-                    <br><br>
-                    ความสวยงามของแนวปะการังช่วยในด้านพักผ่อนหย่อนใจและเป็นจุดดึงดูดนักท่องเที่ยวได้อย่างดี</h4>
-            </div>
-            <div class="center" style="margin-top: 350px;">
-                <button><h4 style="color:var(--greenH4)">พบปะเพื่อนใหม่</h4></button>
-            </div>
-        </div>
-    </div>
-
-
 </body>
 </html>
