@@ -17,15 +17,20 @@
             src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
             font-weight: bold;
     }
+    html {
+        scroll-behavior: smooth;
+    }
     body{
         margin: 0;
         overflow-x: hidden;
+        /* overflow: hidden; */
     }
     .container{
         margin: auto;
         width: 100%;
         position: relative;
         max-width: 1366px;
+        /* overflow-x: hidden; */
     }
     .wallpaper{
         width: 100%;
@@ -40,12 +45,11 @@
         vertical-align: top;
     }
     .betweenpage{
-        width: 107.5%;
+        width: 100%;
         position: absolute;
-        left: -59px;
         margin: 0;
         padding: 0%;
-        top: -420px;
+        top: -540px;
         z-index: 0;
     }
     .content{
@@ -53,7 +57,18 @@
         position: absolute;
         top: 0;
         left: 0;
-    }    
+    }
+    .fish-card{
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+    }
     .textpage4{
         width: 100%;
         padding: 2rem 0;
@@ -63,31 +78,40 @@
         align-items: center;
         color: #339693;
     }
-    .fish-gallery-frame{
-        height: 340px;
-        position: relative;
-        overflow: hidden;
+    .fish-gallery {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
         overflow-x: scroll;
+        overflow-y: hidden;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        /* border: black 1px solid; */
+        z-index: 1;
     }
-    .fish-gallery-frame::-webkit-scrollbar {
+    .fish-gallery::-webkit-scrollbar {
         display: none;
     }
-    .fish-gallery{
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        white-space: nowrap;
-        gap: 6rem;
-        padding: 0rem 4.5rem;
-    }
-    .fish{
-        width: 340px;   
+    .fish {
+        position: relative;
+        flex: 1 0 340px;
         height: 340px;
-        background: white;
+        margin: 0 3.5rem;
+        /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0), white); */
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 10%, white 80%);
         border-radius: 100%;
+        z-index: 1;
     }
+    .fish > img{
+        width: 280px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .buttonpage4{
         display: flex;
         justify-content: center;
@@ -129,45 +153,53 @@
         border: none;
         cursor: pointer;
         z-index: 1;
+        transition: all .5s;
     }
+
 </style>
 <body>
-    <div class="container">
+    <div class="container" id="page4">
         <div class="wallpaper">
-            <img src="../asset/scene_04.png" alt="">
+            <img src="../asset/scene4/scene4.png" alt="">
         </div>
         <div class="content">
             <div class="textpage4">
                 <h1>ปลาท้องถิ่น</h1>
             </div>
-            <div class="fish-gallery-frame">
-                <div class="fish-gallery">
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
-                    <div class="fish"></div>
+            <div class="fish-gallery">
+                <div class="fish" data-fishid="1" onclick="showFishData(this)">
+                    <img src="../asset/fish/pic/fish_pic1.png" alt="">
                 </div>
+                <div class="fish" data-fishid="2" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="3" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="4" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="5" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="6" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="7" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="8" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="9" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="10" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="11" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="12" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="13" onclick="showFishData(this)"></div>
             </div>
             <div class="buttonpage4">
-                <button>
+                <button onClick="document.getElementById('page5').scrollIntoView({block: 'end'});">
                     <h3>ภัยคุกคาม</h3>
                 </button>
-            </div>      
+            </div>
+        </div>
+        <div class="content fish-card">
+            <img src="../asset/fish/data/fish_data1.png" alt="">
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="page5">
         <div class="wallpaper">
-            <img src="../asset/scene_05.png" alt="">
+            <img src="../asset/scene5/scene5.png" alt="">
         </div>
         <div class="betweenpage">
-            <img src="../asset/between_secene4_5.png" alt="">
+            <img src="../asset/scene5/scene4-5.png" alt="">
         </div>
         <div class="content">
             <div class="textpage5">
@@ -178,12 +210,150 @@
                     <h4>แต่ทว่าพวกเขาโพสต์ท่านั่งบนแนวปะการังนี่สิ!</h4>
                     <h4>นั่นสามารถทำให้ปะการังเสียหายได้เลยนะ</h4>
                 </div>
-                <button>
+                <button onClick="document.getElementById('page4').scrollIntoView();">
                     <h3>ฝึกหลบหลีกปะการัง</h3>
                 </button>
             </div>
         </div>
     </div>
     
+    <script type="text/javascript">
+
+        let fishs = [
+            {
+                fishid:1,
+                fish_pic:'../asset/fish/pic/fish_pic1.png',
+                fish_data:'../asset/fish/data/fish_data1.png'
+            },
+            {
+                fishid:2,
+                fish_pic:'../asset/fish/pic/fish_pic2.png',
+                fish_data:'../asset/fish/data/fish_data2.png'
+            },
+            {
+                fishid:3,
+                fish_pic:'../asset/fish/pic/fish_pic3.png',
+                fish_data:'../asset/fish/data/fish_data3.png'
+            },
+            {
+                fishid:4,
+                fish_pic:'../asset/fish/pic/fish_pic4.png',
+                fish_data:'../asset/fish/data/fish_data4.png'
+            },
+            {
+                fishid:5,
+                fish_pic:'../asset/fish/pic/fish_pic5.png',
+                fish_data:'../asset/fish/data/fish_data5.png'
+            },
+            {
+                fishid:6,
+                fish_pic:'../asset/fish/pic/fish_pic6.png',
+                fish_data:'../asset/fish/data/fish_data6.png'
+            },
+            {
+                fishid:7,
+                fish_pic:'../asset/fish/pic/fish_pic7.png',
+                fish_data:'../asset/fish/data/fish_data7.png'
+            },
+            {
+                fishid:8,
+                fish_pic:'../asset/fish/pic/fish_pic8.png',
+                fish_data:'../asset/fish/data/fish_data8.png'
+            },
+            {
+                fishid:9,
+                fish_pic:'../asset/fish/pic/fish_pic9.png',
+                fish_data:'../asset/fish/data/fish_data9.png'
+            },
+            {
+                fishid:10,
+                fish_pic:'../asset/fish/pic/fish_pic10.png',
+                fish_data:'../asset/fish/data/fish_data10.png'
+            },
+            {
+                fishid:11,
+                fish_pic:'../asset/fish/pic/fish_pic11.png',
+                fish_data:'../asset/fish/data/fish_data11.png'
+            },
+            {
+                fishid:12,
+                fish_pic:'../asset/fish/pic/fish_pic12.png',
+                fish_data:'../asset/fish/data/fish_data12.png'
+            },
+            {
+                fishid:13,
+                fish_pic:'../asset/fish/pic/fish_pic13.png',
+                fish_data:'../asset/fish/data/fish_data13.png'
+            }
+        ]
+        
+        let bubbles = document.querySelectorAll('.fish')
+        let html = ``
+        let count = 0
+        for(let fish of fishs){
+            html = `<img src="${fish.fish_pic}">`
+            bubbles[count].innerHTML = html
+            count++
+        }
+
+        function showFishData(el){
+            let data = el.dataset
+            let body = document.querySelector('body')
+            let card = document.querySelector('.fish-card')
+            let html = `<img src="${fishs[data.fishid-1].fish_data}">`
+
+            body.style.overflow = 'hidden'
+            card.style.visibility = 'visible'
+            card.innerHTML = html
+            console.log(data.fishid)
+        }
+
+        const container = document.querySelector(".fish-gallery");
+        const children = document.querySelector(".fish");
+
+        let [firing, currPos, prevX] = [false, 0, 0];
+
+        container.addEventListener("mousedown", e => {
+            prevX = e.clientX;
+            e.preventDefault();
+            firing = true;
+        });
+
+        container.addEventListener("mousemove", ({
+            clientX: newX
+        }) => {
+            if (!firing) return;
+            
+            let newPos = currPos - (newX - prevX);
+            let availableOffset = container.scrollWidth - container.clientWidth;
+            
+            if (newPos > availableOffset) {
+                elementToCut = container.querySelector('.fish:first-child')
+                container.appendChild(elementToCut)
+                newPos = availableOffset - elementToCut.offsetWidth;
+                elementToCut.removeChild
+            }
+          
+            if (newPos < 0) {
+                firstElement = container.querySelector('.fish:first-child')
+                elementToCut = container.querySelector('.fish:last-child')
+                container.insertBefore(elementToCut, firstElement);
+                newPos = 0 + elementToCut.offsetWidth;
+                elementToCut.removeChild
+            }
+          
+            prevX = newX;
+            container.scrollTo(newPos, 0);
+            currPos = newPos;
+        })
+
+        container.addEventListener("mouseup", () => {
+          firing = false;
+        })
+
+        container.addEventListener("mouseleave", () => {
+          firing = false;
+        })
+    </script>
 </body>
 </html>

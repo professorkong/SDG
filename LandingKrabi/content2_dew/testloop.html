@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        max-width: 1366px;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fish {
+        flex: 1 0 340px;
+        height: 340px;
+        margin: 10px;
+        background: #333;
+        border-radius: 50%;
+        margin: 0 4rem;
+    }
+
+    /* .green {
+        background: green;
+    }
+
+    .blue {
+        background: blue;
+    } */
+
+</style>
+<body>
+    <div class="gallery">
+        <div class="fish">1</div>
+        <div class="fish">2</div>
+        <div class="fish">3</div>
+        <div class="fish">4</div>
+        <div class="fish">5</div>
+        <div class="fish">6</div>
+        <div class="fish">7</div>
+        <div class="fish">8</div>
+        <div class="fish">9</div>
+        <div class="fish">10</div>
+        <!-- <div class="fish">11</div> -->
+        <!-- <div class="fish">12</div> -->
+        <!-- <div class="fish">13</div> -->
+        <!-- <div class="fish">14</div> -->
+      </div>
+     <script type="text/javascript">
+        const container = document.querySelector(".gallery");
+        const children = document.querySelector(".fish");
+
+        let [firing, currPos, prevX] = [false, 0, 0];
+
+        container.addEventListener("mousedown", e => {
+            prevX = e.clientX;
+            e.preventDefault();
+            firing = true;
+        });
+
+        container.addEventListener("mousemove", ({
+            clientX: newX
+        }) => {
+            if (!firing) return;
+            
+            let newPos = currPos - (newX - prevX);
+            let availableOffset = container.scrollWidth - container.clientWidth;
+            
+            if (newPos > availableOffset) {
+                elementToCut = container.querySelector('.fish:first-child')
+                container.appendChild(elementToCut)
+                newPos = availableOffset - elementToCut.offsetWidth;
+                elementToCut.removeChild
+            }
+          
+            if (newPos < 0) {
+                firstElement = container.querySelector('.fish:first-child')
+                elementToCut = container.querySelector('.fish:last-child')
+                container.insertBefore(elementToCut, firstElement);
+                newPos = 0 + elementToCut.offsetWidth;
+                elementToCut.removeChild
+            }
+          
+            prevX = newX;
+            container.scrollTo(newPos, 0);
+            currPos = newPos;
+        })
+
+        container.addEventListener("mouseup", () => {
+          firing = false;
+        })
+
+        container.addEventListener("mouseleave", () => {
+          firing = false;
+        })
+     </script>
+</body>
+</html>
