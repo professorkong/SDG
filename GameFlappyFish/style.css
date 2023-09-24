@@ -1,0 +1,50 @@
+body{
+    overflow: hidden;
+}
+
+.screen{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.player{
+    --poy: 70%;
+    --cor: green;
+    position: absolute;
+    top: var(--poy);
+    left: 10%;
+    width: 400px;
+    height: 200px;
+    background-color: var(--cor);
+    transition: top 1s linear;
+}
+
+.ob_top{
+    position: absolute;
+    top: 0%;
+    width: 100px;
+    height: 200px;
+    transform: translateX(-500%);
+    background-color: red;
+    animation: ob_move 5s linear;
+}
+
+.ob_bottom{
+    position: absolute;
+    bottom: 0%;
+    width: 100px;
+    height: 200px;
+    transform: translateX(-500%);
+    background-color: red;
+    animation: ob_move 5s linear;
+}
+
+@keyframes ob_move{
+    0%{transform: translateX(1500%);};
+    100%{transform: translateX(-500%);};
+}
