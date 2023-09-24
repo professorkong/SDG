@@ -95,3 +95,109 @@ button{
     height: 100%;
     background-image: url('../asset/scene3_back.png');
 }
+
+
+
+
+/* ของเจมี่เจม */
+.scene-6{
+    background-image: url('../content3_Jaimes/1x/Artboard 5.png');
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item{
+    position: absolute;
+}
+
+.front_dirty, .sand{
+    bottom: 0;
+}
+
+.back_kelp_1{
+    bottom: 300px;
+    left: 500px;
+}
+
+.back_kelp_2{
+    bottom: 250px;
+    left: 900px;
+}
+
+.back_kelp_3{
+    bottom: 220px;
+    right: 200px;
+}
+
+.back_coral_1{
+    bottom: 230px;
+    right: 700px;
+}
+
+.back_coral_2{
+    bottom: 150px;
+    right: 400px;
+}
+
+.back_coral_3{
+    bottom: 830px;
+    left: 0px;
+}
+
+.back_fish_1{
+    opacity: 0.2;
+    top: 220px;
+    left: 220px;
+
+}
+
+.back_fish_2{
+    opacity: 0.2;
+    top: 200px;
+    right: 200px;
+
+}
+
+.front{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.tube{
+    bottom: 150px;
+    right: 0;
+}
+
+
+.rightleg{
+    top: 500px;
+}
+
+.body{
+    top: 700px;
+    left: 950px;
+}
+
+.handright{
+    top: 870px;
+    left: 1200px;
+}
+
+.handleft{
+    top: -50px;
+}
+.namha{
+    left: 1210px;
+    top: 670px;
+}
+.hair{
+    left: 1050px;
+    top: 580px; 
+}
+/* .bubblebubjai{
+    
+} */
+
+/* ของเจมี่เจม */
