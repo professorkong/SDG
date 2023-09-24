@@ -14,7 +14,7 @@
     top: -40px;
     animation: 
         oplight 2s infinite alternate,
-        movelight 5s linear infinite;
+        movelight 10s linear infinite;
 }
 
 @keyframes oplight {
@@ -23,64 +23,64 @@
   }
 
 @keyframes movelight {
-    0% {left: -1000px;}
-    100% {left: 1300px;}
+    0% {left: -2500px;}
+    100% {left: 2500px;}
   }
 
 .boat{
     background-image: url('../asset/boat.png');
-    width: 700px;
+    width: 1100px;
     aspect-ratio: 1093/724;
-    left: 500px;
-    top: 490px;
-    animation: moveboat 2s infinite alternate;
+    left: 900px;
+    top: 840px;
+    animation: ty20 3s infinite alternate;
 }
 
-@keyframes moveboat {
-    0% {top: 490px;}
-    100% {top: 500px;}
+@keyframes ty20 {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(20px);}
     /* อย่าลืมใส่หน่วย */
 }
 
 .bird{
     background-image: url('../asset/bird.png');
-    width: 300px;
+    width: 500px;
     aspect-ratio: 1/1;
-    animation: movebird 17s infinite ease-in-out;
+    animation: movebird 17s infinite linear;
 }
 
 .smallbird{
     background-image: url('../asset/bird.png');
-    width: 150px;
+    width: 300px;
     opacity: 0.5;
     aspect-ratio: 1/1;
-    animation: movebird 15s infinite ease-in-out;
+    animation: movebird 10s infinite ease-in-out;
 }
 
 @keyframes movebird {
     0% {left: 103%; top: 300px;}
-    100% {left: -40px; top: -300px;}
+    100% {left: 0px; top: -400px;}
 }
 
 .cloud1{
     background-image: url('../asset/cloud1.png');
     width: 500px;
     aspect-ratio: 757/73;
-    top: 150px;
+    top: 200px;
     right: 100px;
     animation: 
-        cloudY 1.5s linear infinite alternate,
-        cloudX 20s linear infinite alternate;
+        cloudY 2.5s linear infinite alternate,
+        cloudX 30s linear infinite alternate;
 }
 .cloud2{
     background-image: url('../asset/cloud2.png');
     width: 300px;
     aspect-ratio: 757/73;
-    top: 250px;
+    top: 350px;
     left: 100px;
     animation: 
-        cloudY 1.8s linear infinite alternate,
-        cloudXreverse 15s linear infinite alternate;
+        cloudY 2.8s linear infinite alternate,
+        cloudXreverse 25s linear infinite alternate;
 }
 
 @keyframes cloudY {
@@ -89,11 +89,11 @@
 }
 @keyframes cloudX {
     0% {right: 100px;}
-    100% {right: 700px;}
+    100% {right: 1400px;}
 }
 @keyframes cloudXreverse {
     0% {left: 100px;}
-    100% {left: 1000px;}
+    100% {left: 2000px;}
 }
 
 .bubble{
@@ -111,9 +111,9 @@
 
 @keyframes movebubble {
     0% {opacity: 0; transform: translateY(0px);}
-    25% {opacity: .7; transform: translateY(-10px);}
-    75% {opacity: .7; transform: translateY(-50px);}
-    100% {opacity: 0; transform: translateY(-55px);}
+    25% {opacity: .7; transform: translateY(-40px);}
+    75% {opacity: .7; transform: translateY(-80px);}
+    100% {opacity: 0; transform: translateY(-85px);}
 }
 
 .fishNemo{
@@ -133,32 +133,34 @@
 
 @keyframes movefish {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(5px,-5px);}
+    100% {transform: translate(20px,-20px);}
 }
 @keyframes movefishflip {
     0% {transform: translate(0px,0px) rotateY(180deg);}
-    100% {transform: translate(5px,-5px) rotateY(180deg);}
+    100% {transform: translate(40px,-40px) rotateY(180deg);}
 }
+
+/* scene 2 */
 
 .fishGroup{
     background-image: url('../asset/fish_group.png');
-    width: 400px;
+    width: 700px;
     top: 300px;
-    left: -400px;
+    left: -700px;
     aspect-ratio: 638/209;
-    animation: movefishgroup 20s infinite linear;
+    animation: movefishgroup 30s infinite linear;
 }
 
 @keyframes movefishgroup {
     0% {transform: translate(0px,0px) rotate(0deg);}
-    50% {transform: translate(1200px,-300px) rotate(5deg);}
-    70% {transform: translate(1800px,-280px) rotate(10deg);}
-    100% {transform: translate(1800px,-250px) rotate(10deg);}
+    50% {transform: translate(1800px,-300px) rotate(5deg);}
+    70% {transform: translate(3200px,-280px) rotate(10deg);}
+    100% {transform: translate(3200px,-250px) rotate(10deg);}
 }
 
 .fish2{
     background-image: url('../asset/fish2.png');
-    width: 200px;
+    width: 400px;
     aspect-ratio: 1/1;
 }
 
@@ -216,9 +218,9 @@
 }
 .brokeCoral4{
     background-image: url('../asset/broke\ coral4.png');
-    width: 130px;
-    left: 350px;
-    bottom: 100px;
+    width: 200px;
+    left: 650px;
+    bottom: 170px;
     aspect-ratio: 1/1;
     animation: 
     brokeCoralLeftUp 7s 2s infinite,
@@ -226,9 +228,9 @@
 }
 .brokeCoral5{
     background-image: url('../asset/broke\ coral5.png');
-    width: 150px;
-    left: 330px;
-    bottom: 200px;
+    width: 300px;
+    left: 650px;
+    bottom: 300px;
     aspect-ratio: 1/1;
     animation: 
     brokeCoralRightUp 7s 4s infinite,
@@ -237,19 +239,19 @@
 
 @keyframes brokeCoralRightUp {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(20px,-20px);}
+    100% {transform: translate(50px,-50px);}
 }
 @keyframes brokeCoralRightDown {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(20px,20px);}
+    100% {transform: translate(50px,50px);}
 }
 @keyframes brokeCoralLeftUp {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(-20px,-20px);}
+    100% {transform: translate(-50px,-50px);}
 }
 @keyframes brokeCoralLeftDown {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(-20px,20px);}
+    100% {transform: translate(-50px,50px);}
 }
 @keyframes brokeCoralShow {
     0% {opacity: 0;}
@@ -271,6 +273,11 @@
     background-image: url('../asset/scene2_light2.png');
     animation: oplight 4s 5s infinite alternate;
 }
+
+
+/* scene3 */
+
+
 .scene3light1{
     width: 100%;
     height: 100%;
@@ -281,11 +288,8 @@
     width: 100%;
     height: 100%;
     background-image: url('../asset/scene3_light2.png');
-    animation: oplight 2s infinite alternate,
-    movelight 10s linear infinite;;
+    animation: oplight 5s infinite alternate;
 }
-
-/* scene3 */
 
 .fish_brown{
     background-image: url('../asset/fish_brown.png');
@@ -305,7 +309,6 @@
 .fish_yellow{
     background-image: url('../asset/fish_yellow.png');
     width: 150px;
-    transform: rotateY(180deg);
     aspect-ratio: 158/133;
 }
 .fish_rainbow{
@@ -314,22 +317,25 @@
     aspect-ratio: 326/264;
 }
 
-.fishNemo.s3one, .fishNemo.s3two, .fish_yellow.three{
-    animation: movefishflip 2s infinite alternate;
+.fishNemo.s3two, .fish_yellow.one, .fish_yellow.two{
+    animation: movefishflip 4s infinite alternate;
 }
-.fish_nokyung, .fishNemo.s3five, .fish_rainbow{
-    animation: movefishmore 3s infinite alternate;
+.fish_nokyung, .fishNemo.s3one{
+    animation: movefishflip 5s infinite alternate;
 }
-.fish_yellow.one, .fishNemo.s3three, .fish_brown{
-    animation: movefishmore 3s 1.5s infinite alternate;
+.fishNemo.s3five, .fish_rainbow, .fish_yellow.three{
+    animation: movefishmore 5s infinite alternate;
 }
-.fish_saba, .fishNemo.s3four{
-    animation: movefishmore 4s 3s infinite alternate;
+.fish_yellow.four, .fishNemo.s3three, .fish_brown{
+    animation: movefishmore 5s 1.5s infinite alternate;
+}
+.fish_saba, .fishNemo.s3four, .fish_yellow.three{
+    animation: movefishmore 6s 3s infinite alternate;
 }
 
 @keyframes movefishmore {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(20px,-20px);}
+    100% {transform: translate(30px,-30px);}
 }
 
 .kraben{
@@ -340,16 +346,16 @@
 }
 @keyframes movekraben {
     0% {transform: translate(0px,0px);}
-    100% {transform: translate(-800px,1000px);}
+    100% {transform: translate(-1500px,1500px);}
 }
 
 .turtle{
     background-image: url('../asset/turtle.png');
     width: 150px;
     aspect-ratio: 292/232;
-    animation: moveturtle 50s linear infinite;
+    animation: moveturtle 40s 5s linear infinite;
 }
 @keyframes moveturtle {
     0% {transform: translate(0px,0px) rotateY(180deg);}
-    100% {transform: translate(1500px,0px) rotateY(180deg);}
+    100% {transform: translate(3000px,0px) rotateY(180deg);}
 }
