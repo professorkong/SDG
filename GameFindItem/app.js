@@ -17,8 +17,8 @@ function myFunction_set() {
 
 
 var point = 0;
-// var time = 60;
-var time = 15;
+var time = 60;
+// var time = 15;
 var topScore = 0;
 var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12"];
 
@@ -78,8 +78,8 @@ function collect(el){
 
 function reset(){
   point = 0;
-// time = 60;
-  time = 15;
+  time = 60;
+  // time = 15;
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
   start = start();
