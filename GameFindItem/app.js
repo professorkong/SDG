@@ -26,7 +26,7 @@ document.getElementById('tutorial').style.visibility = 'visible';
 
 function start() {
   setInterval(main, 1000);
-  // document.getElementById('tutorial').style.visibility = 'hidden';
+  document.getElementById('tutorial').style.visibility = 'hidden';
 
 }
 
@@ -82,7 +82,6 @@ function reset(){
   time = 15;
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
-  start = start();
 }
 
 function removeAllChildNodes(parent) {

@@ -156,7 +156,7 @@ body {
     display: flex;
     height: 110px;
     width: 420px;
-    border-radius: 3rem;
+    border-radius: 5rem;
     background: white;
     box-sizing: border-box;
     justify-content: center;
@@ -165,10 +165,11 @@ body {
 
 .inner{
     display: flex;
+    flex-direction: column;
     height: 90px;
     width: 400px;
     background: linear-gradient(to bottom, #68B9B1, #446DB0, #3F509F);
-    border-radius: 2.5rem;
+    border-radius: 4rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -186,44 +187,16 @@ h1{
     color: white;
 }
 
-.timer {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 1rem;
-}
-
 .time {
     display: flex;
     justify-self: end;
 }
 
-.circle {
-    display: flex;
-    height: 110px;
-    background-color: white;
-    border-radius: 50%;
-    border: solid 10px red;
-    justify-content: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    aspect-ratio: 1;
-}
-
-.pin {
-    background-color: black;
-    height: 30px;
-    width: 12px;
-    border-radius: 1rem 1rem 0 0;
-}
-
-.b{
-    transform: rotate(230deg) translate(-9px, -20px);
-}
 
 #game_over, #tutorial {
     position: absolute;
-    height: 300px;
-    width: 600px;
+    height: 1100px;
+    width: 1700px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -237,22 +210,57 @@ h1{
 }
 
 #game_over .inner , #tutorial .inner {
-    height: 260px;
-    width: 560px;
+    height: 1050px;
+    width: 1650px;
+    background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
 }
 
 #game_over .inner .wrapper , #tutorial .inner .wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+}
 
+.wrapper h1{
+    color: #262262;
+    background-color: #fff;
+    padding: 0.5rem 3rem;
+    border-radius: 6rem;
+    font-size: 5rem;
+}
+
+.guide {
+    padding: 0rem 4rem;
+}
+
+.guide .inlist{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+}
+
+.guide .inlist span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 #reset {
     text-align: center;
+    font-size: 4rem;
+    border: solid 0.8rem #fff;
+    border-radius: 4rem;
+    background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
 }
 
 #reset a{
-    background-color: aliceblue;
-    padding: 0.5rem 1rem;
+    color: #fff;
     border-radius: 1rem;
+    margin: 4rem;
 }
