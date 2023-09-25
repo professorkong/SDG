@@ -513,3 +513,48 @@
         transform: rotatez(3deg);
     }
 }
+
+
+.fishback2,.fishback3-1{
+    animation: backfish1se 4s 0s alternate infinite;
+}
+
+.fishback1,.fishback3{
+    animation: backfish1se 2s 01s alternate infinite;
+}
+
+.fishback3-2{
+    animation: backfish1se 3s 0s alternate infinite;
+}
+
+@keyframes backfish1se {
+    0% {
+        transform: translate(0px,0px);
+        opacity: 1;}
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(30px,-30px);
+        opacity: 0.8;
+    }
+}
+
+.lighte{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/light.png');
+    z-index: 1;
+    top: -40px;
+    animation: 
+        oplighte 2s infinite alternate;
+}
+
+@keyframes oplighte {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.turtleeiktua{
+    animation: movefishmore 3s infinite alternate;
+}
