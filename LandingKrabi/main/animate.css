@@ -168,9 +168,19 @@
     animation: movefish 2s infinite alternate inherit;
 }
 .fish2.two{
-    animation: movefish 2s .7s infinite alternat inherit;
+    animation: movefish 2s .7s infinite alternate inherit;
 }
 .fish2.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+.back_fish_1.one{
+    animation: movefish 2s infinite alternate inherit;
+}
+.fish.two{
+    animation: movefish 2s .7s infinite alternate inherit;
+}
+.fish.three{
     animation: movefish 2s 1.5s infinite alternate;
 }
 
@@ -317,11 +327,15 @@
     aspect-ratio: 326/264;
 }
 
-.fishNemo.s3two, .fish_yellow.one, .fish_yellow.two{
+.fishNemo.s3two, .fish_yellow.one{
     animation: movefishflip 4s infinite alternate;
 }
+
+.fish_yellow.two{
+    animation: movefishflip 6s infinite alternate;
+}
 .fish_nokyung, .fishNemo.s3one{
-    animation: movefishflip 5s infinite alternate;
+    animation: movefishflip 4s infinite alternate;
 }
 .fishNemo.s3five, .fish_rainbow, .fish_yellow.three{
     animation: movefishmore 5s infinite alternate;
@@ -358,4 +372,144 @@
 @keyframes moveturtle {
     0% {transform: translate(0px,0px) rotateY(180deg);}
     100% {transform: translate(3000px,0px) rotateY(180deg);}
+}
+
+.back_fish_1{
+    animation: backfish1 4s 0s alternate infinite;
+}
+
+.back_fish_2{
+    animation: backfish1 5s 0s alternate infinite;
+}
+
+.leftleg{
+    animation: leftleg 5s alternate infinite;
+}
+.rightleg{
+    animation: rightleg 7s alternate infinite;
+}
+
+.body{
+    animation: body 5s alternate infinite;
+}
+
+.handleft{
+    animation: handleft 3s 2s alternate infinite;
+}
+
+.hair{
+    animation: hair 3s alternate-reverse infinite;
+}
+
+.face {
+    animation: face 3s alternate infinite;
+}
+
+.namha{
+    animation: namha 3s alternate infinite;
+}
+
+@keyframes backfish1 {
+    0% {
+        transform: translate(0px,0px);
+        opacity: 0.3;}
+    50%{
+        opacity: 0.1;
+    }
+    100% {
+        transform: translate(30px,-30px);
+        opacity: 0.4;
+    }
+}
+
+@keyframes leftleg{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes rightleg{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(-5deg);
+    }
+}
+
+@keyframes body{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes handleft{
+    0%{
+        transform: rotatez(0deg);
+    }
+    100%{
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes hair{
+    0%{
+        transform: rotatez(-5deg);
+    }
+
+
+    100%{
+        transform: rotatez(5deg);
+    }
+}
+
+@keyframes face{
+    0%{
+        transform: rotatez(-2deg);
+    }
+
+
+    100%{
+        transform: rotatez(5deg);
+    }
+}
+
+@keyframes namha{
+    0%{
+        transform: rotatez(0deg);
+    }
+
+
+    100%{
+        transform: rotatez(20deg);
+    }
+}
+
+.wetsuit{
+    animation: wetsuit 10s alternate infinite;
+}
+
+@keyframes wetsuit{
+    0%{
+        transform: rotatez(0deg);
+    }
+
+    20%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: rotatez(5deg);
+    }
+    80%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: rotatez(3deg);
+    }
 }
