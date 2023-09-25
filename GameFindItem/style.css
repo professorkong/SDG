@@ -131,6 +131,38 @@ body {
     visibility: hidden;
 }
 
+#fish1{
+    background-image: url(./asset/fish.png);
+    width: 239px;
+    height: 292px;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 1000px;
+    animation: linear;
+    animation-name: fish_move1;
+    animation-duration: 50s;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+}
+#fish2{
+    background-image: url(./asset/fish_group2.png);
+    width: 239px;
+    height: 292px;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 1000px;
+    animation: linear;
+    animation-name: fish_move2;
+    animation-duration: 50s;
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+}
 
 @keyframes bin_down {
     0%   {top: -200px;}
@@ -138,6 +170,14 @@ body {
     100% {top: 800px;}
 }
 
+@keyframes fish_move1 {
+    0%   {left: 40%;}
+    100% {left: -80%;}
+}
+@keyframes fish_move2 {
+    0%   {right: 60%;}
+    100% {right: -80%;}
+}
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
