@@ -3,67 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b3b98bb353.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" type="text/css" /> 
     <title>Document</title>
 </head>
 <body>
     <div class="background" id="display">
+        <div id="fish1"></div>
+        <div id="fish2"></div>
+        <div id="fish3"></div>
+        <div id="fish4"></div>
+        
         <div id="tutorial">
             <div class="outer">
                 <div class="inner">
                     <div class="wrapper">
-                        <h1>tutorial</h1>
-                        <span id="reset">
-                            <a onclick="start()">Start</a>
-                        </span>
+                        <h1>วิธีการเล่น</h1>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="menu">
-            <div class="bar">
-                <div class="outer">
-                    <div class="inner">
-                        <h1 id="top-hit">000</h1>
-                    </div> 
-                </div>
-                <h2>สถิติ</h2>
-            </div>
-            <div class="timer">     
-                    <div class="time">
-                        <div class="circle">
-                            <div class="pin a">
-                                <div class="pin b"></div>
-                            </div>
+                    <div class="guide">
+                        <div class="inlist">
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <h1>เมื่อมีขยะโผล่มา  ให้กำจัดขยะชิ้นนั้นออกไปโดยการคลิ้กไปยังขยะชิ้นนั้น</h1>
+                        </div>
+                        <div class="inlist">
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <h1>เมื่อกำจัดขยะออกไปแล้วผู้เล่นจะได้รับคะแนน +100 คะแนนต่อขยะ 1 ชิ้น</h1>
+                        </div>
+                        <div class="inlist">
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <h1>หากคลิ้กผิดไปยังสิ่งที่ไม่ใช่ขยะจะโดนหัก -100 คะแนน</h1>
+                        </div>
+                        <div class="inlist">
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <h1>ผู้เล่นมีเวลา 60 วินาทีในการกำจัดขยะออกไปให้ได้มากที่สุด เมื่อครบเวลาแล้วระบบจะทำการรวมคะแนนให้อัตโนมัติ</h1>
                         </div>
                     </div>
-                    <div class="outer">
-                        <div class="inner">
-                            <h1 id="time">01:00</h1>
-                        </div> 
+                </div>
+            </div>
+            <div class="button">
+                <span id="reset">
+                    <a onclick="start()">เริ่มเกม</a>
+                </span>
+            </div>
+        </div>
+
+        <div id="game_over">
+            <div class="boxitem">
+                <div class="circleclip"></div>
+                <div class="circle"></div>
+                <h1 class="score">คะแนนรวม</h1>
+                <div class="outer">
+                    <div class="inner">
+                        <div class="wrapper">
+                            <h1 id="score"></h1>
+                            <h2>เก่งมาก พยายามต่อไปนะ!</h2>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="button">
+                <span id="reset">
+                    <a onclick="reset()">เล่นอีกครั้ง</a>
+                </span>
+                <span id="main">
+                    <a onclick="">กลับหน้าหลัก</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="timer">     
+                <div class="outer">
+                    <div class="inner">
+                        <h1 id="time">01:00</h1>
+                    </div> 
+                </div>
             </div>
             <div class="bar">
+                <h2>คะแนน</h2>
                 <div class="outer">
                     <div class="inner">
                         <h1 id="point">000</h1>
                     </div> 
                 </div>
-                <h2>คะแนนรวม</้h2>
             </div>
         </div>
-        <div id="game_over">
-            <div class="outer">
-                <div class="inner">
-                    <div class="wrapper">
-                        <h1>Game Over</h1>
-                        <span id="reset">
-                            <a onclick="reset()">Reset</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="sample">
             <div class="bin" id="bin1" onclick="collect(this)"></div>
             <div class="bin" id="bin2" onclick="collect(this)"></div>
