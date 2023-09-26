@@ -29,14 +29,14 @@
         margin: auto;
         width: 100%;
         position: relative;
-        max-width: 2388px;
+        max-width: 1194px;
         overflow: hidden;
     }
     .wallpaper{
         width: 100%;
     }
     .wallpaper > img{
-        min-height: 1024px;
+        min-height: 894px;
         z-index: -1;
     }
     img{
@@ -52,10 +52,10 @@
         z-index: 2;
     }
     .p4{
-        bottom: -720px;
+        bottom: -40.5%;
     }
     .p5{
-        top: -940px;
+        top: -43%;
     }
     .content{
         width: 100%;
@@ -75,13 +75,13 @@
         visibility: hidden;
     }
     .fish-card > img{
-        width: 2200px;
+        width: 1000px;
         height: auto;
     }
     .textpage4{
         width: 100%;
         padding: 2rem 0;
-        padding-top: 6rem;
+        padding-top: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,15 +103,15 @@
     }
     .fish {
         position: relative;
-        flex: 1 0 640px;
-        height: 640px;
-        margin: 0 5rem;
+        flex: 1 0 320px;
+        height: 320px;
+        margin: 0 2.5rem;
         background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 10%, white 80%);
         border-radius: 100%;
         z-index: 1;
     }
     .fish > img{
-        width: 520px;
+        width: 240px;
         height: auto;
         position: absolute;
         top: 50%;
@@ -122,7 +122,7 @@
     .buttonpage4{
         display: flex;
         justify-content: center;
-        padding: 6rem 0;
+        padding: 4rem 0;
     }
     .buttonpage4 > button{
         color: #4CA6C1;
@@ -134,7 +134,7 @@
         flex-direction: column;
         align-items: end;
         gap: 1rem;
-        padding: 34rem 6rem;
+        padding: 14rem 4rem;
         color: white;
         z-index: 10;
     }
@@ -147,10 +147,10 @@
         color: white;
     }
 
-    h1{font-size: 13rem;z-index: 10;}
-    h2{font-size: 5rem;z-index: 10;}
-    h3{font-size: 3.5rem;z-index: 10;}
-    h4{font-size: 2.9rem;z-index: 10;}
+    h1{font-size: 6rem;z-index: 10;}
+    h2{font-size: 2rem;z-index: 10;}
+    h3{font-size: 1.8rem;z-index: 10;}
+    h4{font-size: 1.4rem;z-index: 10;}
 
     button{
         width: fit-content;
@@ -172,38 +172,38 @@
         position: absolute;
     }
     .b1{
-        width: 800px;
+        width: 200px;
         left: 0;
         top: 50%;
         /* transform: scaleX(-1); */
         animation:
-            bubbleX_1 4s linear infinite alternate,
-            bubbleY_1 3.5s linear infinite alternate;
+            bubbleX_1 4s linear infinite,
+            bubbleY_1 3.5s linear infinite;
     }
     .b2{
-        width: 750px;
+        width: 180px;
         right: 0;
         top: 50%;
         animation:
-            bubbleX_2 2.5s linear infinite alternate,
-            bubbleY_2 3s linear infinite alternate;
+            bubbleX_2 2.5s linear infinite,
+            bubbleY_2 3s linear infinite;
     }   
     @keyframes bubbleX_1{
         0%{transform: translateX(0);}
-        100%{transform: translateX(130px);}
+        100%{transform: translateX(60px);}
     }
     @keyframes bubbleX_2{
         0%{transform: translateX(0);}
-        100%{transform: translateX(-125px);}
+        100%{transform: translateX(-65px);}
     }
     @keyframes bubbleY_1{   
         0%{
             transform: translateY(-5);
-            opacity: 0.2;
+            opacity: 1;
         }
         100%{
-            transform: translateY(95px);
-            opacity: 1;
+            transform: translateY(-45px);
+            opacity: 0;
         }
     }
     @keyframes bubbleY_2{   
@@ -262,12 +262,12 @@
         0%{
             /* transform: rotate(-5deg);
             transform-origin: 100% 0%; */
-            transform: translateX(-150px);
+            transform: translateX(-120px);
         }
         100%{
             /* transform: rotate(5deg);
             transform-origin: 100% 0%; */
-            transform: translateX(150px);
+            transform: translateX(120px);
         }
     }
     @keyframes diver1{
@@ -275,7 +275,7 @@
             transform: translate(0px, 0px);
         }
         100%{
-            transform: translate(45px, -45px);
+            transform: translate(20px, -25px);
         }
     }
     @keyframes diver2{
@@ -283,7 +283,7 @@
             transform: translate(0px, 0px);
         }
         100%{
-            transform: translate(40px, 45px);
+            transform: translate(20px, 25px);
         }
     }
     @keyframes diver3{
@@ -291,7 +291,7 @@
             transform: translate(0px, 0px);
         }
         100%{
-            transform: translate(60px, -20px);
+            transform: translate(30px, -10px);
         }
     }
 
@@ -302,41 +302,41 @@
     .nemo1{
         top: 68%;
         left: 12%;
-        width: 140px;
+        width: 70px;
         transform: scaleX(-1) rotateZ(-20deg);
         animation: nemo 4s 1s ease-in-out infinite alternate;
     }
     .nemo2{
         top: 70%;
         left: 5%;
-        width: 200px;
+        width: 100px;
         transform: scaleX(-1) rotateZ(-45deg);
         animation: nemo 6s ease-in-out infinite alternate;
     }
     .angel1{
         top: 77%;
         left: 38%;
-        width: 80px;
+        width: 40px;
         animation: angel 5s ease-in-out infinite alternate ;
     }
     .angel2{
         top: 79%;   
         left: 32%;
-        width: 150px;
+        width: 75px;
         animation: angel 4.5s ease-in-out infinite alternate ;
 
     }
     .angel3{
         top: 82%;
         left: 39%;
-        width: 100px;
+        width: 50px;
         animation: angel 4s ease-in-out infinite alternate ;
 
     }
     .tiger1{
         top: 68%;
         left: 84%;
-        width: 250px;
+        width: 125px;
         transform: rotateZ(-5deg);
         animation: tiger 6s ease-in-out infinite alternate;
     }
@@ -346,7 +346,7 @@
             transform: translate(0,0,0) scaleX(-1) rotateZ(-30deg);
         }
         100%{
-            transform: translate(40px, -20px) scaleX(-1) rotateZ(-30deg);
+            transform: translate(20px, -10px) scaleX(-1) rotateZ(-30deg);
         }
     }
     @keyframes angel{
@@ -354,7 +354,7 @@
             transform: translate(0,0,0);
         }
         100%{
-            transform: translate(-40px, 45px);
+            transform: translate(-20px, 25px);
         }
     }
     @keyframes tiger{
@@ -362,36 +362,36 @@
             transform: translate(0,0,0) rotateZ(-5deg);
         }
         100%{
-            transform: translate(40px, 20px) rotateZ(0deg);
+            transform: translate(20px, 10px) rotateZ(0deg);
         }
     }
 
     .b3{
-        width: 300px;
+        width: 150px;
         top: 58%;
         left: 3%;
         animation: bubble 18s ease-in-out infinite alternate;
     }
     .b4{
-        width: 300px;
+        width: 150px;
         top: 35%;
         left: 25%;
         animation: diver1 7s linear infinite alternate;
     }
     .b5{
-        width: 300px;
+        width: 120px;
         top: 66%;
         left: 28%;
         animation: angel 8s ease-in-out infinite alternate;
     }
     .b6{
-        width: 300px;
+        width: 150px;
         top: 75%;
         left: 70%;
         animation: bubble 15s ease-in-out infinite alternate;
     }
     .b7{
-        width: 300px;
+        width: 100px;
         top: 65%;
         left: 90%;
         animation: bubble 9s ease-in-out infinite alternate;
