@@ -102,6 +102,8 @@
     animation: movebubble 3s linear infinite;
 }
 
+
+
 .bubble.two{
     animation: movebubble 5s linear infinite;
 }
@@ -560,4 +562,8 @@
 
 .turtleeiktua{
     animation: movefishmore 3s infinite alternate;
+}
+
+.bubble.jj{
+    aspect-ratio: 1/1.5;
 }
