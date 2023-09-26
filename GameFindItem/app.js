@@ -17,9 +17,7 @@ function myFunction_set() {
 
 
 var point = 0;
-var time = 60;
-// var time = 15;
-var topScore = 0;
+var time = 1;
 var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12"];
 
 document.getElementById('tutorial').style.visibility = 'visible';
@@ -34,8 +32,7 @@ function gameOver(e) {
   clearInterval(e);
 }
 
-function main(){
-    console.log("main___gogogo");
+function main(){ 
     document.getElementById("time").innerHTML = time > 9 ? '00:' + time : '00:0' + time;
      
     if (time != 0){
@@ -53,17 +50,12 @@ function main(){
     }
     else{
       document.getElementById("game_over").style.visibility = "visible";
-      topScore = calTopScore(topScore, point)
-      console.log(topScore);
-      document.getElementById("top-hit").innerHTML = topScore;
+      document.getElementById("score").innerHTML = point;
       removeAllChildNodes(document.getElementById("generate"))
       gameOver(start);
     }
 }
 
-function calTopScore(oldScore, newScore) {
-    return newScore > oldScore ? newScore : oldScore;
-}
 
 function collect(el){
     var bin = document.querySelector(bin);
@@ -78,8 +70,7 @@ function collect(el){
 
 function reset(){
   point = 0;
-  time = 60;
-  // time = 15;
+  time = 59;
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
 }
