@@ -228,6 +228,7 @@ button{
 
 .boulder{
     right: 0;
+    bottom: 0;
 }
 
 .frontback{
@@ -239,12 +240,15 @@ button{
 }
 
 .something2{
+    width: 125%;
+    left: -150px;
     top: -200px;
-    left: -280px;
+    
 }
 .something3{
     top: -100px;
-    left: -280px;
+    width: 125%;
+    left: -150px;
 }
 .line{
     right: 0;
@@ -252,34 +256,46 @@ button{
 }
 
 .fishback1{
-    right: 200px;
-    top: 900px;
+    right: 100px;
+    top: 400px;
+    width: 20%;
+    opacity: 0.3;
 }
 
 .fishback2{
-    right: 500px;
-    top: 200px;
+    right: 400px;
+    top: 100px;
+    width: 20%;
 }
 
 .fishback3{
     left: 100px;
-    top: 400px;
+    top: 250px;
+    width: 20%;
 }
 
 .fishback3-1{
-    right: 100px;
-    top: 1100px;
+    right: 150px;
+    top: 450px;
+    width: 20%;
 }
 
 .fishback3-2{
-    right: 350px;
-    top: 1200px;
+    right: 100px;
+    top: 400px;
+    width: 20%;
 }
 
 .coralll{
     right: 0;
-    bottom: 100px;
+    bottom: 50px;
+    width: 15%;
 }
+.turtleeiktua{
+    bottom: 50px;
+    left: 300px;
+}
+
 
 /* .bubblebubjai{
     

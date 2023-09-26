@@ -558,9 +558,7 @@
   }
 
 .turtleeiktua{
+    width: 50%;
     animation: movefishmore 3s infinite alternate;
 }
 
-.bubble.jj{
-    aspect-ratio: 1/1.5;
-}
