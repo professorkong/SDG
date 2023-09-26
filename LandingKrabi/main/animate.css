@@ -44,16 +44,16 @@
 
 .bird{
     background-image: url('../asset/bird.png');
-    width: 250px;
-    aspect-ratio: 1/1;
+    width: 180px;
+    aspect-ratio: 187/162;
     animation: movebird 17s infinite linear;
 }
 
 .smallbird{
     background-image: url('../asset/bird.png');
-    width: 150px;
+    width: 100px;
     opacity: 0.5;
-    aspect-ratio: 1/1;
+    aspect-ratio: 187/162;
     animation: movebird 10s infinite ease-in-out;
 }
 
@@ -98,7 +98,7 @@
 
 .bubble{
     background-image: url('../asset/bubble2.png');
-    aspect-ratio: 1/1;
+    aspect-ratio: 2/3;
     animation: movebubble 3s linear infinite;
 }
 
@@ -163,8 +163,8 @@
 
 .fish2{
     background-image: url('../asset/fish2.png');
-    width: 200px;
-    aspect-ratio: 1/1;
+    width: 120px;
+    aspect-ratio: 199/49;
 }
 
 .fish2.one{
@@ -189,7 +189,7 @@
 
 .brokeCoral1{
     background-image: url('../asset/broke\ coral1.png');
-    aspect-ratio: 1/1;
+    aspect-ratio: 135/121;
 }
 .brokeCoral1.one{
     animation: 
@@ -204,7 +204,7 @@
 
 .brokeCoral2{
     background-image: url('../asset/broke\ coral2.png');
-    aspect-ratio: 1/1;
+    aspect-ratio: 56/46;
 }
 .brokeCoral2.one{
     animation: 
@@ -224,27 +224,27 @@
 
 .brokeCoral3{
     background-image: url('../asset/broke\ coral3.png');
-    aspect-ratio: 1/1;
+    aspect-ratio: 14/15;
     animation: 
     brokeCoralLeftDown 4s 1s infinite,
     brokeCoralShow 4s 1s infinite;
 }
 .brokeCoral4{
     background-image: url('../asset/broke\ coral4.png');
-    width: 100px;
+    width: 80px;
     left: 325px;
-    bottom: 80px;
-    aspect-ratio: 1/1;
+    bottom: 100px;
+    aspect-ratio: 110/103;
     animation: 
     brokeCoralLeftUp 7s 2s infinite,
     brokeCoralShow 7s 2s infinite;
 }
 .brokeCoral5{
     background-image: url('../asset/broke\ coral5.png');
-    width: 150px;
-    left: 325px;
-    bottom: 150px;
-    aspect-ratio: 1/1;
+    width: 90px;
+    left: 350px;
+    bottom: 170px;
+    aspect-ratio: 43/34;
     animation: 
     brokeCoralRightUp 7s 4s infinite,
     brokeCoralShow 7s 4s infinite;
