@@ -102,6 +102,10 @@
     animation: movebubble 3s linear infinite;
 }
 
+.bubble.jj{
+    aspect-ratio: 1/1.5;
+}
+
 .bubble.two{
     animation: movebubble 5s linear infinite;
 }

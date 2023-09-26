@@ -37,27 +37,25 @@ body{
     flex-direction: column;
 }
 
-h1{font-size: 5.5rem; line-height: 130%;}
-h2{font-size: 2.5rem; line-height: 130%;}
-h3{font-size: 1.7rem; line-height: 130%;}
-h4{font-size: 1.5rem; line-height: 130%;}
+h1{font-size: 13rem;}
+h2{font-size: 5rem;}
+h3{font-size: 3.5rem;}
+h4{font-size: 2.9rem;}
 
 .content{
     width: 100%;
-    max-width: 100%;
+    max-width: 80%;
     height: 100%;
     display: flex;
-    /* แนวตั้ง */
     justify-content: center;
-    /* แนวนอน */
     align-items: start;
-    /* deafualt บน */
+    /* deafualt ชิดซ้าย */
     flex-direction: column;
     z-index: 2;
 }
 button{
     background: hsl(1, 100%, 100%, 30%);
-    padding: .5rem 1.5rem;
+    padding: 1rem 3rem;
     border-radius: 60px;
     border: none;
     cursor: pointer;
@@ -125,6 +123,8 @@ button{
 
 .item{
     position: absolute;
+    width: 100%;
+    
 }
 
 .front_dirty, .sand{
@@ -132,45 +132,53 @@ button{
 }
 
 .back_kelp_1{
-    bottom: 300px;
-    left: 500px;
+    width: 15%;
+    bottom: 150px;
+    left: 250px;
 }
 
 .back_kelp_2{
-    bottom: 250px;
-    left: 900px;
+    width: 15%;
+    bottom: 100px;
+    left: 450px;
 }
 
 .back_kelp_3{
-    bottom: 220px;
-    right: 200px;
+    width: 15%;
+    bottom: 100px;
+    right: 100px;
 }
 
 .back_coral_1{
-    bottom: 230px;
-    right: 700px;
+    width: 20%;
+    bottom: 120px;
+    right: 350px;
 }
 
 .back_coral_2{
-    bottom: 150px;
-    right: 400px;
+    width: 15%;
+    bottom: 100px;
+    right: 170px;
 }
 
 .back_coral_3{
-    bottom: 830px;
+    width: 20%;
+    bottom: 425px;
     left: 0px;
 }
 
 .back_fish_1{
+    width: 25%;
     opacity: 0.2;
-    top: 220px;
-    left: 220px;
+    top: 120px;
+    left: 120px;
 
 }
 
 .back_fish_2{
+    width: 25%;
     opacity: 0.2;
-    top: 200px;
+    top: 100px;
     right: 200px;
 
 }
@@ -182,35 +190,40 @@ button{
 }
 
 .tube{
-    bottom: 150px;
+    bottom: 50px;
     right: 0;
+    width: 15%;
 }
 
 
 .rightleg{
-    top: 500px;
+    top: 200px;
+    width: 50%;
 }
-
 .body{
-    top: 700px;
-    left: 950px;
+    top: 320px;
+    left: 450px;
+    width: 25%;
 }
 
 .handright{
-    top: 870px;
-    left: 1200px;
+    top: 400px;
+    left: 550px;
+    width: 25%;
 }
 
 .handleft{
     top: -50px;
 }
 .namha{
-    left: 1210px;
-    top: 670px;
+    left: 610px;
+    top: 335px;
+    width: 15%; 
 }
 .hair{
-    left: 1050px;
-    top: 580px; 
+    left: 555px;
+    top: 300px;
+    width: 15%; 
 }
 
 .boulder{
