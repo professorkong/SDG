@@ -220,7 +220,7 @@ body {
 .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     margin-top: 2rem;
     margin-bottom: 6rem;
     column-gap: 15rem;
@@ -261,6 +261,7 @@ body {
     text-align: center;
     align-items: flex-start;
 }
+
 
 h1{
     font-size: 3rem;
