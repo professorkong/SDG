@@ -1,0 +1,356 @@
+.wallpaper{
+    width: 100%;
+}
+.wallpaper > img{
+    min-height: 894px;
+    z-index: -1;
+}
+img{
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.betweenpage{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0%;
+    z-index: 2;
+}
+.p4{
+    bottom: -40.5%;
+}
+.p5{
+    top: -43%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fish-card{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    /* ซ่อนก่อน กดแล้วค่อยแสดง */
+}
+.fish-card > img{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+}
+.textpage4{
+    width: 100%;
+    padding: 2rem 0;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fish-gallery {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 200px;
+    margin-bottom: 2rem;
+    left: -200px;
+    z-index: 10;
+    /* transition: 0s; */
+}
+.fish {
+    position: relative;
+    height: 400px;
+    aspect-ratio: 1/1;
+    padding: 2rem;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 10%, white 80%);
+    border-radius: 100%;
+    z-index: 3;
+}
+.fish > img{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+ /* page 5  */
+
+.textpage5{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    padding: 14rem 4rem;
+    color: white;
+    z-index: 10;
+}
+.textpage5 > div{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.textpage5  > button{
+    color: white;
+}
+
+/* animate */
+
+button{
+    transition: all .5s;
+}
+
+.animate{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble{
+    position: absolute;
+}
+.b1{
+    width: 200px;
+    left: 0;
+    top: 50%;
+    /* transform: scaleX(-1); */
+    animation:
+        bubbleX_1 4s linear infinite,
+        bubbleY_1 3.5s linear infinite;
+}
+.b2{
+    width: 180px;
+    right: 0;
+    top: 50%;
+    animation:
+        bubbleX_2 2.5s linear infinite,
+        bubbleY_2 3s linear infinite;
+}   
+@keyframes bubbleX_1{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(60px);}
+}
+@keyframes bubbleX_2{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-65px);}
+}
+@keyframes bubbleY_1{   
+    0%{
+        transform: translateY(-5);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-45px);
+        opacity: 0;
+    }
+}
+@keyframes bubbleY_2{   
+    0%{
+        transform: translateY(-5);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(95px);
+        opacity: 1;
+    }
+}
+
+.fish-bg{
+    position: absolute;
+    z-index: 1;
+    animation: fishmove 10s linear infinite;
+}
+.light{
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    right: -100px;
+    opacity: .3;
+    animation: lightmove 5s linear infinite alternate;
+}
+.diver{
+    position: absolute;
+    z-index: 2;
+}
+.d1{
+    animation: diver1 5s linear infinite alternate;
+}
+.d2{
+    animation: diver2 7s linear infinite alternate;
+}
+.d3{
+    animation: diver3 8s linear infinite alternate;
+}
+
+@keyframes fishmove{
+    0%{
+        opacity: 0;
+        transform: translate(200px, 200px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100px, -100px);
+    }
+}
+
+@keyframes lightmove{
+    0%{
+        /* transform: rotate(-5deg);
+        transform-origin: 100% 0%; */
+        transform: translateX(-120px);
+    }
+    100%{
+        /* transform: rotate(5deg);
+        transform-origin: 100% 0%; */
+        transform: translateX(120px);
+    }
+}
+@keyframes diver1{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(20px, -25px);
+    }
+}
+@keyframes diver2{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(20px, 25px);
+    }
+}
+@keyframes diver3{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(30px, -10px);
+    }
+}
+
+.fish-dec{
+    position: absolute;
+    z-index: 2;
+}
+.nemo1{
+    top: 68%;
+    left: 12%;
+    width: 70px;
+    transform: scaleX(-1) rotateZ(-20deg);
+    animation: nemo 4s 1s ease-in-out infinite alternate;
+}
+.nemo2{
+    top: 70%;
+    left: 5%;
+    width: 100px;
+    transform: scaleX(-1) rotateZ(-45deg);
+    animation: nemo 6s ease-in-out infinite alternate;
+}
+.angel1{
+    top: 77%;
+    left: 38%;
+    width: 40px;
+    animation: angel 5s ease-in-out infinite alternate ;
+}
+.angel2{
+    top: 79%;   
+    left: 32%;
+    width: 75px;
+    animation: angel 4.5s ease-in-out infinite alternate ;
+
+}
+.angel3{
+    top: 82%;
+    left: 39%;
+    width: 50px;
+    animation: angel 4s ease-in-out infinite alternate ;
+
+}
+.tiger1{
+    top: 68%;
+    left: 84%;
+    width: 125px;
+    transform: rotateZ(-5deg);
+    animation: tiger 6s ease-in-out infinite alternate;
+}
+
+@keyframes nemo{
+    0%{
+        transform: translate(0,0,0) scaleX(-1) rotateZ(-30deg);
+    }
+    100%{
+        transform: translate(20px, -10px) scaleX(-1) rotateZ(-30deg);
+    }
+}
+@keyframes angel{
+    0%{
+        transform: translate(0,0,0);
+    }
+    100%{
+        transform: translate(-20px, 25px);
+    }
+}
+@keyframes tiger{
+    0%{
+        transform: translate(0,0,0) rotateZ(-5deg);
+    }
+    100%{
+        transform: translate(20px, 10px) rotateZ(0deg);
+    }
+}
+
+.b3{
+    width: 150px;
+    top: 58%;
+    left: 3%;
+    animation: bubble 18s ease-in-out infinite alternate;
+}
+.b4{
+    width: 150px;
+    top: 35%;
+    left: 25%;
+    animation: diver1 7s linear infinite alternate;
+}
+.b5{
+    width: 120px;
+    top: 66%;
+    left: 28%;
+    animation: angel 8s ease-in-out infinite alternate;
+}
+.b6{
+    width: 150px;
+    top: 75%;
+    left: 70%;
+    animation: bubble 15s ease-in-out infinite alternate;
+}
+.b7{
+    width: 100px;
+    top: 65%;
+    left: 90%;
+    animation: bubble 9s ease-in-out infinite alternate;
+}
+@keyframes bubble{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(20px, -30px);
+    }
+    100%{
+        transform: translate(0,-60px);
+    }
+}
