@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="items-container">
+        <div class="item"> </div>
+        <div class="item"></div>
+        <div class="item" style="width: 150%;">  </div>
+        <div class="item"> </div>
+        <div class="item"></div>
+        <div class="item" style="width: 150%;"> </div>
+    </div>
+
+    <style>
+        .container{
+            background: #333;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding:8px;
+            box-sizing:border-box;
+            height: 500px;
+            overflow:auto;
+            }
+            .item{
+            width: 90%;
+            height: 60px;
+            margin:60px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:#FFFFFF;
+            }
+            .item:nth-child(even){
+            background: #30a57f;
+            }
+            .item:nth-child(odd){
+            background:#c17a38;
+            }
+    </style>
+
+    <script>
+        const container = document.querySelector('#items-container');
+                
+                let startX;
+                let scrollLeft;
+                let isDown;
+                
+                container.addEventListener('mousedown',e => mouseIsDown(e));  
+                container.addEventListener('mouseup',e => mouseUp(e))
+                container.addEventListener('mouseleave',e=>mouseLeave(e));
+                container.addEventListener('mousemove',e=>mouseMove(e));
+                
+                function mouseIsDown(e){
+                  isDown = true;
+                  startX = e.pageX - container.offsetLeft;
+                  scrollLeft = container.scrollLeft;
+                }
+                function mouseUp(e){
+                  isDown = false;
+                }
+                function mouseLeave(e){
+                  isDown = false;
+                }
+                function mouseMove(e){
+                  if(isDown){
+                    e.preventDefault();
+                    const x = e.pageX - container.offsetLeft;
+                    const walkX = x - startX;
+                    container.scrollLeft = scrollLeft - walkX;
+                  }
+                }
+    </script>
+</body>
+</html>

@@ -39,6 +39,7 @@ img{
     justify-content: center;
     align-items: center;
     visibility: hidden;
+    transition: 1s;
     /* ซ่อนก่อน กดแล้วค่อยแสดง */
 }
 .fish-card > img{
@@ -59,11 +60,11 @@ img{
     display: grid;
     grid-auto-flow: column;
     gap: 200px;
-    margin-bottom: 2rem;
     left: -200px;
-    z-index: 10;
-    /* transition: 0s; */
+    white-space: nowrap;
+    overflow: auto;
 }
+
 .fish {
     position: relative;
     height: 400px;

@@ -40,7 +40,7 @@
                 <div class="fish" data-fishid="13" onclick="showFishData(this)"></div>
             </div>
 
-            <div class="center" style="margin-bottom: 10%;">
+            <div class="center" style="margin: 2% 0 5% 0;">
                 <button onClick="document.getElementById('page5').scrollIntoView({block: 'end'});">
                     <h4>ภัยคุกคาม</h4>
                 </button>
@@ -239,36 +239,35 @@
             autoScroll = setInterval(scrolling, delay) //ลูปต่อ
         }
 
-        let isDown = false;
+        // drag scroll
         let startX;
         let scrollLeft;
-
-        fishgal.addEventListener('mousedown', (e) => {
+        let isDown;
+                
+        fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
+        fishgal.addEventListener('mouseup',e => mouseUp(e))
+        fishgal.addEventListener('mouseleave',e=>mouseLeave(e));
+        fishgal.addEventListener('mousemove',e=>mouseMove(e));
+                
+        function mouseIsDown(e){
             isDown = true;
-            fishgal.classList.add('active');
             startX = e.pageX - fishgal.offsetLeft;
             scrollLeft = fishgal.scrollLeft;
-        });
-
-        // เอาเมาส์ออก
-        fishgal.addEventListener('mouseleave', () => {
+        }
+        function mouseUp(e){
             isDown = false;
-            fishgal.classList.remove('active');
-        });
-            fishgal.addEventListener('mouseup', () => {
+        }
+        function mouseLeave(e){
             isDown = false;
-            fishgal.classList.remove('active');
-        });
-        
-        fishgal.addEventListener('mousemove', (e) => {
-            if(!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - fishgal.offsetLeft;
-            const walk = (x - startX) * 1; //scroll-fast
-            // fishgal.scrollLeft = scrollLeft - walk;
-            fishgal.style.left = `${walk}px`
-            console.log(walk);
-        });
+        }
+        function mouseMove(e){
+            if(isDown){
+                e.preventDefault();
+                const x = e.pageX - fishgal.offsetLeft;
+                const walkX = x - startX;
+                fishgal.scrollLeft = scrollLeft - walkX;
+            }
+        }
 
         // const container = document.querySelector(".fish-gallery");
         // const children = document.querySelector(".fish");
