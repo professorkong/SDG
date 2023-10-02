@@ -19,7 +19,7 @@
         <div class="betweenpage p4">
             <img src="../asset/scene5/scene4-5.png" alt="">
         </div>
-        <div class="content">
+        <div class="contentdew">
             <div class="textpage4">
                 <h1 style="color:var(--lightGreenH1);">ปลาท้องถิ่น</h1>
             </div>
@@ -71,7 +71,7 @@
                     <h4>แต่ทว่าพวกเขาโพสต์ท่านั่งบนแนวปะการังนี่สิ!</h4>
                     <h4>นั่นสามารถทำให้ปะการังเสียหายได้เลยนะ</h4>
                 </div>
-                <button onClick="document.getElementById('page4').scrollIntoView();">
+                <button onClick="document.getElementById('page6').scrollIntoView();">
                     <h4>ฝึกหลบหลีกปะการัง</h4>
                 </button>
             </div>
@@ -190,7 +190,7 @@
         }
         // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
-        // let autoScroll = setInterval(scrolling, delay)
+        let autoScroll = setInterval(scrolling, delay)
         let totalScroll = 0
         let nowScroll = 0 // เก็บตน.ปัจจุบัน ใช้กับฟังชันที่หยุดลูป
 
@@ -199,19 +199,19 @@
 
             //ถ้าจบลูป
             if(totalScroll == fishLen + 1){
+                fishgal.style.scrollBehavior = "auto";
                 console.log('last')
                 fishgal.style.transition = '0s 0s'
-                fishgal.style.left = '-200px'
+                fishgal.scrollLeft = 0
                 clearInterval(autoScroll)
                 totalScroll = 0
                 autoScroll = setInterval(scrolling, delay)
             }
             else{
-                // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
-                // ให้ฝั่งซ้ายกินไปครึ่งฟอง = -200px
-                let newleft = totalScroll * 600 * -1 - 200
-                fishgal.style.left = `${newleft}px`
+                fishgal.style.scrollBehavior = "smooth";
                 fishgal.style.transition = '1s'
+                // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
+                fishgal.scrollLeft = totalScroll * 600
             }  
         }
 
@@ -268,53 +268,6 @@
                 fishgal.scrollLeft = scrollLeft - walkX;
             }
         }
-
-        // const container = document.querySelector(".fish-gallery");
-        // const children = document.querySelector(".fish");
-
-        // let [firing, currPos, prevX] = [false, 0, 0];
-
-        // container.addEventListener("mousedown", e => {
-        //     prevX = e.clientX;
-        //     e.preventDefault();
-        //     firing = true;
-        // });
-
-        // container.addEventListener("mousemove", ({
-        //     clientX: newX
-        // }) => {
-        //     if (!firing) return;
-            
-        //     let newPos = currPos - (newX - prevX);
-        //     let availableOffset = container.scrollWidth - container.clientWidth;
-            
-        //     if (newPos > availableOffset) {
-        //         elementToCut = container.querySelector('.fish:first-child')
-        //         container.appendChild(elementToCut)
-        //         newPos = availableOffset - elementToCut.offsetWidth;
-        //         elementToCut.removeChild
-        //     }
-          
-        //     if (newPos < 0) {
-        //         firstElement = container.querySelector('.fish:first-child')
-        //         elementToCut = container.querySelector('.fish:last-child')
-        //         container.insertBefore(elementToCut, firstElement);
-        //         newPos = 0 + elementToCut.offsetWidth;
-        //         elementToCut.removeChild
-        //     }
-          
-        //     prevX = newX;
-        //     container.scrollTo(newPos, 0);
-        //     currPos = newPos;
-        // })
-
-        // container.addEventListener("mouseup", () => {
-        //   firing = false;
-        // })
-
-        // container.addEventListener("mouseleave", () => {
-        //   firing = false;
-        // })
     </script>
 </body>
 </html>
