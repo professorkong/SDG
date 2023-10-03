@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <div class=" fish-card" onclick="closeFishData()">
+        <div class="fish-card" onclick="closeFishData(this)">
             <div class="asset left arrow"> left </div>
             <div class="data-card">
                 <img src="../asset/fish/data/fish_data1.png" alt="">        
@@ -189,9 +189,9 @@
         const fishgal = document.querySelector('.fish-gallery')
         const fishLen = bubbles.length
 
-        for(let i = 0; i < 3; i++){
-            fishgal.insertAdjacentHTML('beforeend', bubbles[i].outerHTML)
-        }
+        // for(let i = 0; i < 3; i++){
+        //     fishgal.insertAdjacentHTML('beforeend', bubbles[i].outerHTML)
+        // }
         // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
         let showindData = 0
@@ -220,23 +220,24 @@
         // show data card
         function showFishData(el){
             showindData = 1
-            clearInterval(autoScroll) //หยุดลูป
+            // clearInterval(autoScroll) //หยุดลูป
 
             nowScroll = totalScroll //เก็บปลนปจบ.
             let data = el.dataset
             let body = document.querySelector('body')
             let card = document.querySelector('.data-card')
+            let cardfish = document.querySelector('.fish-card')
             let html = `<img src="${fishs[data.fishid-1].fish_data}">`
 
             body.style.overflow = 'hidden'
-            card.style.visibility = 'visible'
+            cardfish.style.visibility = 'visible'
             card.innerHTML = html    
         }
 
 
         // click card to close
         function closeFishData(el){
-            showindData = 0
+            // showindData = 0
             let body = document.querySelector('body')
             let card = document.querySelector('.fish-card')
 
@@ -244,7 +245,7 @@
             card.style.visibility = 'hidden'
 
             console.log('setauto from closeData')
-            autoScroll = setInterval(scrolling, delay)
+            // autoScroll = setInterval(scrolling, delay)
         }
 
         // // drag scroll 
@@ -303,16 +304,18 @@
             prevX = e.clientX;
             e.preventDefault();
             firing = true;
+            console.log('mouseDown')
         });
 
         container.addEventListener("mousemove", ({
             clientX: newX
         }) => {
+            console.log('move')
             if (!firing) return;
             
             let newPos = currPos - (newX - prevX);
             let availableOffset = container.scrollWidth - container.clientWidth;
-            
+            console.log('move drag')
             if (newPos > availableOffset) {
                 elementToCut = container.querySelector('.fish:first-child')
                 container.appendChild(elementToCut)

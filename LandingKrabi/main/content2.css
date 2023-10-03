@@ -44,8 +44,13 @@ img{
     display: grid;
     grid-auto-flow: column;
     gap: 200px;
-    left: -200px;
-    overflow: auto;
+    /* left: -200px; */
+    flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     scroll-behavior: smooth;
 }
 
@@ -78,8 +83,8 @@ img{
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
-    visibility: hidden;
     transition: 1s;
+    visibility: hidden;
     /* ซ่อนก่อน กดแล้วค่อยแสดง */
 }
 .data-card > img{
