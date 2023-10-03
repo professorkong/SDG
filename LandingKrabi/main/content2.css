@@ -74,20 +74,19 @@ img{
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
     visibility: hidden;
     transition: 1s;
     /* ซ่อนก่อน กดแล้วค่อยแสดง */
 }
-.fish-card > img{
-    width: 1000px;
+.data-card > img{
+    width: 100%;
     height: auto;
     margin: auto;
 }
-
 
  /* page 5  */
 
@@ -360,3 +359,4 @@ img{
         opacity: 1;
     }
 }
+

@@ -47,8 +47,13 @@
             </div>
         </div>
 
-        <div class="content fish-card" onclick="closeFishData()">
-            <img src="../asset/fish/data/fish_data1.png" alt="">        </div>
+        <div class=" fish-card" onclick="closeFishData()">
+            <div class="asset left arrow"> left </div>
+            <div class="data-card">
+                <img src="../asset/fish/data/fish_data1.png" alt="">        
+            </div>
+            <div class="asset right arrow"> right</div>
+        </div>
 
     </div>
 
@@ -190,44 +195,44 @@
         // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
         let showindData = 0
-        let autoScroll = setInterval(scrolling, delay)
+        // let autoScroll = setInterval(scrolling, delay)
         let totalScroll = 0
         let nowScroll = 0 // เก็บตน.ปัจจุบัน ใช้กับฟังชันที่หยุดลูป
 
-        function scrolling(){
-            totalScroll++ // นับปลา
+        // function scrolling(){
+        //     totalScroll++ // นับปลา
 
-            //ถ้าจบลูป
-            if(totalScroll == fishLen + 1){
-                fishgal.style.scrollBehavior = "auto";
-                fishgal.scrollLeft = 0
-                clearInterval(autoScroll)
-                totalScroll = 0
-                autoScroll = setInterval(scrolling, delay)
-            }
-            else{
-                fishgal.style.scrollBehavior = "smooth";
-                // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
-                fishgal.scrollLeft = totalScroll * 600
-            }  
-        }
+        //     //ถ้าจบลูป
+        //     if(totalScroll == fishLen + 1){
+        //         fishgal.style.scrollBehavior = "auto";
+        //         fishgal.scrollLeft = 0
+        //         clearInterval(autoScroll)
+        //         totalScroll = 0
+        //         autoScroll = setInterval(scrolling, delay)
+        //     }
+        //     else{
+        //         fishgal.style.scrollBehavior = "smooth";
+        //         // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
+        //         fishgal.scrollLeft = totalScroll * 600
+        //     }  
+        // }
 
         // show data card
         function showFishData(el){
             showindData = 1
-            console.log(showindData)
             clearInterval(autoScroll) //หยุดลูป
 
             nowScroll = totalScroll //เก็บปลนปจบ.
             let data = el.dataset
             let body = document.querySelector('body')
-            let card = document.querySelector('.fish-card')
+            let card = document.querySelector('.data-card')
             let html = `<img src="${fishs[data.fishid-1].fish_data}">`
 
             body.style.overflow = 'hidden'
             card.style.visibility = 'visible'
             card.innerHTML = html    
         }
+
 
         // click card to close
         function closeFishData(el){
@@ -242,48 +247,99 @@
             autoScroll = setInterval(scrolling, delay)
         }
 
-        // drag scroll 
-        // cannot test inspect mode !!!
-        let startX;
-        let scrollLeft;
-        let isDown;
+        // // drag scroll 
+        // // cannot test inspect mode !!!
+        // let startX;
+        // let scrollLeft;
+        // let isDown;
                 
-        fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
-        fishgal.addEventListener('mouseup',e => mouseUp(e))
-        fishgal.addEventListener('mousemove',e=>mouseMove(e));
-        // ipad ไม่น่ามี mouse leave
+        // fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
+        // fishgal.addEventListener('mouseup',e => mouseUp(e))
+        // fishgal.addEventListener('mousemove',e=>mouseMove(e));
+        // // ipad ไม่น่ามี mouse leave
                 
-        function mouseIsDown(e){
-            isDown = true;
-            startX = e.pageX - fishgal.offsetLeft;
-            scrollLeft = fishgal.scrollLeft;
+        // function mouseIsDown(e){
+        //     isDown = true;
+        //     startX = e.pageX - fishgal.offsetLeft;
+        //     scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
 
-            console.log('CLEAR auto from mouseDown')
-            clearInterval(autoScroll) //หยุดลูป
-        }
+        //     console.log('CLEAR auto from mouseDown')
+        //     clearInterval(autoScroll) //หยุดลูป
+        // }
 
-        function mouseUp(e){
-            isDown = false;
-            if(!showindData){
-                console.log('setauto from mouseUp')
-                autoScroll = setInterval(scrolling, delay)
+        // function mouseUp(e){
+        //     isDown = false;
+        //     if(!showindData){
+        //         console.log('setauto from mouseUp')
+        //         autoScroll = setInterval(scrolling, delay)
+        //     }
+        // }
+
+        // function mouseMove(e){
+        //     console.log('current left', fishgal.scrollLeft)
+        //     console.log('just move')
+        //     if(isDown){ //click and drag
+        //         console.log('mouse drag')
+        //         clearInterval(autoScroll) //หยุดลูปก่อน
+
+        //         e.preventDefault();
+        //         const x = e.pageX - fishgal.offsetLeft;
+        //         const walkX = x - startX;
+        //         fishgal.scrollLeft = scrollLeft - walkX;  
+        //         console.log('current left', fishgal.scrollLeft)
+              
+        //         totalScroll = Math.floor((scrollLeft) / 600)
+        //     }
+        // }
+
+        // !!! Drag Dew
+
+        const container = document.querySelector(".fish-gallery");
+        const children = document.querySelector(".fish");
+
+        let [firing, currPos, prevX] = [false, 0, 0];
+
+        container.addEventListener("mousedown", e => {
+            prevX = e.clientX;
+            e.preventDefault();
+            firing = true;
+        });
+
+        container.addEventListener("mousemove", ({
+            clientX: newX
+        }) => {
+            if (!firing) return;
+            
+            let newPos = currPos - (newX - prevX);
+            let availableOffset = container.scrollWidth - container.clientWidth;
+            
+            if (newPos > availableOffset) {
+                elementToCut = container.querySelector('.fish:first-child')
+                container.appendChild(elementToCut)
+                newPos = availableOffset - elementToCut.offsetWidth;
+                elementToCut.removeChild
             }
-        }
-
-        function mouseMove(e){
-            console.log('just move')
-            if(isDown){ //click and drag
-                console.log('mouse drag')
-                clearInterval(autoScroll) //หยุดลูปก่อน
-
-                e.preventDefault();
-                const x = e.pageX - fishgal.offsetLeft;
-                const walkX = x - startX;
-                fishgal.scrollLeft = scrollLeft - walkX;
-                
-                totalScroll = Math.floor((scrollLeft) / 600)
+          
+            if (newPos < 0) {
+                firstElement = container.querySelector('.fish:first-child')
+                elementToCut = container.querySelector('.fish:last-child')
+                container.insertBefore(elementToCut, firstElement);
+                newPos = 0 + elementToCut.offsetWidth;
+                elementToCut.removeChild
             }
-        }
+          
+            prevX = newX;
+            container.scrollTo(newPos, 0);
+            currPos = newPos;
+        })
+
+        container.addEventListener("mouseup", () => {
+          firing = false;
+        })
+
+        container.addEventListener("mouseleave", () => {
+          firing = false;
+        })
 
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
