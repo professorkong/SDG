@@ -188,38 +188,17 @@
 
         let delay = 2000
         const fishgal = document.querySelector('.fish-gallery')
-        const fishLen = bubbles.length
-
-        // for(let i = 0; i < 3; i++){
-        //     fishgal.insertAdjacentHTML('beforeend', bubbles[i].outerHTML)
-        // }
-        // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
         let showindData = 0
         let autoScroll = setInterval(scroll2, delay)
-        let totalScroll = 0
-        let nowScroll = 0 // เก็บตน.ปัจจุบัน ใช้กับฟังชันที่หยุดลูป
-
-        // function scrolling(){
-        //     totalScroll++ // นับปลา
-
-        //     //ถ้าจบลูป
-        //     if(totalScroll == fishLen + 1){
-        //         fishgal.style.scrollBehavior = "auto";
-        //         fishgal.scrollLeft = 0
-        //         clearInterval(autoScroll)
-        //         totalScroll = 0
-        //         autoScroll = setInterval(scrolling, delay)
-        //     }
-        //     else{
-        //         fishgal.style.scrollBehavior = "smooth";
-        //         // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
-        //         fishgal.scrollLeft = totalScroll * 600
-        //     }  
-        // }
 
         function scroll2(){
-            fishgal.scrollLeft = fishgal.scrollLeft+600
+            fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 850
+            if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ //   ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
+                elementToCut = bubbles[numfishPlus % 12]
+                numfishPlus++
+                $(fishgal).append($(elementToCut).clone())
+            }
         }
 
         // show data card
@@ -227,7 +206,6 @@
             showindData = 1
             clearInterval(autoScroll) //หยุดลูป
 
-            nowScroll = totalScroll //เก็บปลนปจบ.
             let data = el.dataset
             let body = document.querySelector('body')
             let card = document.querySelector('.data-card')
@@ -263,7 +241,6 @@
                 
         fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
         fishgal.addEventListener('mouseup',e => mouseUp(e))
-        fishgal.addEventListener('mousemove',e=>mouseMove(e));
         fishgal.addEventListener('touchend',e=>touchEnd(e));
         // ipad ไม่น่ามี mouse leave
                 
@@ -290,28 +267,19 @@
 
         let numfishPlus = 0
         let numfishDown = 12
-        let reverseBub = bubbles
-        console.log(reverseBub)
-        // reverseBub.reverse()
         fishgal.scrollLeft = 1500
         let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
 
 
         function touchEnd(e){
-            console.log('touch end')
 
             if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ //   ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
                 elementToCut = bubbles[numfishPlus % 12]
                 numfishPlus++
-                // elementToCut = fishgal.querySelector('.fish:first-child')
-                $(fishgal).append($(elementToCut).clone()) // jquery append in origin position
-                // fishgal.appendChild(elementToCut)
-                // elementToCut.removeChild
-                // $(elementToCut).remove();
+                $(fishgal).append($(elementToCut).clone())
             }
+
             if(fishgal.scrollLeft < 400){ //   ดึงท้ายมาต่อหน้า
-                console.log('in first')
-                
                 lastleft = fishgal.scrollLeft
 
                 elementToCut = bubbles[numfishDown]
@@ -322,67 +290,8 @@
                 $(fishgal).prepend($(elementToCut).clone())
 
                 fishgal.scrollLeft = lastleft + 600
-                console.log(lastleft, elementToCut.clientWidth)
-                
-                // firstElement = fishgal.querySelector('.fish:first-child')
-                // elementToCut = fishgal.querySelector('.fish:last-child')
-                // fishgal.insertBefore(elementToCut, firstElement);
-                // elementToCut.removeChild
             }
         }
-
-        
-
-        // !!! Drag Dew
-
-        // const container = document.querySelector(".fish-gallery");
-        // const children = document.querySelector(".fish");
-
-        // let [firing, currPos, prevX] = [false, 0, 0];
-
-        // container.addEventListener("mousedown", e => {
-            // prevX = e.clientX;
-            // e.preventDefault();
-            // firing = true;
-        //     console.log('mouseDown')
-        // });
-
-        // container.addEventListener("mousemove", ({
-        //     clientX: newX
-        // }) => {
-        //     console.log('move')
-        //     if (!firing) return;
-            
-        //     let newPos = currPos - (newX - prevX);
-        //     let availableOffset = container.scrollWidth - container.clientWidth;
-        //     console.log('move drag')
-        //     if (newPos > availableOffset) {
-        //         elementToCut = container.querySelector('.fish:first-child')
-        //         container.appendChild(elementToCut)
-        //         newPos = availableOffset - elementToCut.offsetWidth;
-        //         elementToCut.removeChild
-        //     }
-          
-        //     if (newPos < 0) {
-        //         firstElement = container.querySelector('.fish:first-child')
-        //         elementToCut = container.querySelector('.fish:last-child')
-        //         container.insertBefore(elementToCut, firstElement);
-        //         newPos = 0 + elementToCut.offsetWidth;
-        //         elementToCut.removeChild
-        //     }
-          
-        //     prevX = newX;
-        //     container.scrollTo(newPos, 0);
-        //     currPos = newPos;
-        // })
-
-        // container.addEventListener("mouseup", () => {
-        //   firing = false;
-        // })
-
-        // container.addEventListener("mouseleave", () => {
-        //   firing = false;
-        // })
 
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
