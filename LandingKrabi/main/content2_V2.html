@@ -259,6 +259,7 @@
         fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
         fishgal.addEventListener('mouseup',e => mouseUp(e))
         fishgal.addEventListener('mousemove',e=>mouseMove(e));
+        fishgal.addEventListener('touchmove',e=>touchMove(e));
         // ipad ไม่น่ามี mouse leave
                 
         function mouseIsDown(e){
@@ -312,6 +313,16 @@
             }
 
             // function nolimit ชีวิตเกินร้อย
+        }
+
+        function touchMove(e){
+            if(fishgal.scrollLeft > 6000){ //   ดึงหน้ามาต่อท้าย
+                elementToCut = fishgal.querySelector('.fish:first-child')
+                console.log(elementToCut)
+                fishgal.appendChild(elementToCut)
+                elementToCut.removeChild
+                console.log('add element')
+            }
         }
 
         // !!! Drag Dew
