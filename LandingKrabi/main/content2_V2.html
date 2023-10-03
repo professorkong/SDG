@@ -252,129 +252,141 @@
 
         // // drag scroll 
         // // cannot test inspect mode !!!
-        // let startX;
-        // let scrollLeft;
-        // let isDown;
+        let startX;
+        let scrollLeft;
+        let isDown;
                 
-        // fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
-        // fishgal.addEventListener('mouseup',e => mouseUp(e))
-        // fishgal.addEventListener('mousemove',e=>mouseMove(e));
-        // fishgal.addEventListener('touchmove',e=>touchMove(e));
-        // // ipad ไม่น่ามี mouse leave
+        fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
+        fishgal.addEventListener('mouseup',e => mouseUp(e))
+        fishgal.addEventListener('mousemove',e=>mouseMove(e));
+        fishgal.addEventListener('touchmove',e=>touchMove(e));
+        // ipad ไม่น่ามี mouse leave
                 
-        // function mouseIsDown(e){
-        //     isDown = true;
-        //     startX = e.pageX - fishgal.offsetLeft;
-        //     scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
+        function mouseIsDown(e){
+            isDown = true;
+            startX = e.pageX - fishgal.offsetLeft;
+            scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
 
-        //     prevX = e.clientX; // ของ loop
-        //     e.preventDefault();
-        //     firing = true;
+            prevX = e.clientX; // ของ loop
+            e.preventDefault();
+            firing = true;
 
-        //     console.log('CLEAR auto from mouseDown')
-        //     clearInterval(autoScroll) //หยุดลูป
-        // }
+            console.log('CLEAR auto from mouseDown')
+            clearInterval(autoScroll) //หยุดลูป
+        }
 
-        // function mouseUp(e){
-        //     isDown = false;
-        //     if(!showindData){
-        //         console.log('mouseUp')
-        //         // autoScroll = setInterval(scrolling, delay)
-        //     }
-        // }
+        function mouseUp(e){
+            isDown = false;
+            if(!showindData){
+                console.log('mouseUp')
+                // autoScroll = setInterval(scrolling, delay)
+            }
+        }
 
-        // function mouseMove(e){
-        //     console.log('current left', fishgal.scrollLeft)
-        //     console.log('just move') // ไม่แสดงใน inspect responsive
-        //     if(isDown){ //click and drag
-        //         console.log('mouse drag')
-        //         clearInterval(autoScroll) //หยุดลูปก่อน
+        function mouseMove(e){
+            console.log('current left', fishgal.scrollLeft)
+            console.log('just move') // ไม่แสดงใน inspect responsive
+            if(isDown){ //click and drag
+                console.log('mouse drag')
+                clearInterval(autoScroll) //หยุดลูปก่อน
 
-        //         e.preventDefault();
-        //         const x = e.pageX - fishgal.offsetLeft;
-        //         const walkX = x - startX;
-        //         fishgal.scrollLeft = scrollLeft - walkX;  
-        //         console.log('current left', fishgal.scrollLeft)
-        //         console.log(walkX, 'walk')
+                e.preventDefault();
+                const x = e.pageX - fishgal.offsetLeft;
+                const walkX = x - startX;
+                fishgal.scrollLeft = scrollLeft - walkX;  
+                console.log('current left', fishgal.scrollLeft)
+                console.log(walkX, 'walk')
               
-        //         totalScroll = Math.floor((scrollLeft) / 600)
-        //     }
+                totalScroll = Math.floor((scrollLeft) / 600)
+            }
 
-        //     // if (!isDown) return;
+            // if (!isDown) return;
 
-        //     // clientX: newX
+            // clientX: newX
 
-        //     if(fishgal.scrollLeft > 6458){ //   ดึงหน้ามาต่อท้าย
-        //         elementToCut = fishgal.querySelector('.fish:first-child')
-        //         console.log(elementToCut)
-        //         fishgal.appendChild(elementToCut)
-        //         elementToCut.removeChild
-        //         console.log('add element')
-        //     }
+            let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
+            if(fishgal.scrollLeft > availableOffset){ //   ดึงหน้ามาต่อท้าย
+                elementToCut = fishgal.querySelector('.fish:first-child')
+                console.log(elementToCut)
+                fishgal.appendChild(elementToCut)
+                newPos = availableOffset - elementToCut.offsetWidth;
+                elementToCut.removeChild
+                console.log('add element')
+            }
+            currPos = newPos;
 
-        //     // function nolimit ชีวิตเกินร้อย
-        // }
+            // function nolimit ชีวิตเกินร้อย
+        }
 
-        // function touchMove(e){
-        //     if(fishgal.scrollLeft > 6000){ //   ดึงหน้ามาต่อท้าย
-        //         elementToCut = fishgal.querySelector('.fish:first-child')
-        //         console.log(elementToCut)
-        //         fishgal.appendChild(elementToCut)
-        //         elementToCut.removeChild
-        //         console.log('add element')
-        //     }
-        // }
+        function touchMove(e){
+            if(fishgal.scrollLeft > 6000){ //   ดึงหน้ามาต่อท้าย
+                elementToCut = fishgal.querySelector('.fish:first-child')
+                fishgal.appendChild(elementToCut)
+                elementToCut.removeChild
+
+                fishgal.scrollLeft = 5602
+            }
+            if(fishgal.scrollLeft < 1){ //   ดึงหน้ามาต่อท้าย
+                firstElement = fishgal.querySelector('.fish:first-child')
+                elementToCut = fishgal.querySelector('.fish:last-child')
+                fishgal.insertBefore(elementToCut, firstElement);
+                elementToCut.removeChild
+
+                fishgal.scrollLeft = 10
+                console.log('add element')
+            }
+        }
 
         // !!! Drag Dew
 
-        const container = document.querySelector(".fish-gallery");
-        const children = document.querySelector(".fish");
+        // const container = document.querySelector(".fish-gallery");
+        // const children = document.querySelector(".fish");
 
-        let [firing, currPos, prevX] = [false, 0, 0];
+        // let [firing, currPos, prevX] = [false, 0, 0];
 
-        container.addEventListener("mousedown", e => {
-            prevX = e.clientX;
-            e.preventDefault();
-            firing = true;
-            console.log('mouseDown')
-        });
+        // container.addEventListener("mousedown", e => {
+            // prevX = e.clientX;
+            // e.preventDefault();
+            // firing = true;
+        //     console.log('mouseDown')
+        // });
 
-        container.addEventListener("touchmove", ({
-            clientX: newX
-        }) => {
-            console.log('move')
-            if (!firing) return;
+        // container.addEventListener("mousemove", ({
+        //     clientX: newX
+        // }) => {
+        //     console.log('move')
+        //     if (!firing) return;
             
-            let newPos = currPos - (newX - prevX);
-            let availableOffset = container.scrollWidth - container.clientWidth;
-            console.log('move drag')
-            if (newPos > availableOffset) {
-                elementToCut = container.querySelector('.fish:first-child')
-                container.appendChild(elementToCut)
-                newPos = availableOffset - elementToCut.offsetWidth;
-                elementToCut.removeChild
-            }
+        //     let newPos = currPos - (newX - prevX);
+        //     let availableOffset = container.scrollWidth - container.clientWidth;
+        //     console.log('move drag')
+        //     if (newPos > availableOffset) {
+        //         elementToCut = container.querySelector('.fish:first-child')
+        //         container.appendChild(elementToCut)
+        //         newPos = availableOffset - elementToCut.offsetWidth;
+        //         elementToCut.removeChild
+        //     }
           
-            if (newPos < 0) {
-                firstElement = container.querySelector('.fish:first-child')
-                elementToCut = container.querySelector('.fish:last-child')
-                container.insertBefore(elementToCut, firstElement);
-                newPos = 0 + elementToCut.offsetWidth;
-                elementToCut.removeChild
-            }
+        //     if (newPos < 0) {
+        //         firstElement = container.querySelector('.fish:first-child')
+        //         elementToCut = container.querySelector('.fish:last-child')
+        //         container.insertBefore(elementToCut, firstElement);
+        //         newPos = 0 + elementToCut.offsetWidth;
+        //         elementToCut.removeChild
+        //     }
           
-            prevX = newX;
-            container.scrollTo(newPos, 0);
-            currPos = newPos;
-        })
+        //     prevX = newX;
+        //     container.scrollTo(newPos, 0);
+        //     currPos = newPos;
+        // })
 
-        container.addEventListener("mouseup", () => {
-          firing = false;
-        })
+        // container.addEventListener("mouseup", () => {
+        //   firing = false;
+        // })
 
-        container.addEventListener("mouseleave", () => {
-          firing = false;
-        })
+        // container.addEventListener("mouseleave", () => {
+        //   firing = false;
+        // })
 
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
