@@ -266,6 +266,10 @@
             startX = e.pageX - fishgal.offsetLeft;
             scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
 
+            prevX = e.clientX; // ของ loop
+            e.preventDefault();
+            firing = true;
+
             console.log('CLEAR auto from mouseDown')
             clearInterval(autoScroll) //หยุดลูป
         }
@@ -273,14 +277,14 @@
         function mouseUp(e){
             isDown = false;
             if(!showindData){
-                console.log('setauto from mouseUp')
-                autoScroll = setInterval(scrolling, delay)
+                console.log('mouseUp')
+                // autoScroll = setInterval(scrolling, delay)
             }
         }
 
         function mouseMove(e){
             console.log('current left', fishgal.scrollLeft)
-            console.log('just move')
+            console.log('just move') // ไม่แสดงใน inspect responsive
             if(isDown){ //click and drag
                 console.log('mouse drag')
                 clearInterval(autoScroll) //หยุดลูปก่อน
@@ -290,9 +294,24 @@
                 const walkX = x - startX;
                 fishgal.scrollLeft = scrollLeft - walkX;  
                 console.log('current left', fishgal.scrollLeft)
+                console.log(walkX, 'walk')
               
                 totalScroll = Math.floor((scrollLeft) / 600)
             }
+
+            // if (!isDown) return;
+
+            // clientX: newX
+
+            if(fishgal.scrollLeft > 6000){ //   ดึงหน้ามาต่อท้าย
+                elementToCut = fishgal.querySelector('.fish:first-child')
+                console.log(elementToCut)
+                fishgal.appendChild(elementToCut)
+                elementToCut.removeChild
+                console.log('add element')
+            }
+
+            // function nolimit ชีวิตเกินร้อย
         }
 
         // !!! Drag Dew
@@ -303,9 +322,9 @@
         // let [firing, currPos, prevX] = [false, 0, 0];
 
         // container.addEventListener("mousedown", e => {
-        //     prevX = e.clientX;
-        //     e.preventDefault();
-        //     firing = true;
+            // prevX = e.clientX;
+            // e.preventDefault();
+            // firing = true;
         //     console.log('mouseDown')
         // });
 
