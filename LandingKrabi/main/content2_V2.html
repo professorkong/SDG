@@ -196,7 +196,7 @@
         // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
         let showindData = 0
-        // let autoScroll = setInterval(scrolling, delay)
+        let autoScroll = setInterval(scroll2, delay)
         let totalScroll = 0
         let nowScroll = 0 // เก็บตน.ปัจจุบัน ใช้กับฟังชันที่หยุดลูป
 
@@ -218,10 +218,14 @@
         //     }  
         // }
 
+        function scroll2(){
+            fishgal.scrollLeft = fishgal.scrollLeft+600
+        }
+
         // show data card
         function showFishData(el){
             showindData = 1
-            // clearInterval(autoScroll) //หยุดลูป
+            clearInterval(autoScroll) //หยุดลูป
 
             nowScroll = totalScroll //เก็บปลนปจบ.
             let data = el.dataset
@@ -239,7 +243,7 @@
 
         // click card to close
         function closeFishData(el){
-            // showindData = 0
+            showindData = 0
             let body = document.querySelector('body')
             let card = document.querySelector('.fish-card')
 
@@ -248,7 +252,7 @@
             card.style.opacity = '0'
 
             console.log('setauto from closeData')
-            // autoScroll = setInterval(scrolling, delay)
+            autoScroll = setInterval(scroll2, delay)
         }
 
         // // drag scroll 
@@ -280,43 +284,8 @@
             isDown = false;
             if(!showindData){
                 console.log('mouseUp')
-                // autoScroll = setInterval(scrolling, delay)
+                autoScroll = setInterval(scroll2, delay)
             }
-        }
-
-        function mouseMove(e){
-            console.log('current left', fishgal.scrollLeft)
-            console.log('just move') // ไม่แสดงใน inspect responsive
-            if(isDown){ //click and drag
-                console.log('mouse drag')
-                clearInterval(autoScroll) //หยุดลูปก่อน
-
-                e.preventDefault();
-                const x = e.pageX - fishgal.offsetLeft;
-                const walkX = x - startX;
-                fishgal.scrollLeft = scrollLeft - walkX;  
-                console.log('current left', fishgal.scrollLeft)
-                console.log(walkX, 'walk')
-              
-                totalScroll = Math.floor((scrollLeft) / 600)
-            }
-
-            // if (!isDown) return;
-
-            // clientX: newX
-
-            // let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
-            // if(fishgal.scrollLeft > availableOffset){ //   ดึงหน้ามาต่อท้าย
-            //     elementToCut = fishgal.querySelector('.fish:first-child')
-            //     console.log(elementToCut)
-            //     fishgal.appendChild(elementToCut)
-            //     newPos = availableOffset - elementToCut.offsetWidth;
-            //     elementToCut.removeChild
-            //     console.log('add element')
-            // }
-            // currPos = newPos;
-
-            // function nolimit ชีวิตเกินร้อย
         }
 
         let numfishPlus = 0
@@ -361,6 +330,8 @@
                 // elementToCut.removeChild
             }
         }
+
+        
 
         // !!! Drag Dew
 
