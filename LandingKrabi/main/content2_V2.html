@@ -6,6 +6,7 @@
     <title>content2 V2</title>
     <link rel="stylesheet" href="content2.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container" id="page4">
@@ -259,7 +260,7 @@
         fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
         fishgal.addEventListener('mouseup',e => mouseUp(e))
         fishgal.addEventListener('mousemove',e=>mouseMove(e));
-        fishgal.addEventListener('touchmove',e=>touchMove(e));
+        fishgal.addEventListener('touchend',e=>touchEnd(e));
         // ipad ไม่น่ามี mouse leave
                 
         function mouseIsDown(e){
@@ -304,36 +305,49 @@
 
             // clientX: newX
 
-            let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
-            if(fishgal.scrollLeft > availableOffset){ //   ดึงหน้ามาต่อท้าย
-                elementToCut = fishgal.querySelector('.fish:first-child')
-                console.log(elementToCut)
-                fishgal.appendChild(elementToCut)
-                newPos = availableOffset - elementToCut.offsetWidth;
-                elementToCut.removeChild
-                console.log('add element')
-            }
-            currPos = newPos;
+            // let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
+            // if(fishgal.scrollLeft > availableOffset){ //   ดึงหน้ามาต่อท้าย
+            //     elementToCut = fishgal.querySelector('.fish:first-child')
+            //     console.log(elementToCut)
+            //     fishgal.appendChild(elementToCut)
+            //     newPos = availableOffset - elementToCut.offsetWidth;
+            //     elementToCut.removeChild
+            //     console.log('add element')
+            // }
+            // currPos = newPos;
 
             // function nolimit ชีวิตเกินร้อย
         }
 
-        function touchMove(e){
-            if(fishgal.scrollLeft > 6000){ //   ดึงหน้ามาต่อท้าย
-                elementToCut = fishgal.querySelector('.fish:first-child')
-                fishgal.appendChild(elementToCut)
-                elementToCut.removeChild
+        let numfishPlus = 0
+        let numfishDown = 12
+        let reverseBub = bubbles
+        console.log(reverseBub)
+        // reverseBub.reverse()
+        fishgal.scrollLeft = 1500
 
-                fishgal.scrollLeft = 5602
+        function touchEnd(e){
+            
+            if(fishgal.scrollLeft > 5000){ //   ดึงหน้ามาต่อท้าย
+                elementToCut = bubbles[numfishPlus % 12]
+                numfishPlus++
+                // elementToCut = fishgal.querySelector('.fish:first-child')
+                $(fishgal).append($(elementToCut).clone()) // jquery append in origin position
+                // fishgal.appendChild(elementToCut)
+                // elementToCut.removeChild
+                // $(elementToCut).remove();
             }
-            if(fishgal.scrollLeft < 1){ //   ดึงหน้ามาต่อท้าย
-                firstElement = fishgal.querySelector('.fish:first-child')
-                elementToCut = fishgal.querySelector('.fish:last-child')
-                fishgal.insertBefore(elementToCut, firstElement);
-                elementToCut.removeChild
-
-                fishgal.scrollLeft = 10
-                console.log('add element')
+            if(fishgal.scrollLeft < 1000){ //   ดึงท้ายมาต่อหน้า
+                elementToCut = reverseBub[numfishDown]
+                numfishDown--
+                if(numfishDown == -1){
+                    numfishDown = 12
+                }
+                $(fishgal).prepend($(elementToCut).clone())
+                // firstElement = fishgal.querySelector('.fish:first-child')
+                // elementToCut = fishgal.querySelector('.fish:last-child')
+                // fishgal.insertBefore(elementToCut, firstElement);
+                // elementToCut.removeChild
             }
         }
 
