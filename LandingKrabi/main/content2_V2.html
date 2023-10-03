@@ -325,10 +325,11 @@
         console.log(reverseBub)
         // reverseBub.reverse()
         fishgal.scrollLeft = 1500
+        let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
 
         function touchEnd(e){
             
-            if(fishgal.scrollLeft > 5000){ //   ดึงหน้ามาต่อท้าย
+            if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ //   ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
                 elementToCut = bubbles[numfishPlus % 12]
                 numfishPlus++
                 // elementToCut = fishgal.querySelector('.fish:first-child')
@@ -337,13 +338,17 @@
                 // elementToCut.removeChild
                 // $(elementToCut).remove();
             }
-            if(fishgal.scrollLeft < 1000){ //   ดึงท้ายมาต่อหน้า
-                elementToCut = reverseBub[numfishDown]
+            if(fishgal.scrollLeft < 400){ //   ดึงท้ายมาต่อหน้า
+                elementToCut = bubbles[numfishDown]
                 numfishDown--
                 if(numfishDown == -1){
                     numfishDown = 12
                 }
                 $(fishgal).prepend($(elementToCut).clone())
+
+                newPos = 0 + elementToCut.offsetWidth;
+                fishgal.scrollLeft = 200
+                
                 // firstElement = fishgal.querySelector('.fish:first-child')
                 // elementToCut = fishgal.querySelector('.fish:last-child')
                 // fishgal.insertBefore(elementToCut, firstElement);
