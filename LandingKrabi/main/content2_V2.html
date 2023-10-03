@@ -12,9 +12,9 @@
         <div class="wallpaper">
             <img src="../asset/scene4/scene4.png" alt="">
         </div>
-        <div class="content animate">
-            <img class="bubble b1" src="../asset/bubble2.png" alt="">
-            <img class="bubble b2" src="../asset/bubble2.png" alt="">
+        <div class="contentdew animate">
+            <img class="bubbled b1" src="../asset/bubble2.png" alt="">
+            <img class="bubbled b2" src="../asset/bubble2.png" alt="">
         </div>
         <div class="betweenpage p4">
             <img src="../asset/scene5/scene4-5.png" alt="">
@@ -41,17 +41,14 @@
             </div>
 
             <div class="center" style="margin: 2% 0 5% 0;">
-                <button onClick="document.getElementById('page5').scrollIntoView({block: 'end'});">
-                    <h4>ภัยคุกคาม</h4>
+                <button onClick="page4to5()">
+                    <h4 style="color:var(--lightGreenH1);">ภัยคุกคาม</h4>
                 </button>
             </div>
         </div>
 
-        <!--  -->
         <div class="content fish-card" onclick="closeFishData()">
-            <img src="../asset/fish/data/fish_data1.png" alt="">
-            <!-- <img class="bubble" src="../asset/fish/data/fish_data1.png" alt=""> -->
-        </div>
+            <img src="../asset/fish/data/fish_data1.png" alt="">        </div>
 
     </div>
 
@@ -62,7 +59,29 @@
         <div class="betweenpage p5">
             <img src="../asset/scene5/scene4-5.png" alt="">
         </div>
-        <div class="content">
+        <div class="contentdew animate">
+            <img class="fish-bg" src="../asset/scene5/fish_bg.png" alt="">
+            <img class="lightdew" src="../asset/scene5/light.png" alt="">
+            <img class="diver d1" src="../asset/scene5/diver1.png" alt="">
+            <img class="diver d2" src="../asset/scene5/diver2.png" alt="">
+            <img class="diver d3" src="../asset/scene5/diver3.png" alt="">
+
+            <img class="fish-dec nemo1" src="../asset/fish_nemo.png" alt="">
+            <img class="fish-dec nemo2" src="../asset/fish_nemo.png" alt="">
+            <img class="fish-dec angel1" src="../asset/fish_yellow.png" alt="">
+            <img class="fish-dec angel2" src="../asset/fish_yellow.png" alt="">
+            <img class="fish-dec angel3" src="../asset/fish_yellow.png" alt="">
+            <img class="fish-dec tiger1" src="../asset/fish_nokyung_red.png" alt="">
+
+            <img class="bubbled b3" src="../asset/bubble2.png" alt="">
+            <img class="bubbled b4" src="../asset/bubble2.png" alt="">
+            <img class="bubbled b5" src="../asset/bubble2.png" alt="">
+            <img class="bubbled b6" src="../asset/bubble2.png" alt="">
+            <img class="bubbled b7" src="../asset/bubble2.png" alt="">
+        </div>
+
+
+        <div class="contentdew">
             <div class="textpage5">
                 <h1>ภัยคุกคาม</h1>
                 <div>
@@ -75,26 +94,6 @@
                     <h4>ฝึกหลบหลีกปะการัง</h4>
                 </button>
             </div>
-        </div>
-        <div class="content animate">
-            <img class="fish-bg" src="../asset/scene5/fish_bg.png" alt="">
-            <img class="light" src="../asset/scene5/light.png" alt="">
-            <img class="diver d1" src="../asset/scene5/diver1.png" alt="">
-            <img class="diver d2" src="../asset/scene5/diver2.png" alt="">
-            <img class="diver d3" src="../asset/scene5/diver3.png" alt="">
-
-            <img class="fish-dec nemo1" src="../asset/fish_nemo.png" alt="">
-            <img class="fish-dec nemo2" src="../asset/fish_nemo.png" alt="">
-            <img class="fish-dec angel1" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec angel2" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec angel3" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec tiger1" src="../asset/fish_nokyung_red.png" alt="">
-
-            <img class="bubble b3" src="../asset/bubble2.png" alt="">
-            <img class="bubble b4" src="../asset/bubble2.png" alt="">
-            <img class="bubble b5" src="../asset/bubble2.png" alt="">
-            <img class="bubble b6" src="../asset/bubble2.png" alt="">
-            <img class="bubble b7" src="../asset/bubble2.png" alt="">
         </div>
     </div>
     
@@ -200,8 +199,6 @@
             //ถ้าจบลูป
             if(totalScroll == fishLen + 1){
                 fishgal.style.scrollBehavior = "auto";
-                console.log('last')
-                fishgal.style.transition = '0s 0s'
                 fishgal.scrollLeft = 0
                 clearInterval(autoScroll)
                 totalScroll = 0
@@ -209,7 +206,6 @@
             }
             else{
                 fishgal.style.scrollBehavior = "smooth";
-                fishgal.style.transition = '1s'
                 // ขนาดบับเบิ้ลปลา 400 gap 200 = ขยับซ้ายทีละ 600
                 fishgal.scrollLeft = totalScroll * 600
             }  
@@ -262,11 +258,24 @@
         }
         function mouseMove(e){
             if(isDown){
+                clearInterval(autoScroll) //หยุดลูปก่อน
+                
+
                 e.preventDefault();
                 const x = e.pageX - fishgal.offsetLeft;
                 const walkX = x - startX;
                 fishgal.scrollLeft = scrollLeft - walkX;
+                
+                totalScroll = Math.floor((scrollLeft - walkX) / 600)
+                autoScroll = setInterval(scrolling, delay) //ไปต้อจ้า
             }
+        }
+
+        function page4to5(){
+            let action = document.getElementById('page5').scrollIntoView({block: 'end'});
+            let between = document.querySelector('.p5')
+            console.log(between)
+            between.style.top = '-65%'
         }
     </script>
 </body>

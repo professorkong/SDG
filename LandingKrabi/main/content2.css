@@ -10,50 +10,25 @@
 }
 .wallpaper > img{
     min-height: 894px;
-    z-index: -1;
 }
 img{
     max-width: 100%;
     object-fit: cover;
     vertical-align: top;
 }
+
 .betweenpage{
     width: 100%;
     position: absolute;
     margin: 0;
     padding: 0%;
-    z-index: 2;
 }
 .p4{
-    bottom: -40.5%;
+    bottom: -44%;
 }
 .p5{
-    top: -43%;
-}
-.content{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.fish-card{
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    transition: 1s;
-    z-index: 100;
-    /* ซ่อนก่อน กดแล้วค่อยแสดง */
-}
-.fish-card > img{
-    width: 1000px;
-    height: auto;
-    margin: auto;
+    top: -57%;
+    transition: 10s linear;
 }
 .textpage4{
     width: 100%;
@@ -71,7 +46,6 @@ img{
     gap: 200px;
     left: -200px;
     overflow: auto;
-    z-index: 2;
     scroll-behavior: smooth;
 }
 
@@ -96,6 +70,24 @@ img{
     transform: translate(-50%, -50%);
 }
 
+.fish-card{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 1s;
+    /* ซ่อนก่อน กดแล้วค่อยแสดง */
+}
+.fish-card > img{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+}
+
 
  /* page 5  */
 
@@ -104,9 +96,8 @@ img{
     flex-direction: column;
     align-items: end;
     gap: 1rem;
-    padding: 14rem 4rem;
+    padding: 12rem 4rem;
     color: white;
-    z-index: 10;
 }
 .textpage5 > div{
     display: flex;
@@ -117,19 +108,19 @@ img{
     color: white;
 }
 
+/* button{
+    transition: all .5s;
+} */
+
 /* animate */
 
-button{
-    transition: all .5s;
-}
-
 .animate{
-    z-index: -3;
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
-.bubble{
+.bubbled{
     position: absolute;
 }
 .b1{
@@ -180,12 +171,10 @@ button{
 
 .fish-bg{
     position: absolute;
-    z-index: 1;
     animation: fishmove 10s linear infinite;
 }
-.light{
+.lightdew{
     position: absolute;
-    z-index: 1;
     top: -100px;
     right: -100px;
     opacity: .3;
@@ -193,7 +182,7 @@ button{
 }
 .diver{
     position: absolute;
-    z-index: 2;
+    top: -20%;
 }
 .d1{
     animation: diver1 5s linear infinite alternate;
@@ -258,7 +247,6 @@ button{
 
 .fish-dec{
     position: absolute;
-    z-index: 2;
 }
 .nemo1{
     top: 68%;
@@ -328,31 +316,32 @@ button{
 }
 
 .b3{
-    width: 150px;
+    width: 5%;
     top: 58%;
     left: 3%;
     animation: bubble 18s ease-in-out infinite alternate;
 }
 .b4{
-    width: 150px;
+    width: 5%;
     top: 35%;
-    left: 25%;
-    animation: diver1 7s linear infinite alternate;
+    left: 28%;
+    animation: diver1 7s linear infinite alternate,
+    bubble 5s ease-in-out infinite alternate;
 }
 .b5{
-    width: 120px;
+    width: 7%;
     top: 66%;
     left: 28%;
     animation: angel 8s ease-in-out infinite alternate;
 }
 .b6{
-    width: 150px;
+    width: 7%;
     top: 75%;
     left: 70%;
     animation: bubble 15s ease-in-out infinite alternate;
 }
 .b7{
-    width: 100px;
+    width: 7%;
     top: 65%;
     left: 90%;
     animation: bubble 9s ease-in-out infinite alternate;
@@ -360,11 +349,14 @@ button{
 @keyframes bubble{
     0%{
         transform: translate(0,0);
+        opacity: 0;
     }
     50%{
         transform: translate(20px, -30px);
+        opacity: .7;
     }
     100%{
         transform: translate(0,-60px);
+        opacity: 1;
     }
 }
