@@ -231,6 +231,7 @@
 
             body.style.overflow = 'hidden'
             cardfish.style.visibility = 'visible'
+            cardfish.style.opacity = '1'
             card.innerHTML = html    
         }
 
@@ -243,6 +244,7 @@
 
             body.style.overflow = 'none'
             card.style.visibility = 'hidden'
+            card.style.opacity = '0'
 
             console.log('setauto from closeData')
             // autoScroll = setInterval(scrolling, delay)
@@ -250,99 +252,99 @@
 
         // // drag scroll 
         // // cannot test inspect mode !!!
-        // let startX;
-        // let scrollLeft;
-        // let isDown;
+        let startX;
+        let scrollLeft;
+        let isDown;
                 
-        // fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
-        // fishgal.addEventListener('mouseup',e => mouseUp(e))
-        // fishgal.addEventListener('mousemove',e=>mouseMove(e));
-        // // ipad ไม่น่ามี mouse leave
+        fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
+        fishgal.addEventListener('mouseup',e => mouseUp(e))
+        fishgal.addEventListener('mousemove',e=>mouseMove(e));
+        // ipad ไม่น่ามี mouse leave
                 
-        // function mouseIsDown(e){
-        //     isDown = true;
-        //     startX = e.pageX - fishgal.offsetLeft;
-        //     scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
+        function mouseIsDown(e){
+            isDown = true;
+            startX = e.pageX - fishgal.offsetLeft;
+            scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
 
-        //     console.log('CLEAR auto from mouseDown')
-        //     clearInterval(autoScroll) //หยุดลูป
-        // }
+            console.log('CLEAR auto from mouseDown')
+            clearInterval(autoScroll) //หยุดลูป
+        }
 
-        // function mouseUp(e){
-        //     isDown = false;
-        //     if(!showindData){
-        //         console.log('setauto from mouseUp')
-        //         autoScroll = setInterval(scrolling, delay)
-        //     }
-        // }
+        function mouseUp(e){
+            isDown = false;
+            if(!showindData){
+                console.log('setauto from mouseUp')
+                autoScroll = setInterval(scrolling, delay)
+            }
+        }
 
-        // function mouseMove(e){
-        //     console.log('current left', fishgal.scrollLeft)
-        //     console.log('just move')
-        //     if(isDown){ //click and drag
-        //         console.log('mouse drag')
-        //         clearInterval(autoScroll) //หยุดลูปก่อน
+        function mouseMove(e){
+            console.log('current left', fishgal.scrollLeft)
+            console.log('just move')
+            if(isDown){ //click and drag
+                console.log('mouse drag')
+                clearInterval(autoScroll) //หยุดลูปก่อน
 
-        //         e.preventDefault();
-        //         const x = e.pageX - fishgal.offsetLeft;
-        //         const walkX = x - startX;
-        //         fishgal.scrollLeft = scrollLeft - walkX;  
-        //         console.log('current left', fishgal.scrollLeft)
+                e.preventDefault();
+                const x = e.pageX - fishgal.offsetLeft;
+                const walkX = x - startX;
+                fishgal.scrollLeft = scrollLeft - walkX;  
+                console.log('current left', fishgal.scrollLeft)
               
-        //         totalScroll = Math.floor((scrollLeft) / 600)
-        //     }
-        // }
+                totalScroll = Math.floor((scrollLeft) / 600)
+            }
+        }
 
         // !!! Drag Dew
 
-        const container = document.querySelector(".fish-gallery");
-        const children = document.querySelector(".fish");
+        // const container = document.querySelector(".fish-gallery");
+        // const children = document.querySelector(".fish");
 
-        let [firing, currPos, prevX] = [false, 0, 0];
+        // let [firing, currPos, prevX] = [false, 0, 0];
 
-        container.addEventListener("mousedown", e => {
-            prevX = e.clientX;
-            e.preventDefault();
-            firing = true;
-            console.log('mouseDown')
-        });
+        // container.addEventListener("mousedown", e => {
+        //     prevX = e.clientX;
+        //     e.preventDefault();
+        //     firing = true;
+        //     console.log('mouseDown')
+        // });
 
-        container.addEventListener("mousemove", ({
-            clientX: newX
-        }) => {
-            console.log('move')
-            if (!firing) return;
+        // container.addEventListener("mousemove", ({
+        //     clientX: newX
+        // }) => {
+        //     console.log('move')
+        //     if (!firing) return;
             
-            let newPos = currPos - (newX - prevX);
-            let availableOffset = container.scrollWidth - container.clientWidth;
-            console.log('move drag')
-            if (newPos > availableOffset) {
-                elementToCut = container.querySelector('.fish:first-child')
-                container.appendChild(elementToCut)
-                newPos = availableOffset - elementToCut.offsetWidth;
-                elementToCut.removeChild
-            }
+        //     let newPos = currPos - (newX - prevX);
+        //     let availableOffset = container.scrollWidth - container.clientWidth;
+        //     console.log('move drag')
+        //     if (newPos > availableOffset) {
+        //         elementToCut = container.querySelector('.fish:first-child')
+        //         container.appendChild(elementToCut)
+        //         newPos = availableOffset - elementToCut.offsetWidth;
+        //         elementToCut.removeChild
+        //     }
           
-            if (newPos < 0) {
-                firstElement = container.querySelector('.fish:first-child')
-                elementToCut = container.querySelector('.fish:last-child')
-                container.insertBefore(elementToCut, firstElement);
-                newPos = 0 + elementToCut.offsetWidth;
-                elementToCut.removeChild
-            }
+        //     if (newPos < 0) {
+        //         firstElement = container.querySelector('.fish:first-child')
+        //         elementToCut = container.querySelector('.fish:last-child')
+        //         container.insertBefore(elementToCut, firstElement);
+        //         newPos = 0 + elementToCut.offsetWidth;
+        //         elementToCut.removeChild
+        //     }
           
-            prevX = newX;
-            container.scrollTo(newPos, 0);
-            currPos = newPos;
-        })
+        //     prevX = newX;
+        //     container.scrollTo(newPos, 0);
+        //     currPos = newPos;
+        // })
 
-        container.addEventListener("mouseup", () => {
-          firing = false;
-        })
+        // container.addEventListener("mouseup", () => {
+        //   firing = false;
+        // })
 
-        container.addEventListener("mouseleave", () => {
-          firing = false;
-        })
+        // container.addEventListener("mouseleave", () => {
+        //   firing = false;
+        // })
 
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});

@@ -83,8 +83,9 @@ img{
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
-    transition: 1s;
+    transition: all 1s;
     visibility: hidden;
+    opacity: 0;
     /* ซ่อนก่อน กดแล้วค่อยแสดง */
 }
 .data-card > img{

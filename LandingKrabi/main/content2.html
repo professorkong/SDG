@@ -607,9 +607,10 @@
             firing = true;
         });
 
-        container.addEventListener("mousemove", ({
+        container.addEventListener("touchmove", ({
             clientX: newX
         }) => {
+            console.log('intouchmove')
             if (!firing) return;
             
             let newPos = currPos - (newX - prevX);
