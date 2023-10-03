@@ -189,6 +189,7 @@
         }
         // เพิ่ม 3 ชิ้นให้กลับมาเหมือนหน้าแรกแล้วเซ็ตกลับไปเริ่มต้นใหม่ด้วยความไวแสง
 
+        let showindData = 0
         let autoScroll = setInterval(scrolling, delay)
         let totalScroll = 0
         let nowScroll = 0 // เก็บตน.ปัจจุบัน ใช้กับฟังชันที่หยุดลูป
@@ -213,7 +214,11 @@
 
         // show data card
         function showFishData(el){
-            nowScroll = totalScroll
+            showindData = 1
+            console.log(showindData)
+            clearInterval(autoScroll) //หยุดลูป
+
+            nowScroll = totalScroll //เก็บปลนปจบ.
             let data = el.dataset
             let body = document.querySelector('body')
             let card = document.querySelector('.fish-card')
@@ -221,60 +226,68 @@
 
             body.style.overflow = 'hidden'
             card.style.visibility = 'visible'
-            card.innerHTML = html
-            clearInterval(autoScroll)
+            card.innerHTML = html    
         }
 
         // click card to close
         function closeFishData(el){
+            showindData = 0
             let body = document.querySelector('body')
             let card = document.querySelector('.fish-card')
 
             body.style.overflow = 'none'
             card.style.visibility = 'hidden'
-            autoScroll = setInterval(scrolling, delay) //ลูปต่อ
+
+            console.log('setauto from closeData')
+            autoScroll = setInterval(scrolling, delay)
         }
 
-        // drag scroll
+        // drag scroll 
+        // cannot test inspect mode !!!
         let startX;
         let scrollLeft;
         let isDown;
                 
         fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
         fishgal.addEventListener('mouseup',e => mouseUp(e))
-        fishgal.addEventListener('mouseleave',e=>mouseLeave(e));
         fishgal.addEventListener('mousemove',e=>mouseMove(e));
+        // ipad ไม่น่ามี mouse leave
                 
         function mouseIsDown(e){
             isDown = true;
             startX = e.pageX - fishgal.offsetLeft;
             scrollLeft = fishgal.scrollLeft;
+
+            console.log('CLEAR auto from mouseDown')
+            clearInterval(autoScroll) //หยุดลูป
         }
+
         function mouseUp(e){
             isDown = false;
+            if(!showindData){
+                console.log('setauto from mouseUp')
+                autoScroll = setInterval(scrolling, delay)
+            }
         }
-        function mouseLeave(e){
-            isDown = false;
-        }
+
         function mouseMove(e){
-            if(isDown){
+            console.log('just move')
+            if(isDown){ //click and drag
+                console.log('mouse drag')
                 clearInterval(autoScroll) //หยุดลูปก่อน
-                
 
                 e.preventDefault();
                 const x = e.pageX - fishgal.offsetLeft;
                 const walkX = x - startX;
                 fishgal.scrollLeft = scrollLeft - walkX;
                 
-                totalScroll = Math.floor((scrollLeft - walkX) / 600)
-                autoScroll = setInterval(scrolling, delay) //ไปต้อจ้า
+                totalScroll = Math.floor((scrollLeft) / 600)
             }
         }
 
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
             let between = document.querySelector('.p5')
-            console.log(between)
             between.style.top = '-65%'
         }
     </script>
