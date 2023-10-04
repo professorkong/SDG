@@ -48,10 +48,12 @@
             </div>
         </div>
 
-        <div class="fish-card" onclick="closeFishData(this)">
-            <div class="arrow right"><img src="../asset/arrowleft.png" alt=""></div>
+        <!-- <div class="fish-card" onclick="closeFishData(this)"> -->
+        <div class="fish-card">
+            <div class="bgCard" onclick="closeFishData()"></div>
+            <div class="arrow right" onclick="prevFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
             <div class="data-card"><img src="../asset/fish/data/fish_data1.png" alt=""></div>
-            <div class="arrow"><img src="../asset/arrowleft.png" alt=""></div>
+            <div class="arrow" onclick="nextFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
         </div>
 
     </div>
@@ -199,12 +201,17 @@
             }
         }
 
+        
         // show data card
+        let nowFishNumber //ไว้ใช้ตอนกดเปลี่ยน
+
         function showFishData(el){
             showindData = 1
             clearInterval(autoScroll) //หยุดลูป
 
+            
             let data = el.dataset
+            nowFishNumber = data.fishid //เก็บให้ฟังชั่นเปลี่ยนหน้า
             let body = document.querySelector('body')
             let pagecard = document.querySelector('.fish-card')
             let card = document.querySelector('.data-card')
@@ -228,6 +235,32 @@
             pagecard.style.opacity = '0'
 
             autoScroll = setInterval(scroll2, delay)
+        }
+
+        // next card
+        function nextFishCard(){
+            nextFishNumber = nowFishNumber*1 + 1
+            if(nextFishNumber == 14){
+                nextFishNumber = 1
+            }
+            console.log({nowFishNumber, nextFishNumber})
+            let card = document.querySelector('.data-card')
+            let html = `<img src="${fishs[nextFishNumber-1].fish_data}">`
+            card.innerHTML = html  
+            nowFishNumber = nextFishNumber
+        }
+
+        // prev card
+        function prevFishCard(){
+            prevFishNumber = nowFishNumber*1 - 1
+            if(prevFishNumber == 0){
+                prevFishNumber = 13
+            }
+            console.log({nowFishNumber, prevFishNumber})
+            let card = document.querySelector('.data-card')
+            let html = `<img src="${fishs[prevFishNumber-1].fish_data}">`
+            card.innerHTML = html  
+            nowFishNumber = prevFishNumber
         }
 
         // // drag scroll 
@@ -283,6 +316,8 @@
             let between = document.querySelector('.p5')
             between.style.top = '-65%'
         }
+
+        
     </script>
 </body>
 </html>
