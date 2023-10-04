@@ -49,11 +49,9 @@
         </div>
 
         <div class="fish-card" onclick="closeFishData(this)">
-            <div class="asset left arrow"> left </div>
-            <div class="data-card">
-                <img src="../asset/fish/data/fish_data1.png" alt="">        
-            </div>
-            <div class="asset right arrow"> right</div>
+            <div class="arrow light"><img src="../asset/arrowleft.png" alt=""></div>
+            <div class="data-card"><img src="../asset/fish/data/fish_data1.png" alt=""></div>
+            <div class="arrow"><img src="../asset/arrowleft.png" alt=""></div>
         </div>
 
     </div>
@@ -193,7 +191,7 @@
         let autoScroll = setInterval(scroll2, delay)
 
         function scroll2(){
-            fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 850
+            fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 800
             if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ //   ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
                 elementToCut = bubbles[numfishPlus % 12]
                 numfishPlus++
@@ -208,13 +206,13 @@
 
             let data = el.dataset
             let body = document.querySelector('body')
+            let pagecard = document.querySelector('.fish-card')
             let card = document.querySelector('.data-card')
-            let cardfish = document.querySelector('.fish-card')
             let html = `<img src="${fishs[data.fishid-1].fish_data}">`
 
             body.style.overflow = 'hidden'
-            cardfish.style.visibility = 'visible'
-            cardfish.style.opacity = '1'
+            pagecard.style.visibility = 'visible'
+            pagecard.style.opacity = '1'
             card.innerHTML = html    
         }
 
@@ -223,13 +221,12 @@
         function closeFishData(el){
             showindData = 0
             let body = document.querySelector('body')
-            let card = document.querySelector('.fish-card')
+            let pagecard = document.querySelector('.fish-card')
 
             body.style.overflow = 'none'
-            card.style.visibility = 'hidden'
-            card.style.opacity = '0'
+            pagecard.style.visibility = 'hidden'
+            pagecard.style.opacity = '0'
 
-            console.log('setauto from closeData')
             autoScroll = setInterval(scroll2, delay)
         }
 
@@ -245,29 +242,17 @@
         // ipad ไม่น่ามี mouse leave
                 
         function mouseIsDown(e){
-            isDown = true;
-            startX = e.pageX - fishgal.offsetLeft;
-            scrollLeft = fishgal.scrollLeft; //จุดที่จิ้ม
-
-            prevX = e.clientX; // ของ loop
-            e.preventDefault();
-            firing = true;
-
-            console.log('CLEAR auto from mouseDown')
             clearInterval(autoScroll) //หยุดลูป
         }
 
         function mouseUp(e){
-            isDown = false;
             if(!showindData){
-                console.log('mouseUp')
                 autoScroll = setInterval(scroll2, delay)
             }
         }
 
         let numfishPlus = 0
         let numfishDown = 12
-        fishgal.scrollLeft = 1500
         let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
 
 
@@ -279,7 +264,7 @@
                 $(fishgal).append($(elementToCut).clone())
             }
 
-            if(fishgal.scrollLeft < 400){ //   ดึงท้ายมาต่อหน้า
+            if(fishgal.scrollLeft < 400){ //   ดึงท้ายมาต่อหน้า แลคเว่อ
                 lastleft = fishgal.scrollLeft
 
                 elementToCut = bubbles[numfishDown]

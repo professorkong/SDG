@@ -50,13 +50,13 @@ img{
     overflow-x: scroll;
     overflow-y: hidden;
     -ms-overflow-style: none;
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
     scroll-behavior: smooth;
 }
-/* 
+
 .fish-gallery::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .fish {
     position: relative;
@@ -87,6 +87,7 @@ img{
     visibility: hidden;
     opacity: 0;
     /* ซ่อนก่อน กดแล้วค่อยแสดง */
+    justify-content: center;
 }
 .data-card > img{
     width: 100%;
@@ -94,6 +95,14 @@ img{
     margin: auto;
 }
 
+.arrow{
+    width: 70px;
+    height: 70px;
+}
+
+.arrow.light{
+    transform: rotateY(180deg)
+}
  /* page 5  */
 
 .textpage5{
