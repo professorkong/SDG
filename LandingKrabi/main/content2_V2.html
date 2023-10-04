@@ -26,19 +26,19 @@
             </div>
 
             <div class="fish-gallery">
-                <div class="fish" data-fishid="1" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="2" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="3" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="4" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="5" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="6" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="7" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="8" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="9" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="10" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="11" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="12" onclick="showFishData(this)"></div>
-                <div class="fish" data-fishid="13" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="1" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="2" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="3" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="4" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="5" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="6" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="7" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="8" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="9" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="10" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="11" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="12" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="13" ontouchend="showFishData(this)"></div>
             </div>
 
             <div class="center" style="margin: 2% 0 5% 0;">
@@ -221,11 +221,42 @@
             fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 800
             chackAddFish()
         }
+
+        // ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
+        fishgal.addEventListener('touchend',e=>touchEnd(e));
+        fishgal.addEventListener('touchstart',e=>touchStart(e));
         
+        let xStart, xEnd, yStart, yEnd
+        let dif = 0
+        function touchStart(e){
+            // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+            // https://stackoverflow.com/questions/41993176/determine-touch-position-on-tablets-with-javascript/61732450#61732450
+            var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+            var touch = evt.touches[0] || evt.changedTouches[0];
+            xStart = touch.pageX;
+            yStart = touch.pageY;
+        }
+        function touchEnd(e){
+            // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+            var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+            var touch = evt.touches[0] || evt.changedTouches[0];
+            xEnd = touch.pageX;
+            yEnd = touch.pageY;
+            dif = Math.abs(xStart-xEnd)
+            console.log({xStart, xEnd})
+
+            chackAddFish()
+        }
+        
+
         // show data card
         let nowFishNumber //ไว้ใช้ตอนกดเปลี่ยน
 
         function showFishData(el){
+            // ถ้าจิ้มแล้วเคลื่อนเกิน 100px ไม่ต้องโชว์
+            
+            if(dif > 100) return;
+            console.log(dif)
             showindData = 1
             clearInterval(autoScroll) //หยุดลูป
             
@@ -241,7 +272,6 @@
             pagecard.style.opacity = '1'
             card.innerHTML = html    
         }
-
 
         // click card to close
         function closeFishData(el){
@@ -293,29 +323,10 @@
             chackAddFish()
         }
 
-        // fishgal.addEventListener('touchend',e=>touchEnd(e));
-        fishgal.addEventListener('touchend',e=>touchEnd(e));
-        // ipad ไม่น่ามี mouse leave
-                
-        // function mouseIsDown(e){
-        //     clearInterval(autoScroll) //หยุดลูป
-        // }
-
-        // function mouseUp(e){
-        //     if(!showindData){
-        //         autoScroll = setInterval(scroll2, delay)
-        //     }
-        // }
-
-        function touchEnd(e){
-            // ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
-            chackAddFish()
-        }
-
         function page4to5(){
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
             let between = document.querySelector('.p5')
-            between.style.top = '-65%'
+            between.style.top = '-60%'
         }
 
         
