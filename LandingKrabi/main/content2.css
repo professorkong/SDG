@@ -100,7 +100,7 @@ img{
     height: 70px;
 }
 
-.arrow.light{
+.arrow.right{
     transform: rotateY(180deg)
 }
  /* page 5  */
