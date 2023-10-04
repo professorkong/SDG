@@ -26,19 +26,19 @@
             </div>
 
             <div class="fish-gallery">
-                <div class="fish" data-fishid="1" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="2" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="3" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="4" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="5" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="6" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="7" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="8" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="9" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="10" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="11" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="12" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="13" ontouchend="showFishData(this)"></div>
+                <div class="fish" data-fishid="1" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="2" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="3" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="4" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="5" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="6" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="7" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="8" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="9" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="10" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="11" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="12" onclick="showFishData(this)"></div>
+                <div class="fish" data-fishid="13" onclick="showFishData(this)"></div>
             </div>
 
             <div class="center" style="margin: 2% 0 5% 0;">
@@ -183,14 +183,14 @@
             count++
         }
 
+
         // auto slide loop
         // https://www.youtube.com/watch?v=tZmpC93zkio
 
         let delay = 2000
-        const fishgal = document.querySelector('.fish-gallery')
-
         let showindData = 0
         let autoScroll = setInterval(scroll2, delay)
+        const fishgal = document.querySelector('.fish-gallery')
 
         let numfishPlus = 0
         let numfishDown = 12
@@ -202,7 +202,7 @@
                 numfishPlus++
                 $(fishgal).append($(elementToCut).clone())
             }
-            if(fishgal.scrollLeft < 400){ // ดึงท้ายมาต่อหน้า แลคเว่อ
+            if(fishgal.scrollLeft < 200){ // ดึงท้ายมาต่อหน้า แลคเว่อ
                 lastleft = fishgal.scrollLeft
 
                 elementToCut = bubbles[numfishDown]
@@ -212,7 +212,7 @@
                 }
                 $(fishgal).prepend($(elementToCut).clone())
 
-                fishgal.scrollLeft = lastleft + 600
+                fishgal.scrollLeft = 0 + elementToCut.offsetWidth;
             }
         }
 
@@ -293,28 +293,22 @@
             chackAddFish()
         }
 
-        // // drag scroll 
-        // // cannot test inspect mode !!!
-        let startX;
-        let scrollLeft;
-        let isDown;
-                
-        fishgal.addEventListener('mousedown',e => mouseIsDown(e));  
-        fishgal.addEventListener('mouseup',e => mouseUp(e))
+        // fishgal.addEventListener('touchend',e=>touchEnd(e));
         fishgal.addEventListener('touchend',e=>touchEnd(e));
         // ipad ไม่น่ามี mouse leave
                 
-        function mouseIsDown(e){
-            clearInterval(autoScroll) //หยุดลูป
-        }
+        // function mouseIsDown(e){
+        //     clearInterval(autoScroll) //หยุดลูป
+        // }
 
-        function mouseUp(e){
-            if(!showindData){
-                autoScroll = setInterval(scroll2, delay)
-            }
-        }
+        // function mouseUp(e){
+        //     if(!showindData){
+        //         autoScroll = setInterval(scroll2, delay)
+        //     }
+        // }
 
         function touchEnd(e){
+            // ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
             chackAddFish()
         }
 

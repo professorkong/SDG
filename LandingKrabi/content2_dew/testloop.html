@@ -87,9 +87,11 @@
             }
           
             if (newPos < 0) {
+                console.log('new front')
                 firstElement = container.querySelector('.fish:first-child')
                 elementToCut = container.querySelector('.fish:last-child')
                 container.insertBefore(elementToCut, firstElement);
+                console.log(elementToCut)
                 newPos = 0 + elementToCut.offsetWidth;
                 elementToCut.removeChild
             }
