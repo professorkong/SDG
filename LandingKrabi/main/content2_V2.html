@@ -26,19 +26,20 @@
             </div>
 
             <div class="fish-gallery">
-                <div class="fish" data-fishid="1" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="2" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="3" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="4" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="5" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="6" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="7" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="8" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="9" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="10" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="11" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="12" ontouchend="showFishData(this)"></div>
-                <div class="fish" data-fishid="13" ontouchend="showFishData(this)"></div>
+                <!-- delay ให้เก็บ xStart xEnd ก่อน -->
+                <div class="fish" data-fishid="1" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="2" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="3" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="4" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="5" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="6" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="7" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="8" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="9" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="10" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="11" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="12" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
+                <div class="fish" data-fishid="13" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
             </div>
 
             <div class="center" style="margin: 2% 0 5% 0;">
@@ -52,7 +53,7 @@
         <div class="fish-card">
             <div class="bgCard" onclick="closeFishData()"></div>
             <div class="arrow right" onclick="prevFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
-            <div class="data-card"><img src="../asset/fish/data/fish_data1.png" alt=""></div>
+            <div class="data-card" onclick="closeFishData()"><img src="../asset/fish/data/fish_data1.png" alt=""></div>
             <div class="arrow" onclick="nextFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
         </div>
 
@@ -188,7 +189,6 @@
         // https://www.youtube.com/watch?v=tZmpC93zkio
 
         let delay = 2000
-        let showindData = 0
         let autoScroll = setInterval(scroll2, delay)
         const fishgal = document.querySelector('.fish-gallery')
 
@@ -229,21 +229,19 @@
         let xStart, xEnd, yStart, yEnd
         let dif = 0
         function touchStart(e){
+            scaleCenterBubble()
             // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
             // https://stackoverflow.com/questions/41993176/determine-touch-position-on-tablets-with-javascript/61732450#61732450
             var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
             var touch = evt.touches[0] || evt.changedTouches[0];
             xStart = touch.pageX;
-            yStart = touch.pageY;
         }
         function touchEnd(e){
             // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
             var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
             var touch = evt.touches[0] || evt.changedTouches[0];
             xEnd = touch.pageX;
-            yEnd = touch.pageY;
             dif = Math.abs(xStart-xEnd)
-            console.log({xStart, xEnd})
 
             chackAddFish()
         }
@@ -254,10 +252,8 @@
 
         function showFishData(el){
             // ถ้าจิ้มแล้วเคลื่อนเกิน 100px ไม่ต้องโชว์
-            
             if(dif > 100) return;
-            console.log(dif)
-            showindData = 1
+
             clearInterval(autoScroll) //หยุดลูป
             
             let data = el.dataset
@@ -275,7 +271,6 @@
 
         // click card to close
         function closeFishData(el){
-            showindData = 0
             let body = document.querySelector('body')
             let pagecard = document.querySelector('.fish-card')
 
@@ -323,7 +318,15 @@
             chackAddFish()
         }
 
+        function scaleCenterBubble(){
+            var elem = document.elementFromPoint($(window).width()/2, $(window).height()/2);
+            var centerElem = $(elem);
+            // centerElem.style.width = "scale(1.1)";
+            // console.log(centerElem)
+        }
+
         function page4to5(){
+            clearInterval(autoScroll) //หยุดลูป
             let action = document.getElementById('page5').scrollIntoView({block: 'end'});
             let between = document.querySelector('.p5')
             between.style.top = '-60%'
