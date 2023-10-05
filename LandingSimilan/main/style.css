@@ -78,7 +78,7 @@ img{
 
 .buttonpage1{
     color: #4ca6c1;
-    margin-top: 45%;
+    margin-top: 40%;
 }
 
 .cloud1_1{
@@ -113,7 +113,7 @@ img{
 
 .wave_1{
     width: 150%;
-    bottom: -10%;
+    bottom: -12.5%;
     left: -10%;
     z-index: 1;
 }
@@ -144,7 +144,7 @@ img{
 }
 
 .wave_2{
-    top: -15%;
+    top: -16%;
     left: 0;
 }
 
@@ -311,7 +311,7 @@ img{
 }
 
 .shark_3{
-    top: 6%;
+    top: 10%;
     right: -4%;
 }
 
@@ -351,12 +351,12 @@ img{
 
 .buttonpage4{
     color: #4ca6c1;
-    margin-top: 40%;
+    margin-top: 35%;
 }
 
 .fish-gallery {
     width: 100%;
-    margin-top: 22%;
+    margin-top: 20%;
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -370,8 +370,8 @@ img{
 }
 .fish {
     position: relative;
-    flex: 1 0 360px;
-    height: 360px;
+    flex: 1 0 340px;
+    height: 340px;
     margin: 0 2.5rem;
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), white, white);
     border-radius: 100%;
@@ -418,7 +418,7 @@ img{
 }
 
 .rock_4{
-    bottom: -46%;
+    bottom: -50%;
     left: -3%;
 }
 
@@ -427,20 +427,20 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 22%;
+    margin-top: 25%;
     color: #0f52b5;
 }
 
 .buttonpage5{
     color: #4ca6c1;
-    margin-top: 43%;
+    margin-top: 40%;
 }
 
 .deck{
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 42%;
+    margin-top: 43.5%;
 }
 
 .light_5{
