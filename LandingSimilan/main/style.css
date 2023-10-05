@@ -12,9 +12,9 @@
 html {
     scroll-behavior: smooth;
   }
-body{
+/* body{
     overflow: hidden;
-}
+} */
 
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
@@ -42,7 +42,6 @@ button{
     width: 100%;
     position: relative;
     max-width: 1194px;
-    /* border: 1px solid black; */
     overflow: hidden;
 }
 
@@ -142,6 +141,16 @@ img{
 .buttonpage2{
     color: #4ca6c1;
     margin-top: 3%;
+}
+
+.wave_2{
+    top: -15%;
+    left: 0;
+}
+
+.lifebelt_2{
+    top: -8%;
+    left: 72%;
 }
 
 .fishback_2{
@@ -345,6 +354,38 @@ img{
     margin-top: 40%;
 }
 
+.fish-gallery {
+    width: 100%;
+    margin-top: 22%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.fish-gallery::-webkit-scrollbar {
+    display: none;
+}
+.fish {
+    position: relative;
+    flex: 1 0 360px;
+    height: 360px;
+    margin: 0 2.5rem;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), white, white);
+    border-radius: 100%;
+    z-index: 1;
+}
+.fish > img{
+    width: 240px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .island_4{
     bottom: 0;
     left: -3%;
@@ -386,13 +427,20 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 22%;
     color: #0f52b5;
 }
 
 .buttonpage5{
     color: #4ca6c1;
-    margin-top: 45%;
+    margin-top: 43%;
+}
+
+.deck{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 42%;
 }
 
 .light_5{
