@@ -14,7 +14,7 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-image: url(bg.png);
+    background-image: url(asset/compressed/bg.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -48,56 +48,56 @@ body {
 
 
 #bin1 {
-    background-image: url(./asset/trash/trash1.png);
-    width: 319px;
-    height: 455px;
+    background-image: url(./asset/trash/trash1.webp);
+    width: 200px;
+    height: 290px;
     visibility: hidden;
 }
 
 #bin2 {
-    background-image: url(./asset/trash/trash2.png);
+    background-image: url(./asset/trash/trash2.webp);
     width: 266px;
     height: 322px;
     visibility: hidden;
 }
 
 #bin3 {
-    background-image: url(./asset/trash/trash3.png);
+    background-image: url(./asset/trash/trash3.webp);
     width: 242px;
     height: 148px;
     visibility: hidden;
 }
 
 #bin4 {
-    background-image: url(./asset/trash/trash4.png);
+    background-image: url(./asset/trash/trash4.webp);
     width: 162px;
     height: 179px;
     visibility: hidden;
 }
 
 #bin5 {
-    background-image: url(./asset/trash/trash5.png);
+    background-image: url(./asset/trash/trash5.webp);
     width: 389px;
     height: 265px;
     visibility: hidden;
 }
 
 #bin6 {
-    background-image: url(./asset/trash/trash6.png);
+    background-image: url(./asset/trash/trash6.webp);
     width: 113px;
     height: 129px;
     visibility: hidden;
 }
 
 #bin7 {
-    background-image: url(./asset/trash/trash7.png);
+    background-image: url(./asset/trash/trash7.webp);
     width: 150px;
     height: 116px;
     visibility: hidden;
 }
 
 #bin8 {
-    background-image: url(./asset/trash/trash8.png);
+    background-image: url(./asset/trash/trash8.webp);
     width: 238px;
     height: 300px;
     visibility: hidden;
@@ -105,7 +105,7 @@ body {
 
 
 #bin9 {
-    background-image: url(./asset/trash/trash9.png);
+    background-image: url(./asset/trash/trash9.webp);
     width: 113px;
     height: 136px;
     visibility: hidden;
@@ -113,7 +113,7 @@ body {
 
 
 #bin10 {
-    background-image: url(./asset/trash/trash10.png);
+    background-image: url(./asset/trash/trash10.webp);
     width: 90px;
     height: 90px;
     visibility: hidden;
@@ -121,7 +121,7 @@ body {
 
 
 #bin11 {
-    background-image: url(./asset/trash/trash11.png);
+    background-image: url(./asset/trash/trash11.webp);
     width: 316px;
     height: 312px;
     visibility: hidden;
@@ -129,14 +129,28 @@ body {
 
 
 #bin12 {
-    background-image: url(./asset/trash/trash12.png);
+    background-image: url(./asset/trash/trash12.webp);
     width: 239px;
     height: 292px;
     visibility: hidden;
 }
 
+#star1 {
+    background-image: url(./asset/trash/star1.png);
+    width: 250px;
+    height: 250px;
+    visibility: hidden;
+}
+
+#star2 {
+    background-image: url(./asset/trash/star2.png);
+    width: 250px;
+    height: 250px;
+    visibility: hidden;
+}
+
 #fish1{
-    background-image: url(./asset/fish.png);
+    background-image: url(./asset/compressed/fish.webp);
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -150,10 +164,11 @@ body {
     animation-fill-mode: forwards;
     z-index: -1;
     opacity: .8;
+    animation-iteration-count: infinite;
 }
 
 #fish2{
-    background-image: url(./asset/fish_group2.png);
+    background-image: url(./asset/compressed/fish_group2.webp);
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -167,10 +182,11 @@ body {
     animation-fill-mode: forwards;
     z-index: -1;
     opacity: .8;
+    animation-iteration-count: infinite;
 }
 
 #fish3{
-    background-image: url(./asset/fish_group1.png);
+    background-image: url(./asset/compressed/fish_group1.webp);
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -184,10 +200,11 @@ body {
     animation-fill-mode: forwards;
     z-index: -1;
     opacity: .8;
+    animation-iteration-count: infinite;
 }
 
 #fish4{
-    background-image: url(./asset/fish_group3.png);
+    background-image: url(./asset/compressed/fish_group3.webp);
     background-repeat: no-repeat;
     width: 1000px;
     height: 1000px;
@@ -201,6 +218,40 @@ body {
     animation-fill-mode: forwards;
     z-index: -1;
     opacity: .8;
+    animation-iteration-count: infinite;
+}
+
+.bubble {
+    background-image: url(asset/compressed/bubble.webp);
+    width: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    animation: floatopacity 4s ease-in-out 2s infinite;
+}
+
+.b1{
+    top:50%;
+    left:85%;
+}
+
+.b2{
+    top:40%;
+    left:45%;
+}
+
+.b3{
+    top:60%;
+    left:10%;
+}
+
+@keyframes floatopacity {
+    10%  {transform: translateY(0);
+        opacity: 0.8;}
+    100% {transform: translateY(-300px);
+        opacity: 0;}
 }
 
 @keyframes bin_down {
@@ -217,10 +268,11 @@ body {
     from   {transform: translateX(0);}
     to     {transform: translateX(2500px);}
 }
+
 .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     margin-top: 2rem;
     margin-bottom: 6rem;
     column-gap: 15rem;
@@ -342,6 +394,14 @@ h1{
 
 .wrapper h2 {
     font-size: 3.5rem;
+    margin: 0;
+}
+
+#score {
+    font-size: 10rem;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .circleclip {
