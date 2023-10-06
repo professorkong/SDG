@@ -1,8 +1,163 @@
 
-function delayScroll(next){
-    $('html, body').animate({
-        scrollTop: $('#'+next).offset().top
-      }, 1000);
-
-    //   แค่ delay ทำหน่วงไงว้า
+// show buble fish
+const bubbles = document.querySelectorAll('.fish')
+console.log(bubbles)
+let text = ''
+let count = 0
+for(let fish of fishs){
+    text = `<img src="${fish.fish_pic}"><div class="moreinfo"><img src="../asset/moreinfo.png"></div>`
+    console.log(text)
+    bubbles[count].innerHTML = text
+    count++
 }
+
+
+// auto slide loop
+// https://www.youtube.com/watch?v=tZmpC93zkio
+
+let delay = 2000
+let autoScroll = setInterval(scroll2, delay)
+const fishgal = document.querySelector('.fish-gallery')
+
+let numfishPlus = 0
+let numfishDown = 12
+let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
+
+function chackAddFish(){//ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
+    if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ 
+        elementToCut = bubbles[numfishPlus % 13]
+        numfishPlus++
+        $(fishgal).append($(elementToCut).clone())
+    }
+}
+
+
+function scroll2(){
+    fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 800
+    chackAddFish()
+}
+
+// ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
+fishgal.addEventListener('touchend',e=>touchEnd(e));
+fishgal.addEventListener('touchstart',e=>touchStart(e));
+
+let xStart, xEnd, yStart, yEnd
+let dif = 0
+function touchStart(e){
+    scaleCenterBubble()
+    // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+    // https://stackoverflow.com/questions/41993176/determine-touch-position-on-tablets-with-javascript/61732450#61732450
+    var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+    var touch = evt.touches[0] || evt.changedTouches[0];
+    xStart = touch.pageX;
+}
+function touchEnd(e){
+    // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+    var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+    var touch = evt.touches[0] || evt.changedTouches[0];
+    xEnd = touch.pageX;
+    dif = Math.abs(xStart-xEnd)
+
+    chackAddFish()
+}
+
+
+// show data card
+let nowFishNumber //ไว้ใช้ตอนกดเปลี่ยน
+
+function showFishData(el){
+    // ถ้าจิ้มแล้วเคลื่อนเกิน 100px ไม่ต้องโชว์
+    if(dif > 100) return;
+
+    clearInterval(autoScroll) //หยุดลูป
+    
+    let data = el.dataset
+    nowFishNumber = data.fishid //เก็บให้ฟังชั่นเปลี่ยนหน้า
+    let body = document.querySelector('body')
+    let pagecard = document.querySelector('.fish-card')
+    let card = document.querySelector('.data-card')
+    let html = `<img src="${fishs[data.fishid-1].fish_data}">`
+
+    body.style.overflow = 'hidden'
+    pagecard.style.visibility = 'visible'
+    pagecard.style.opacity = '1'
+    card.innerHTML = html    
+}
+
+// click card to close
+function closeFishData(el){
+    let body = document.querySelector('body')
+    let pagecard = document.querySelector('.fish-card')
+
+    body.style.overflow = 'none'
+    pagecard.style.visibility = 'hidden'
+    pagecard.style.opacity = '0'
+
+    autoScroll = setInterval(scroll2, delay)
+}
+
+// next card
+let leftArrow = document.querySelector('.arrow.right')
+
+function nextFishCard(){
+    if(fishgal.scrollLeft > 0){
+      leftArrow.style.opacity = 1
+    }
+    
+    nextFishNumber = nowFishNumber*1 + 1
+    if(nextFishNumber == 14){
+        nextFishNumber = 1
+    }
+    console.log({nowFishNumber, nextFishNumber})
+    let card = document.querySelector('.data-card')
+    let html = `<img src="${fishs[nextFishNumber-1].fish_data}">`
+    card.innerHTML = html  
+    nowFishNumber = nextFishNumber
+
+    //ขยับด้านหลัง
+    nowleft = fishgal.scrollLeft
+    fishgal.scrollLeft = nowleft - (nowleft % 600) + 800
+    chackAddFish()
+}
+
+// prev card
+function prevFishCard(){
+
+    //แผ่นแรกไม่ให้กดซ้าย
+    if(fishgal.scrollLeft == 0){
+      leftArrow.style.opacity = 0
+      return;
+    }
+
+    //ปกติ
+    prevFishNumber = nowFishNumber*1 - 1
+    if(prevFishNumber == 0){
+        prevFishNumber = 13
+    }
+    console.log({nowFishNumber, prevFishNumber})
+    let card = document.querySelector('.data-card')
+    let html = `<img src="${fishs[prevFishNumber-1].fish_data}">`
+    card.innerHTML = html  
+    nowFishNumber = prevFishNumber
+
+    //ขยับด้านหลัง
+    nowleft = fishgal.scrollLeft
+    fishgal.scrollLeft = nowleft - (nowleft % 600) - 400
+
+    chackAddFish()
+}
+
+function scaleCenterBubble(){
+    var elem = document.elementFromPoint($(window).width()/2, $(window).height()/2);
+    var centerElem = $(elem);
+    // centerElem.style.width = "scale(1.1)";
+    // console.log(centerElem)
+}
+
+function page4to5(){
+    clearInterval(autoScroll) //หยุดลูป
+    let action = document.getElementById('page5').scrollIntoView({block: 'end'});
+    let between = document.querySelector('.p5')
+    between.style.top = '-60%'
+}
+
