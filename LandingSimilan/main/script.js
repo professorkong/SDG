@@ -38,12 +38,10 @@ const fishs = [
 
 // show buble fish
 const bubbles = document.querySelectorAll(".fish");
-console.log(bubbles);
 let text = "";
 let count = 0;
 for (let fish of fishs) {
   text = `<img src="${fish.fish_pic}"><div class="moreinfo"><img src="../asset/abc/moreinfo.png"></div>`;
-  console.log(text);
   bubbles[count].innerHTML = text;
   count++;
 }
@@ -184,21 +182,25 @@ for (let fish of fishs) {
         chackAddFish();
       }
 
-      function scaleCenterBubble() {
-        var elem = document.elementFromPoint(
-          $(window).width() / 2,
-          $(window).height() / 2
-        );
-        var centerElem = $(elem);
-        // centerElem.style.width = "scale(1.1)";
-        // console.log(centerElem)
-      }
+function scrollY(pageid){
+  body = document.querySelector("body")
+  page = document.querySelector(pageid)
+  pageStat = page.getBoundingClientRect();
+  
+  let pos = body.style.top;
+  if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
+  scrollToBottom = (pageStat.bottom - 834) * -1 + pos // + ต่อจาก top เดิม
 
-      function page4to5() {
-        clearInterval(autoScroll); //หยุดลูป
-        let action = document
-          .getElementById("page5")
-          .scrollIntoView({ block: "end" });
-        let between = document.querySelector(".p5");
-        between.style.top = "-60%";
-      }
+  // frame animation
+  let id = setInterval(frame, 0.1);
+  function frame() {
+    if (pos == scrollToBottom || pos == scrollToBottom-1) {
+      console.log(body.style.top)
+      clearInterval(id);
+    } else {
+      pos -= 2; 
+      body.style.top = pos + 'px';
+      
+    }
+  }
+}

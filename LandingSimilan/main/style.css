@@ -16,6 +16,11 @@ html {
     overflow: hidden;
 } */
 
+body{
+    position: absolute;
+    top: 0;
+}
+
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
 h3{z-index: 100; font-size: 2rem; line-height: 130%;}
