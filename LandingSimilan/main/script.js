@@ -189,12 +189,13 @@ function scrollY(pageid){
   
   let pos = body.style.top;
   if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
-  scrollToBottom = (pageStat.bottom - 834) * -1 + pos // + ต่อจาก top เดิม
+  scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos) // + ต่อจาก top เดิม
 
   // frame animation
   let id = setInterval(frame, 0.1);
+  console.log({pos, scrollToTop})
   function frame() {
-    if (pos == scrollToBottom || pos == scrollToBottom-1) {
+    if (pos == scrollToTop || pos == scrollToTop-1) {
       console.log(body.style.top)
       clearInterval(id);
     } else {
