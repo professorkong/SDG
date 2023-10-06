@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Similan</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body onload="document.getElementById('page1').scrollIntoView({block: 'end'});">
     <div class="container" id="page1">
@@ -146,20 +145,42 @@
         </div>
         <div class="content">
             <div class="fish-gallery">
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-                <div class="fish"></div>
-            </div>
+                <!-- delay ให้เก็บ xStart xEnd ก่อน -->
+                <div
+                  class="fish"
+                  data-fishid="1"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="2"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="3"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="4"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="5"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="6"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
+                <div
+                  class="fish"
+                  data-fishid="7"
+                  ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+                ></div>
         </div>
     </div>
 
@@ -226,5 +247,6 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -253,6 +253,8 @@
       // https://www.youtube.com/watch?v=tZmpC93zkio
 
       let delay = 2000;
+      let fishWidth = 500
+      let fishWidthGap = 600
       let autoScroll = setInterval(scroll2, delay);
       const fishgal = document.querySelector(".fish-gallery");
 
@@ -270,7 +272,7 @@
       }
 
       function scroll2() {
-        fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600) * 600 + 800;
+        fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / fishWidth) * fishWidth + fishWidthGap;
         chackAddFish();
       }
 
@@ -352,7 +354,7 @@
 
         //ขยับด้านหลัง
         nowleft = fishgal.scrollLeft;
-        fishgal.scrollLeft = nowleft - (nowleft % 600) + 800;
+        fishgal.scrollLeft = nowleft - (nowleft % fishWidth) + fishWidthGap;
         chackAddFish();
       }
 
@@ -377,7 +379,7 @@
 
         //ขยับด้านหลัง
         nowleft = fishgal.scrollLeft;
-        fishgal.scrollLeft = nowleft - (nowleft % 600) - 400;
+        fishgal.scrollLeft = nowleft - (nowleft % fishWidth) - (fishWidthGap / 2);
 
         chackAddFish();
       }
