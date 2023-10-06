@@ -355,11 +355,12 @@ img{
 }
 
 .fish-gallery {
+    margin-top: 18%;
     width: calc(100% + 200px);
     position: relative;
     display: grid;
     grid-auto-flow: column;
-    gap: 200px;
+    gap: 100px;
     /* left: -200px; */
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -378,8 +379,6 @@ img{
     position: relative;
     height: 400px;
     aspect-ratio: 1/1;
-    padding: 2rem;
-    border-radius: 100%;
 }
 .fish > img{
     width: 100%;
