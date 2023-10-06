@@ -17,7 +17,7 @@ function myFunction_set() {
 
 
 var point = 0;
-// var time = 1; // for testing purposes
+// var time = 59; // for testing purposes
 var time = 59;
 var bin = ["bin1", "bin2", "bin3", "bin4", "star1", "star2","bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12", "star1", "star2"];
 
@@ -34,7 +34,7 @@ function gameOver(e) {
 }
 
 function main(){ 
-    document.getElementById("time").innerHTML = time > 9 ? '' + time : '0' + time;
+    document.getElementById("time").innerHTML = time > 9 ? '00:' + time : '00:0' + time;
      
     if (time != 0){
       var item = Math.floor(Math.random() * 18);

@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: FC-Orbit, sans-serif;
+    /* color: white; */
+}
+@font-face {
+    font-family: FC-Orbit;
+    src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* body{
+    overflow: hidden;
+} */
+
+h1{z-index: 100; font-size: 8rem; line-height: 130%;}
+h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
+h3{z-index: 100; font-size: 2rem; line-height: 130%;}
+h4{z-index: 100; font-size: 1.5rem; line-height: 130%;}
+
+button{
+    width: fit-content;
+    background: hsl(1, 100%, 100%, 60%);
+    padding: .75rem 2rem;
+    border-radius: 60px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+}
+
+.dec{
+    position: absolute;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    max-width: 1194px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.wallpaper{
+    width: 100%;
+}
+
+.wallpaper > img{
+    max-width: 100%;
+    min-height: 834px;
+    z-index: -1;
+}
+
+img{
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.textpage7{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 23%;
+    color: white;
+}
+
+.rockback_7{
+    bottom: 18%;
+    left: -1%;
+}
+
+.seaweedback_7{
+    bottom: 10%;
+    left: -2%;
+}
+
+.rockmid_7{
+    bottom: 3%;
+    left: -1.5%;
+}
+
+.coralmid_7{
+    bottom: 0;
+    left: -2%;
+}
+
+.coralfront_7{
+    bottom: -4%;
+    left: -6%;
+}
+
+.light_7{
+    top: 0;
+    left: 20%;
+}
+
+.fish1_7{
+    width: 14%;
+    top: 76%;
+    left: 64%;
+}
+.fish2_7{
+    top: 80%;
+    left: 25%;
+}
+
+.bubble1_7{
+    top: 60%;
+    left: 8%;
+}
+.bubble2_7{
+    top: 46%;
+    left: 78%;
+}
+
+.textpage8{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 23%;
+    color: white;
+}
+
+.sand_8{
+    bottom: 1%;
+    left: 0;
+}
+
+.sea_8{
+    bottom: 1%;
+    right: 0;
+}
+
+.wave_8{
+    width: 80%;
+    bottom: 1%;
+    right: -1%;
+}
+
+.boat1_8{
+    width: 20%;
+    top: 67%;
+    left: 33%;
+}
+
+.boat2_8{
+    width: 10%;
+    top: 62%;
+    left: 25%;
+    transform: scaleX(-1);
+}
+
+.mountainback_8{
+    bottom: 34.25%;
+    right: -.5%;
+}
+
+.mountain_8{
+    bottom: 1%;
+    left: -3%;
+}
+
+.rock_8{
+    bottom: -1%;
+    left: -.5%;
+}
+
+.tree_8{
+    bottom: -5%;
+    left: -1%;
+}
+
+.cloud1_8{
+    top: 7%;
+    right: -9%;
+}
+
+.cloud2_8{
+    top: 22%;
+    right: 15%;
+}
+
+.cloud3_8{
+    top: 17%;
+    left: 8%;
+}
+
+.bird1_8{
+    top: 44%;
+    left: 12%;
+}
+
+.bird2_8{
+    top: 25%;
+    left: 3%;
+}
+
+.bird3_8{
+    top: 10%;
+    left: 28%;
+}
+
+.sky_8{
+    width: 110%;
+    top: 36%;
+    left: -5%;
+}
+
+.sunset_8{
+    top: 20%;
+    left: 25%;
+}
+
+.light_8{
+    top: 37%;
+    left: -22%;
+}
+
+.armright_8{
+    bottom: -15%;
+    left: 70%;
+}
+
+.armleft_8{
+    bottom: -17.5%;
+    left: 38.5%;
+}
+
+.body_8{
+    bottom: -27%;
+    left: 61%;
+}
+
+.head_8{
+    bottom: 15.5%;
+    left: 63%;
+}
+
+.hair_8{
+    bottom: 3%;
+    left: 64.5%;
+}
+
+.hat_8{
+    bottom: 18%;
+    left: 58%;
+}

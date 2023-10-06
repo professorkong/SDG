@@ -8,7 +8,7 @@
 <style>
     body{
         margin: auto;
-        max-width: 1366px;
+        max-width: 1194px;
     }
     .gallery {
         display: flex;
@@ -87,9 +87,11 @@
             }
           
             if (newPos < 0) {
+                console.log('new front')
                 firstElement = container.querySelector('.fish:first-child')
                 elementToCut = container.querySelector('.fish:last-child')
                 container.insertBefore(elementToCut, firstElement);
+                console.log(elementToCut)
                 newPos = 0 + elementToCut.offsetWidth;
                 elementToCut.removeChild
             }
