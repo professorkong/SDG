@@ -20,6 +20,7 @@ body {
     background-size: cover;
     font-family: FC-Orbit, sans-serif;
     z-index: 2;
+    
 }
 
 .background{
@@ -104,6 +105,8 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root{
