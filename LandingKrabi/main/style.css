@@ -13,12 +13,20 @@ html {
     scroll-behavior: smooth;
   }
 body{
+    position: absolute;
     overflow: hidden;
+
     --greenH1: #336666;
     --lightGreenH1: #339693;
     --greenH4: #4CA6C1;
 }
 .container{
+    /* margin: auto;
+    width: 100%;
+    position: relative;
+    max-width: 1194px;
+    overflow: hidden; */
+
     width: 100%;
     max-width: 1194px;
     height: 834px;
@@ -31,10 +39,10 @@ body{
     overflow-x: hidden;
     position: relative;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 h1{font-size: 5.5rem; line-height: 130%;}
