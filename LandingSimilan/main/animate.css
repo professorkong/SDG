@@ -109,7 +109,7 @@
     top: 830px;
 }
 
-.fishback_2,.fishbg_3{
+.fishback_2,.fishbg_3,.fishback_6{
     animation: light2 10s linear infinite;
 }
 
@@ -147,6 +147,15 @@
 
 .bubble2_4{
     animation: movebubble 3s linear infinite;
+}
+
+.light_5,.light_6{
+    animation: light4 3s linear infinite;
+}
+
+.light_5.l2{
+    left: 0px;
+    animation: light4 4s linear  infinite;
 }
 
 @keyframes movebubble {
@@ -314,4 +323,10 @@
 @keyframes movefish {
     0% {transform: translate(0px,0px);}
     100% {transform: translate(10px,-10px);}
+}
+
+@keyframes light4{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
 }
