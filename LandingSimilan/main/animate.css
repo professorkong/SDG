@@ -97,7 +97,7 @@
     animation: light2 5s linear infinite;
 }
 
-.islandwave_2{
+.islandwave_2,.wave_4{
     left: 0;
     animation: light2 5s linear infinite;
 }
@@ -109,8 +109,8 @@
     top: 830px;
 }
 
-.fishback_2{
-    animation: light2 5s linear infinite;
+.fishback_2,.fishbg_3{
+    animation: light2 10s linear infinite;
 }
 
 
@@ -120,6 +120,40 @@
 
 .light_3.l2{
     animation: light3 10s 2s linear infinite;
+}
+
+.shark_3{
+    animation: shark 7s  alternate infinite;
+}
+
+.angel1_3 ,.trash1_6{
+    animation: movefish 5s  alternate infinite;
+}
+.angel2_3 ,.trash3_6{
+    animation: movefish 3s  alternate infinite;
+}
+
+.flyfish_3{
+    animation: movefish 4s  alternate infinite;
+}
+
+.flyworm_3,.trash2_6{
+    animation: movefish 8s  alternate infinite;
+}
+
+.bubble1_4{
+    animation: movebubble 5s linear infinite;
+}
+
+.bubble2_4{
+    animation: movebubble 3s linear infinite;
+}
+
+@keyframes movebubble {
+    0% {opacity: 0; transform: translateY(0px);}
+    25% {opacity: .7; transform: translateY(-20px);}
+    75% {opacity: .7; transform: translateY(-40px);}
+    100% {opacity: 0; transform: translateY(-50px);}
 }
 
 @keyframes cloud{
@@ -265,3 +299,19 @@
     }
 }
 
+@keyframes shark{
+    0%{
+        transform: translateX(20px) translateY(-10px) rotateZ(-10deg);
+    }
+
+
+    100%{
+        transform: translateX(0px) translateY(0px) rotateZ(-5deg);
+    }
+
+}
+
+@keyframes movefish {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(10px,-10px);}
+}
