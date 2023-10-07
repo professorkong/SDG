@@ -28,9 +28,9 @@ h4{z-index: 100; font-size: 1.5rem; line-height: 130%;}
 
 button{
     width: fit-content;
-    background: hsl(1, 100%, 100%, 60%);
-    padding: .75rem 2rem;
-    border-radius: 60px;
+    background: none;
+    /* padding: .75rem 2rem; */
+    /* border-radius: 60px; */
     align-items: center;
     border: none;
     cursor: pointer;
@@ -83,7 +83,7 @@ img{
 
 .buttonpage1{
     color: #4ca6c1;
-    margin-top: 40%;
+    margin-top: 35%;
 }
 
 .cloud1_1{
@@ -265,7 +265,7 @@ img{
 
 .buttonpage3{
     color: #4ca6c1;
-    margin-top: 7%;
+    margin-top: 3%;
     align-self: center;
 }
 
@@ -451,7 +451,7 @@ img{
 
 .buttonpage5{
     color: #4ca6c1;
-    margin-top: 40%;
+    margin-top: 37%;
 }
 
 .deck{
