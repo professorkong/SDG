@@ -1,20 +1,24 @@
-.cloud1_1{
+.cloud1_1,.cloud1_8{
     opacity: 0;
     animation: cloud 20s 2s linear infinite;
 }
 
-.cloud2_1{
+.cloud2_1,.cloud3_8{
     opacity: 0;
     animation: cloud 23s linear infinite;
 }
 
-.cloud3_1{
+.cloud3_18,.cloud2_8{
     opacity: 0;
     animation: cloud 25s 5s linear infinite;
 }
 
-.wave_1{
+.wave_1,.sky_8{
     animation: wave1 2s 0s  linear alternate infinite;
+}
+
+.wave_8{
+    animation: wave1 10s 0s  linear alternate infinite;
 }
 
 .lifebelt2_1{
@@ -27,15 +31,15 @@
 
 }
 
-.bird1_1{
+.bird1_1,.bird1_8{
     animation: bird 6s 0s linear alternate infinite;
 }
 
-.bird2_1{
+.bird2_1,.bird2_8{
     animation: bird 5s 0s linear alternate infinite;
 }
 
-.bird3_1{
+.bird3_1,.bird3_8{
     animation: bird 7s 0s linear alternate infinite;
 }
 
@@ -122,14 +126,17 @@
     animation: light3 10s 2s linear infinite;
 }
 
-.shark_3{
+.shark_3,.boat1_8{
     animation: shark 7s  alternate infinite;
 }
+.boat2_8{
+    animation: movefishflip 5s  alternate infinite;
+}
 
-.angel1_3 ,.trash1_6{
+.angel1_3 ,.trash1_6,.fish2_7{
     animation: movefish 5s  alternate infinite;
 }
-.angel2_3 ,.trash3_6{
+.angel2_3 ,.trash3_6,.fish1_7{
     animation: movefish 3s  alternate infinite;
 }
 
@@ -141,15 +148,15 @@
     animation: movefish 8s  alternate infinite;
 }
 
-.bubble1_4{
+.bubble1_4,.bubble1_7{
     animation: movebubble 5s linear infinite;
 }
 
-.bubble2_4{
+.bubble2_4,.bubble2_7{
     animation: movebubble 3s linear infinite;
 }
 
-.light_5,.light_6{
+.light_5,.light_6,.light_7,.light_8{
     animation: light4 3s linear infinite;
 }
 
@@ -310,12 +317,12 @@
 
 @keyframes shark{
     0%{
-        transform: translateX(20px) translateY(-10px) rotateZ(-10deg);
+        transform: translateX(20px) translateY(-10px) rotateZ(-5deg);
     }
 
 
     100%{
-        transform: translateX(0px) translateY(0px) rotateZ(-5deg);
+        transform: translateX(0px) translateY(0px) rotateZ(5deg);
     }
 
 }
@@ -330,3 +337,9 @@
     50%{opacity: 1;}
     100%{opacity: 0;}
 }
+
+@keyframes movefishflip {
+    0% {transform: translate(0px,0px) rotateY(180deg);}
+    100% {transform: translate(10px,-10px) rotateY(180deg);}
+}
+
