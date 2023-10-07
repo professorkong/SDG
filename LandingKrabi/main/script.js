@@ -7,19 +7,28 @@ function scrollY(pageid){
     if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
     scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos) // + ต่อจาก top เดิม
   
+    // หินงอกหินย้อยหน้า 5
+    let p5 = document.querySelector(".p5");
+    p5top = -470 // to -210
+    // console.log(p5top)
+
     // frame animation
     let id = setInterval(frame, 0.1);
-    console.log({pos, scrollToTop})
     function frame() {
       if (pos == scrollToTop || pos == scrollToTop-1) {
-        console.log(body.style.top)
         clearInterval(id);
       } else {
         pos -= 2; 
         body.style.top = pos + 'px';
-        
+
+        if(pageid == '#page5' && pos <= -3350){
+          p5top += 2
+          p5.style.top = p5top + 'px'
+        }
       }
     }
+
+    
   }
 
   const fishs = [
@@ -92,12 +101,10 @@ function scrollY(pageid){
 
   // show buble fish
   const bubbles = document.querySelectorAll(".fish");
-  console.log(bubbles);
   let text = "";
   let count = 0;
   for (let fish of fishs) {
     text = `<img src="${fish.fish_pic}"><div class="moreinfo"><img src="../asset/moreinfo.png"></div>`;
-    console.log(text);
     bubbles[count].innerHTML = text;
     count++;
   }
