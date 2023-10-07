@@ -15,6 +15,7 @@ html {
 body{
     position: absolute;
     overflow: hidden;
+    width: 100%;
 
     --greenH1: #336666;
     --lightGreenH1: #339693;
@@ -27,8 +28,8 @@ body{
     max-width: 1194px;
     overflow: hidden; */
 
-    width: 1194px;
-    /* max-width: 1194px; */
+    width: 100%;
+    max-width: 1194px;
     height: 834px;
     margin: auto;
 
