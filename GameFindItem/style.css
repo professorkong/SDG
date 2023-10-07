@@ -1,6 +1,5 @@
 html {
     overflow: clip;
-    user-select: none;
 }
 
 @font-face {
@@ -95,10 +94,10 @@ body {
     background-repeat: no-repeat;
     width: 500px;
     height: 500px;
-    cursor: pointer;
     animation: linear;
     animation-name: bin_down;
     animation-duration: 60s;
+    user-select: none;
 }
 
 :root{
