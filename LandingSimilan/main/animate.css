@@ -1,0 +1,267 @@
+.cloud1_1{
+    opacity: 0;
+    animation: cloud 20s 2s linear infinite;
+}
+
+.cloud2_1{
+    opacity: 0;
+    animation: cloud 23s linear infinite;
+}
+
+.cloud3_1{
+    opacity: 0;
+    animation: cloud 25s 5s linear infinite;
+}
+
+.wave_1{
+    animation: wave1 2s 0s  linear alternate infinite;
+}
+
+.lifebelt2_1{
+    animation: lifebelt 3s 0s  alternate infinite;
+
+}
+
+.lifebelt1_1,.lifebelt_2{
+    animation: lifebelt 5s 0s alternate infinite;
+
+}
+
+.bird1_1{
+    animation: bird 6s 0s linear alternate infinite;
+}
+
+.bird2_1{
+    animation: bird 5s 0s linear alternate infinite;
+}
+
+.bird3_1{
+    animation: bird 7s 0s linear alternate infinite;
+}
+
+.leftLeg{
+    width: 300px;
+    height: 300px;
+    top: 550px;
+    left: 220px;
+    animation: rightLeg 3s 1s ease-out alternate infinite;
+}
+.rightLeg{
+    width: 300px;
+    height: 300px;
+    top: 605px;
+    left: 175px;
+    animation: rightLeg 3s ease-out alternate infinite;
+}
+.frontleg_2{
+    top: 0;
+    left: 0;
+}
+.frontfoot_2{
+    top:-110px;
+    left: -135px;
+    /* animation: rightLeg 2s ease-out alternate infinite; */
+}
+
+.backfoot_2{
+    top: -5px;
+    left: 33px;
+}
+
+.frontarm_2{
+    top: 875px;
+    animation: frontarm 5s ease-out alternate infinite;
+}
+.backarm_2{
+    top: 875px;
+    animation: frontarm 4s ease-out alternate infinite;
+}
+
+.hair_2{
+    top: 750px;
+    animation: hair 4s ease-out alternate infinite;
+}
+
+.head_2,.mouth_2{
+    top:800px;
+    animation: head 4s ease-out alternate infinite;
+}
+
+.light_2{
+    left: 0;
+    animation: light1 10s linear infinite;
+}
+
+.lightwave_2{
+    left: 0;
+    animation: light2 5s linear infinite;
+}
+
+.islandwave_2{
+    left: 0;
+    animation: light2 5s linear infinite;
+}
+
+.female{
+    animation: female 10s  alternate infinite;
+}
+.body_2{
+    top: 830px;
+}
+
+.fishback_2{
+    animation: light2 5s linear infinite;
+}
+
+
+.light_3{
+    animation: light3 5s linear infinite;
+}
+
+.light_3.l2{
+    animation: light3 10s 2s linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        transform: translateX(0px);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+}
+
+@keyframes wave1{
+    0%{
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+   
+    100%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+@keyframes lifebelt{
+    0%{
+      
+        transform: translateX(-20px);
+    }
+   
+    100%{
+     
+        transform: translateX(20px) rotateZ(5deg);
+    }
+}
+
+@keyframes bird {
+    0%{
+      
+        transform: translateX(-5px) rotateZ(-5deg);
+    }
+   
+    100%{
+     
+        transform: translateX(5px) translateY(-30px) rotateZ(5deg);
+    }
+}
+
+@keyframes rightLeg{
+    0%{
+        transform: rotateZ(0deg) translateY(0px);
+    }
+    100%{
+        transform: rotateZ(5deg) translateY(-10px) translateX(10px);
+    }
+}
+
+@keyframes frontarm{
+    0%{
+        transform: rotateZ(-5deg) translateY(0px);
+    }
+    100%{
+        transform: rotateZ(15deg) translateY(-15px) translateX(-10px);
+    }
+}
+
+@keyframes hair{
+    0%{
+        transform: rotateZ(-5deg) translateY(0px) translateX(-20px);
+    }
+    100%{
+        transform: rotateZ(15deg) translateY(-10px) translateX(-10px);
+    }
+}
+
+@keyframes head{
+    0%{
+        transform: rotateZ(0deg) translateY(0px) translateX(0px);
+    }
+    100%{
+        transform: rotateZ(5deg) translateY(-5px) translateX(0px);
+    }
+}
+
+@keyframes light1{
+    0%{
+        opacity: 0;
+        transform: rotateZ(20deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(1000px) rotateZ(-50deg);
+    }
+}
+
+@keyframes light2{
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(200px) ;
+    }
+}
+
+@keyframes light3{
+    0%{
+        opacity: 0;
+        transform: translateX(50px) rotateZ(0deg);
+    }
+    25%{opacity: 1;}
+    50%{opacity: 0;}
+    75%{opacity: 1;}
+    100%{
+        opacity: 0;
+        transform: translateX(-50px) translateY(-70px) rotateZ(7deg);
+    }
+}
+
+@keyframes female{
+    0%{
+      
+        transform: translateX(50px) rotateZ(0deg);
+    }
+   
+    100%{
+     
+        transform: translateX(-50px) translateY(-70px) rotateZ(7deg);
+    }
+}
+

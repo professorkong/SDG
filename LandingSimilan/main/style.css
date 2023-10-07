@@ -16,6 +16,11 @@ html {
     overflow: hidden;
 } */
 
+body{
+    position: absolute;
+    top: 0;
+}
+
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
 h3{z-index: 100; font-size: 2rem; line-height: 130%;}
@@ -23,9 +28,9 @@ h4{z-index: 100; font-size: 1.5rem; line-height: 130%;}
 
 button{
     width: fit-content;
-    background: hsl(1, 100%, 100%, 60%);
-    padding: .75rem 2rem;
-    border-radius: 60px;
+    background: none;
+    /* padding: .75rem 2rem; */
+    /* border-radius: 60px; */
     align-items: center;
     border: none;
     cursor: pointer;
@@ -78,7 +83,7 @@ img{
 
 .buttonpage1{
     color: #4ca6c1;
-    margin-top: 40%;
+    margin-top: 35%;
 }
 
 .cloud1_1{
@@ -260,7 +265,7 @@ img{
 
 .buttonpage3{
     color: #4ca6c1;
-    margin-top: 7%;
+    margin-top: 3%;
     align-self: center;
 }
 
@@ -345,45 +350,58 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 8%;
     color: #0f52b5;
 }
 
 .buttonpage4{
     color: #4ca6c1;
-    margin-top: 35%;
+    margin-top: 38%;
 }
 
 .fish-gallery {
-    width: 100%;
-    margin-top: 20%;
-    display: flex;
+    margin-top: 18%;
+    width: calc(100% + 200px);
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 100px;
+    /* left: -200px; */
     flex-wrap: nowrap;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
+
 .fish-gallery::-webkit-scrollbar {
     display: none;
 }
+
 .fish {
     position: relative;
-    flex: 1 0 340px;
-    height: 340px;
-    margin: 0 2.5rem;
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), white, white);
-    border-radius: 100%;
-    z-index: 1;
+    height: 400px;
+    aspect-ratio: 1/1;
 }
 .fish > img{
-    width: 240px;
+    width: 100%;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.moreinfo{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.moreinfo > img{
+    width: 150px;
 }
 
 .island_4{
@@ -433,7 +451,7 @@ img{
 
 .buttonpage5{
     color: #4ca6c1;
-    margin-top: 40%;
+    margin-top: 37%;
 }
 
 .deck{

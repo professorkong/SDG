@@ -1,338 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>content2 V2</title>
-    <link rel="stylesheet" href="content2.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="content2.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+  </head>
+  <body>
     <div class="container" id="page4">
-        <div class="wallpaper">
-            <img src="../asset/scene4/scene4.png" alt="">
-        </div>
-        <div class="contentdew animate">
-            <img class="bubbled b1" src="../asset/bubble2.png" alt="">
-            <img class="bubbled b2" src="../asset/bubble2.png" alt="">
-        </div>
-        <div class="betweenpage p4">
-            <img src="../asset/scene5/scene4-5.png" alt="">
-        </div>
-        <div class="contentdew">
-            <div class="textpage4">
-                <h1 style="color:var(--lightGreenH1);">ปลาท้องถิ่น</h1>
-            </div>
-
-            <div class="fish-gallery">
-                <!-- delay ให้เก็บ xStart xEnd ก่อน -->
-                <div class="fish" data-fishid="1" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="2" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="3" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="4" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="5" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="6" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="7" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="8" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="9" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="10" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="11" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="12" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-                <div class="fish" data-fishid="13" ontouchend="setTimeout(showFishData.bind(null, this), 100)"></div>
-            </div>
-
-            <div class="center" style="margin: 2% 0 5% 0;">
-                <button onClick="page4to5()">
-                    <h4 style="color:var(--lightGreenH1);">ภัยคุกคาม</h4>
-                </button>
-            </div>
+      <div class="wallpaper">
+        <img src="../asset/scene4/scene4.png" alt="" />
+      </div>
+      <div class="contentdew animate">
+        <img class="bubbled b1" src="../asset/bubble2.png" alt="" />
+        <img class="bubbled b2" src="../asset/bubble2.png" alt="" />
+      </div>
+      <div class="betweenpage p4">
+        <img src="../asset/scene5/scene4-5.png" alt="" />
+      </div>
+      <div class="contentdew">
+        <div class="textpage4">
+          <h1 style="color: var(--lightGreenH1)">ปลาท้องถิ่น</h1>
         </div>
 
-        <!-- <div class="fish-card" onclick="closeFishData(this)"> -->
-        <div class="fish-card">
-            <div class="bgCard" onclick="closeFishData()"></div>
-            <div class="arrow right" onclick="prevFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
-            <div class="data-card" onclick="closeFishData()"><img src="../asset/fish/data/fish_data1.png" alt=""></div>
-            <div class="arrow" onclick="nextFishCard()"><img src="../asset/arrowleft.png" alt=""></div>
+        <div class="fish-gallery">
+          <!-- delay ให้เก็บ xStart xEnd ก่อน -->
+          <div
+            class="fish"
+            data-fishid="1"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="2"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="3"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="4"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="5"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="6"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="7"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="8"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="9"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="10"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="11"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="12"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
+          <div
+            class="fish"
+            data-fishid="13"
+            ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+          ></div>
         </div>
 
+        <div class="center" style="margin: 1% 0 5% 0">
+          <img src="../asset/btn/btn_page4.png" alt="" width="300px" onClick="document.getElementById('page5').scrollIntoView();">
+        </div>
+      </div>
+
+      <!-- <div class="fish-card" onclick="closeFishData(this)"> -->
+      <div class="fish-card">
+        <div class="bgCard" onclick="closeFishData()"></div>
+        <div class="arrow right" onclick="prevFishCard()">
+          <img src="../asset/arrowleft.png" alt="" />
+        </div>
+        <div class="data-card" onclick="closeFishData()">
+          <img src="../asset/fish/data/fish_data1.png" alt="" />
+        </div>
+        <div class="arrow" onclick="nextFishCard()">
+          <img src="../asset/arrowleft.png" alt="" />
+        </div>
+      </div>
     </div>
 
     <div class="container" id="page5">
-        <div class="wallpaper">
-            <img src="../asset/scene5/scene5.png" alt="">
-        </div>
-        <div class="betweenpage p5">
-            <img src="../asset/scene5/scene4-5.png" alt="">
-        </div>
-        <div class="contentdew animate">
-            <img class="fish-bg" src="../asset/scene5/fish_bg.png" alt="">
-            <img class="lightdew" src="../asset/scene5/light.png" alt="">
-            <img class="diver d1" src="../asset/scene5/diver1.png" alt="">
-            <img class="diver d2" src="../asset/scene5/diver2.png" alt="">
-            <img class="diver d3" src="../asset/scene5/diver3.png" alt="">
+      <div class="wallpaper">
+        <img src="../asset/scene5/scene5.png" alt="" />
+      </div>
+      <div class="betweenpage p5">
+        <img src="../asset/scene5/scene4-5.png" alt="" />
+      </div>
+      <div class="contentdew animate">
+        <img class="fish-bg" src="../asset/scene5/fish_bg.png" alt="" />
+        <img class="lightdew" src="../asset/scene5/light.png" alt="" />
+        <img class="diver d1" src="../asset/scene5/diver1.png" alt="" />
+        <img class="diver d2" src="../asset/scene5/diver2.png" alt="" />
+        <img class="diver d3" src="../asset/scene5/diver3.png" alt="" />
 
-            <img class="fish-dec nemo1" src="../asset/fish_nemo.png" alt="">
-            <img class="fish-dec nemo2" src="../asset/fish_nemo.png" alt="">
-            <img class="fish-dec angel1" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec angel2" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec angel3" src="../asset/fish_yellow.png" alt="">
-            <img class="fish-dec tiger1" src="../asset/fish_nokyung_red.png" alt="">
+        <img class="fish-dec nemo1" src="../asset/fish_nemo.png" alt="" />
+        <img class="fish-dec nemo2" src="../asset/fish_nemo.png" alt="" />
+        <img class="fish-dec angel1" src="../asset/fish_yellow.png" alt="" />
+        <img class="fish-dec angel2" src="../asset/fish_yellow.png" alt="" />
+        <img class="fish-dec angel3" src="../asset/fish_yellow.png" alt="" />
+        <img
+          class="fish-dec tiger1"
+          src="../asset/fish_nokyung_red.png"
+          alt=""
+        />
 
-            <img class="bubbled b3" src="../asset/bubble2.png" alt="">
-            <img class="bubbled b4" src="../asset/bubble2.png" alt="">
-            <img class="bubbled b5" src="../asset/bubble2.png" alt="">
-            <img class="bubbled b6" src="../asset/bubble2.png" alt="">
-            <img class="bubbled b7" src="../asset/bubble2.png" alt="">
+        <img class="bubbled b3" src="../asset/bubble2.png" alt="" />
+        <img class="bubbled b4" src="../asset/bubble2.png" alt="" />
+        <img class="bubbled b5" src="../asset/bubble2.png" alt="" />
+        <img class="bubbled b6" src="../asset/bubble2.png" alt="" />
+        <img class="bubbled b7" src="../asset/bubble2.png" alt="" />
+      </div>
+
+      <div class="contentdew">
+        <div class="textpage5">
+          <h1>ภัยคุกคาม</h1>
+          <div>
+            <h4>การดำน้ำเป็นสิ่งที่ส่งเสริมการท่องเที่ยว</h4>
+            <h4>บ่อยครั้งที่นักท่องเที่ยวอยากได้ภาพสวยๆกับแหล่งปะการัง</h4>
+            <h4>แต่ทว่าพวกเขาโพสต์ท่านั่งบนแนวปะการังนี่สิ!</h4>
+            <h4>นั่นสามารถทำให้ปะการังเสียหายได้เลยนะ</h4>
+          </div>
+          <img src="../asset/btn/btn_page5.png" alt="" width="300px" onClick="document.getElementById('page6').scrollIntoView();">
         </div>
-
-
-        <div class="contentdew">
-            <div class="textpage5">
-                <h1>ภัยคุกคาม</h1>
-                <div>
-                    <h4>การดำน้ำเป็นสิ่งที่ส่งเสริมการท่องเที่ยว</h4>
-                    <h4>บ่อยครั้งที่นักท่องเที่ยวอยากได้ภาพสวยๆกับแหล่งปะการัง</h4>
-                    <h4>แต่ทว่าพวกเขาโพสต์ท่านั่งบนแนวปะการังนี่สิ!</h4>
-                    <h4>นั่นสามารถทำให้ปะการังเสียหายได้เลยนะ</h4>
-                </div>
-                <button onClick="document.getElementById('page6').scrollIntoView();">
-                    <h4>ฝึกหลบหลีกปะการัง</h4>
-                </button>
-            </div>
-        </div>
+      </div>
     </div>
-    
+
     <script type="text/javascript">
-
-        const fishs = [
-            {
-                fishid:1,
-                fish_pic:'../asset/fish/pic/fish_pic1.png',
-                fish_data:'../asset/fish/data/fish_data1.png'
-            },
-            {
-                fishid:2,
-                fish_pic:'../asset/fish/pic/fish_pic2.png',
-                fish_data:'../asset/fish/data/fish_data2.png'
-            },
-            {
-                fishid:3,
-                fish_pic:'../asset/fish/pic/fish_pic3.png',
-                fish_data:'../asset/fish/data/fish_data3.png'
-            },
-            {
-                fishid:4,
-                fish_pic:'../asset/fish/pic/fish_pic4.png',
-                fish_data:'../asset/fish/data/fish_data4.png'
-            },
-            {
-                fishid:5,
-                fish_pic:'../asset/fish/pic/fish_pic5.png',
-                fish_data:'../asset/fish/data/fish_data5.png'
-            },
-            {
-                fishid:6,
-                fish_pic:'../asset/fish/pic/fish_pic6.png',
-                fish_data:'../asset/fish/data/fish_data6.png'
-            },
-            {
-                fishid:7,
-                fish_pic:'../asset/fish/pic/fish_pic7.png',
-                fish_data:'../asset/fish/data/fish_data7.png'
-            },
-            {
-                fishid:8,
-                fish_pic:'../asset/fish/pic/fish_pic8.png',
-                fish_data:'../asset/fish/data/fish_data8.png'
-            },
-            {
-                fishid:9,
-                fish_pic:'../asset/fish/pic/fish_pic9.png',
-                fish_data:'../asset/fish/data/fish_data9.png'
-            },
-            {
-                fishid:10,
-                fish_pic:'../asset/fish/pic/fish_pic10.png',
-                fish_data:'../asset/fish/data/fish_data10.png'
-            },
-            {
-                fishid:11,
-                fish_pic:'../asset/fish/pic/fish_pic11.png',
-                fish_data:'../asset/fish/data/fish_data11.png'
-            },
-            {
-                fishid:12,
-                fish_pic:'../asset/fish/pic/fish_pic12.png',
-                fish_data:'../asset/fish/data/fish_data12.png'
-            },
-            {
-                fishid:13,
-                fish_pic:'../asset/fish/pic/fish_pic13.png',
-                fish_data:'../asset/fish/data/fish_data13.png'
-            }
-        ]
         
-        // show buble fish
-        const bubbles = document.querySelectorAll('.fish')
-        let text = ''
-        let count = 0
-        for(let fish of fishs){
-            text = `<img src="${fish.fish_pic}">`
-            bubbles[count].innerHTML = text
-            count++
+      const fishs = [
+        {
+          fishid: 1,
+          fish_pic: "../asset/fish/pic/fish_pic1.png",
+          fish_data: "../asset/fish/data/fish_data1.png",
+        },
+        {
+          fishid: 2,
+          fish_pic: "../asset/fish/pic/fish_pic2.png",
+          fish_data: "../asset/fish/data/fish_data2.png",
+        },
+        {
+          fishid: 3,
+          fish_pic: "../asset/fish/pic/fish_pic3.png",
+          fish_data: "../asset/fish/data/fish_data3.png",
+        },
+        {
+          fishid: 4,
+          fish_pic: "../asset/fish/pic/fish_pic4.png",
+          fish_data: "../asset/fish/data/fish_data4.png",
+        },
+        {
+          fishid: 5,
+          fish_pic: "../asset/fish/pic/fish_pic5.png",
+          fish_data: "../asset/fish/data/fish_data5.png",
+        },
+        {
+          fishid: 6,
+          fish_pic: "../asset/fish/pic/fish_pic6.png",
+          fish_data: "../asset/fish/data/fish_data6.png",
+        },
+        {
+          fishid: 7,
+          fish_pic: "../asset/fish/pic/fish_pic7.png",
+          fish_data: "../asset/fish/data/fish_data7.png",
+        },
+        {
+          fishid: 8,
+          fish_pic: "../asset/fish/pic/fish_pic8.png",
+          fish_data: "../asset/fish/data/fish_data8.png",
+        },
+        {
+          fishid: 9,
+          fish_pic: "../asset/fish/pic/fish_pic9.png",
+          fish_data: "../asset/fish/data/fish_data9.png",
+        },
+        {
+          fishid: 10,
+          fish_pic: "../asset/fish/pic/fish_pic10.png",
+          fish_data: "../asset/fish/data/fish_data10.png",
+        },
+        {
+          fishid: 11,
+          fish_pic: "../asset/fish/pic/fish_pic11.png",
+          fish_data: "../asset/fish/data/fish_data11.png",
+        },
+        {
+          fishid: 12,
+          fish_pic: "../asset/fish/pic/fish_pic12.png",
+          fish_data: "../asset/fish/data/fish_data12.png",
+        },
+        {
+          fishid: 13,
+          fish_pic: "../asset/fish/pic/fish_pic13.png",
+          fish_data: "../asset/fish/data/fish_data13.png",
+        },
+      ];
+
+      // show buble fish
+      const bubbles = document.querySelectorAll(".fish");
+      console.log(bubbles);
+      let text = "";
+      let count = 0;
+      for (let fish of fishs) {
+        text = `<img src="${fish.fish_pic}"><div class="moreinfo"><img src="../asset/moreinfo.png"></div>`;
+        console.log(text);
+        bubbles[count].innerHTML = text;
+        count++;
+      }
+
+      // auto slide loop
+      // https://www.youtube.com/watch?v=tZmpC93zkio
+
+      let delay = 2000;
+      let fishWidth = 500 // ระยะการเลื่อน
+      let fishWidthGap = 600 //ระยะการเลื่อน + ให้ปลาริมโดนกินขอบนิดนึง
+      let autoScroll = setInterval(scroll2, delay);
+      const fishgal = document.querySelector(".fish-gallery");
+
+      let numfishPlus = 0;
+      let numfishDown = 12;
+      let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
+
+      function chackAddFish() {
+        //ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
+        if (fishgal.scrollLeft > fishgal.clientWidth - 1000) {
+          elementToCut = bubbles[numfishPlus % 13];
+          numfishPlus++;
+          $(fishgal).append($(elementToCut).clone());
+        }
+      }
+
+      function scroll2() {
+        fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / fishWidth) * fishWidth + fishWidthGap;
+        chackAddFish();
+      }
+
+      // ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
+      fishgal.addEventListener("touchend", (e) => touchEnd(e));
+      fishgal.addEventListener("touchstart", (e) => touchStart(e));
+
+      let xStart, xEnd, yStart, yEnd;
+      let dif = 0;
+      function touchStart(e) {
+        scaleCenterBubble();
+        // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+        // https://stackoverflow.com/questions/41993176/determine-touch-position-on-tablets-with-javascript/61732450#61732450
+        var evt = typeof e.originalEvent === "undefined" ? e : e.originalEvent;
+        var touch = evt.touches[0] || evt.changedTouches[0];
+        xStart = touch.pageX;
+      }
+      function touchEnd(e) {
+        // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
+        var evt = typeof e.originalEvent === "undefined" ? e : e.originalEvent;
+        var touch = evt.touches[0] || evt.changedTouches[0];
+        xEnd = touch.pageX;
+        dif = Math.abs(xStart - xEnd);
+
+        chackAddFish();
+      }
+
+      // show data card
+      let nowFishNumber; //ไว้ใช้ตอนกดเปลี่ยน
+
+      function showFishData(el) {
+        // ถ้าจิ้มแล้วเคลื่อนเกิน 100px ไม่ต้องโชว์
+        if (dif > 100) return;
+
+        clearInterval(autoScroll); //หยุดลูป
+
+        let data = el.dataset;
+        nowFishNumber = data.fishid; //เก็บให้ฟังชั่นเปลี่ยนหน้า
+        let body = document.querySelector("body");
+        let pagecard = document.querySelector(".fish-card");
+        let card = document.querySelector(".data-card");
+        let html = `<img src="${fishs[data.fishid - 1].fish_data}">`;
+
+        body.style.overflow = "hidden";
+        pagecard.style.visibility = "visible";
+        pagecard.style.opacity = "1";
+        card.innerHTML = html;
+      }
+
+      // click card to close
+      function closeFishData(el) {
+        let body = document.querySelector("body");
+        let pagecard = document.querySelector(".fish-card");
+
+        body.style.overflow = "none";
+        pagecard.style.visibility = "hidden";
+        pagecard.style.opacity = "0";
+
+        autoScroll = setInterval(scroll2, delay);
+      }
+
+      // next card
+      let leftArrow = document.querySelector(".arrow.right");
+
+      function nextFishCard() {
+        if (fishgal.scrollLeft > 0) {
+          leftArrow.style.opacity = 1;
         }
 
+        nextFishNumber = nowFishNumber * 1 + 1;
+        if (nextFishNumber == 14) {
+          nextFishNumber = 1;
+        }
+        console.log({ nowFishNumber, nextFishNumber });
+        let card = document.querySelector(".data-card");
+        let html = `<img src="${fishs[nextFishNumber - 1].fish_data}">`;
+        card.innerHTML = html;
+        nowFishNumber = nextFishNumber;
 
-        // auto slide loop
-        // https://www.youtube.com/watch?v=tZmpC93zkio
+        //ขยับด้านหลัง
+        nowleft = fishgal.scrollLeft;
+        fishgal.scrollLeft = nowleft - (nowleft % fishWidth) + fishWidthGap;
+        chackAddFish();
+      }
 
-        let delay = 2000
-        let autoScroll = setInterval(scroll2, delay)
-        const fishgal = document.querySelector('.fish-gallery')
-
-        let numfishPlus = 0
-        let numfishDown = 12
-        let availableOffset = fishgal.scrollWidth - fishgal.clientWidth;
-
-        function chackAddFish(){//ดึงหน้ามาต่อท้าย ถ้าเหลือน้้อยกว่า 1000px
-            if(fishgal.scrollLeft > fishgal.clientWidth - 1000){ 
-                elementToCut = bubbles[numfishPlus % 13]
-                numfishPlus++
-                $(fishgal).append($(elementToCut).clone())
-            }
-            if(fishgal.scrollLeft < 200){ // ดึงท้ายมาต่อหน้า แลคเว่อ
-                lastleft = fishgal.scrollLeft
-
-                elementToCut = bubbles[numfishDown]
-                numfishDown--
-                if(numfishDown == -1){
-                    numfishDown = 12
-                }
-                $(fishgal).prepend($(elementToCut).clone())
-
-                fishgal.scrollLeft = 0 + elementToCut.offsetWidth;
-            }
+      // prev card
+      function prevFishCard() {
+        //แผ่นแรกไม่ให้กดซ้าย
+        if (fishgal.scrollLeft == 0) {
+          leftArrow.style.opacity = 0;
+          return;
         }
 
-
-        function scroll2(){
-            fishgal.scrollLeft = Math.floor(fishgal.scrollLeft / 600)* 600 + 800
-            chackAddFish()
+        //ปกติ
+        prevFishNumber = nowFishNumber * 1 - 1;
+        if (prevFishNumber == 0) {
+          prevFishNumber = 13;
         }
+        console.log({ nowFishNumber, prevFishNumber });
+        let card = document.querySelector(".data-card");
+        let html = `<img src="${fishs[prevFishNumber - 1].fish_data}">`;
+        card.innerHTML = html;
+        nowFishNumber = prevFishNumber;
 
-        // ipad แต่จิ้มลากก็คือการ scroll ไม่ต้องเก็บค่า mouse นู่นนี่เหมือนคอม
-        fishgal.addEventListener('touchend',e=>touchEnd(e));
-        fishgal.addEventListener('touchstart',e=>touchStart(e));
-        
-        let xStart, xEnd, yStart, yEnd
-        let dif = 0
-        function touchStart(e){
-            scaleCenterBubble()
-            // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
-            // https://stackoverflow.com/questions/41993176/determine-touch-position-on-tablets-with-javascript/61732450#61732450
-            var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-            var touch = evt.touches[0] || evt.changedTouches[0];
-            xStart = touch.pageX;
-        }
-        function touchEnd(e){
-            // เก็บตำแหน่ง toustart & end ถ้าเป็นจุดเดียวกันค่อยโชว์ปลา
-            var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-            var touch = evt.touches[0] || evt.changedTouches[0];
-            xEnd = touch.pageX;
-            dif = Math.abs(xStart-xEnd)
+        //ขยับด้านหลัง
+        nowleft = fishgal.scrollLeft;
+        fishgal.scrollLeft = nowleft - (nowleft % fishWidth) - (fishWidthGap / 2);
 
-            chackAddFish()
-        }
-        
+        chackAddFish();
+      }
 
-        // show data card
-        let nowFishNumber //ไว้ใช้ตอนกดเปลี่ยน
+      function scaleCenterBubble() {
+        var elem = document.elementFromPoint(
+          $(window).width() / 2,
+          $(window).height() / 2
+        );
+        var centerElem = $(elem);
+        // centerElem.style.width = "scale(1.1)";
+        // console.log(centerElem)
+      }
 
-        function showFishData(el){
-            // ถ้าจิ้มแล้วเคลื่อนเกิน 100px ไม่ต้องโชว์
-            if(dif > 100) return;
-
-            clearInterval(autoScroll) //หยุดลูป
-            
-            let data = el.dataset
-            nowFishNumber = data.fishid //เก็บให้ฟังชั่นเปลี่ยนหน้า
-            let body = document.querySelector('body')
-            let pagecard = document.querySelector('.fish-card')
-            let card = document.querySelector('.data-card')
-            let html = `<img src="${fishs[data.fishid-1].fish_data}">`
-
-            body.style.overflow = 'hidden'
-            pagecard.style.visibility = 'visible'
-            pagecard.style.opacity = '1'
-            card.innerHTML = html    
-        }
-
-        // click card to close
-        function closeFishData(el){
-            let body = document.querySelector('body')
-            let pagecard = document.querySelector('.fish-card')
-
-            body.style.overflow = 'none'
-            pagecard.style.visibility = 'hidden'
-            pagecard.style.opacity = '0'
-
-            autoScroll = setInterval(scroll2, delay)
-        }
-
-        // next card
-        function nextFishCard(){
-            nextFishNumber = nowFishNumber*1 + 1
-            if(nextFishNumber == 14){
-                nextFishNumber = 1
-            }
-            console.log({nowFishNumber, nextFishNumber})
-            let card = document.querySelector('.data-card')
-            let html = `<img src="${fishs[nextFishNumber-1].fish_data}">`
-            card.innerHTML = html  
-            nowFishNumber = nextFishNumber
-
-            //ขยับด้านหลัง
-            nowleft = fishgal.scrollLeft
-            fishgal.scrollLeft = nowleft - (nowleft % 600) + 800
-            chackAddFish()
-        }
-
-        // prev card
-        function prevFishCard(){
-            prevFishNumber = nowFishNumber*1 - 1
-            if(prevFishNumber == 0){
-                prevFishNumber = 13
-            }
-            console.log({nowFishNumber, prevFishNumber})
-            let card = document.querySelector('.data-card')
-            let html = `<img src="${fishs[prevFishNumber-1].fish_data}">`
-            card.innerHTML = html  
-            nowFishNumber = prevFishNumber
-
-            //ขยับด้านหลัง
-            nowleft = fishgal.scrollLeft
-            fishgal.scrollLeft = nowleft - (nowleft % 600) - 400
-
-            chackAddFish()
-        }
-
-        function scaleCenterBubble(){
-            var elem = document.elementFromPoint($(window).width()/2, $(window).height()/2);
-            var centerElem = $(elem);
-            // centerElem.style.width = "scale(1.1)";
-            // console.log(centerElem)
-        }
-
-        function page4to5(){
-            clearInterval(autoScroll) //หยุดลูป
-            let action = document.getElementById('page5').scrollIntoView({block: 'end'});
-            let between = document.querySelector('.p5')
-            between.style.top = '-60%'
-        }
-
-        
+      function page4to5() {
+        clearInterval(autoScroll); //หยุดลูป
+        let action = document
+          .getElementById("page5")
+          .scrollIntoView({ block: "end" });
+        let between = document.querySelector(".p5");
+        between.style.top = "-60%";
+      }
     </script>
-</body>
+  </body>
 </html>
