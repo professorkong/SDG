@@ -151,13 +151,13 @@
     top: 150px;
     left: -350px;
     aspect-ratio: 638/209;
-    animation: movefishgroup 40s infinite linear;
+    animation: movefishgroup 30s infinite linear;
 }
 
 @keyframes movefishgroup {
     0% {transform: translate(0px,0px) rotate(0deg);}
-    40% {transform: translate(900px,-150px) rotate(5deg);}
-    70% {transform: translate(1600px,-140px) rotate(10deg);}
+    50% {transform: translate(900px,-150px) rotate(5deg);}
+    90% {transform: translate(1600px,-140px) rotate(10deg);}
     100% {transform: translate(1600px,-125px) rotate(10deg);}
 }
 

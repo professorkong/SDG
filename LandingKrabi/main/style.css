@@ -13,14 +13,22 @@ html {
     scroll-behavior: smooth;
   }
 body{
+    position: absolute;
     overflow: hidden;
+
     --greenH1: #336666;
     --lightGreenH1: #339693;
     --greenH4: #4CA6C1;
 }
 .container{
+    /* margin: auto;
     width: 100%;
+    position: relative;
     max-width: 1194px;
+    overflow: hidden; */
+
+    width: 1194px;
+    /* max-width: 1194px; */
     height: 834px;
     margin: auto;
 
@@ -35,6 +43,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.container.five{
+    height: max-content;
 }
 
 h1{font-size: 5.5rem; line-height: 130%;}

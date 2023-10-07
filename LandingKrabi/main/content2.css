@@ -1,8 +1,12 @@
 .contentdew{
     width: 100%;
     position: absolute;
-    top: 0;
+    bottom: 10%;
     left: 0;
+}
+
+.contentdew.five{
+    bottom: -5%;
 }
 
 .wallpaper{
@@ -27,8 +31,9 @@ img{
     bottom: -44%;
 }
 .p5{
-    top: -57%;
-    transition: 10s linear;
+    position: absolute;
+    top: -470px;
+    /* transition: 10s linear; */
 }
 .textpage4{
     width: 100%;
@@ -127,7 +132,7 @@ img{
     flex-direction: column;
     align-items: end;
     gap: 1rem;
-    padding: 12rem 4rem;
+    padding: 0 5% 33% 0;
     color: white;
 }
 .textpage5 > div{
@@ -181,6 +186,10 @@ img{
 }
 @keyframes bubbleY_1{   
     0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
         transform: translateY(-5);
         opacity: 1;
     }
@@ -191,12 +200,16 @@ img{
 }
 @keyframes bubbleY_2{   
     0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
         transform: translateY(-5);
-        opacity: 0.2;
+        opacity: 1;
     }
     100%{
         transform: translateY(95px);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -213,7 +226,7 @@ img{
 }
 .diver{
     position: absolute;
-    top: -20%;
+    /* top: -20%; */
 }
 .d1{
     animation: diver1 5s linear infinite alternate;

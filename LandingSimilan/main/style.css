@@ -18,6 +18,7 @@ html {
 
 body{
     position: absolute;
+    overflow: hidden;
     top: 0;
 }
 
@@ -83,7 +84,7 @@ img{
 
 .buttonpage1{
     color: #4ca6c1;
-    margin-top: 35%;
+    margin-top: 34%;
 }
 
 .cloud1_1{
@@ -257,6 +258,7 @@ img{
 .textpage3{
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 15%;
     margin-left: 10%;
     width: fit-content;
@@ -331,8 +333,8 @@ img{
 }
 
 .flyfish_3{
-    bottom: 3%;
-    left: 20%;
+    bottom: 25%;
+    left: 15%;
 }
 
 .flyworm_3{

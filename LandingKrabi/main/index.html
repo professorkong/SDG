@@ -1,18 +1,338 @@
-<html> 
-  <head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krabi</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="content2.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script> 
-    $(function(){
-      $("#Content1").load("content1.html"); 
-      $("#Content2").load("content2_V2.html");
-      $("#Content3").load("content3.html"); 
-    });
-    </script> 
-  </head> 
+</head>
+<body style="background: #222222;"> 
 
-  <body style="background: #222222;"> 
-     <div id="Content1"></div>
-     <div id="Content2"></div>
-     <div id="Content3"></div>
-  </body> 
+    <div class="container" id="page1" style="background-image: url('../asset/scene_01.png');">
+      <div class="asset light"></div>
+      <div class="asset boat"></div>
+      <div class="asset bird"></div>
+      <div class="asset smallbird"></div>
+      <div class="asset cloud1"></div>
+      <div class="asset cloud2"></div>
+      <div class="asset bubble" style="width: 80px; left: 100px; bottom: 100px;"></div>
+      <div class="asset bubble two" style="width: 50px; left: 300px; bottom: 10px;"></div>
+      <div class="asset fishNemo one" style="width: 100px; left: 325px; bottom: 75px; opacity: 0.7;"></div>
+      <div class="asset fishNemo two" style="width: 60px; left: 350px; bottom: 35px; opacity: 0.7;"></div>
+      <div class="asset fishNemo three" style="width: 60px; left: 275px; bottom: 125px; opacity: 0.7;"></div>
+      <div class="asset grain"></div>
+      <div class="content">
+              <div style="height: 60%; margin-top: 17%; margin-left: 17%;">
+                  <h1 style="color:var(--greenH1);">ท่องเที่ยวกระบี่</h1>
+                  <h2 style="color:var(--greenH1)">สายเทคแคร์ เป็นมิตรต่อปะการัง</h2>
+              </div>
+              <div class="center" style="height: 30%; align-items: center;">
+                  <img src="../asset/btn/btn_start.png" alt="" width="300px" onClick="scrollY('#page2')">
+              </div>
+      </div>
+    </div>
+
+    <div class="container" id="page2" style="background-image: url('../asset/scene_02.png');">
+      <div class="asset scene2front"></div>
+      <div class="asset fishGroup"></div>
+      <div class="asset fish2 one" style="top: 250px; right: 100px"></div>
+      <div class="asset fish2 two" style="top: 450px; right: 0px"></div>
+      <div class="asset fish2 three" style="top: 400px; right: 500px"></div>
+      
+      <div class="asset brokeCoral1 one" style="width: 30px; bottom: 70px; left: 250px;"></div>
+      <div class="asset brokeCoral1 two" style="width: 45px; bottom: 300px; left: 150px;"></div>
+
+      <div class="asset brokeCoral1 one" style="width: 60px; bottom: 130px; left: 50px;"></div>
+      <div class="asset brokeCoral1 two" style="width: 50px; bottom: 250px; left: 450px;"></div>
+
+      <div class="asset brokeCoral2 one" style="width: 30px; bottom: 280px; left: 357px;"></div>
+      <div class="asset brokeCoral2 two" style="width: 50px; bottom: 150px; left: 450px;"></div>
+      <div class="asset brokeCoral2 three" style="width: 40px; bottom: 30px; left: 550px;"></div>
+      
+      <div class="asset brokeCoral3" style="width: 60px; bottom: 25px; left: 200px;"></div>
+
+      <div class="asset brokeCoral4"></div>
+      <div class="asset brokeCoral5"></div>
+
+      <div class="asset bubble" style="width: 60px; left: 0; bottom: 300px; "></div>
+      <div class="asset bubble two" style="width: 60px; left: 100px; bottom: 150px; "></div>
+      <div class="asset bubble three" style="width: 60px; left: 600px; bottom: 150px; "></div>
+      <div class="asset bubble two" style="width: 60px; right: 100px; top: 250px; "></div>
+
+      <div class="asset scene2light1"></div>
+      <div class="asset scene2light2"></div>
+      <div class="asset grain"></div>
+
+      <div class="content" style="text-align: center; align-items: end; justify-content: end;">
+          <div style="width: 35%;  margin-right: 10%; ">
+              <h3>ลงจากเรือได้ไม่นานเราก็พบกับ เอ่อ...จริงๆมันควรเป็นแนวปะการังแต่ดูสิ ตอนนี้ปะการังเสียหาย</h3>
+              <h4 style="padding: 2rem 1rem;">
+                  บ่อยครั้งที่การจอดเรือฝั่งน้ำตื้นตัวเรือจอดทับแนวปะการังเสียหาย เหตุมาจากเรือนำเที่ยวฝ่าฝืนเข้าไปในเขตแนวทุ่นอุทยานซึ่งใต้ท้องเรือนั้นครูดทับอยู่บนแนวปะการังรอบเกาะ !
+              </h4>
+              <div class="center" style="margin-bottom: 30%;">
+                 <button onClick="scrollY('#page3')"><h4>ออกสำรวจแนวปะการัง</h4></button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="container" id="page3" style="background-image: url('../asset/scene_03.png');">
+      <div class="asset bubble three" style="width: 70px; left: 200px; bottom: 200px;"></div>
+      <div class="asset fish2 one" style="top: 50px; right: 300px"></div>
+
+      <div class="asset kraben" style="width: 150px; right: 25px; top: -50px;"></div>
+      <div class="asset scene3back"></div>
+
+      <div class="asset turtle" style="width: 130px; left: -130px; top: 450px;"></div>
+
+      <div class="asset fish_yellow two" style="width: 60px; left: 250px; bottom: 150px;"></div>
+      <div class="asset fish_yellow three" style="width: 40px; left: 150px; bottom: 90px;"></div>
+      
+      <div class="asset fish_yellow four" style="width: 60px; right: 250px; top: 400px;"></div>
+      <div class="asset fish_rainbow" style="width: 150px; right: 5px; top: 300px;"></div>
+
+      <div class="asset scene3mid"></div>
+      <!-- left mid -->
+      <div class="asset fish_nokyung" style="width: 120px; left: 0px; bottom: 200px;"></div>
+      <div class="asset fishNemo s3one" style="width: 120px; left: 250px; bottom: 10px;"></div>
+      <div class="asset fishNemo s3two" style="width: 70px; left: 400px; bottom: 125px;"></div>
+      <!-- right mid -->
+      <div class="asset fishNemo s3three" style="width: 70px; right: 550px; bottom: 10px;"></div>
+      <div class="asset fishNemo s3four" style="width: 60px; right: 350px; bottom: 200px;"></div>
+      <div class="asset fishNemo s3five" style="width: 90px; right: 300px; bottom: 50px;"></div>
+      <div class="asset fish_brown" style="width: 140px; right: 25px; bottom: 150px;"></div>
+      <div class="asset scene3front"></div>
+
+      <div class="asset fish_saba" style="width: 200px; right: -50px; bottom: -30px;"></div>
+      <div class="asset fish_yellow one" style="width: 70px; left: 50px; bottom: 50px;"></div>
+
+      <div class="asset bubble" style="width: 75px; right: 300px; bottom: 200px;"></div>
+      <div class="asset bubble two" style="width: 50px; left: 500px; bottom: 0px;"></div>
+      <div class="asset scene3light1"></div>
+      <div class="asset grain"></div>
+      <div class="asset scene3light2"></div>
+      
+      <div class="content" style="justify-content: start;">
+          <div style="width: 50%; margin: 8%  0 0 10%">
+              <h1 style="color:var(--lightGreenH1)">แนวปะการัง</h1>
+              <h4 style="color:var(--greenH4)"> ปะการังมีความสำคัญต่อ ระบบนิเวศทางทะเล
+                  การประมง และมีส่วนช่วยรักษาสภาพสมดุลธรรมชาติและ ช่วยลดความรุนแรงของคลื่นที่กระทบต่อชายฝั่ง  
+                  <br><br>
+                  ความสวยงามของแนวปะการังช่วยในด้านพักผ่อนหย่อนใจและเป็นจุดดึงดูดนักท่องเที่ยวได้อย่างดี</h4>
+          </div>
+          <div class="center" style="margin-top: 20%;">
+              <img src="../asset/btn/btn_page3.png" alt="" width="270px" onClick="scrollY('#page4')">
+          </div>
+      </div>
+    </div>
+
+    <div class="container" id="page4">
+    <div class="wallpaper">
+      <img src="../asset/scene4/scene4.png" alt="" />
+    </div>
+    <div class="contentdew animate">
+      <img class="bubbled b1" src="../asset/bubble2.png" alt="" />
+      <img class="bubbled b2" src="../asset/bubble2.png" alt="" />
+    </div>
+    <div class="betweenpage p4">
+      <img src="../asset/scene5/scene4-5.png" alt="" />
+    </div>
+    <div class="contentdew">
+      <div class="textpage4">
+        <h1 style="color: var(--lightGreenH1)">ปลาท้องถิ่น</h1>
+      </div>
+
+      <div class="fish-gallery">
+        <!-- delay ให้เก็บ xStart xEnd ก่อน -->
+        <div
+          class="fish"
+          data-fishid="1"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="2"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="3"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="4"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="5"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="6"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="7"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="8"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="9"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="10"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="11"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="12"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+        <div
+          class="fish"
+          data-fishid="13"
+          ontouchend="setTimeout(showFishData.bind(null, this), 100)"
+        ></div>
+      </div>
+
+      <div class="center">
+        <img src="../asset/btn/btn_page4.png" alt="" width="270px" onClick="scrollY('#page5')">
+      </div>
+    </div>
+
+    <div class="fish-card">
+      <div class="bgCard" onclick="closeFishData()"></div>
+      <div class="arrow right" onclick="prevFishCard()">
+        <img src="../asset/arrowleft.png" alt="" />
+      </div>
+      <div class="data-card" onclick="closeFishData()">
+        <img src="../asset/fish/data/fish_data1.png" alt="" />
+      </div>
+      <div class="arrow" onclick="nextFishCard()">
+        <img src="../asset/arrowleft.png" alt="" />
+      </div>
+    </div>
+    </div>
+
+    <div class="container five" id="page5">
+    <div class="wallpaper">
+      <img src="../asset/scene5/scene5.png" alt="" />
+    </div>
+    <div class="betweenpage p5">
+      <img src="../asset/scene5/scene4-5.png" alt="" />
+    </div>
+    <div class="contentdew five animate">
+      <img class="fish-bg" src="../asset/scene5/fish_bg.png" alt="" />
+      <img class="lightdew" src="../asset/scene5/light.png" alt="" />
+      <img class="diver d1" src="../asset/scene5/diver1.png" alt="" />
+      <img class="diver d2" src="../asset/scene5/diver2.png" alt="" />
+      <img class="diver d3" src="../asset/scene5/diver3.png" alt="" />
+
+      <img class="fish-dec nemo1" src="../asset/fish_nemo.png" alt="" />
+      <img class="fish-dec nemo2" src="../asset/fish_nemo.png" alt="" />
+      <img class="fish-dec angel1" src="../asset/fish_yellow.png" alt="" />
+      <img class="fish-dec angel2" src="../asset/fish_yellow.png" alt="" />
+      <img class="fish-dec angel3" src="../asset/fish_yellow.png" alt="" />
+      <img
+        class="fish-dec tiger1"
+        src="../asset/fish_nokyung_red.png"
+        alt=""
+      />
+
+      <img class="bubbled b3" src="../asset/bubble2.png" alt="" />
+      <img class="bubbled b4" src="../asset/bubble2.png" alt="" />
+      <img class="bubbled b5" src="../asset/bubble2.png" alt="" />
+      <img class="bubbled b6" src="../asset/bubble2.png" alt="" />
+      <img class="bubbled b7" src="../asset/bubble2.png" alt="" />
+    </div>
+
+    <div class="contentdew five">
+      <div class="textpage5">
+        <h1>ภัยคุกคาม</h1>
+        <div>
+          <h4>การดำน้ำเป็นสิ่งที่ส่งเสริมการท่องเที่ยว</h4>
+          <h4>บ่อยครั้งที่นักท่องเที่ยวอยากได้ภาพสวยๆกับแหล่ง</h4>
+          <h4>ปะการัง แต่ทว่าพวกเขาโพสต์ท่านั่งบนแนวปะการังนี่สิ!</h4>
+          <h4>นั่นสามารถทำให้ปะการังเสียหายได้เลยนะ</h4>
+        </div>
+        <img src="../asset/btn/btn_page5.png" alt="" width="300px" onClick="scrollY('#page6')">
+      </div>
+    </div>
+    </div>
+
+    <div class="container" id="page6">
+    <div class="scene-6">
+        <div class="asset light" style="transform: scaleX(-1); opacity: 0.1; z-index: 0;animation-duration: 50s;"></div>
+        <img class="back_fish_2 item" src="../content3_Jaimes/1x/back_fish_2.png"/>
+        <img class="back_fish_1 item" src="../content3_Jaimes/1x/back_fish_1.png"/>
+        <img class="back_coral_3 item" src="../content3_Jaimes/1x/back_coral_3.png"/>
+        <img class="back_coral_2 item" src="../content3_Jaimes/1x/back_coral_2.png"/>
+        <img class="back_coral_1 item" src="../content3_Jaimes/1x/back_coral_1.png"/>
+        <img class="back_kelp_3 item" src="../content3_Jaimes/1x/back_kelp_3.png"/>
+        <img class="back_kelp_2 item" src="../content3_Jaimes/1x/back_kelp_2.png"/>
+        <img class="back_kelp_1 item" src="../content3_Jaimes/1x/back_kelp_1.png"/>
+        <img class="tube item" src="../content3_Jaimes/1x/tube.png"/>
+        <img class="sand item" src="../content3_Jaimes/1x/sand.png"/>
+        <img class="front_dirty item" src="../content3_Jaimes/1x/front_dirty.png"/>
+        <div class="asset bubble jj" style="left: 200px; bottom: 400px; width: 60px;"></div>
+        
+        <div class="wetsuit">
+            <img class="handleft item" src="../content3_Jaimes/1x/handleft.png"/>
+            <img class="leftleg item" src="../content3_Jaimes/1x/leftleg.png"/>
+            <img class="rightleg item" src="../content3_Jaimes/1x/rightleg.png"/>
+            <img class="body item" src="../content3_Jaimes/1x/body.png"/>
+            <img class="handright item" src="../content3_Jaimes/1x/handright.png"/>
+            <img class="hair item" src="../content3_Jaimes/1x/hair.png"/>
+            <img class="face item" src="../content3_Jaimes/1x/face.png"/>
+            <img class="namha item" src="../content3_Jaimes/1x/namha.png"/>
+        </div>
+        <div class="asset scene2light1" style="transform: scaleX(-1);"></div>
+        <div class="asset scene2light2" style="transform: scaleX(-1);"></div>
+        
+        <div class="asset bubble " style="right: 80px; bottom: 250px; width: 50px; "></div>
+        <div class="asset bubble three" style="right: 200px; bottom: 200px; width: 100px;"></div>
+        <div class="asset bubble two" style="left: 250px; bottom: 150px; width: 150px;"></div>
+        
+        <div class="asset fish_yellow two" style="width: 100px; left: 150px; bottom: 250px;"></div>
+        <div class="asset fish_yellow one" style="width: 70px; left: 300px; bottom: 150px;"></div>
+        <div class="asset fishNemo s3three" style="width: 100px; right: 250px; bottom: 150px;"></div>
+        <div class="asset fishNemo s3four" style="width: 80px; right: 270px; bottom: 320px;"></div>
+        <div class="asset fishNemo s3five" style="width: 140px; right: 170px; bottom: 200px;"></div>
+        <img class="front item" src="../content3_Jaimes/1x/front.png"/>
+        
+        <div class="asset grain"></div>
+        <div class="content" style="justify-content: start;text-align: center; margin-top: 120px; margin-left: 580px; width: 600px;">
+            <div style="width: 100%;">
+                <h1 style="color:var(--white);font-size: 45px; line-height: 50px;">ดำน้ำให้ปัง <br>ปะการังไม่พังแน่นอน</h1>
+                <h4 style="color:var(--white);font-size: 25px;line-height: 60px;">หักอกเราไม่ว่า แต่ถ้าหักปะการัง แกไม่รอดแน่</h4>
+            </div>
+            <div class="center" style="margin: auto;  margin-top: 20px;">
+                <a href="../../GameFindItem/index.html"><img src="../asset/btn/btn_inToGame.png" alt="" width="270px"></a>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+     <script src="script.js"></script>
+</body> 
 </html>
