@@ -113,6 +113,15 @@
     animation: light2 5s linear infinite;
 }
 
+
+.light_3{
+    animation: light3 5s linear infinite;
+}
+
+.light_3.l2{
+    animation: light3 10s 2s linear infinite;
+}
+
 @keyframes cloud{
     0%{
         transform: translateX(0px);
@@ -205,26 +214,42 @@
 @keyframes light1{
     0%{
         opacity: 0;
+        transform: rotateZ(20deg);
     }
     50%{
         opacity: 1;
     }
     100%{
         opacity: 0;
-        transform: translateX(1000px);
+        transform: translateX(1000px) rotateZ(-50deg);
     }
 }
 
 @keyframes light2{
     0%{
         opacity: 0;
+
     }
     50%{
         opacity: 1;
     }
     100%{
         opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(200px) ;
+    }
+}
+
+@keyframes light3{
+    0%{
+        opacity: 0;
+        transform: translateX(50px) rotateZ(0deg);
+    }
+    25%{opacity: 1;}
+    50%{opacity: 0;}
+    75%{opacity: 1;}
+    100%{
+        opacity: 0;
+        transform: translateX(-50px) translateY(-70px) rotateZ(7deg);
     }
 }
 
@@ -239,3 +264,4 @@
         transform: translateX(-50px) translateY(-70px) rotateZ(7deg);
     }
 }
+
