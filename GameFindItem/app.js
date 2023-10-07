@@ -42,10 +42,23 @@ function main(){
       document.getElementById("game_over").style.visibility = "visible";
       document.getElementById("score").innerHTML = point;
       removeAllChildNodes(document.getElementById("generate"))
+      showCharacter(point);
       gameOver(start);
     }
 }
 
+// show character when end game is over 
+function showCharacter(score) {
+    if (score > 1000) {
+      document.getElementById("content1").style.visibility = "visible";
+    }
+    else if (score > 500) {
+      document.getElementById("content2").style.visibility = "visible";
+    }
+    else {
+      document.getElementById("content3").style.visibility = "visible";
+    }
+}
 
 function collect(el){
     var bin = document.querySelector(bin);
@@ -70,6 +83,9 @@ function reset(){
   time = 59;
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
+  document.getElementById("content1").style.visibility = "hidden";
+  document.getElementById("content2").style.visibility = "hidden";
+  document.getElementById("content3").style.visibility = "hidden";
 }
 
 function removeAllChildNodes(parent) {
