@@ -37,6 +37,18 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    left: -60%;
+    opacity: .5;
+    z-index: 0;
+    animation: toRight 10s linear 6s infinite, opal 9s ease-in-out 7s infinite;
+}
+
+@keyframes opal {
+    0% { opacity: 1;}
+    25% { opacity: .5;}
+    50% { opacity: .8}
+    75% { opacity: .3;}
+    100% { opacity: 1;}
 }
 
 .wave1 {
@@ -64,6 +76,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     bottom: -15%;
+    z-index: -3;
 }
 
 .ground {
@@ -74,6 +87,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     bottom: -40%;
+    z-index: -2;
 }
 
 .foreground {
@@ -85,11 +99,12 @@ body {
     background-position: center center;
     background-size: cover;
     bottom: -13%;
+    z-index: 0;
 }
 
 .bin {
     position: absolute;
-    /* background-color: red; */
+    /* background-color: hsl(0, 71%, 62%); */
     /* background-image: url(./asset/trash/trash1.png); */
     background-repeat: no-repeat;
     width: 500px;
@@ -273,13 +288,13 @@ body {
 
 .bubble {
     background-image: url(asset/SVG/bubble.svg);
-    width: 150px;
-    height: 200px;
+    width: 120px;
+    height: 150px;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     opacity: 0;
-    animation: floatopacity  ease-in-out  infinite;
+    animation: floatopacity linear infinite;
 }
 
 /* .grain {
@@ -291,15 +306,15 @@ body {
 } */
 
 .b1{
-    top:50%;
-    left:80%;
+    top:55%;
+    left:82%;
     animation-delay: 5.5s;
-    animation-duration: 3.5s;
+    animation-duration: 4.5s;
 }
 
 .b2{
-    top:40%;
-    left:50%;
+    top:45%;
+    left:52%;
     animation-delay: 4s;
     animation-duration: 5s;
 }
@@ -307,7 +322,7 @@ body {
 .b3{
     top:30%;
     left:5%;
-    animation-delay: 5s;
+    animation-delay: 3.7s;
     animation-duration: 4s;
 }
 
@@ -334,11 +349,19 @@ body {
 }
 
 .menu {
+    width: 100%;
+    position: absolute;
+    left: calc(50% - 125px);
     display: flex;
     align-items: center;
-    justify-content: right;
     padding-top: 1rem;
     margin: 0 2rem;
+
+    & h1{
+        font-size: 2.5rem;
+        margin: 0.5rem;
+        color: white;
+    }
 }
 
 .bar {
@@ -372,14 +395,14 @@ body {
 
 .bar h2 {
     color: #3F509F;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     align-items: flex-start;
 }
 
-h1{
+.inlist h1 {
     font-size: 1.7rem;
-    margin: 0.5rem;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
     color: white;
 }
 
@@ -403,7 +426,7 @@ h1{
 }
 
 #game_over {
-    height: 320px;
+    height: 420px;
     width: 550px;
 }
 
@@ -424,11 +447,12 @@ h1{
 }
 
 #game_over .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 220px;
+    height: 320px;
     width: 440px;
     background-color: white;
     border-radius: 2rem; 
@@ -448,6 +472,8 @@ h1{
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    margin: 0.5rem;
+    color: white;
 }
 
 .wrapper h1{
@@ -495,10 +521,43 @@ h1{
     align-items: end;
 
     & img {
-        padding-bottom: 2.2rem;
+        padding-bottom: 3rem;
         width: 220px;
         height: 110px;
     }
+}
+
+.grade {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    & .pic {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        flex-direction: column;
+    
+        & .char {
+            height: 160px;
+            width: 160px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.content1 .char{
+    background-image: url("/GameFindItem/asset/character/char1_1.svg");
+}
+.content2 .char{
+    background-image: url("/GameFindItem/asset/character/char2_1.svg");
+}
+.content3 .char{
+    background-image: url("/GameFindItem/asset/character/char3_1.svg");
 }
 
 .guide {

@@ -19,7 +19,7 @@ function myFunction_set() {
 var point = 0;
 // var time = 59; // for testing purposes
 var time = 2;
-var bin = ["bin1", "bin2", "bin3", "bin4", "star", "star","bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "star", "star"];
+var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "star", "star"];
 
 document.getElementById('tutorial').style.visibility = 'visible';
 
@@ -35,9 +35,10 @@ function gameOver(e) {
 
 function main(){ 
     document.getElementById("time").innerHTML = time > 9 ? time : '0' + time;
+    document.getElementById("time").style.color = time > 9 ? "white" : "hsl(2, 91%, 62%)" ;
      
     if (time != 0){
-      var item = Math.floor(Math.random() * 18);
+      var item = Math.floor(Math.random() * 14);
       var posx = Math.floor(100 + Math.random() * 900);
       var rotate = Math.floor(Math.random() * 360);
 
