@@ -91,6 +91,11 @@
     animation: head 4s ease-out alternate infinite;
 }
 
+.head_8,.hat_8,.hair_8{
+    
+    animation: head 4s ease-out alternate infinite;
+}
+
 .light_2{
     left: 0;
     animation: light1 10s linear infinite;
