@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+    <div class="light"></div>
+    <div class="bground"></div>
+    <div class="ground"></div>
+    <div class="foreground"></div>
+    <div class="grain"></div>
     <div class="background" id="display">
         <div id="fish1"></div>
         <div id="fish2"></div>
@@ -24,19 +31,19 @@
                     </div>
                     <div class="guide">
                         <div class="inlist">
-                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.5em;"></i></span>
                             <h1>เมื่อมีขยะโผล่มา  ให้กำจัดขยะชิ้นนั้นออกไปโดยการคลิ้กไปยังขยะชิ้นนั้น</h1>
                         </div>
                         <div class="inlist">
-                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.5em;"></i></span>
                             <h1>เมื่อกำจัดขยะออกไปแล้วผู้เล่นจะได้รับคะแนน +100 คะแนนต่อขยะ 1 ชิ้น</h1>
                         </div>
                         <div class="inlist">
-                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.5em;"></i></span>
                             <h1>หากคลิ้กผิดไปยังสิ่งที่ไม่ใช่ขยะจะโดนหัก -100 คะแนน</h1>
                         </div>
                         <div class="inlist">
-                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 4em;"></i></span>
+                            <span><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.5em;"></i></span>
                             <h1>ผู้เล่นมีเวลา 60 วินาทีในการกำจัดขยะออกไปให้ได้มากที่สุด เมื่อครบเวลาแล้วระบบจะทำการรวมคะแนนให้อัตโนมัติ</h1>
                         </div>
                     </div>
@@ -52,7 +59,9 @@
         <div id="game_over">
             <div class="boxitem">
                 <div class="circleclip"></div>
-                <div class="circle"></div>
+                <div class="circle">
+                    <img src="asset/menu_atar.png" alt="star"/>
+                </div>
                 <h1 class="score">คะแนนรวม</h1>
                 <div class="outer">
                     <div class="inner">
@@ -103,9 +112,7 @@
             <div class="bin" id="bin9" onclick="collect(this)"></div>
             <div class="bin" id="bin10" onclick="collect(this)"></div>
             <div class="bin" id="bin11" onclick="collect(this)"></div>
-            <div class="bin" id="bin12" onclick="collect(this)"></div>
-            <div class="bin" id="star1" onclick="minus(this)"></div>
-            <div class="bin" id="star2" onclick="minus(this)"></div>
+            <div class="bin" id="star" onclick="minus(this)"></div>
         </div>
         <div id="generate"></div>
     </div>

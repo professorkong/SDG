@@ -1,2 +1,2 @@
 # SDG - วิชามัลติมีเดียโปรแกรมมิ่ง
-Screen Resolutions 2388 x 1668 px
+Screen Resolutions 1148 x 838 px

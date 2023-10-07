@@ -14,7 +14,7 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-image: url(asset/compressed/bg.webp);
+    background-image: url(asset/SVG/seabg.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -28,13 +28,72 @@ body {
     height: 100%;
 }
 
+
+.light {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(asset/light_1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.wave1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(asset/SVG/wave1.svg);
+    background-repeat: no-repeat;
+}
+
+.wave2 {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    background-image: url(asset/SVG/wave2.svg);
+    background-repeat: no-repeat;
+    top: 28%;
+}
+
+.bground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(asset/SVG/background.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    bottom: -15%;
+}
+
+.ground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(asset/SVG/sand.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -40%;
+}
+
+.foreground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(asset/SVG/foreground.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    bottom: -13%;
+}
+
 .bin {
     position: absolute;
     /* background-color: red; */
     /* background-image: url(./asset/trash/trash1.png); */
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
     cursor: pointer;
     animation: linear;
     animation-name: bin_down;
@@ -42,118 +101,106 @@ body {
 }
 
 :root{
-    --posx: 500px;
-    --posy: -200px;
+    --posx: 250px;
+    --posy: -100px;
 }
 
 
 #bin1 {
-    background-image: url(./asset/trash/trash1.webp);
-    width: 200px;
-    height: 290px;
+    background-image: url(./asset/trash/SVG/trash1.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin2 {
-    background-image: url(./asset/trash/trash2.webp);
-    width: 266px;
-    height: 322px;
+    background-image: url(./asset/trash/SVG/trash2.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin3 {
-    background-image: url(./asset/trash/trash3.webp);
-    width: 242px;
-    height: 148px;
+    background-image: url(./asset/trash/SVG/trash3.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin4 {
-    background-image: url(./asset/trash/trash4.webp);
-    width: 162px;
-    height: 179px;
+    background-image: url(./asset/trash/SVG/trash4.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin5 {
-    background-image: url(./asset/trash/trash5.webp);
-    width: 389px;
-    height: 265px;
+    background-image: url(./asset/trash/SVG/trash5.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin6 {
-    background-image: url(./asset/trash/trash6.webp);
-    width: 113px;
-    height: 129px;
+    background-image: url(./asset/trash/SVG/trash6.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin7 {
-    background-image: url(./asset/trash/trash7.webp);
-    width: 150px;
-    height: 116px;
+    background-image: url(./asset/trash/SVG/trash7.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 #bin8 {
-    background-image: url(./asset/trash/trash8.webp);
-    width: 238px;
-    height: 300px;
+    background-image: url(./asset/trash/SVG/trash8.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 
 #bin9 {
-    background-image: url(./asset/trash/trash9.webp);
-    width: 113px;
-    height: 136px;
+    background-image: url(./asset/trash/SVG/trash9.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 
 #bin10 {
-    background-image: url(./asset/trash/trash10.webp);
-    width: 90px;
-    height: 90px;
+    background-image: url(./asset/trash/SVG/trash10.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 
 #bin11 {
-    background-image: url(./asset/trash/trash11.webp);
-    width: 316px;
-    height: 312px;
+    background-image: url(./asset/trash/SVG/trash11.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
 
-#bin12 {
-    background-image: url(./asset/trash/trash12.webp);
-    width: 239px;
-    height: 292px;
+#star {
+    background-image: url(./asset/SVG/star_item.svg);
+    width: 100px;
+    height: 100px;
     visibility: hidden;
 }
 
-#star1 {
-    background-image: url(./asset/trash/star1.png);
-    width: 250px;
-    height: 250px;
-    visibility: hidden;
-}
-
-#star2 {
-    background-image: url(./asset/trash/star2.png);
-    width: 250px;
-    height: 250px;
-    visibility: hidden;
-}
 
 #fish1{
-    background-image: url(./asset/compressed/fish.webp);
+    background-image: url(./asset/fish.png);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
+    background-position: center;
+    width: 300px;
+    height: 300px;
     animation: linear;
     animation-name: toLeft;
     animation-duration: 37s;
@@ -168,10 +215,11 @@ body {
 }
 
 #fish2{
-    background-image: url(./asset/compressed/fish_group2.webp);
+    background-image: url(./asset/fish_group2.png);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
+    background-position: center;
+    width: 300px;
+    height: 300px;
     animation: linear;
     animation-name: toRight;
     animation-duration: 44s;
@@ -186,10 +234,11 @@ body {
 }
 
 #fish3{
-    background-image: url(./asset/compressed/fish_group1.webp);
+    background-image: url(./asset/fish_group1.png);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
+    background-position: center;
+    width: 300px;
+    height: 300px;
     animation: linear;
     animation-name: toLeft;
     animation-duration: 40s;
@@ -204,10 +253,11 @@ body {
 }
 
 #fish4{
-    background-image: url(./asset/compressed/fish_group3.webp);
+    background-image: url(./asset/fish_group3.png);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
+    background-position: center;
+    width: 300px;
+    height: 300px;
     animation: linear;
     animation-name: toRight;
     animation-duration: 39s;
@@ -222,35 +272,49 @@ body {
 }
 
 .bubble {
-    background-image: url(asset/compressed/bubble.webp);
-    width: 200px;
-    height: 300px;
+    background-image: url(asset/SVG/bubble.svg);
+    width: 150px;
+    height: 200px;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     opacity: 0;
-    animation: floatopacity 4s ease-in-out 2s infinite;
+    animation: floatopacity  ease-in-out  infinite;
 }
+
+/* .grain {
+    width: 100%;
+    height: 100%;
+    background-image: url(asset/grain.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+} */
 
 .b1{
     top:50%;
-    left:85%;
+    left:80%;
+    animation-delay: 5.5s;
+    animation-duration: 3.5s;
 }
 
 .b2{
     top:40%;
-    left:45%;
+    left:50%;
+    animation-delay: 4s;
+    animation-duration: 5s;
 }
 
 .b3{
-    top:60%;
-    left:10%;
+    top:30%;
+    left:5%;
+    animation-delay: 5s;
+    animation-duration: 4s;
 }
 
 @keyframes floatopacity {
     10%  {transform: translateY(0);
         opacity: 0.8;}
-    100% {transform: translateY(-300px);
+    100% {transform: translateY(-200px);
         opacity: 0;}
 }
 
@@ -273,22 +337,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
-    column-gap: 15rem;
+    padding-top: 1rem;
+    margin: 0 2rem;
 }
 
 .bar {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr;
     place-items: center;
 }
 
 .outer{
     display: flex;
-    height: 110px;
-    width: 420px;
-    border-radius: 5rem;
+    height: 90px;
+    width: 250px;
+    border-radius: 3rem;
     background: white;
     box-sizing: border-box;
     justify-content: center;
@@ -298,10 +361,10 @@ body {
 .inner{
     display: flex;
     flex-direction: column;
-    height: 90px;
-    width: 400px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
     background: linear-gradient(to bottom, #68B9B1, #446DB0, #3F509F);
-    border-radius: 4rem;
+    border-radius: 2.5rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -309,14 +372,14 @@ body {
 
 .bar h2 {
     color: #3F509F;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     align-items: flex-start;
 }
 
-
 h1{
-    font-size: 3rem;
+    font-size: 1.7rem;
+    margin: 0.5rem;
     color: white;
 }
 
@@ -330,8 +393,8 @@ h1{
 
 #game_over, #tutorial {
     position: absolute;
-    height: 1100px;
-    width: 1700px;
+    height: 550px;
+    width: 850px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -340,8 +403,8 @@ h1{
 }
 
 #game_over {
-    height: 550px;
-    width: 1000px;
+    height: 320px;
+    width: 550px;
 }
 
 #game_over .outer, #tutorial .outer {
@@ -350,8 +413,8 @@ h1{
 }
 
 #game_over .inner , #tutorial .inner {
-    height: calc(100% - 50px);
-    width: calc(100% - 50px);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
     background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
 }
 
@@ -365,10 +428,10 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 370px;
-    width: 750px;
+    height: 220px;
+    width: 440px;
     background-color: white;
-    border-radius: 3rem; 
+    border-radius: 2rem; 
 }
 
 .boxitem {
@@ -378,63 +441,74 @@ h1{
 }
 
 .boxitem .score{
+    width: 100%;
     position: absolute;
-    font-size: 6rem;
-    top: -30%;
+    font-size: 4rem;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .wrapper h1{
     color: #262262;
     background-color: #fff;
-    padding: 0.5rem 3rem;
-    border-radius: 6rem;
-    font-size: 5rem;
+    padding: 0.25rem 2rem;
+    border-radius: 4rem;
+    font-size: 3rem;
 }
 
 .wrapper h2 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin: 0;
 }
 
 #score {
-    font-size: 10rem;
-    margin: 0;
+    font-size: 4rem;
     padding: 0;
+    margin: 1rem;
     background-color: transparent;
 }
 
 .circleclip {
     position: absolute;
-    top: -122.5%;
+    top: -122%;
     left: 50%;
     transform: translateX(-50%);
-    height: 700px;
-    width: 750px;
+    height: 400px;
+    width: 420px;
     background: #fff;
     clip-path: circle(50% at 50% 100%);
 }
 
 .circle {
     position: absolute;
-    top: -121%;
+    top: -124.5%;
     left: 50%;
     transform: translateX(-50%);
-    height: 700px;
-    width: 700px;
+    height: 410px;
+    width: 410px;
     background: linear-gradient(to bottom, #446DB0, #4470b6);
     clip-path: circle(47% at 50% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    & img {
+        padding-bottom: 2.2rem;
+        width: 220px;
+        height: 110px;
+    }
 }
 
 .guide {
-    padding: 0rem 4rem;
+    padding: 0rem 2rem;
 }
 
 .guide .inlist{
     display: flex;
     flex-direction: row;
-    column-gap: 3rem;
+    column-gap: 1rem;
 }
 
 .guide .inlist span {
@@ -446,20 +520,21 @@ h1{
 .button {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer;
 }
 
 #reset, #main {
     text-align: center;
-    font-size: 4rem;
-    border: solid 0.8rem #fff;
-    border-radius: 4rem;
+    font-size: 2rem;
+    border: solid 0.5rem #fff;
+    border-radius: 3rem;
+    padding: 0.5rem 0;
     background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
 }
 
 #reset a, #main a{
     color: #fff;
-    border-radius: 1rem;
-    margin: 4rem;
+    border-radius: 1.5rem;
+    margin: 2rem;
 }

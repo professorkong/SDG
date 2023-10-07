@@ -18,8 +18,8 @@ function myFunction_set() {
 
 var point = 0;
 // var time = 59; // for testing purposes
-var time = 59;
-var bin = ["bin1", "bin2", "bin3", "bin4", "star1", "star2","bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "bin12", "star1", "star2"];
+var time = 2;
+var bin = ["bin1", "bin2", "bin3", "bin4", "star", "star","bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "star", "star"];
 
 document.getElementById('tutorial').style.visibility = 'visible';
 
@@ -34,18 +34,18 @@ function gameOver(e) {
 }
 
 function main(){ 
-    document.getElementById("time").innerHTML = time > 9 ? '00:' + time : '00:0' + time;
+    document.getElementById("time").innerHTML = time > 9 ? time : '0' + time;
      
     if (time != 0){
       var item = Math.floor(Math.random() * 18);
-      var posx = Math.floor(100 + Math.random() * 1800);
+      var posx = Math.floor(100 + Math.random() * 900);
       var rotate = Math.floor(Math.random() * 360);
 
       console.log(bin[item]);
 
       var node = document.getElementById(bin[item]);
       var clone = node.cloneNode(true);
-      clone.style.translate = posx + "px " + "+450px";
+      clone.style.translate = posx + "px " + "-100px";
       clone.style.rotate = rotate + "deg";
       clone.style.visibility = "visible";
       document.getElementById("generate").appendChild(clone);
@@ -62,7 +62,7 @@ function main(){
 
 function collect(el){
     var bin = document.querySelector(bin);
-    r.style.setProperty('--posy', '-1000px');
+    r.style.setProperty('--posy', '-200px');
     // el.style.visibility = "hidden";
     point += 100;
     document.getElementById("generate").removeChild(el);
