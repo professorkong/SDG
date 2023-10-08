@@ -132,13 +132,9 @@ function closeFishData(el) {
 }
 
 // next card
-let leftArrow = document.querySelector(".arrow.right");
+let leftArrow = document.querySelector(".arrow.left");
 
 function nextFishCard() {
-  if (fishgal.scrollLeft > 0) {
-    leftArrow.style.opacity = 1;
-  }
-
   nextFishNumber = nowFishNumber * 1 + 1;
   if (nextFishNumber == 8) {
     nextFishNumber = 1;
@@ -149,26 +145,26 @@ function nextFishCard() {
   card.innerHTML = html;
   nowFishNumber = nextFishNumber;
 
+
+
   //ขยับด้านหลัง
   nowleft = fishgal.scrollLeft;
   fishgal.scrollLeft = nowleft - (nowleft % fishWidth) + fishWidthGap;
   chackAddFish();
+
+  //กลับมาแสดงลูกศร
+  if (fishgal.scrollLeft > 0) {
+    leftArrow.style.opacity = 1;
+  }
 }
 
 // prev card
 function prevFishCard() {
-  //แผ่นแรกไม่ให้กดซ้าย
-  if (fishgal.scrollLeft == 0) {
-    leftArrow.style.opacity = 0;
-    return;
-  }
-
   //ปกติ
   prevFishNumber = nowFishNumber * 1 - 1;
   if (prevFishNumber == 0) {
     prevFishNumber = 7;
   }
-  console.log({ nowFishNumber, prevFishNumber });
   let card = document.querySelector(".data-card");
   let html = `<img src="${fishs[prevFishNumber - 1].fish_data}">`;
   card.innerHTML = html;
@@ -179,6 +175,12 @@ function prevFishCard() {
   fishgal.scrollLeft = nowleft - (nowleft % fishWidth) - fishWidthGap / 2;
 
   chackAddFish();
+
+  //แผ่นแรกไม่ให้กดซ้าย
+  if (fishgal.scrollLeft == 0) {
+    leftArrow.style.opacity = 0;
+    return;
+  }
 }
 
 function scrollY(pageid) {

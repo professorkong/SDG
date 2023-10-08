@@ -434,7 +434,7 @@ img{
     position: relative;
 }
 
-.arrow.right{
+.arrow.left{
     transform: rotateY(180deg)
 }
 
