@@ -194,14 +194,18 @@ function scrollY(pageid) {
 
   // frame animation
   let id = setInterval(frame, 0.1);
-  console.log({ pos, scrollToTop });
   function frame() {
     if (pos == scrollToTop || pos == scrollToTop - 1) {
-      console.log(body.style.top);
       clearInterval(id);
     } else {
       pos -= 2;
       body.style.top = pos + "px";
     }
   }
+}
+
+// flip card page 5
+function flipCard(el){
+  data = el.dataset.open
+  el.dataset.open = data*-1
 }
