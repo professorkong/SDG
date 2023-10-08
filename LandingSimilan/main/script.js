@@ -206,6 +206,5 @@ function scrollY(pageid) {
 
 // flip card page 5
 function flipCard(el){
-  data = el.dataset.open
-  el.dataset.open = data*-1
+  el.dataset.open *= -1
 }
