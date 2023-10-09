@@ -49,10 +49,10 @@ function main(){
 
 // show character when end game is over 
 function showCharacter(score) {
-    if (score > 1000) {
+    if (score > 1500) {
       document.getElementById("content1").style.visibility = "visible";
     }
-    else if (score > 500) {
+    else if (score > 1000) {
       document.getElementById("content2").style.visibility = "visible";
     }
     else {
