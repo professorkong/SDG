@@ -362,7 +362,7 @@ body {
 }
 
 .menu h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0.5rem;
     color: white;
 }
@@ -373,7 +373,31 @@ body {
     place-items: center;
 }
 
-.outer{
+.timer .outer {
+    height: 120px;
+    width: 220px;
+    background-image: url("asset/time.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar .outer { 
+    height: 70px;
+    width: 280px;
+    background-image: url("asset/score.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_over .outer, #tutorial .outer{
     display: flex;
     height: 90px;
     width: 250px;
@@ -409,14 +433,6 @@ body {
     color: white;
 }
 
-.timer {
-    display: flex;
-    /* position: absolute;
-    left: 50%;
-    transform: translateX(-50%); */
-}
-
-
 #game_over, #tutorial {
     position: absolute;
     height: 550px;
@@ -429,8 +445,8 @@ body {
 }
 
 #game_over {
-    height: 510px;
-    width: 550px;
+    height: 530px;
+    width: 640px;
 }
 
 #game_over .outer, #tutorial .outer {
@@ -457,29 +473,23 @@ body {
     align-items: center;
     height: 410px;
     width: 440px;
-    background-color: white;
     border-radius: 2rem; 
 }
 
 .boxitem {
-    position: relative;
     width: 100%;
     height: 100%;
+    background-image: url(asset/final.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
-.boxitem .score{
-    width: 100%;
-    position: absolute;
-    font-size: 4rem;
-    top: -13%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin: 0.5rem;
-    color: white;
-}
-
-.wrapper h1{
+#tutorial .wrapper h1{
     color: #262262;
     background-color: #fff;
     padding: 0.25rem 2rem;
@@ -493,13 +503,16 @@ body {
 }
 
 #score {
-    font-size: 4rem;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    font-size: 2.7rem;
     padding: 0;
     margin: 1rem;
     background-color: transparent;
 }
 
-.circleclip {
+/* .circleclip {
     position: absolute;
     top: -77%;
     left: 50%;
@@ -529,7 +542,7 @@ body {
     padding-bottom: 3rem;
     width: 220px;
     height: 110px;
-}
+} */
 
 .grade {
     /* display: none; */
@@ -540,7 +553,7 @@ body {
 
 .grade .pic {
     position: absolute;
-    top: 27%;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -551,8 +564,8 @@ body {
 }
 
 .pic .char {
-    height: 160px;
-    width: 160px;
+    height: 300px;
+    width: 300px;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -563,6 +576,15 @@ body {
     color: #262262;
     padding: 0;
     margin: 0;
+}
+
+.pic h1 {
+    font-size: 4.5rem;
+}
+
+.pic h2 {
+    font-size: 2.5rem;
+    transform: translateY(-10px);
 }
 
 #content1 .char{
@@ -598,17 +620,28 @@ body {
     cursor: pointer;
 }
 
-#reset, #main {
-    text-align: center;
-    font-size: 2rem;
-    border: solid 0.5rem #fff;
-    border-radius: 3rem;
-    padding: 0.5rem 0;
-    background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
+#reset {
+    background-image: url(asset/again.png);
 }
 
+#main {
+    background-image: url(asset/main.png);
+}
+
+#reset, #main {
+    height: 70px;
+    width: 240px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 
 #reset a, #main a{
     color: #fff;
+    font-size: 2rem;
     border-radius: 1.5rem;
     margin: 2rem;
-}
+} */
