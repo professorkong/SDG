@@ -359,11 +359,12 @@ body {
     padding-top: 1rem;
     margin: 0 2rem;
 
-    & h1{
-        font-size: 2.5rem;
-        margin: 0.5rem;
-        color: white;
-    }
+}
+
+.menu h1{
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    color: white;
 }
 
 .bar {
@@ -522,11 +523,12 @@ body {
     justify-content: center;
     align-items: end;
 
-    & img {
-        padding-bottom: 3rem;
-        width: 220px;
-        height: 110px;
-    }
+}
+
+.circle img {
+    padding-bottom: 3rem;
+    width: 220px;
+    height: 110px;
 }
 
 .grade {
@@ -534,32 +536,33 @@ body {
     width: 100%;
     height: 100%;
 
-    & .pic {
-        position: absolute;
-        top: 27%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        visibility: hidden;
-    
-        & .char {
-            height: 160px;
-            width: 160px;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
+}
 
-        & h1, h2 {
-            width: 150%;
-            text-align: center;
-            color: #262262;
-            padding: 0;
-            margin: 0;
-        }
-    }
+.grade .pic {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.pic .char {
+    height: 160px;
+    width: 160px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pic h1, h2 {
+    width: 150%;
+    text-align: center;
+    color: #262262;
+    padding: 0;
+    margin: 0;
 }
 
 #content1 .char{
