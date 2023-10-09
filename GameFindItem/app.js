@@ -32,10 +32,10 @@ function main(){
 
       var node = document.getElementById(bin[item]);
       var clone = node.cloneNode(true);
-      clone.style.translate = posx + "px " + "-100px";
-      clone.style.rotate = rotate + "deg";
+      clone.style.transform = "translateX(" + posx + "px) translateY(0px) rotate(" + rotate + "deg)"; 
       clone.style.visibility = "visible";
-      document.getElementById("generate").appendChild(clone);
+      itemDisappear(document.getElementById("generate").appendChild(clone));
+      
       time--;
     }
     else{
@@ -47,12 +47,27 @@ function main(){
     }
 }
 
+function itemDisappear(el) {
+      setTimeout(() => {
+          el.animate([
+            {opacity: '1'},
+            {opacity: '0'},
+          ], {
+            duration: 3000,
+            iterations: 1
+          });
+          setTimeout(() => {
+            document.getElementById("generate").removeChild(el);  
+          }, 2000)
+      }, 5000)  
+}
+
 // show character when end game is over 
 function showCharacter(score) {
-    if (score > 1000) {
+    if (score > 3000) {
       document.getElementById("content1").style.visibility = "visible";
     }
-    else if (score > 500) {
+    else if (score > 1500) {
       document.getElementById("content2").style.visibility = "visible";
     }
     else {
@@ -65,14 +80,17 @@ function collect(el){
     r.style.setProperty('--posy', '-200px');
     // el.style.visibility = "hidden";
     point += 100;
+    center = el.getBoundingClientRect().left + 25;
     el.style.rotate = "0deg";
     el.backgroundSize = "100px 100px";
     el.backgroundPosition = "center center";    
     el.style.backgroundImage = "url('./asset/correct.png')";
+    el.style.pointerEvents = 'none';
+    document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames
-      { transform: 'translateY(0px)' },
-      { transform: 'translateY(-150px)' }
+      { transform: 'translateX(' + center + 'px) translateY(0px)' },
+      { transform: 'translateX(' + center + 'px) translateY(-400px)' }
     ], {
       // sync options
       duration: 1000,
@@ -82,7 +100,6 @@ function collect(el){
     setTimeout(function() {
       //your code to be executed after 1 second
       document.getElementById("generate").removeChild(el);
-      document.getElementById("point").innerHTML = point;
       console.log(point);
     }, 1000);
 }
@@ -90,14 +107,17 @@ function collect(el){
 function minus(el){
     var bin = document.querySelector(bin);
     point -= 100;
+    center = el.getBoundingClientRect().left + 25;
     el.style.rotate = "0deg";
     el.backgroundSize = "100px 100px";
     el.backgroundPosition = "center center";
     el.style.backgroundImage = "url('./asset/wrong.png')";
+    el.style.pointerEvents = 'none';
+    document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames
-      { transform: 'translateY(0px)' },
-      { transform: 'translateY(-150px)' }
+      { transform: 'translateX(' + center + 'px) translateY(0px)' },
+      { transform: 'translateX(' + center + 'px) translateY(-400px)' }
     ], {
       // sync options
       duration: 1000,
@@ -106,7 +126,6 @@ function minus(el){
     setTimeout(function() {
       //your code to be executed after 2 second
       document.getElementById("generate").removeChild(el);
-      document.getElementById("point").innerHTML = point;
       console.log(point);
     }, 1000);
 }
