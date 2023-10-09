@@ -64,10 +64,10 @@ function itemDisappear(el) {
 
 // show character when end game is over 
 function showCharacter(score) {
-    if (score > 3000) {
+    if (score > 1500) {
       document.getElementById("content1").style.visibility = "visible";
     }
-    else if (score > 1500) {
+    else if (score > 1000) {
       document.getElementById("content2").style.visibility = "visible";
     }
     else {
