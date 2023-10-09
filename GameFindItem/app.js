@@ -65,17 +65,50 @@ function collect(el){
     r.style.setProperty('--posy', '-200px');
     // el.style.visibility = "hidden";
     point += 100;
-    document.getElementById("generate").removeChild(el);
-    document.getElementById("point").innerHTML = point;
-    console.log(point);
+    el.style.rotate = "0deg";
+    el.backgroundSize = "100px 100px";
+    el.backgroundPosition = "center center";    
+    el.style.backgroundImage = "url('./asset/correct.png')";
+    el.animate([
+      // key frames
+      { transform: 'translateY(0px)' },
+      { transform: 'translateY(-150px)' }
+    ], {
+      // sync options
+      duration: 1000,
+      iterations: 1
+    });
+
+    setTimeout(function() {
+      //your code to be executed after 1 second
+      document.getElementById("generate").removeChild(el);
+      document.getElementById("point").innerHTML = point;
+      console.log(point);
+    }, 1000);
 }
 
 function minus(el){
     var bin = document.querySelector(bin);
     point -= 100;
-    document.getElementById("generate").removeChild(el);
-    document.getElementById("point").innerHTML = point;
-    console.log(point);
+    el.style.rotate = "0deg";
+    el.backgroundSize = "100px 100px";
+    el.backgroundPosition = "center center";
+    el.style.backgroundImage = "url('./asset/wrong.png')";
+    el.animate([
+      // key frames
+      { transform: 'translateY(0px)' },
+      { transform: 'translateY(-150px)' }
+    ], {
+      // sync options
+      duration: 1000,
+      iterations: 1
+    });
+    setTimeout(function() {
+      //your code to be executed after 2 second
+      document.getElementById("generate").removeChild(el);
+      document.getElementById("point").innerHTML = point;
+      console.log(point);
+    }, 1000);
 }
 
 function reset(){
