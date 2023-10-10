@@ -12,14 +12,14 @@ document.getElementById('tutorial').style.visibility = 'visible';
 function start() {
   setInterval(main, 1000);
   document.getElementById('tutorial').style.visibility = 'hidden';
-
+  document.querySelector('.menu').style.visibility = 'visible';
 }
 
 function gameOver(e) {
   clearInterval(e);
 }
 
-function main(){ 
+function main(){
     document.getElementById("time").innerHTML = time > 9 ? time : '0' + time;
     document.getElementById("time").style.color = time > 9 ? "white" : "hsl(2, 91%, 62%)" ;
      
@@ -40,6 +40,7 @@ function main(){
     }
     else{
       document.getElementById("game_over").style.visibility = "visible";
+      document.querySelector(".menu").style.visibility = "hidden";
       document.getElementById("score").innerHTML = point;
       removeAllChildNodes(document.getElementById("generate"))
       showCharacter(point);
@@ -133,6 +134,7 @@ function minus(el){
 function reset(){
   point = 0;
   time = 59;
+  document.querySelector(".menu").style.visibility = 'visible';
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
   document.getElementById("content1").style.visibility = "hidden";
