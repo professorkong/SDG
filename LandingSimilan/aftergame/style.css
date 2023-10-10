@@ -12,9 +12,9 @@
 html {
     scroll-behavior: smooth;
   }
-/* body{
+body{
     overflow: hidden;
-} */
+}
 
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
