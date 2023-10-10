@@ -77,6 +77,20 @@ button{
     border-radius: 100%;
 }
 
+.star1{
+    position: absolute;
+    bottom: -6%;
+    left: -1%;
+    scale: 0.8;
+}
+.star2{
+    position: absolute;
+    top: -7%;
+    right: -3%;
+    scale: 0.9;
+    rotate: 45deg;
+}
+
 .dec{
     position: absolute;
 }
@@ -457,6 +471,7 @@ img{
     visibility: hidden;
     opacity: 0;
     justify-content: center;
+    z-index: 100;
 }
 
 .data-card > img{
