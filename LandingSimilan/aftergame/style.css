@@ -23,15 +23,66 @@ h4{z-index: 100; font-size: 1.5rem; line-height: 130%;}
 
 button{
     width: fit-content;
-    background: hsl(1, 100%, 100%, 60%);
-    padding: .75rem 2rem;
-    border-radius: 60px;
+    background: none;
+    /* padding: .75rem 2rem; */
+    /* border-radius: 60px; */
     align-items: center;
     border: none;
     cursor: pointer;
     z-index: 10;
     transition: all .5s;
 }
+
+.outterbutton{
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(222,161,62,255) 0%, rgba(249,211,146,255) 50%, rgba(222,161,62,255) 100%);
+    padding: .4rem .4rem;
+    border-radius: 60px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+}
+
+.innerbutton{
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(93,201,248,255)0%, rgba(156,250,244,255) 51%, rgba(93,201,248,255)100%);
+    padding: .65rem 1.8rem;
+    border-radius: 60px;
+    align-items: center;
+    border-bottom: 5px solid #7dd0d4;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+    color: #3c8b9e;
+}
+
+.innerbutton::after{
+    content: "";
+    left: 30%;
+    top: 13%;
+    width: 40%; 
+    height: 4px;
+    position: absolute; 
+    background-color: white;
+    border-radius: 100%;
+}
+
+.star1{
+    position: absolute;
+    bottom: -6%;
+    left: -1%;
+    scale: 0.8;
+}
+.star2{
+    position: absolute;
+    top: -7%;
+    right: -3%;
+    scale: 0.9;
+    rotate: 45deg;
+}
+
 
 .dec{
     position: absolute;
@@ -133,6 +184,10 @@ img{
     margin-top: 23%;
     color: white;
 }
+.buttonpage8{
+    margin-top: 32%;
+    margin-left: 2%;
+}
 
 .sand_8{
     bottom: 1%;
@@ -164,7 +219,7 @@ img{
 }
 
 .mountainback_8{
-    bottom: 34.25%;
+    bottom: 37%;
     right: -.5%;
 }
 
@@ -204,8 +259,8 @@ img{
 }
 
 .bird2_8{
-    top: 25%;
-    left: 3%;
+    top: 20%;
+    left: 8%;
 }
 
 .bird3_8{
