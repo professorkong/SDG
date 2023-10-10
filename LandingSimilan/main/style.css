@@ -27,7 +27,7 @@ body{
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
 h3{z-index: 100; font-size: 2rem; line-height: 130%;}
-h4{z-index: 100; font-size: 1.5rem; line-height: 130%;}
+h4{z-index: 100; font-size: 1.8rem; line-height: 130%;}
 
 button{
     width: fit-content;
@@ -39,6 +39,42 @@ button{
     cursor: pointer;
     z-index: 10;
     transition: all .5s;
+}
+
+.outterbutton{
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(222,161,62,255) 0%, rgba(249,211,146,255) 50%, rgba(222,161,62,255) 100%);
+    padding: .4rem .4rem;
+    border-radius: 60px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+}
+
+.innerbutton{
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(93,201,248,255)0%, rgba(156,250,244,255) 51%, rgba(93,201,248,255)100%);
+    padding: .65rem 1.8rem;
+    border-radius: 60px;
+    align-items: center;
+    border-bottom: 5px solid #7dd0d4;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+    color: #3c8b9e;
+}
+
+.innerbutton::after{
+    content: "";
+    left: 30%;
+    top: 13%;
+    width: 40%; 
+    height: 4px;
+    position: absolute; 
+    background-color: white;
+    border-radius: 100%;
 }
 
 .dec{
@@ -486,20 +522,20 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 25%;
+    margin-top: 23%;
     color: #0f52b5;
 }
 
 .buttonpage5{
     color: #4ca6c1;
-    margin-top: 37%;
+    margin-top: 38%;
 }
 
 .deck{
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 43.5%;
+    margin-top: 41%;
 }
 
 /* card page 5 */
@@ -535,6 +571,8 @@ img{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
   }
   
   .flip-card-back {
