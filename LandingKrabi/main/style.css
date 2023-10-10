@@ -67,12 +67,71 @@ h4{font-size: 1.5rem; line-height: 130%;}
     flex-direction: column;
     z-index: 2;
 }
+
 button{
-    background: hsl(1, 100%, 100%, 30%);
-    padding: .5rem 1.5rem;
-    border-radius: 60px;
+    width: fit-content;
+    background: none;
+    /* padding: .75rem 2rem; */
+    /* border-radius: 60px; */
+    align-items: center;
     border: none;
     cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+}
+
+.outterbutton{
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(222,161,62,255) 0%, rgba(249,211,146,255) 50%, rgba(222,161,62,255) 100%);
+    padding: .4rem .4rem;
+    border-radius: 60px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+}
+
+.innerbutton{
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(93,201,248,255)0%, rgba(156,250,244,255) 51%, rgba(93,201,248,255)100%);
+    padding: .65rem 1.8rem;
+    border-radius: 60px;
+    align-items: center;
+    border-bottom: 5px solid #7dd0d4;
+    cursor: pointer;
+    z-index: 10;
+    transition: all .5s;
+    color: #3c8b9e;
+}
+
+.innerbutton::after{
+    content: "";
+    left: 30%;
+    top: 13%;
+    width: 40%; 
+    height: 4px;
+    position: absolute; 
+    background-color: white;
+    border-radius: 100%;
+}
+
+.innerbutton > h4{
+    color: #3c8b9e;
+}
+
+.star1{
+    position: absolute;
+    bottom: -6%;
+    left: -1%;
+    scale: 0.8;
+}
+.star2{
+    position: absolute;
+    top: -7%;
+    right: -3%;
+    scale: 0.9;
+    rotate: 45deg;
 }
 
 .center{
