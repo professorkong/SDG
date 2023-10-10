@@ -4,7 +4,7 @@ var r = document.querySelector(':root');
 
 var point = 0;
 // var time = 59; // for testing purposes
-var time = 2;
+var time = 59;
 var bin = ["bin1", "bin2", "bin3", "bin4", "bin5", "bin6", "bin7", "bin8", "bin9", "bin10", "bin11", "star", "star"];
 
 document.getElementById('tutorial').style.visibility = 'visible';
@@ -32,7 +32,7 @@ function main(){
 
       var node = document.getElementById(bin[item]);
       var clone = node.cloneNode(true);
-      clone.style.transform = "translateX(" + posx + "px) translateY(0px) rotate(" + rotate + "deg)"; 
+      clone.style.transform = "translateX(" + posx + "px) translateY(-50px) rotate(" + rotate + "deg)"; 
       clone.style.visibility = "visible";
       itemDisappear(document.getElementById("generate").appendChild(clone));
       
