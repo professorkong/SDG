@@ -164,17 +164,13 @@ img{
     left: 0;
     top: 50%;
     /* transform: scaleX(-1); */
-    animation:
-        bubbleX_1 4s linear infinite,
-        bubbleY_1 3.5s linear infinite;
+    animation: movebubble 5s 2s linear infinite;
 }
 .b2{
     width: 180px;
     right: 0;
     top: 50%;
-    animation:
-        bubbleX_2 2.5s linear infinite,
-        bubbleY_2 3s linear infinite;
+    animation: movebubble 5s 2s linear infinite;
 }   
 @keyframes bubbleX_1{
     0%{transform: translateX(0);}
