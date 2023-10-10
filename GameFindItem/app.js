@@ -107,7 +107,7 @@ function collect(el){
 
 function minus(el){
     var bin = document.querySelector(bin);
-    point -= 100;
+    point = point <= 0 ? 0 : point - 100;
     center = el.getBoundingClientRect().left + 25;
     el.style.rotate = "0deg";
     el.backgroundSize = "100px 100px";
