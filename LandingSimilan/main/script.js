@@ -224,7 +224,12 @@ function scrollY(pageid) {
   let sp2 = document.querySelector('.sp2')
   let sp3 = document.querySelector('.sp3')
 
-  // let rockback6 =
+  let rockback6 = document.querySelector('.rockback_6')
+  let rockmid6 = document.querySelector('.rockmid_6')
+  let cfront6 = document.querySelector('.coralfront_6')
+  let trash1 = document.querySelector('.trash1_6')
+  let trash2 = document.querySelector('.trash2_6')
+  let trash3 = document.querySelector('.trash3_6')
   
   // frame animation
   let id = setInterval(frame, 0.1);
@@ -277,12 +282,31 @@ function scrollY(pageid) {
        if(pos <= -3700){
         rock5.style.setProperty('top', '-10%')
        }
-       if(pos <= -3813){
+       if(pos <= -3800){
         fc1.style.setProperty('bottom', '18%')
         fc2.style.setProperty('bottom', '18%')
         fc3.style.setProperty('bottom', '18%')
         sp1.style.setProperty('left', '14.5%')
         sp3.style.setProperty('left', '64%')
+       }
+
+       //6
+       if (pos <= -4000){
+        trash1.style.setProperty('top', '50.5%')
+        trash2.style.setProperty('top', '43.9%')
+        trash3.style.setProperty('top', '60.7%')
+       }
+
+       if (pos <= -4200){
+        rockback6.style.setProperty('bottom', '18%')
+        rockmid6.style.setProperty('bottom', '0%')
+        cfront6.style.setProperty('bottom', '-3%')
+       }
+
+       if (pos <= -4600){
+        trash1.style.setProperty('top', '50%')
+        trash2.style.setProperty('top', '43%')
+        trash3.style.setProperty('top', '60%')
        }
        
 

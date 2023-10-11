@@ -661,8 +661,9 @@ img{
 }
 
 .rockback_6{
-    bottom: 18%;
+    bottom: 30%;
     left: -1%;
+    transition: 3s;
 }
 
 .seaweedback_6{
@@ -671,8 +672,9 @@ img{
 }
 
 .rockmid_6{
-    bottom: 3%;
+    bottom: 13%;
     left: -1.5%;
+    transition: 2.8s;
 }
 
 .coralmid_6{
@@ -681,8 +683,9 @@ img{
 }
 
 .coralfront_6{
-    bottom: -3%;
+    bottom: -10%;
     left: -3%;
+    transition: 2.3s .5s;
 }
 
 .light_6{
@@ -696,17 +699,20 @@ img{
 }
 
 .trash1_6{
-    top: 50%;
+    top: 0%;
     left: 25%;
+    transition: 5s;
 }
 .trash2_6{
-    top: 43%;
+    top: 0%;
     left: 33%;
     opacity: .5;
+    transition: 5s;
 }
 .trash3_6{
-    top: 60%;
+    top: 0%;
     left: 47%;
+    transition: 5s;
 }
 .t1{
     position: absolute;
