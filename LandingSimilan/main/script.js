@@ -197,6 +197,7 @@ function scrollY(pageid) {
   let text1top = 100;
   let text1 = document.querySelector(".t1");
   let coral2 = document.querySelectorAll(".c2");
+
   let seaweed1_2 = document.querySelector('.seaweedleft_2')
   let seaweed2_2 = document.querySelector('.seaweedright1_2')
   let seaweed2_3 = document.querySelector('.seaweedright2_2')
@@ -204,6 +205,11 @@ function scrollY(pageid) {
   let islandwave2 = document.querySelector('.islandwave_2')
   let seaweedback2 = document.querySelector('.seaweedback_2')
   let text2 = document.querySelector('.textpage2')
+
+  let sceneback3 = document.querySelector('.sceneback_3')
+
+  let scenemid3 = document.querySelector('.scenemid_3')
+  let scenefront3 = document.querySelector('.scenefront_3')
 
   // frame animation
   let id = setInterval(frame, 0.1);
@@ -234,6 +240,13 @@ function scrollY(pageid) {
         for (let h of coral2) {
           h.style.setProperty('bottom', '-1%')
         }
+      }
+
+      //3
+      if(pos <= -1200){
+        sceneback3.style.setProperty('bottom', '15%')
+        scenemid3.style.setProperty('bottom', '0%')
+        scenefront3.style.setProperty('bottom', '0%')
       }
 
     }

@@ -194,7 +194,7 @@ img{
     align-items: center;
     margin-top: 35%;
     color: #0f52b5;
-    transition: 2s 3s;
+    /* transition: 2s 3s; */
     opacity: 0;
 }
 
@@ -338,23 +338,27 @@ img{
 
 .sceneback_3{
     width: 105%;
-    bottom: 15%;
+    bottom: 0%;
     left: 0;
+    transition: 2s 1s;
 }
 .seaweedmid_3{
     bottom: 0%;
     left: 50%;
+    transition: 2.5s 1s;
 }
 
 .seaweedbackleft_3{
     bottom: 30%;
     left: 2%;
+    transition: 2.5s 1s;
 }
 
 .scenemid_3{
     width: 110%;
-    bottom: 0;
+    bottom: 10%;
     left: -5%;
+    transition: 2.8s;
 }
 
 .coralmid_3{
@@ -363,13 +367,15 @@ img{
 }
 
 .scenefront_3{
-    bottom: 0;
+    bottom: 10%;
     left: 0;
+    transition: 1.8s;
 }
 
 .coralfront1_3{
     bottom: -5%;
     right: -3.5%;
+    
 }
 
 .coralfront2_3{
