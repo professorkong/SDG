@@ -244,6 +244,7 @@ function scrollY(pageid) {
       if (pos >= -1094) {
         text1top += pos * -0.003;
         text1.style.setProperty('opacity',1+pos*0.003)
+        text1.style.setProperty('filter','blur(4px)')
       }
       //1
       text1.style.top = text1top + 'px'
@@ -259,7 +260,7 @@ function scrollY(pageid) {
         text2.style.setProperty('opacity', '1')
         for (let h of coral2) {
           h.style.setProperty('bottom', '-1%')
-          h.style.setProperty('--cb', '2px')
+          // h.style.setProperty('--cb', '6px')
         }
       }
 
@@ -283,7 +284,7 @@ function scrollY(pageid) {
        if(pos <= -3700){
         rock5.style.setProperty('top', '-10%')
        }
-       if(pos <= -3800){
+       if(pos <= -3600){
         fc1.style.setProperty('bottom', '18%')
         fc2.style.setProperty('bottom', '18%')
         fc3.style.setProperty('bottom', '18%')
