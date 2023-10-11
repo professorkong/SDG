@@ -443,7 +443,8 @@ body {
 .inlist img {
     width: 40px;
     height: 40px;
-    padding-top: 10px;
+    padding-top: 3px;
+    transform: translateY(5px);
 }
 
 #game_over, #tutorial {
@@ -526,43 +527,9 @@ body {
     background-color: transparent;
 }
 
-/* .circleclip {
-    position: absolute;
-    top: -77%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 400px;
-    width: 420px;
-    background: #fff;
-    clip-path: circle(50% at 50% 100%);
-}
-
-.circle {
-    position: absolute;
-    top: -78%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 410px;
-    width: 410px;
-    background: linear-gradient(to bottom, #446DB0, #4470b6);
-    clip-path: circle(47% at 50% 100%);
-    display: flex;
-    justify-content: center;
-    align-items: end;
-
-}
-
-.circle img {
-    padding-bottom: 3rem;
-    width: 220px;
-    height: 110px;
-} */
-
 .grade {
-    /* display: none; */
     width: 100%;
     height: 100%;
-
 }
 
 .grade .pic {
@@ -629,35 +596,77 @@ body {
 
 .button {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+    justify-content: space-around;
+    margin-top: 1.5rem;
     cursor: pointer;
 }
 
-#reset {
-    background-image: url(asset/again.png);
-}
 
-#main {
-    background-image: url(asset/main.png);
-}
-
-#reset, #main {
-    height: 70px;
-    width: 240px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
+button{
+    width: fit-content;
+    background: none;
+    /* padding: .75rem 2rem; */
+    /* border-radius: 60px; */
     align-items: center;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 
-#reset a, #main a{
-    width: 100%;
-    height: 100%;
-    /* color: #fff;
-    font-size: 2rem;
-    border-radius: 1.5rem;
-    margin: 2rem; */
+.outterbutton{
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(222,161,62,255) 0%, rgba(249,211,146,255) 50%, rgba(222,161,62,255) 100%);
+    padding: .4rem .4rem;
+    border-radius: 60px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.innerbutton{
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(93,201,248,255)0%, rgba(156,250,244,255) 51%, rgba(93,201,248,255)100%);
+    padding: .65rem 1.8rem;
+    border-radius: 60px;
+    align-items: center;
+    border-bottom: 5px solid #7dd0d4;
+    cursor: pointer;
+    z-index: 10;
+}
+
+a {
+    color: #3c8b9e;
+}
+
+.innerbutton::after{
+    content: "";
+    left: 30%;
+    top: 13%;
+    width: 40%; 
+    height: 4px;
+    position: absolute; 
+    background-color: white;
+    border-radius: 100%;
+}
+
+.star1{
+    position: absolute;
+    bottom: -6%;
+    left: -1%;
+    scale: 0.8;
+}
+.star2{
+    position: absolute;
+    top: -7%;
+    right: -3%;
+    scale: 0.9;
+    rotate: 45deg;
+}
+
+h4{
+    z-index: 100;
+    font-size: 1.8rem; 
+    line-height: 130%;
+    margin: 0;
 }

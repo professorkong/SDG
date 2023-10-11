@@ -40,7 +40,7 @@
                         </div>
                         <div class="inlist">
                             <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
-                            <h1>หากคลิ้กผิดไปยัง <img src="asset/SVG/star_item.svg"> จะโดนหัก 100 คะแนน</h1>
+                            <h1>หากคลิกไปที่ <img src="../LandingSimilan/asset/btn/star.png"> จะโดนหัก 100 คะแนน</h1>
                         </div>
                         <div class="inlist">
                             <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
@@ -50,18 +50,20 @@
                 </div>
             </div>
             <div class="button">
-                <span id="reset">
-                    <a onclick="start()"></a>
-                </span>
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="reset">
+                            <a onclick="start()">เริ่มเกม</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="game_over">
             <div class="boxitem">
-                <!-- <div class="circleclip"></div>
-                <div class="circle">
-                    <img src="asset/menu_atar.png" alt="star"/>
-                </div> -->
                 <div class="wrapper">
                     <h1 id="score"></h1>
                     <div class="grade">
@@ -84,12 +86,24 @@
                 </div>
             </div>
             <div class="button">
-                <span id="reset">
-                    <a onclick="reset()"></a>
-                </span>
-                <span id="main">
-                    <a href="../LandingSimilan/aftergame/aftergame.html" style="text-decoration: none;"></a>
-                </span>
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="reset">
+                            <a onclick="reset()">เล่นอีกครั้ง</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="main">
+                            <a href="../LandingSimilan/aftergame/aftergame.html" style="text-decoration: none;">กลับหน้าหลัก</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
             </div>
         </div>
 
