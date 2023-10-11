@@ -194,6 +194,11 @@ function scrollY(pageid) {
   scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos); // + ต่อจาก top เดิม
 
   //call class
+  let text2 = document.querySelector('.textpage2')
+  let text3 = document.querySelector('.textpage3')
+  let text4 = document.querySelector('.textpage4')
+  let text5 = document.querySelector('.textpage5')
+  let text6 = document.querySelector('.textpage6')
   let text1top = 100;
   let text1 = document.querySelector(".t1");
   let coral2 = document.querySelectorAll(".c2");
@@ -204,16 +209,20 @@ function scrollY(pageid) {
   let island2 = document.querySelector('.island_2')
   let islandwave2 = document.querySelector('.islandwave_2')
   let seaweedback2 = document.querySelector('.seaweedback_2')
-  let text2 = document.querySelector('.textpage2')
+  
 
   let sceneback3 = document.querySelector('.sceneback_3')
-
+  let shark3 = document.querySelector('.shark_3')
   let scenemid3 = document.querySelector('.scenemid_3')
   let scenefront3 = document.querySelector('.scenefront_3')
+  let cfront13 = document.querySelector('.coralfront1_3')
+  let cfront23 = document.querySelector('.coralfront2_3')
+  let cmid = document.querySelector('.coralmid_3')
 
   let island4 = document.querySelector('.island_4')
   let islandwave4 = document.querySelector('.wave_4')
   let rock4 = document.querySelector('.rock_4')
+  let fg = document.querySelector('.fish-gallery')
 
   let rock5 = document.querySelector('.rock_5')
   let fc1 = document.querySelector('.fc1')
@@ -263,25 +272,63 @@ function scrollY(pageid) {
           // h.style.setProperty('--cb', '6px')
         }
       }
+      if(pos <= -500){
+        for (let h of coral2) {
+          h.style.setProperty('--cb', 6+pos*0.005+'px')
+        }
+        seaweedback2.style.setProperty('--cb', 5+pos*0.004+'px')
+        seaweed1_2.style.setProperty('--cb',5+pos*0.004+'px')
+        seaweed2_2.style.setProperty('--cb', 6+pos*0.004+'px')
+        seaweed2_3.style.setProperty('--cb', 4+pos*0.004+'px')
+      }
+      if(pos <= -1100){
+        text2.style.setProperty('filter','blur(20px)')
+      }
 
       //3
       if(pos <= -1200){
         sceneback3.style.setProperty('bottom', '15%')
         scenemid3.style.setProperty('bottom', '0%')
         scenefront3.style.setProperty('bottom', '0%')
+        text3.style.setProperty('margin-top', '15%')
+        text3.style.setProperty('opacity', '1')
+        shark3.style.setProperty('right','-4%')
+        shark3.style.setProperty('top','10%')
+        
+      }
+      if(pos <= -1700){
+        console.log(1)
+        cfront13.style.setProperty('--cbb', 10+pos*0.005+'px')
+        cfront23.style.setProperty('--cbb', 10+pos*0.005+'px')
+        cmid.style.setProperty('--cbb', 2+pos*0.005+'px')
       }
 
       //4
-      if(pos <= -1929){
+      if(pos <= -1980){
         rock4.style.setProperty('bottom', '-50%')
+        rock4.style.setProperty('position', 'fixed')
+        text3.style.setProperty('filter','blur(20px)')
+        fg.style.setProperty('filter', 'blur(50px)')
       }
       if(pos <= -2300){
-        island4.style.setProperty('bottom', '0%')
+        
         islandwave4.style.setProperty('bottom', '0%')
         
       }
+      if( pos <= -2600){
+        fg.style.setProperty('filter', 'blur(0px)')
+        
+      }
+      if(pos <= -2763){
+        rock4.style.setProperty('position', 'absolute')
+      }
+
+      if (pos <= -2800){
+        fg.style.setProperty('filter', 'blur(20px)')
+        text4.style.setProperty('filter','blur(20px)')
+      }
        //5
-       if(pos <= -3700){
+       if(pos <= -3750){
         rock5.style.setProperty('top', '-10%')
        }
        if(pos <= -3600){
@@ -293,16 +340,24 @@ function scrollY(pageid) {
        }
 
        //6
+       if (pos <= -3900){
+        text5.style.setProperty('filter','blur(20px)')
+       }
        if (pos <= -4000){
         trash1.style.setProperty('top', '50.5%')
         trash2.style.setProperty('top', '43.9%')
         trash3.style.setProperty('top', '60.7%')
+        fc1.style.setProperty('bottom', '50%')
+        fc2.style.setProperty('bottom', '50%')
+        fc3.style.setProperty('bottom', '50%')
+        
        }
 
        if (pos <= -4200){
         rockback6.style.setProperty('bottom', '18%')
         rockmid6.style.setProperty('bottom', '0%')
         cfront6.style.setProperty('bottom', '-3%')
+        
        }
 
        if (pos <= -4600){

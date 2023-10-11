@@ -192,13 +192,16 @@ img{
 }
 
 .textpage2{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 35%;
     color: #0f52b5;
-    /* transition: 2s 3s; */
+    transition: 2s 0s;
     opacity: 0;
+    position: relative;
+    z-index: 100;
 }
 
 .buttonpage2{
@@ -234,47 +237,49 @@ img{
 }
 
 .seaweedback_2{
+    --cb: 4px;
     top: 20%;
     right: -8%;
     transition: 3s 1s;
+    filter: blur(var(--cb));
 }
 
 .seaweedleft_2{
-    
+    --cb: 4px;
     top: 45%;
     left: -7.5%;
     transition: 2s .3s;
-    
+    filter: blur(var(--cb));
 }
 
 .seaweedright1_2{
-    
+    --cb: 6px;
     top: 38%;
     right: -4%;
     transition: 1.7s ;
-    
+    filter: blur(var(--cb));
 }
 
 .seaweedright2_2{
-  
+    --cb: 4px;
     top: 46%;
     right: -7%;
     transition: 1.3s 0.2s;
-    
+    filter: blur(var(--cb));
 }
 
 .coral1_2{
-   
+    --cb: 6px;
     bottom: -1%;
     right: -10%;
-    
+    filter: blur(var(--cb));
 }
 
 .coral2_2{
-  
+    --cb: 6px;
     bottom: -1%;
     left: 7%;
-    
+    filter: blur(var(--cb));
 }
 
 .backarm_2{
@@ -332,10 +337,14 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 0%;
     margin-left: 10%;
     width: fit-content;
     color: #0f52b5;
+    transition: 1.5s 0s;
+    position: relative;
+    z-index: 100;
+    opacity: 0;
 }
 
 .buttonpage3{
@@ -372,11 +381,15 @@ img{
     bottom: 10%;
     left: -5%;
     transition: 2.5s 0.3s;
+    
 }
 
 .coralmid_3{
+    --cbb: 2px;
+    transition: 1s 1s;
     bottom: 0;
     left: -3%;
+    filter: blur(var(--cbb));
 }
 
 .scenefront_3{
@@ -386,19 +399,28 @@ img{
 }
 
 .coralfront1_3{
+    --cbb: 10px;
     bottom: -5%;
     right: -3.5%;
-    
+    filter: blur(var(--cbb));
+    transition: 1s;
+   
 }
 
 .coralfront2_3{
+    --cbb: 10px;
     bottom: -5%;
     left: -14%;
+    filter: blur(var(--cbb));
+
+    transition: 1s;
+    
 }
 
 .shark_3{
-    top: 10%;
-    right: -4%;
+    top: 0%;
+    right: -20%;
+    transition: 2s;
 }
 
 .angel1_3{
@@ -433,6 +455,7 @@ img{
     justify-content: center;
     margin-top: 8%;
     color: #0f52b5;
+    transition: .5s;
 }
 
 .buttonpage4{
@@ -455,6 +478,7 @@ img{
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    transition: .7s;
 }
 
 .fish-gallery::-webkit-scrollbar {
@@ -558,9 +582,9 @@ img{
 }
 
 .rock_4{
-    bottom: 50%;
+    bottom: -70%;
     left: -3%;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .textpage5{
@@ -570,6 +594,7 @@ img{
     justify-content: center;
     margin-top: 23%;
     color: #0f52b5;
+    transition: .5s;
 }
 
 .buttonpage5{
@@ -661,6 +686,7 @@ img{
     margin-top: 10%;
     margin-left: 28%;
     color: white;
+    transition: 1.5s;
 }
 
 .buttonpage6{
