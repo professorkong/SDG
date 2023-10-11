@@ -305,13 +305,12 @@ function scrollY(pageid) {
 
       //4
       if(pos <= -1980){
-        rock4.style.setProperty('bottom', '-50%')
-        rock4.style.setProperty('position', 'fixed')
+        
         text3.style.setProperty('filter','blur(20px)')
         fg.style.setProperty('filter', 'blur(50px)')
       }
       if(pos <= -2300){
-        
+        rock4.style.setProperty('bottom', '-50%')
         islandwave4.style.setProperty('bottom', '0%')
         
       }
@@ -320,7 +319,7 @@ function scrollY(pageid) {
         
       }
       if(pos <= -2763){
-        rock4.style.setProperty('position', 'absolute')
+        
       }
 
       if (pos <= -2800){
