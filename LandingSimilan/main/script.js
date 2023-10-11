@@ -211,6 +211,21 @@ function scrollY(pageid) {
   let scenemid3 = document.querySelector('.scenemid_3')
   let scenefront3 = document.querySelector('.scenefront_3')
 
+  let island4 = document.querySelector('.island_4')
+  let islandwave4 = document.querySelector('.wave_4')
+  let rock4 = document.querySelector('.rock_4')
+
+  let rock5 = document.querySelector('.rock_5')
+  let fc1 = document.querySelector('.fc1')
+  let fc2 = document.querySelector('.fc2')
+  let fc3 = document.querySelector('.fc3')
+
+  let sp1 = document.querySelector('.sp1')
+  let sp2 = document.querySelector('.sp2')
+  let sp3 = document.querySelector('.sp3')
+
+  // let rockback6 =
+  
   // frame animation
   let id = setInterval(frame, 0.1);
   function frame() {
@@ -248,6 +263,28 @@ function scrollY(pageid) {
         scenemid3.style.setProperty('bottom', '0%')
         scenefront3.style.setProperty('bottom', '0%')
       }
+
+      //4
+      if(pos <= -1929){
+        rock4.style.setProperty('bottom', '-50%')
+      }
+      if(pos <= -2300){
+        island4.style.setProperty('bottom', '0%')
+        islandwave4.style.setProperty('bottom', '0%')
+        
+      }
+       //5
+       if(pos <= -3700){
+        rock5.style.setProperty('top', '-10%')
+       }
+       if(pos <= -3813){
+        fc1.style.setProperty('bottom', '18%')
+        fc2.style.setProperty('bottom', '18%')
+        fc3.style.setProperty('bottom', '18%')
+        sp1.style.setProperty('left', '14.5%')
+        sp3.style.setProperty('left', '64%')
+       }
+       
 
     }
   }

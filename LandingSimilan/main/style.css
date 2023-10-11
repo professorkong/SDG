@@ -340,7 +340,7 @@ img{
     width: 105%;
     bottom: 0%;
     left: 0;
-    transition: 2s 1s;
+    transition: 3s ;
 }
 .seaweedmid_3{
     bottom: 0%;
@@ -358,7 +358,7 @@ img{
     width: 110%;
     bottom: 10%;
     left: -5%;
-    transition: 2.8s;
+    transition: 2.5s 0.3s;
 }
 
 .coralmid_3{
@@ -511,19 +511,22 @@ img{
 }
 
 .island_4{
-    bottom: 0;
+    bottom: -10%;
     left: -3%;
+    transition: 2s;
 }
 
 .wave_4{
     width: 140%;
-    bottom: 2%;
+    bottom: -20%;
     left: -30%;
+    transition: 2s;
 }
 
 .coralleft_4{
     bottom: 17%;
     left: -4%;
+    
 }
 
 .coralright_4{
@@ -542,8 +545,9 @@ img{
 }
 
 .rock_4{
-    bottom: -50%;
+    bottom: 50%;
     left: -3%;
+    transition: 3s;
 }
 
 .textpage5{
@@ -574,6 +578,7 @@ img{
     width: 258px;
     height: 375px;
     perspective: 1000px;
+    position: absolute;
   }
   
   .flip-card-inner {
@@ -608,6 +613,20 @@ img{
     transform: rotateY(180deg);
   }
 
+  .fc1{
+    bottom: -50%;
+    transition: 1s 0s;
+  }
+  .fc2{
+    bottom: -50%;
+    transition: 1s .2s;
+  }
+
+  .fc3{
+    bottom: -50%;
+    transition: 1s .4s;
+  }
+
 /* end card page 5 */
 
 .light_5{
@@ -618,6 +637,7 @@ img{
 .rock_5{
     top: -18%;
     left: -3%;
+    transition: .5s;
 }
 
 .textpage6{
