@@ -194,6 +194,8 @@ img{
     align-items: center;
     margin-top: 35%;
     color: #0f52b5;
+    transition: 2s 3s;
+    opacity: 0;
 }
 
 .buttonpage2{
@@ -217,33 +219,39 @@ img{
 }
 
 .island_2{
-    bottom: 0;
+    bottom: -5%;
     left: 0;
+    transition: 4s;
 }
 
 .islandwave_2{
-    bottom: 0;
+    bottom: -5%;
     left: -10%;
+    transition: 3s;
 }
 
 .seaweedback_2{
-    top: 15%;
+    top: 20%;
     right: -8%;
+    transition: 3s 1s;
 }
 
 .seaweedleft_2{
-    top: 33%;
+    top: 45%;
     left: -7.5%;
+    transition: 2s .3s;
 }
 
 .seaweedright1_2{
-    top: 18%;
+    top: 38%;
     right: -4%;
+    transition: 1.7s ;
 }
 
 .seaweedright2_2{
-    top: 26%;
+    top: 46%;
     right: -7%;
+    transition: 1.3s 0.2s;
 }
 
 .coral1_2{
@@ -674,5 +682,13 @@ img{
     top: 60%;
     left: 47%;
 }
-
+.t1{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+}
+.c2{
+    bottom: -20%;
+    transition: 1.5s;
+}
 

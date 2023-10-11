@@ -187,26 +187,67 @@ function scrollY(pageid) {
   body = document.querySelector("body");
   page = document.querySelector(pageid);
   pageStat = page.getBoundingClientRect();
-
   let pos = body.style.top;
   if (pos.includes("px")) {
     pos = parseInt(pos);
   } // แปลงเป็น int
   scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos); // + ต่อจาก top เดิม
 
+  //call class
+  let text1top = 100;
+  let text1 = document.querySelector(".t1");
+  let coral2 = document.querySelectorAll(".c2");
+  let seaweed1_2 = document.querySelector('.seaweedleft_2')
+  let seaweed2_2 = document.querySelector('.seaweedright1_2')
+  let seaweed2_3 = document.querySelector('.seaweedright2_2')
+  let island2 = document.querySelector('.island_2')
+  let islandwave2 = document.querySelector('.islandwave_2')
+  let seaweedback2 = document.querySelector('.seaweedback_2')
+  let text2 = document.querySelector('.textpage2')
+
   // frame animation
   let id = setInterval(frame, 0.1);
   function frame() {
-    if (pos == scrollToTop || pos == scrollToTop - 1) {
+    if (pos == scrollToTop || pos == scrollToTop - 1 || pos == scrollToTop - 2 ) {
       clearInterval(id);
-    } else {
-      pos -= 2;
+    }
+    else {
+      pos -= 3;
       body.style.top = pos + "px";
+      console.log(pos)
+      if (pos >= -1094) {
+        text1top += pos * -0.003;
+        text1.style.setProperty('opacity',1+pos*0.003)
+      }
+      //1
+      text1.style.top = text1top + 'px'
+      
+      //2
+      if (pos <= -600) {
+        seaweed1_2.style.setProperty('top', '33%')
+        seaweed2_2.style.setProperty('top', '18%')
+        seaweed2_3.style.setProperty('top', '26%')
+        island2.style.setProperty('bottom', '0')
+        islandwave2.style.setProperty('bottom', '0')
+        seaweedback2.style.setProperty('top', '15%')
+        text2.style.setProperty('opacity', '1')
+        for (let h of coral2) {
+          h.style.setProperty('bottom', '-1%')
+        }
+      }
+
     }
   }
 }
 
 // flip card page 5
-function flipCard(el){
+function flipCard(el) {
   el.dataset.open *= -1
 }
+
+
+// function setContent(){
+//   let point = document.querySelector('.head').getBoundingClientRect().top;
+//   // console.log(point);
+// }
+// setContent()
