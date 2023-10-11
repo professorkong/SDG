@@ -259,6 +259,7 @@ function scrollY(pageid) {
         text2.style.setProperty('opacity', '1')
         for (let h of coral2) {
           h.style.setProperty('bottom', '-1%')
+          h.style.setProperty('--cb', '2px')
         }
       }
 

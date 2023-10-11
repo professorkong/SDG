@@ -240,28 +240,34 @@ img{
     top: 45%;
     left: -7.5%;
     transition: 2s .3s;
+    filter: blur(4px);
 }
 
 .seaweedright1_2{
     top: 38%;
     right: -4%;
     transition: 1.7s ;
+    filter: blur(2px);
 }
 
 .seaweedright2_2{
     top: 46%;
     right: -7%;
     transition: 1.3s 0.2s;
+    filter: blur(4px);
 }
 
 .coral1_2{
     bottom: -1%;
     right: -10%;
+    filter: blur(6px);
 }
 
 .coral2_2{
+    --cb: 6px;
     bottom: -1%;
     left: 7%;
+    filter: blur(var(--cb));
 }
 
 .backarm_2{
@@ -702,6 +708,7 @@ img{
     top: 0%;
     left: 25%;
     transition: 5s;
+
 }
 .trash2_6{
     top: 0%;
