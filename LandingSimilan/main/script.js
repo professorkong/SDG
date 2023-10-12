@@ -321,34 +321,38 @@ function scrollY(pageid) {
         fg.style.setProperty('filter', 'blur(0px)')
         
       }
-      // if(pos <= -2763){
-        
+      // ตัวกระตุกขาเข้า
+      // if (pos <= -2800){
+      //   // fg.style.setProperty('filter', 'blur(20px)')
+      //   text4.style.setProperty('filter','blur(20px)')
       // }
 
-      if (pos <= -2800){
-        // fg.style.setProperty('filter', 'blur(20px)')
-        text4.style.setProperty('filter','blur(20px)')
-      }
-       //5
-       if(pos <= -3750){
-        rock5.style.setProperty('top', '-10%')
-       }
-       if(pos <= -3600){
+      // 5
+
+      if(pos <= -3500){
         fc1.style.setProperty('bottom', '18%')
         fc2.style.setProperty('bottom', '18%')
         fc3.style.setProperty('bottom', '18%')
+
+        // jame comment
         // sp1.style.setProperty('left', '14.5%')
         // sp3.style.setProperty('left', '64%')
        }
+      
+       if(pos <= -3750){
+        rock5.style.setProperty('top', '-10%')
+       }
 
        //6
-       if (pos <= -3900){
-        text5.style.setProperty('filter','blur(20px)')
-       }
+       //ตัวกระตุกขาออก
+      //  if (pos <= -3900){
+      //   text5.style.setProperty('filter','blur(20px)')
+      //  }
        if (pos <= -4000){
         trash1.style.setProperty('top', '50%')
         trash2.style.setProperty('top', '43%')
         trash3.style.setProperty('top', '60%')
+
         fc1.style.setProperty('bottom', '35%')
         fc2.style.setProperty('bottom', '35%')
         fc3.style.setProperty('bottom', '35%')
@@ -362,6 +366,7 @@ function scrollY(pageid) {
         
        }
 
+      // jame comment
       //  if (pos <= -4600){
       //   trash1.style.setProperty('top', '50%')
       //   trash2.style.setProperty('top', '43%')
