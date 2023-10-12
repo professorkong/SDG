@@ -321,27 +321,24 @@ function scrollY(pageid) {
         fg.style.setProperty('filter', 'blur(0px)')
         
       }
-      // if(pos <= -2763){
-        
-      // }
+      // จุดเริ่มตัวต้นเรื่อง
+      if (pos <= -2800){
+        // fg.style.setProperty('filter', 'blur(20px)')
+        text4.style.setProperty('filter','blur(20px)')
+      }
+       5
+       if(pos <= -3750){
+        rock5.style.setProperty('top', '-10%')
+       }
+       if(pos <= -3600){
+        fc1.style.setProperty('bottom', '18%')
+        fc2.style.setProperty('bottom', '18%')
+        fc3.style.setProperty('bottom', '18%')
 
-      // if (pos <= -2800){
-      //   // fg.style.setProperty('filter', 'blur(20px)')
-      //   text4.style.setProperty('filter','blur(20px)')
-      // }
-       //5
-      //  if(pos <= -3750){
-      //   rock5.style.setProperty('top', '-10%')
-      //  }
-      //  if(pos <= -3600){
-      //   fc1.style.setProperty('bottom', '18%')
-      //   fc2.style.setProperty('bottom', '18%')
-      //   fc3.style.setProperty('bottom', '18%')
-
-      //   // jame comment
-      //   // sp1.style.setProperty('left', '14.5%')
-      //   // sp3.style.setProperty('left', '64%')
-      //  }
+        // jame comment
+        // sp1.style.setProperty('left', '14.5%')
+        // sp3.style.setProperty('left', '64%')
+       }
 
        //6
       //  if (pos <= -3900){
