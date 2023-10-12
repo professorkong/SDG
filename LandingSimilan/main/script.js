@@ -325,10 +325,10 @@ function scrollY(pageid) {
         
       // }
 
-      if (pos <= -2800){
-        // fg.style.setProperty('filter', 'blur(20px)')
-        text4.style.setProperty('filter','blur(20px)')
-      }
+      // if (pos <= -2800){
+      //   // fg.style.setProperty('filter', 'blur(20px)')
+      //   text4.style.setProperty('filter','blur(20px)')
+      // }
        //5
       //  if(pos <= -3750){
       //   rock5.style.setProperty('top', '-10%')
@@ -344,28 +344,29 @@ function scrollY(pageid) {
       //  }
 
        //6
-       if (pos <= -3900){
-        text5.style.setProperty('filter','blur(20px)')
-       }
-       if (pos <= -4000){
-        trash1.style.setProperty('top', '50%')
-        trash2.style.setProperty('top', '43%')
-        trash3.style.setProperty('top', '60%')
+      //  if (pos <= -3900){
+      //   text5.style.setProperty('filter','blur(20px)')
+      //  }
+      //  if (pos <= -4000){
+      //   trash1.style.setProperty('top', '50%')
+      //   trash2.style.setProperty('top', '43%')
+      //   trash3.style.setProperty('top', '60%')
 
         //card
         // fc1.style.setProperty('bottom', '35%')
         // fc2.style.setProperty('bottom', '35%')
         // fc3.style.setProperty('bottom', '35%')
         
-       }
+      //  }
 
-       if (pos <= -4200){
-        rockback6.style.setProperty('bottom', '18%')
-        rockmid6.style.setProperty('bottom', '0%')
-        cfront6.style.setProperty('bottom', '-3%')
+      //  if (pos <= -4200){
+      //   rockback6.style.setProperty('bottom', '18%')
+      //   rockmid6.style.setProperty('bottom', '0%')
+      //   cfront6.style.setProperty('bottom', '-3%')
         
-       }
+      //  }
 
+      // jame comment
       //  if (pos <= -4600){
       //   trash1.style.setProperty('top', '50%')
       //   trash2.style.setProperty('top', '43%')
