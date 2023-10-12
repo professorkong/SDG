@@ -321,9 +321,9 @@ function scrollY(pageid) {
         fg.style.setProperty('filter', 'blur(0px)')
         
       }
-      if(pos <= -2763){
+      // if(pos <= -2763){
         
-      }
+      // }
 
       if (pos <= -2800){
         // fg.style.setProperty('filter', 'blur(20px)')
