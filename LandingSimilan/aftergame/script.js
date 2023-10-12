@@ -35,7 +35,7 @@ function setElementMove(){
         cloud3_8.style.setProperty('--ct3', -17+y*0.05 + "%")
         console.log(y-(h-y*0.5))
         if ((y-(h-y*0.5)) >= -550){
-            rock_8.style.setProperty('bottom', -1+(y-(h-y*0.5))*-0.04 + "%")
+            rock_8.style.setProperty('bottom', -1+(y-(h-y*0.5))*-0.08 + "%")
         }
         
         

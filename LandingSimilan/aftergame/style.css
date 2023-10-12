@@ -99,12 +99,12 @@ button{
 
 .wallpaper{
     width: 100%;
-    transition: .2s;
+   
 }
 
 .wallpaper > img{
     max-width: 100%;
-    min-height: 834px;
+    max-height: 834px;
     z-index: -1;
 }
 
@@ -133,35 +133,35 @@ img{
     --rb7: 18%;
     bottom: var(--rb7);
     left: -1%;
-    transition: .25s;
+    /* transition: .25s; */
 }
 
 .seaweedback_7{
     --sb7: 10%;
     bottom: var(--sb7);
     left: -2%;
-    transition: .25s;
+    /* transition: .25s; */
 }
 
 .rockmid_7{
     --rm7: 3%;
     bottom: var(--rm7);
     left: -1.5%;
-    transition: .25s;
+    /* transition: .25s; */
 }
 
 .coralmid_7{
     --cm7: 0;
     bottom: var(--cm7);
     left: -2%;
-    transition: .25s;
+    /* transition: .25s; */
 }
 
 .coralfront_7{
     --cf7: -4%;
     bottom: var(--cf7);
     left: -6%;
-    transition: .25s;
+    /* transition: .25s; */
 }
 
 .light_7{
@@ -242,7 +242,7 @@ img{
 .rock_8{
     bottom: -1%;
     left: -.5%;
-    transition: .1s;
+   
 }
 
 .tree_8{
