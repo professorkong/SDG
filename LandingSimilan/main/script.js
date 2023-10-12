@@ -322,10 +322,10 @@ function scrollY(pageid) {
         
       }
       // จุดเริ่มตัวต้นเรื่อง
-      if (pos <= -2800){
-        // fg.style.setProperty('filter', 'blur(20px)')
-        text4.style.setProperty('filter','blur(20px)')
-      }
+      // if (pos <= -2800){
+      //   // fg.style.setProperty('filter', 'blur(20px)')
+      //   text4.style.setProperty('filter','blur(20px)')
+      // }
        5
        if(pos <= -3750){
         rock5.style.setProperty('top', '-10%')
