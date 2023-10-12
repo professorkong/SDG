@@ -323,7 +323,7 @@ function scrollY(pageid) {
       }
 
       if (pos <= -2800){
-        fg.style.setProperty('filter', 'blur(20px)')
+        // fg.style.setProperty('filter', 'blur(20px)')
         text4.style.setProperty('filter','blur(20px)')
       }
        //5
