@@ -249,7 +249,7 @@ function scrollY(pageid) {
     else {
       pos -= 3;
       body.style.top = pos + "px";
-      // console.log(pos)
+      console.log(pos)
       if (pos >= -1094) {
         text1top += pos * -0.003;
         text1.style.setProperty('opacity',1+pos*0.003)
@@ -298,9 +298,12 @@ function scrollY(pageid) {
       }
       if(pos <= -1700){
         // console.log(1)
-        cfront13.style.setProperty('--cbb', 10+pos*0.005+'px')
-        cfront23.style.setProperty('--cbb', 10+pos*0.005+'px')
-        cmid.style.setProperty('--cbb', 2+pos*0.005+'px')
+        if( pos >= -2000){
+          cfront13.style.setProperty('--cbb', 10+pos*0.005+'px')
+          cfront23.style.setProperty('--cbb', 10+pos*0.005+'px')
+          cmid.style.setProperty('--cbb', 2+pos*0.005+'px')
+        }
+        
       }
 
       //4
