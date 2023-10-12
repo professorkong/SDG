@@ -343,9 +343,9 @@ function scrollY(pageid) {
         text5.style.setProperty('filter','blur(20px)')
        }
        if (pos <= -4500){
-        trash1.style.setProperty('top', '50%')
-        trash2.style.setProperty('top', '43%')
-        trash3.style.setProperty('top', '60%')
+        // trash1.style.setProperty('top', '50%')
+        // trash2.style.setProperty('top', '43%')
+        // trash3.style.setProperty('top', '60%')
         fc1.style.setProperty('bottom', '30%')
         fc2.style.setProperty('bottom', '30%')
         fc3.style.setProperty('bottom', '30%')
