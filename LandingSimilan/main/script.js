@@ -321,16 +321,15 @@ function scrollY(pageid) {
         fg.style.setProperty('filter', 'blur(0px)')
         
       }
-      // จุดเริ่มตัวต้นเรื่อง
+      // ตัวกระตุกขาเข้า
       // if (pos <= -2800){
       //   // fg.style.setProperty('filter', 'blur(20px)')
       //   text4.style.setProperty('filter','blur(20px)')
       // }
-       5
-       if(pos <= -3750){
-        rock5.style.setProperty('top', '-10%')
-       }
-       if(pos <= -3600){
+
+      // 5
+
+      if(pos <= -3500){
         fc1.style.setProperty('bottom', '18%')
         fc2.style.setProperty('bottom', '18%')
         fc3.style.setProperty('bottom', '18%')
@@ -338,6 +337,10 @@ function scrollY(pageid) {
         // jame comment
         // sp1.style.setProperty('left', '14.5%')
         // sp3.style.setProperty('left', '64%')
+       }
+      
+       if(pos <= -3750){
+        rock5.style.setProperty('top', '-10%')
        }
 
        //6
