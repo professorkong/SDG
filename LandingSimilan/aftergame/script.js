@@ -8,7 +8,7 @@ function setBodyScrollPosition(){
 
 function setElementMove(){
     
-    document.body.dataset.h = window.innerHeight;
+    // document.body.dataset.h = window.innerHeight;
     let y = document.body.dataset.y
     let h = document.body.dataset.h
     //7
