@@ -99,6 +99,7 @@ button{
 
 .wallpaper{
     width: 100%;
+    transition: .2s;
 }
 
 .wallpaper > img{
@@ -129,28 +130,38 @@ img{
 }
 
 .rockback_7{
-    bottom: 18%;
+    --rb7: 18%;
+    bottom: var(--rb7);
     left: -1%;
+    transition: .25s;
 }
 
 .seaweedback_7{
-    bottom: 10%;
+    --sb7: 10%;
+    bottom: var(--sb7);
     left: -2%;
+    transition: .25s;
 }
 
 .rockmid_7{
-    bottom: 3%;
+    --rm7: 3%;
+    bottom: var(--rm7);
     left: -1.5%;
+    transition: .25s;
 }
 
 .coralmid_7{
-    bottom: 0;
+    --cm7: 0;
+    bottom: var(--cm7);
     left: -2%;
+    transition: .25s;
 }
 
 .coralfront_7{
-    bottom: -4%;
+    --cf7: -4%;
+    bottom: var(--cf7);
     left: -6%;
+    transition: .25s;
 }
 
 .light_7{
@@ -231,6 +242,7 @@ img{
 .rock_8{
     bottom: -1%;
     left: -.5%;
+    transition: .1s;
 }
 
 .tree_8{
@@ -239,18 +251,24 @@ img{
 }
 
 .cloud1_8{
-    top: 7%;
+    --ct1: -7%;
+    top: var(--ct1);
     right: -9%;
+    transition: .3s ease-out;
 }
 
 .cloud2_8{
-    top: 22%;
+    --ct2: -22%;
+    top: var(--ct2);
     right: 15%;
+    transition: .5s ease-out;
 }
 
 .cloud3_8{
-    top: 17%;
+    --ct3: -17%;
+    top: var(--ct3);
     left: 8%;
+    transition: .4s ease-out;
 }
 
 .bird1_8{
