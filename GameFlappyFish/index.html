@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="screen" onmousedown="swim()" onmouseup="down()">
+    <div class="screen" ontouchstart="swim()" ontouchend="down()">
     <!-- <div class="screen" ontouchstart="swim()" ontouchend="down()"> -->
+
+        <div class="level">
+            <div class="background" id="level_1"></div>
+            <div class="background" id="level_2"></div>
+            <div class="background" id="level_2"></div>
+        </div>
+        
 
         <div class="player"></div>
         <div class="ob_top"></div>

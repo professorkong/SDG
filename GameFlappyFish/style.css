@@ -3,19 +3,55 @@ body{
 }
 
 .screen{
-    height: 100vh;
-    width: 7164px;
+    position: absolute;
     margin: 0;
-    padding: 0;
-    background-image: url(BG/game-01.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    font-family: FC-Orbit, sans-serif;
-    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
-    -webkit-tap-highlight-color: transparent;
-    z-index: 2;
-    animation: movebg 10s linear infinite;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
 }
+
+.background{
+    /* position: absolute; */
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.level{
+    margin: 0;
+    left: 0;
+    top: 0;
+    display: grid;
+    grid-template-columns: calc(7164px / 2) repeat(2, calc(7557px / 2));
+    height: 100%;
+    width: calc(7164px + calc(7557px * 2));
+    /* animation: movebg 60s linear; */
+}
+
+#level_1{
+    width: calc(7164px / 2);
+    height: 100vh;
+    background-image: url("BG/game-01.png");
+    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* transform: translateX(0px); */
+    /* animation: movebg 10s linear; */
+}
+
+#level_2{
+    width: calc(7557px / 2);
+    height: 100vh;
+    background-image: url("BG/game-02.png");
+    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* transform: translateX(calc(7164px / 2)); */
+    /* animation: movebg2 10s linear infinite; */
+}
+
 
 .player{
     --poy: 70%;
@@ -36,7 +72,7 @@ body{
     height: 200px;
     transform: translateX(-500%);
     background-color: red;
-    animation: ob_move 5s linear;
+    /* animation: ob_move 5s linear; */
 }
 
 .ob_bottom{
@@ -46,7 +82,7 @@ body{
     height: 200px;
     transform: translateX(-500%);
     background-color: red;
-    animation: ob_move 5s linear;
+    /* animation: ob_move 5s linear; */
 }
 
 @keyframes ob_move{
@@ -55,10 +91,11 @@ body{
 }
 
 @keyframes movebg{
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%); /* 100% คือค่าของการเลื่อนที่สุดขวา */
-    }
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
+}
+
+@keyframes movebg2{
+    0% {transform: translateX(7164px);}
+    100% {transform: translateX(-100%);}
 }
