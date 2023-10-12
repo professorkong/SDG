@@ -344,6 +344,7 @@ function scrollY(pageid) {
        }
 
        //6
+       //ตัวกระตุกขาออก
       //  if (pos <= -3900){
       //   text5.style.setProperty('filter','blur(20px)')
       //  }
@@ -352,7 +353,6 @@ function scrollY(pageid) {
         trash2.style.setProperty('top', '43%')
         trash3.style.setProperty('top', '60%')
 
-        card
         fc1.style.setProperty('bottom', '35%')
         fc2.style.setProperty('bottom', '35%')
         fc3.style.setProperty('bottom', '35%')
