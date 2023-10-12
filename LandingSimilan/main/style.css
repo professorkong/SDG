@@ -652,6 +652,7 @@ img{
   }
 
   .fc1{
+    left: 14.5%;
     bottom: -50%;
     transition: 1s 0s;
   }
@@ -661,6 +662,7 @@ img{
   }
 
   .fc3{
+    left: 64%;
     bottom: -50%;
     transition: 1s .4s;
   }

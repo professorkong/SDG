@@ -334,8 +334,8 @@ function scrollY(pageid) {
         fc1.style.setProperty('bottom', '18%')
         fc2.style.setProperty('bottom', '18%')
         fc3.style.setProperty('bottom', '18%')
-        sp1.style.setProperty('left', '14.5%')
-        sp3.style.setProperty('left', '64%')
+        // sp1.style.setProperty('left', '14.5%')
+        // sp3.style.setProperty('left', '64%')
        }
 
        //6
@@ -343,9 +343,9 @@ function scrollY(pageid) {
         text5.style.setProperty('filter','blur(20px)')
        }
        if (pos <= -4000){
-        trash1.style.setProperty('top', '50.5%')
-        trash2.style.setProperty('top', '43.9%')
-        trash3.style.setProperty('top', '60.7%')
+        trash1.style.setProperty('top', '50%')
+        trash2.style.setProperty('top', '43%')
+        trash3.style.setProperty('top', '60%')
         fc1.style.setProperty('bottom', '50%')
         fc2.style.setProperty('bottom', '50%')
         fc3.style.setProperty('bottom', '50%')
@@ -359,11 +359,11 @@ function scrollY(pageid) {
         
        }
 
-       if (pos <= -4600){
-        trash1.style.setProperty('top', '50%')
-        trash2.style.setProperty('top', '43%')
-        trash3.style.setProperty('top', '60%')
-       }
+      //  if (pos <= -4600){
+      //   trash1.style.setProperty('top', '50%')
+      //   trash2.style.setProperty('top', '43%')
+      //   trash3.style.setProperty('top', '60%')
+      //  }
        
 
     }
