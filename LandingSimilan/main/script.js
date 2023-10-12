@@ -345,7 +345,7 @@ function scrollY(pageid) {
        if (pos <= -3900){
         text5.style.setProperty('filter','blur(20px)')
        }
-       if (pos <= -4500){
+       if (pos <= -4000){
         trash1.style.setProperty('top', '50%')
         trash2.style.setProperty('top', '43%')
         trash3.style.setProperty('top', '60%')
