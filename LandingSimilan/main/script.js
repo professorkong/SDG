@@ -338,10 +338,10 @@ function scrollY(pageid) {
       //   fc2.style.setProperty('bottom', '18%')
       //   fc3.style.setProperty('bottom', '18%')
 
-        // jame comment
-        // sp1.style.setProperty('left', '14.5%')
-        // sp3.style.setProperty('left', '64%')
-       }
+      //   // jame comment
+      //   // sp1.style.setProperty('left', '14.5%')
+      //   // sp3.style.setProperty('left', '64%')
+      //  }
 
        //6
        if (pos <= -3900){
