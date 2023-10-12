@@ -252,10 +252,12 @@ function scrollY(pageid) {
       console.log(pos);
       text1.style.top = text1top + "px";
       if (pageid == "#page1") {
+        console.log("1");
         //1
       }
 
       if (pageid == "#page2") {
+        console.log("2");
         if (pos >= -1094) {
           text1top += pos * -0.003;
           text1.style.setProperty("opacity", 1 + pos * 0.003);
@@ -286,6 +288,7 @@ function scrollY(pageid) {
         }
       }
       if (pageid == "#page3") {
+        console.log("3");
         if (pos <= -1100) {
           text2.style.setProperty("filter", "blur(20px)");
         }
@@ -302,6 +305,7 @@ function scrollY(pageid) {
         }
       }
       if (pageid == "#page4") {
+        console.log("4");
         if (pos <= -1700) {
           // console.log(1)
           if (pos >= -2000) {
@@ -326,10 +330,11 @@ function scrollY(pageid) {
       }
       // ตัวกระตุกขาเข้า
       if (pageid == "#page5") {
-        if (pos <= -2800) {
-          fg.style.setProperty("filter", "blur(20px)");
-          text4.style.setProperty("filter", "blur(20px)");
-        }
+        console.log("5");
+        // if (pos <= -2800) {
+        //   fg.style.setProperty("filter", "blur(20px)");
+        //   text4.style.setProperty("filter", "blur(20px)");
+        // }
 
         // 5
 
@@ -349,11 +354,12 @@ function scrollY(pageid) {
       }
 
       if (pageid == "#page6") {
+        console.log("6");
         // 6
         // ตัวกระตุกขาออก
-        if (pos <= -3900) {
-          text5.style.setProperty("filter", "blur(20px)");
-        }
+        // if (pos <= -3900) {
+        //   text5.style.setProperty("filter", "blur(20px)");
+        // }
         if (pos <= -4000) {
           trash1.style.setProperty("top", "50%");
           trash2.style.setProperty("top", "43%");
