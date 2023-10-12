@@ -349,9 +349,9 @@ function scrollY(pageid) {
         trash1.style.setProperty('top', '50%')
         trash2.style.setProperty('top', '43%')
         trash3.style.setProperty('top', '60%')
-        // fc1.style.setProperty('bottom', '30%')
-        // fc2.style.setProperty('bottom', '30%')
-        // fc3.style.setProperty('bottom', '30%')
+        fc1.style.setProperty('bottom', '35%')
+        fc2.style.setProperty('bottom', '35%')
+        fc3.style.setProperty('bottom', '35%')
         
        }
 
