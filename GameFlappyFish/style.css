@@ -27,7 +27,7 @@ body{
     grid-template-columns: calc(7164px / 2) repeat(2, calc(7557px / 2));
     height: 100%;
     width: calc(7164px + calc(7557px * 2));
-    /* animation: movebg 60s linear; */
+    /* animation: movebg 120s linear; */
 }
 
 #level_1{
@@ -58,11 +58,11 @@ body{
     --cor: green;
     position: absolute;
     top: var(--poy);
-    left: 10%;
-    width: 400px;
+    left: 5%;
+    width: 500px;
     height: 200px;
-    transform: scale(1);
-    /* background-color: var(--cor); */
+    transform: scale(0.6);
+    background-color: var(--cor);
     transition: top 2s linear;
 }
 
@@ -71,7 +71,7 @@ body{
     background-image: url("Body/body.png");
     width: 167px;
     height: 121px;
-    left: 125px;
+    left: 195px;
     top: 25px;
 }
 
@@ -80,7 +80,7 @@ body{
     background-image: url("Body/head.png");
     width: 158px;
     height: 163px;
-    left: 161px;
+    left: 231px;
     top: -38px;
 }
 
@@ -89,7 +89,7 @@ body{
     background-image: url("Body/arm_up.png");
     width: 154px;
     height: 80px;
-    left: 280px;
+    left: 350px;
     top: 26px;
 }
 
@@ -98,7 +98,7 @@ body{
     background-image: url("Body/arm_down.png");
     width: 174px;
     height: 139px;
-    left: 229px;
+    left: 299px;
     top: 104px;
 }
 
@@ -107,7 +107,7 @@ body{
     background-image: url("Body/full_leg_up.png");
     width: 411px;
     height: 231px;
-    left: -229px;
+    left: -159px;
     top: -104px;
 }
 
@@ -116,29 +116,95 @@ body{
     background-image: url("Body/full_leg_down.png");
     width: 509px;
     height: 116px;
-    left: -337px;
+    left: -267px;
     top: 51px;
 }
 
-.ob_top{
+.rock{
     position: absolute;
-    top: 0%;
-    width: 100px;
-    height: 200px;
-    transform: translateX(-500%);
-    background-color: red;
-    /* animation: ob_move 5s linear; */
+    transform: scale(0.6);
+    left: 0;
+    top: 0;
+    /* background-color: red; */
 }
 
-.ob_bottom{
-    position: absolute;
-    bottom: 0%;
-    width: 100px;
-    height: 200px;
-    transform: translateX(-500%);
-    background-color: red;
-    /* animation: ob_move 5s linear; */
+.rock1{
+    background-image: url("Obj/rock1.png");
+    width: 1752px;
+    height: 670px;
 }
+
+
+.rock2{
+    background-image: url("Obj/rock2.png");
+    width: 1305px;
+    height: 407px;
+}
+
+.rock3{
+    background-image: url("Obj/rock3.png");
+    width: 346px;
+    height: 433px;
+}
+
+.rock4{
+    background-image: url("Obj/rock4.png");
+    width: 832px;
+    height: 684px;
+}
+
+.rock5{
+    background-image: url("Obj/rock5.png");
+    width: 299px;
+    height: 487px;
+}
+
+.coral{
+    position: absolute;
+    transform: scale(0.6);
+    left: 0;
+    bottom: 0;
+    /* background-color: red; */
+}
+
+.coral1{
+    background-image: url("asset/coral1.png");
+    width: 1234px;
+    height: 543px;
+}
+
+.coral2{
+    background-image: url("asset/coral2.png");
+    width: 577px;
+    height: 861px;
+}
+
+.coral3{
+    background-image: url("asset/coral3.png");
+    width: 1204px;
+    height: 606px;
+}
+
+.coral4{
+    background-image: url("asset/coral4.png");
+    width: 675px;
+    height: 371px;
+}
+
+.coral5{
+    background-image: url("asset/coral5.png");
+    width: 945px;
+    height: 693px;
+}
+
+.coral6{
+    background-image: url("asset/coral6.png");
+    width: 612px;
+    height: 610px;
+}
+
+
+
 
 @keyframes ob_move{
     0%{transform: translateX(1500%);};
