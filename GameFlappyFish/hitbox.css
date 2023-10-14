@@ -1,0 +1,51 @@
+.hitbox_rock5{
+    --co: green;
+    position: absolute;
+    transform: scale(0.6);
+    top: -100px;
+    width: 300px;
+    height: 490px;
+}
+
+.box1_rock5{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 310px;
+    background-color: var(--co);
+}
+
+.box2_rock5{
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    width: 50px;
+    height: 360px;
+    background-color: var(--co);
+}
+.box3_rock5{
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    width: 50px;
+    height: 400px;
+    background-color: var(--co);
+}
+.box4_rock5{
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    width: 50px;
+    height: 440px;
+    background-color: var(--co);
+}
+
+.box5_rock5{
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    width: 70px;
+    height: 490px;
+    background-color: var(--co);
+}

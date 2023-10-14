@@ -122,9 +122,9 @@ body{
 
 .rock{
     position: absolute;
-    transform: scale(0.6);
     left: 0;
     top: 0;
+    background-size: contain;
     /* background-color: red; */
 }
 
