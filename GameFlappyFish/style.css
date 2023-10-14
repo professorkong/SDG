@@ -61,8 +61,62 @@ body{
     left: 10%;
     width: 400px;
     height: 200px;
-    background-color: var(--cor);
+    /* background-color: var(--cor); */
     transition: top 1s linear;
+}
+
+.p_body{
+    position: absolute;
+    background-image: url("Body/body.png");
+    width: 167px;
+    height: 121px;
+    left: 125px;
+    top: 25px;
+}
+
+.p_head{
+    position: absolute;
+    background-image: url("Body/head.png");
+    width: 158px;
+    height: 163px;
+    left: 161px;
+    top: -38px
+}
+
+.p_arm_up{
+    position: absolute;
+    background-image: url("Body/arm_up.png");
+    width: 154px;
+    height: 80px;
+    left: 280px;
+    top: 26px
+}
+
+.p_arm_down{
+    position: absolute;
+    background-image: url("Body/arm_down.png");
+    width: 174px;
+    height: 139px;
+    left: 229px;
+    top: 104px
+}
+
+.p_leg_up{
+    position: absolute;
+    background-image: url("Body/full_leg_up.png");
+    width: 411px;
+    height: 231px;
+    left: -229px;
+    top: -104px
+}
+
+.p_leg_down{
+    position: absolute;
+    background-image: url("Body/full_leg_down.png");
+    width: 509px;
+    height: 116px;
+    left: -337px;
+    top: 51px
 }
 
 .ob_top{
