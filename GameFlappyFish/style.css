@@ -61,8 +61,9 @@ body{
     left: 10%;
     width: 400px;
     height: 200px;
+    transform: scale(1);
     /* background-color: var(--cor); */
-    transition: top 1s linear;
+    transition: top 2s linear;
 }
 
 .p_body{
@@ -80,7 +81,7 @@ body{
     width: 158px;
     height: 163px;
     left: 161px;
-    top: -38px
+    top: -38px;
 }
 
 .p_arm_up{
@@ -89,7 +90,7 @@ body{
     width: 154px;
     height: 80px;
     left: 280px;
-    top: 26px
+    top: 26px;
 }
 
 .p_arm_down{
@@ -98,7 +99,7 @@ body{
     width: 174px;
     height: 139px;
     left: 229px;
-    top: 104px
+    top: 104px;
 }
 
 .p_leg_up{
@@ -107,7 +108,7 @@ body{
     width: 411px;
     height: 231px;
     left: -229px;
-    top: -104px
+    top: -104px;
 }
 
 .p_leg_down{
@@ -116,7 +117,7 @@ body{
     width: 509px;
     height: 116px;
     left: -337px;
-    top: 51px
+    top: 51px;
 }
 
 .ob_top{

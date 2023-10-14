@@ -1,0 +1,43 @@
+.p_head{
+    animation: head_move 2s alternate infinite ease-in-out;
+}
+
+@keyframes head_move{
+    100%{transform: rotate(5deg);};
+}
+
+.p_arm_up{
+    animation: arm_up_move 4s alternate infinite ease-out;
+}
+
+@keyframes arm_up_move{
+    0%{transform: translate(-10px) rotate(15deg);};
+    100%{transform: translate(10px) rotate(15deg);};
+}
+
+.p_arm_down{
+    animation: arm_down_move 5s alternate infinite ease-out;
+}
+
+@keyframes arm_down_move{
+    0%{transform: rotateZ(-5deg) translateY(0px);}
+    100%{transform: rotateZ(5deg) translateY(5px) translateX(-10px);}
+}
+
+.p_leg_up{
+    animation: leg_down_move 4s alternate infinite ease-out;
+}
+
+@keyframes leg_up_move{
+    0%{transform: rotateZ(-5deg) translateY(0px);}
+    100%{transform: rotateZ(5deg) translateY(5px) translateX(-10px);}
+}
+
+.p_leg_down{
+    animation: leg_down_move 4s alternate infinite ease-out;
+}
+
+@keyframes leg_down_move{
+    0%{transform: rotateZ(0deg) translateY(0px);}
+    100%{transform: rotateZ(-3deg) translateY(5px) translateX(-5px);}
+}

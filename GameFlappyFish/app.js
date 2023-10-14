@@ -5,11 +5,11 @@ let player = document.querySelector('.player');
 
 //disble long touch
 
-// window.oncontextmenu = function(event) {
-//   event.preventDefault();
-//   event.stopPropagation();
-//   return false;
-// };
+window.oncontextmenu = function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+};
 
 let ob_top = document.querySelectorAll('.ob_top');
 let ob_bottom = document.querySelectorAll('.ob_bottom');
