@@ -15,10 +15,14 @@ function scrollY(pageid){
     // frame animation
     let id = setInterval(frame, 0.1);
     function frame() {
-      if (pos == scrollToTop || pos == scrollToTop-1) {
+      if (
+        pos == scrollToTop ||
+        pos == scrollToTop - 1 ||
+        pos == scrollToTop - 2
+      ) {
         clearInterval(id);
       } else {
-        pos -= 2; 
+        pos -= 3; 
         body.style.top = pos + 'px';
 
         if(pageid == '#page5' && pos <= -3350){
