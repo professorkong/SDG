@@ -19,20 +19,38 @@ body{
     top: 0;
 }
 
+.flex{
+    display: flex;
+    --count: 1;
+    /* animation: movebg 60s linear; */
+    width: fit-content;
+    /* transform: translateX(calc(-10000px * var(--count))); */
+    transition: 60s;
+    transition-timing-function: linear;
+}
+
 .level{
     margin: 0;
     left: 0;
     top: 0;
-    display: grid;
-    grid-template-columns: calc(7164px / 2) repeat(2, calc(7557px / 2));
-    height: 100%;
-    width: calc(7164px + calc(7557px * 2));
-    /* animation: movebg 120s linear; */
+    display: flex;
+    /* grid-template-columns: calc(7164px / 2) repeat(2, calc(7557px / 2)); */
+    /* height: 100%; */
+    /* width: calc(7164px *0.6); */
+    /* transform: translateX(0%); */
+    /* animation: movebg 10s linear; */
+}
+
+.loop{
+    display: flex;
+    /* width: calc(7557px * var(--count)); */
+    /* transform: translateX(0%); */
+    /* animation: movebg2 20s linear infinite; */
 }
 
 #level_1{
     width: calc(7164px / 2);
-    height: 100vh;
+    height: 847px;
     background-image: url("BG/game-01.png");
     background-color: blue;
     background-size: cover;
@@ -43,13 +61,13 @@ body{
 
 #level_2{
     width: calc(7557px / 2);
-    height: 100vh;
+    height: 847px;
     background-image: url("BG/game-02.png");
     background-color: blue;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     /* transform: translateX(calc(7164px / 2)); */
-    /* animation: movebg2 10s linear infinite; */
+    /* animation: movebg2 20s linear infinite; */
 }
 
 
@@ -204,19 +222,12 @@ body{
 }
 
 
-
-
-@keyframes ob_move{
-    0%{transform: translateX(1500%);};
-    100%{transform: translateX(-500%);};
-}
-
 @keyframes movebg{
     0% {transform: translateX(0%);}
-    100% {transform: translateX(-100%);}
+    100% {transform: translateX(-100000px);}
 }
 
 @keyframes movebg2{
-    0% {transform: translateX(7164px);}
+    0% {transform: translateX(0%);}
     100% {transform: translateX(-100%);}
 }

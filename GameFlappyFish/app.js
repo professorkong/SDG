@@ -85,35 +85,69 @@ console.log(p_r)
 
 function rock(p_t){
 
-  let ob_top = document.querySelectorAll('.box');
-
+  let ob_top = document.querySelectorAll('.boxR');
+  
   for (let t of ob_top){
     let t_l = parseInt(t.getBoundingClientRect().left);
     let t_r = parseInt(t.getBoundingClientRect().right);
     let t_b = parseInt(t.getBoundingClientRect().bottom);
     if (p_r >= t_l && p_l <= t_r && p_t <= t_b){
-        console.log(t)
-        t.style.setProperty('--co', 'red');
-        // player.style.setProperty('--cor', 'red');
+      // console.log(t)
+      t.style.setProperty('--co', 'red');
+      // player.style.setProperty('--cor', 'red');
     }
   }
-
+  
 }
 
 function coral(p_b){
   
-  let ob_bottom = document.querySelectorAll('.coral');
+  let ob_bottom = document.querySelectorAll('.boxC');
 
   for (let b of ob_bottom){
     let b_l = parseInt(b.getBoundingClientRect().left);
     let b_r = parseInt(b.getBoundingClientRect().right);
     let b_t = parseInt(b.getBoundingClientRect().top);
     if (p_r >= b_l && p_l <= b_r && p_b >= b_t){
-        console.log("bottom")
-        player.style.setProperty('--cor', 'red');
+        // console.log(b)
+        b.style.setProperty('--co', 'red');
+        // player.style.setProperty('--cor', 'red');
     }
   }
 }
+
+let count = 0;
+
+function check(){
+  let box = document.querySelectorAll(".background");
+  for (let i of box){
+    let i_r = parseInt(i.getBoundingClientRect().right);
+    if (i_r <= p_l && i.dataset.check == 0){
+      let node = document.getElementById("level_2");
+      let clone = node.cloneNode(true);
+      clone.dataset.check = 0;
+      document.querySelector(".loop").appendChild(clone)
+      i.dataset.check = 1;
+      let flex = document.querySelector(".flex");
+      count++;
+      flex.style.setProperty('--count', count)
+      console.log("Check");
+    }
+  }
+}
+
+function pass(){
+  let box = document.querySelectorAll(".box");
+  for (let i of box){
+    let i_r = parseInt(i.getBoundingClientRect().right);
+    if (i_r <= p_l && i.dataset.pass == 0){
+      console.log("Pass");
+      i.dataset.pass = 1;
+    }
+
+  }
+}
+
 
 
 function game(){
@@ -125,5 +159,7 @@ function game(){
 
   // rock5(p_t, p_b)
   rock(p_t)
-  // coral(p_b)
+  coral(p_b)
+  pass()
+  check()
 }
