@@ -122,6 +122,9 @@ body {
     animation-name: bin_down;
     animation-duration: 60s;
     user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 :root{
@@ -598,7 +601,6 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 1.5rem;
-    cursor: pointer;
 }
 
 

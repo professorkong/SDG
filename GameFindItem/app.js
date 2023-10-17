@@ -87,6 +87,7 @@ function collect(el){
     el.backgroundPosition = "center center";    
     el.style.backgroundImage = "url('./asset/correct.png')";
     el.style.pointerEvents = 'none';
+    el.innerHTML = "<h4 style='color: #f2f1f1'>+100</h4>";
     document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames

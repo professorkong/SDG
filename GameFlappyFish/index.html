@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
     <link rel="stylesheet" href="style.css" type="text/css" /> 
-    <title>Document</title>
+    <title>Driving</title>
+    <script src="https://kit.fontawesome.com/b3b98bb353.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="hitbox.css">
@@ -60,8 +61,107 @@
         <div class="ob_top"></div>
         <div class="ob_top"></div>
         <div class="ob_bottom"></div>
+
+
+        <!-- all user interface -->
+        <div class="menu">
+            <div class="timer">     
+                <div class="outer">               
+                        <h1 id="time">60</h1>                  
+                </div>
+            </div>
+            <div class="bar">
+                <h2>คะแนน</h2>
+                <div class="outer">               
+                        <h1 id="point">0</h1>               
+                </div>
+            </div>
+        </div>
+
+        <div id="tutorial">
+            <div class="outer">
+                <div class="inner">
+                    <div class="wrapper">
+                        <h1>วิธีการเล่น</h1>
+                    </div>
+                    <div class="guide">
+                        <div class="inlist">
+                            <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
+                            <h1>หลีกเลี่ยงการชนปะการังระหว่างดำน้ำโดยการคลิกบนหน้าจอเพื่อลอยตัวให้สูงขึ้น และปล่อยมือเพื่อลอยตัวให้ต่ำลง</h1>
+                        </div>
+                        <div class="inlist">
+                            <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
+                            <h1>เมื่อว่ายครบระยะทาง 100 เมตร ผู้เล่นจะได้รับคะแนน +100 คะแนน</h1>
+                        </div>
+                        <div class="inlist">
+                            <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
+                            <h1>หากชนสิ่งกีดขวางจะโดนหัก 100 คะแนน</h1>
+                        </div>
+                        <div class="inlist">
+                            <span style="align-items: start; padding-top: 0.4rem;"><i class="fa-solid fa-star" style="color: #ffffff; font-size: 2.1em;"></i></span>
+                            <h1>ผู้เล่นมีเวลา 60 วินาทีในการดำน้ำ เมื่อครบเวลาแล้วระบบจะทำการรวมคะแนนให้อัตโนมัติพร้อมบอกระยะทางที่ว่ายไปทั้งหมด</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="reset">
+                            <a onclick="start()">เริ่มเกม</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game_over">
+            <div class="boxitem">
+                <div class="wrapper">
+                    <h1 id="score"></h1>
+                    <div class="grade">
+                        <div class="pic" id="content1">
+                            <div class="char"></div>
+                            <h1>สุดยอด!</h1>
+                            <h2>คุณคือนักดำน้ำตัวตึง</h2>
+                        </div>
+                        <div class="pic" id="content2">
+                            <div class="char"></div>
+                            <h1>ดำเก่งแล้ว</h1>
+                            <h2>ถือว่าใช้ได้</h2>
+                        </div>
+                        <div class="pic" id="content3">
+                            <div class="char"></div>
+                            <h1>ต้องไปหัด</h1>
+                            <h2>ดำน้ำอีกแล้ว</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="reset">
+                            <a onclick="reset()">เล่นอีกครั้ง</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
+                <div class="outterbutton">
+                    <div class="innerbutton">
+                        <h4 id="main">
+                            <a href="../LandingKrabi/main/end.html" style="text-decoration: none;">กลับหน้าหลัก</a>
+                            <img class="star1" src="../LandingSimilan/asset/btn/star.png">
+                            <img class="star2" src="../LandingSimilan/asset/btn/star.png">
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
     <script src="app.js"></script>
 </body>
 </html>

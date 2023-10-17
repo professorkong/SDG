@@ -163,3 +163,59 @@ function game(){
   pass()
   check()
 }
+
+let point = 0
+let time = 3;
+
+document.getElementById('tutorial').style.visibility = 'visible';
+
+function main(){
+  document.getElementById("time").innerHTML = time > 9 ? time : '0' + time;
+  document.getElementById("time").style.color = time > 9 ? "white" : "hsl(2, 91%, 62%)" ;
+
+  if (time != 0){
+    time--;
+  }
+  else{
+    document.getElementById("game_over").style.visibility = "visible";
+    document.querySelector(".menu").style.visibility = "hidden";
+    document.getElementById("score").innerHTML = point;
+    showCharacter(point);
+    gameOver(start);
+  }
+
+}
+
+function start() {
+  setInterval(main, 1000);
+  document.getElementById('tutorial').style.visibility = 'hidden';
+  document.querySelector('.menu').style.visibility = 'visible';
+}
+
+function gameOver(e) {
+  clearInterval(e);
+}
+
+// show character when end game is over 
+function showCharacter(score) {
+  if (score > 1500) {
+    document.getElementById("content1").style.visibility = "visible";
+  }
+  else if (score > 1000) {
+    document.getElementById("content2").style.visibility = "visible";
+  }
+  else {
+    document.getElementById("content3").style.visibility = "visible";
+  }
+}
+
+function reset(){
+  point = 0;
+  time = 59;
+  document.querySelector(".menu").style.visibility = 'visible';
+  document.getElementById("point").innerHTML = point;
+  document.getElementById("game_over").style.visibility = "hidden";
+  document.getElementById("content1").style.visibility = "hidden";
+  document.getElementById("content2").style.visibility = "hidden";
+  document.getElementById("content3").style.visibility = "hidden";
+}
