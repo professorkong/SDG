@@ -63,23 +63,21 @@ function scrollPai(){
     if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
     scrollToTop = 3
     
-
     // frame animation
-    let id = setInterval(frame, .1);
+    let run = setInterval(frame, 0.1);
     function frame() {
       if (
         pos == scrollToTop ||
         pos == scrollToTop + 1 ||
         pos == scrollToTop + 2
       ) {
-        clearInterval(id);
+        clearInterval(run);
+        console.log('out')
       } else {
-        
         pos += 3; 
-        body.style.top = pos - 3 + 'px';
-        console.log(body.style.top)
+        console.log(pos)
+        body.style.top = pos + 'px';
+        
       }
     }
-
-    
-  }
+}
