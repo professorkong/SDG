@@ -219,6 +219,8 @@ body {
     width: 100px;
     height: 100px;
     visibility: hidden;
+    justify-content: end;
+    align-items: start;
 }
 
 

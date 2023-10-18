@@ -115,6 +115,7 @@ function minus(el){
     el.backgroundPosition = "center center";
     el.style.backgroundImage = "url('./asset/wrong.png')";
     el.style.pointerEvents = 'none';
+    el.innerHTML = "<h4 style='color: #f2f1f1; transform: translateY(-40px)'>-100</h4>";
     document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames
