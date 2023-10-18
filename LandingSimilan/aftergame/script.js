@@ -56,3 +56,33 @@ function setElementMove(){
     // coralfront_7.style.setProperty('--cf7', y*0.05 + "%")
 }
 setElementMove()
+
+function scrollPai(pageid){
+   
+    body = document.querySelector("body")
+    page = document.querySelector(pageid)
+    pageStat = page.getBoundingClientRect();
+    let pos = body.style.top;
+    if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
+    scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos) // + ต่อจาก top เดิม
+  
+
+    // frame animation
+    let id = setInterval(frame, 0.1);
+    function frame() {
+      if (
+        pos == scrollToTop ||
+        pos == scrollToTop - 1 ||
+        pos == scrollToTop - 2
+      ) {
+        clearInterval(id);
+      } else {
+        
+        pos -= 3; 
+        body.style.top = pos + 'px';
+        console.log(body.style.top)
+      }
+    }
+
+    
+  }

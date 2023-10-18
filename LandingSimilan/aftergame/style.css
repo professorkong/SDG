@@ -4,6 +4,15 @@
     font-family: FC-Orbit, sans-serif;
     /* color: white; */
 }
+
+body{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background: #222;
+}
+
 @font-face {
     font-family: FC-Orbit;
     src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
@@ -69,6 +78,11 @@ button{
     border-radius: 100%;
 }
 
+.buttonpage7{
+    margin-top: 5%;
+    z-index: 1;
+}
+
 .star1{
     position: absolute;
     bottom: -6%;
@@ -99,7 +113,6 @@ button{
 
 .wallpaper{
     width: 100%;
-   
 }
 
 .wallpaper > img{
@@ -127,7 +140,7 @@ img{
     align-items: center;
     margin-top: 19%;
     color: white;
-    height: 834px;
+    /* height: 834px; */
 }
 
 .rockback_7{
