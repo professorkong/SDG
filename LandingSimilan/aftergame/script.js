@@ -57,29 +57,26 @@ function setElementMove(){
 }
 setElementMove()
 
-function scrollPai(pageid){
-   
+function scrollPai(){
     body = document.querySelector("body")
-    page = document.querySelector(pageid)
-    pageStat = page.getBoundingClientRect();
-    let pos = body.style.top;
+    let pos = body.style.top; //console log ไม่ออก
     if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
-    scrollToTop = parseInt((pageStat.bottom - 834) * -1 + pos) // + ต่อจาก top เดิม
-  
+    scrollToTop = 3
+    
 
     // frame animation
-    let id = setInterval(frame, 0.1);
+    let id = setInterval(frame, .1);
     function frame() {
       if (
         pos == scrollToTop ||
-        pos == scrollToTop - 1 ||
-        pos == scrollToTop - 2
+        pos == scrollToTop + 1 ||
+        pos == scrollToTop + 2
       ) {
         clearInterval(id);
       } else {
         
-        pos -= 3; 
-        body.style.top = pos + 'px';
+        pos += 3; 
+        body.style.top = pos - 3 + 'px';
         console.log(body.style.top)
       }
     }

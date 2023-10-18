@@ -24,6 +24,7 @@ function scrollY(pageid){
       } else {
         pos -= 3; 
         body.style.top = pos + 'px';
+        console.log(pos)
 
         if(pageid == '#page5' && pos <= -3350){
           p5top += 2
