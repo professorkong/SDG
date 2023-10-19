@@ -1,5 +1,5 @@
 .hitbox_rock5{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     top: -100px;
@@ -8,36 +8,36 @@
 }
 
 .hitbox_rock4{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     top: -100px;
-    width: 300px;
-    height: 490px;
+    width: 830px;
+    height: 680px;
 }
 .hitbox_rock3{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     top: -100px;
-    width: 300px;
-    height: 490px;
+    width: 350px;
+    height: 430px;
 }
 .hitbox_rock2{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     top: -100px;
-    width: 300px;
-    height: 490px;
+    width: 1300px;
+    height: 410px;
 }
 .hitbox_rock1{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
-    top: -100px;
-    width: 300px;
-    height: 490px;
+    top: -200px;
+    width: 1750px;
+    height: 670px;
 }
 
 .box1_rock5{
@@ -426,52 +426,52 @@
 }  
 
 .hitbox_coral1{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     bottom: -100px;
-    width: 300px;
-    height: 490px;
+    width: 1234px;
+    height: 543px;
 }
 .hitbox_coral2{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
-    bottom: -100px;
-    width: 300px;
-    height: 490px;
+    bottom: -290px;
+    width: 577px;
+    height: 861px;
 }
 .hitbox_coral3{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     bottom: -100px;
-    width: 300px;
-    height: 490px;
+    width: 1204px;
+    height: 606px;
 }
 .hitbox_coral4{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     bottom: -100px;
-    width: 300px;
-    height: 490px;
+    width: 675px;
+    height: 371px;
 }
 .hitbox_coral5{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
     bottom: -100px;
-    width: 300px;
-    height: 490px;
+    width: 945px;
+    height: 693px;
 }
 .hitbox_coral6{
-    --co: green;
+    /* --co: green; */
     position: absolute;
     transform: scale(0.6);
-    bottom: -100px;
-    width: 300px;
-    height: 490px;
+    bottom: -180px;
+    width: 612px;
+    height: 610px;
 }
 
 .box1_coral1{

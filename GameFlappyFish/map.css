@@ -1,12 +1,33 @@
 .obj1{
-    left: 3386px;
+    left: 1000px;
 }
 
 .obj2{
-    /* transform: translateX(3149px); */
-    left: 3149px;
+    left: 1100px;
 }
 
 .obj3{
-    left: 3149px;
+    left: 1500px;
 }
+
+.obj4{
+    left: 2300px;
+}
+
+.obj5{
+    left: 2000px;
+}
+
+.obj6{
+    left: 2800px;
+}
+
+.obj7{
+    left: 2600px;
+}
+
+.obj8{
+    left: 2800px;
+}
+
+

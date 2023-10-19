@@ -32,11 +32,12 @@ body{
 
 .flex{
     display: flex;
-    --count: 1;
+    --count: 0;
+    --dif: 40s;
     /* animation: movebg 60s linear; */
     width: fit-content;
-    /* transform: translateX(calc(-10000px * var(--count))); */
-    transition: 60s;
+    transform: translateX(calc(-10000px * var(--count)));
+    transition: var(--dif);
     transition-timing-function: linear;
 }
 
@@ -84,7 +85,7 @@ body{
 
 .player{
     --poy: 70%;
-    --cor: green;
+    /* --cor: green; */
     position: absolute;
     top: var(--poy);
     left: 5%;
@@ -242,6 +243,15 @@ body{
     0% {transform: translateX(0%);}
     100% {transform: translateX(-100%);}
 }
+
+
+
+
+
+
+
+
+
 
 /* ui menu  */
 
