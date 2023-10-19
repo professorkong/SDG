@@ -59,25 +59,16 @@ setElementMove()
 
 function scrollPai(){
     body = document.querySelector("body")
-    let pos = body.style.top; //console log ไม่ออก
-    if(pos.includes("px")){pos = parseInt(pos)} // แปลงเป็น int
-    scrollToTop = 3
+    let pos = -834
     
     // frame animation
     let run = setInterval(frame, 0.1);
     function frame() {
-      if (
-        pos == scrollToTop ||
-        pos == scrollToTop + 1 ||
-        pos == scrollToTop + 2
-      ) {
+      if (pos > 0) {
         clearInterval(run);
-        console.log('out')
       } else {
         pos += 3; 
-        console.log(pos)
-        body.style.top = pos + 'px';
-        
+        body.style.top = pos - 3 + 'px';
       }
     }
 }
