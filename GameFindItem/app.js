@@ -32,7 +32,7 @@ function main(){
 
       var node = document.getElementById(bin[item]);
       var clone = node.cloneNode(true);
-      clone.style.transform = "translateX(" + posx + "px) rotate(" + rotate + "deg)"; 
+      clone.style.transform = "translateX(" + posx + "px) translateY(-50px) rotate(" + rotate + "deg)"; 
       clone.style.visibility = "visible";
       itemDisappear(document.getElementById("generate").appendChild(clone));
       
@@ -54,12 +54,11 @@ function itemDisappear(el) {
             {opacity: '1'},
             {opacity: '0'},
           ], {
-            duration: 2500,
-            iterations: 1,
-            fill: 'forwards'
+            duration: 3000,
+            iterations: 1
           });
           setTimeout(() => {
-             el.style.pointerEvents = 'none';
+            document.getElementById("generate").removeChild(el);  
           }, 2000)
       }, 5000)  
 }
@@ -79,14 +78,10 @@ function showCharacter(score) {
 
 function collect(el){
     var bin = document.querySelector(bin);
-    // r.style.setProperty('--posy', '-200px');
+    r.style.setProperty('--posy', '-200px');
     // el.style.visibility = "hidden";
-    var top  = el.getBoundingClientRect().top;
-    var left = el.getBoundingClientRect().left;
-    el.style.top = top + "px";
-    el.style.left = (left + 25) + "px";
-    el.style.setProperty('animation', 'collect 1s 1');
     point += 100;
+    center = el.getBoundingClientRect().left + 25;
     el.style.rotate = "0deg";
     el.backgroundSize = "100px 100px";
     el.backgroundPosition = "center center";    
@@ -96,8 +91,8 @@ function collect(el){
     document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames
-      {  opacity: '1'},
-      {  opacity: '1'}
+      { transform: 'translateX(' + center + 'px) translateY(0px)' },
+      { transform: 'translateX(' + center + 'px) translateY(-400px)' }
     ], {
       // sync options
       duration: 1000,
@@ -114,11 +109,7 @@ function collect(el){
 function minus(el){
     var bin = document.querySelector(bin);
     point = point <= 0 ? 0 : point - 100;
-    var top  = el.getBoundingClientRect().top;
-    var left = el.getBoundingClientRect().left;
-    el.style.top = top + "px";
-    el.style.left = (left + 25) + "px";
-    el.style.setProperty('animation', 'collect 1s 1');
+    center = el.getBoundingClientRect().left + 25;
     el.style.rotate = "0deg";
     el.backgroundSize = "100px 100px";
     el.backgroundPosition = "center center";
@@ -128,8 +119,8 @@ function minus(el){
     document.getElementById("point").innerHTML = point;
     el.animate([
       // key frames
-      {opacity: '1'},
-      {opacity: '1'}
+      { transform: 'translateX(' + center + 'px) translateY(0px)' },
+      { transform: 'translateX(' + center + 'px) translateY(-400px)' }
     ], {
       // sync options
       duration: 1000,
