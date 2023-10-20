@@ -27,6 +27,11 @@ img{
     margin: 0;
     padding: 0%;
 }
+.p3{
+    transform: scale(1.1);
+    top: -1.5%;
+    left: -3%;
+}
 .p4{
     bottom: -44%;
 }

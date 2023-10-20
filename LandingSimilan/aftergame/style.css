@@ -25,6 +25,16 @@ html {
     overflow: hidden;
 } */
 
+.grain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background-image: url('../asset/grain.png');
+}
+
 h1{z-index: 100; font-size: 8rem; line-height: 130%;}
 h2{z-index: 100; font-size: 4.5rem; line-height: 130%;}
 h3{z-index: 100; font-size: 2rem; line-height: 130%;}
