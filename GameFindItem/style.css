@@ -350,7 +350,7 @@ body {
 
 @keyframes bin_down {
     0%   {translate: 0px 0px;}
-    5%  {translate: 0px 950px;}
+    5%  {translate: 0px 820px;}
     100% {translate: 0px 50px;}
 }
 
