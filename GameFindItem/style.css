@@ -112,6 +112,7 @@ body {
 }
 
 .bin {
+    top: -200px;
     position: absolute;
     /* background-color: hsl(0, 71%, 62%); */
     /* background-image: url(./asset/trash/trash1.png); */
@@ -348,9 +349,14 @@ body {
 }
 
 @keyframes bin_down {
-    0%   {top: -200px;}
-    5%  {top: 750px;}
-    100% {top: 800px;}
+    0%   {translate: 0px 0px;}
+    5%  {translate: 0px 950px;}
+    100% {translate: 0px 50px;}
+}
+
+@keyframes collect {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-200px);}
 }
 
 @keyframes toLeft {
@@ -414,7 +420,7 @@ body {
     height: 90px;
     width: 250px;
     border-radius: 3rem;
-    background: white;
+    background:  linear-gradient(90deg, rgba(222,161,62,255) 0%, rgba(249,211,146,255) 50%, rgba(222,161,62,255) 100%);
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -442,7 +448,7 @@ body {
 .inlist h1 {
     font-size: 1.7rem;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
-    color: white;
+    color: #3c8b9e;
 }
 
 .inlist img {
@@ -463,6 +469,10 @@ body {
     visibility: hidden;
 }
 
+#tutorial {
+    top: 45%;
+}
+
 #game_over {
     height: 530px;
     width: 640px;
@@ -476,7 +486,8 @@ body {
 #game_over .inner , #tutorial .inner {
     height: calc(100% - 20px);
     width: calc(100% - 20px);
-    background: linear-gradient(to bottom, #446DB0, #3F509F, #2F1086);
+    background: linear-gradient(90deg, rgba(93,201,248,255)0%, rgba(156,250,244,255) 51%, rgba(93,201,248,255)100%);
+    border-bottom: 5px solid #7dd0d4;
 }
 
 #tutorial .inner .wrapper {
@@ -649,6 +660,17 @@ a {
     top: 13%;
     width: 40%; 
     height: 4px;
+    position: absolute; 
+    background-color: white;
+    border-radius: 100%;
+}
+
+#tutorial .inner::after, #game_over .inner::after{
+    content: "";
+    left: 20%;
+    top: 2.5%;
+    width: 60%; 
+    height: 6px;
     position: absolute; 
     background-color: white;
     border-radius: 100%;
