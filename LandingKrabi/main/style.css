@@ -14,7 +14,7 @@ html {
   }
 body{
     position: absolute;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 
     --greenH1: #336666;
@@ -27,7 +27,7 @@ body{
     height: 834px;
     margin: auto;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
     background-position: center;
     background-size: cover;
@@ -168,7 +168,7 @@ button{
 
 /* ของเจมี่เจม */
 .scene-6{
-    background-image: url('../content3_Jaimes/1x/Artboard 5.png');
+    background-image: url('../content3_Jaimes/1x/Artboard 6.png');
     width: 100%;
     height: 100%;
     position: relative;
@@ -363,7 +363,9 @@ button{
     left: 300px;
 }
 
-
+.wavepage6{
+    background-image: url('../asset/wavepage6.png');
+}
 /* .bubblebubjai{
     
 } */

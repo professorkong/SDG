@@ -40,6 +40,11 @@ img{
     top: -470px;
     /* transition: 10s linear; */
 }
+.p6{
+    position: absolute;
+    bottom: -7%;
+    transform: rotate(-.175deg);
+}
 .textpage4{
     width: 100%;
     display: flex;
