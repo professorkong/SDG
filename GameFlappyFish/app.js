@@ -173,6 +173,6 @@ function reset(){
   document.getElementById("content2").style.visibility = "hidden";
   document.getElementById("content3").style.visibility = "hidden";
   let flex = document.querySelector(".flex");
-  flex.style.setProperty('--count', 1)
+  flex.style.setProperty('--count', 0)
   flex.style.setProperty('--dif', '40s')
 }
