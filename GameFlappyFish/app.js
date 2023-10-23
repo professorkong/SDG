@@ -11,6 +11,14 @@ window.oncontextmenu = function(event) {
   return false;
 };
 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+});
+
 function swim(){
   if (isover == 0){
     player.style.setProperty('--poy', 0 + '%');
