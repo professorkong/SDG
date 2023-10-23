@@ -37,6 +37,7 @@ body{
     height: 100%;
     width: 100%;
     background-color: black;
+    touch-action: none;
 }
 
 .background{
@@ -44,6 +45,7 @@ body{
     margin: 0;
     left: 0;
     top: 0;
+    touch-action: none;
 }
 
 .flex{
@@ -56,6 +58,7 @@ body{
     transform: translateX(var(--speed));
     transition: var(--dif);
     transition-timing-function: linear;
+    touch-action: none;
 }
 
 .level{
@@ -63,6 +66,7 @@ body{
     left: 0;
     top: 0;
     display: flex;
+    touch-action: none;
     /* grid-template-columns: calc(7164px / 2) repeat(2, calc(7557px / 2)); */
     /* height: 100%; */
     /* width: calc(7164px *0.6); */
