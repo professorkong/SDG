@@ -27,15 +27,6 @@ document.addEventListener('gestureend', function (e) {
   e.preventDefault();
 });
 
-var lastTouchTime = 0;
-
-document.getElementById("content").addEventListener("touchstart", function (e) {
-    var now = new Date().getTime();
-    if (now - lastTouchTime < 300) {
-        e.preventDefault();
-    }
-    lastTouchTime = now;
-});
 
 function swim(){
   if (isover == 0){
