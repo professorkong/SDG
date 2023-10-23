@@ -13,9 +13,6 @@ window.oncontextmenu = function(event) {
 };
 
 
-document.addEventListener('touchstart', function(e) {
-  e.preventDefault();
-});
 document.addEventListener('touchmove', function (e) {
   e.preventDefault();
 });
@@ -104,7 +101,7 @@ let op = 1;
 
 function knockback(){
   let flex = document.querySelector(".flex");
-  let speed = '-1%';
+  // let speed = '-1%';
   if (point > 0){
     point -= 100;
     document.getElementById("point").innerHTML = point;
@@ -115,7 +112,7 @@ function knockback(){
     fatic = 1;
   }
   console.log("c = ",count)
-  flex.style.setProperty('--speed', speed)
+  // flex.style.setProperty('--speed', speed)
   temp = setInterval(kapib, 200)
   setTimeout(res, 1000)
 }
@@ -124,8 +121,8 @@ function res(){
   clearInterval(temp)
   ishit = 0;
   let flex = document.querySelector(".flex");
-  let speed = "calc(-10000px * var(--count))";
-  flex.style.setProperty('--speed', speed);
+  // let speed = "calc(-10000px * var(--count))";
+  // flex.style.setProperty('--speed', speed);
   op = 1;
   player.style.setProperty('--op', op)
 
