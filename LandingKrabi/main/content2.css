@@ -411,3 +411,6 @@ img{
     }
 }
 
+button:active{
+    background: none;
+}

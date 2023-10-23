@@ -52,6 +52,10 @@ button{
     transition: all .5s;
 }
 
+button:active{
+    background: none;
+}
+
 .outterbutton{
     position: relative;
     width: fit-content;
