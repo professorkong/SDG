@@ -34,9 +34,10 @@ body{
     display: flex;
     --count: 0;
     --dif: 40s;
+    --speed: calc(-10000px * var(--count));
     /* animation: movebg 60s linear; */
     width: fit-content;
-    transform: translateX(calc(-10000px * var(--count)));
+    transform: translateX(var(--speed));
     transition: var(--dif);
     transition-timing-function: linear;
 }
@@ -51,6 +52,13 @@ body{
     /* width: calc(7164px *0.6); */
     /* transform: translateX(0%); */
     /* animation: movebg 10s linear; */
+}
+
+.po{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    /* background-color: red; */
 }
 
 .loop{
@@ -85,6 +93,7 @@ body{
 
 .player{
     --poy: 70%;
+    --op: 1;
     /* --cor: green; */
     position: absolute;
     top: var(--poy);
@@ -94,6 +103,7 @@ body{
     transform: scale(0.6);
     background-color: var(--cor);
     transition: top 2s linear;
+    opacity: var(--op);
 }
 
 .p_body{
