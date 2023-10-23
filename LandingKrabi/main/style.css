@@ -194,44 +194,56 @@ button{
     
 }
 
-.front_dirty, .sand{
-    bottom: 0;
+.front_dirty{
+    bottom: 0px;
+    transition: .5s;
+}
+
+.sand{
+    bottom: -150px;
+    transition: 3s;
 }
 
 .back_kelp_1{
     width: 15%;
-    bottom: 150px;
+    bottom: -150px;
     left: 250px;
+    transition: 6s;
 }
 
 .back_kelp_2{
     width: 15%;
-    bottom: 100px;
+    bottom: -100px;
     left: 450px;
+    transition: 5.5s;
 }
 
 .back_kelp_3{
     width: 15%;
-    bottom: 100px;
+    bottom: -100px;
     right: 100px;
+    transition: 6s;
 }
 
 .back_coral_1{
     width: 20%;
     bottom: 120px;
-    right: 350px;
+    right: -350px;
+    transition: 5s;
 }
 
 .back_coral_2{
     width: 15%;
-    bottom: 100px;
+    bottom: -100px;
     right: 170px;
+    transition: 5s;
 }
 
 .back_coral_3{
     width: 20%;
-    bottom: 425px;
+    bottom: -425px;
     left: 0px;
+    transition: 4s;
 }
 
 .back_fish_1{

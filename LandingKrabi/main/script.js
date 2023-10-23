@@ -30,6 +30,25 @@ function scrollY(pageid){
           p5top += 2
           p5.style.top = p5top + 'px'
         }
+        if(pageid == '#page6'){
+          let sand = document.querySelector('.sand')
+          let back_coral_3 = document.querySelector('.back_coral_3')
+          let back_coral_2 = document.querySelector('.back_coral_2')
+          let back_coral_1 = document.querySelector('.back_coral_1')
+          let back_kelp_3 = document.querySelector('.back_kelp_3')
+          let back_kelp_2 = document.querySelector('.back_kelp_2')
+          let back_kelp_1 = document.querySelector('.back_kelp_1')
+          if (pos < -100){
+            sand.style.setProperty('bottom', 0+'px')
+            back_coral_3.style.setProperty('bottom', 425+'px')
+            back_coral_2.style.setProperty('bottom', 100+'px')
+            back_coral_1.style.setProperty('bottom', 350+'px')
+            back_kelp_3.style.setProperty('bottom', 100+'px')
+            back_kelp_2.style.setProperty('bottom', 100+'px')
+            back_kelp_1.style.setProperty('bottom', 150+'px')
+          }
+          
+        }
       }
     }
 
