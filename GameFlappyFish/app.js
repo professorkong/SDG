@@ -11,11 +11,19 @@ window.oncontextmenu = function(event) {
   return false;
 };
 
+document.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+});
+
 document.addEventListener('gesturestart', function (e) {
   e.preventDefault();
 });
 
-document.addEventListener('touchmove', function (e) {
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function (e) {
   e.preventDefault();
 });
 
