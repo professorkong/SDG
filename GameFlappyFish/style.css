@@ -1,8 +1,13 @@
 *{
     box-sizing: border-box;
     font-family: FC-Orbit, sans-serif;
-     touch-action: manipulation;
-
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body{
@@ -14,20 +19,6 @@ body{
     overflow-y: hidden;
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
     -webkit-tap-highlight-color: transparent;
-}
-
-/* ป้องกันการแสดงกรอบสีฟ้าเมื่อกดค้าง */
-::selection {
-    background: transparent;
-}
-
-::-webkit-selection {
-    background: transparent;
-}
-
-/* ป้องกันการแสดงกรอบสีฟ้าเมื่อเลือกข้อความ */
-::-moz-selection {
-    background: transparent;
 }
 
 @font-face {
