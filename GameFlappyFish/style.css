@@ -16,6 +16,20 @@ body{
     -webkit-tap-highlight-color: transparent;
 }
 
+/* ป้องกันการแสดงกรอบสีฟ้าเมื่อกดค้าง */
+::selection {
+    background: transparent;
+}
+
+::-webkit-selection {
+    background: transparent;
+}
+
+/* ป้องกันการแสดงกรอบสีฟ้าเมื่อเลือกข้อความ */
+::-moz-selection {
+    background: transparent;
+}
+
 @font-face {
     font-family: FC-Orbit;
     src: url('./Fonts/FC_OrbitRounded.ttf');
