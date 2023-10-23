@@ -61,6 +61,7 @@ body{
     transition: var(--dif);
     transition-timing-function: linear;
     touch-action: none;
+    overflow: hidden;
 }
 
 .level{
@@ -99,6 +100,7 @@ body{
     background-repeat: no-repeat;
     margin-right: -1px;
     touch-action: none;
+    overflow: hidden;
     /* transform: translateX(0px); */
     /* animation: movebg 10s linear; */
 }
@@ -131,6 +133,28 @@ body{
     transition: top 2s linear;
     opacity: var(--op);
     touch-action: none;
+}
+
+.show{
+    position: absolute;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.show1{
+    --s1: 0;
+    --ps1: 200%;
+    color: #fff;
+    opacity: var(--s1);
+    transform: translateY(var(--ps1));
+}
+
+.show2{
+    --s2: 0;
+    --ps2: 0%;
+    color: #f70000;
+    opacity: var(--s2);
+    transform: translateY(var(--ps2));
 }
 
 .p_body{

@@ -105,8 +105,30 @@ function knockback(){
   if (point > 0){
     point -= 100;
     document.getElementById("point").innerHTML = point;
+    let ps = document.querySelector('.show2');
+    let ps2 = document.querySelector('.show1');
+    ps.style.setProperty('--s2', 1);
+    ps2.style.setProperty('--s1', 0);
+    ps.style.setProperty('--ps2', '100%');
+
+    let tim1 = 2000
+
+    setTimeout(function(){
+      ps.style.setProperty('--s2', 0);
+      ps.style.setProperty('--ps2', '200%');
+    }, tim1)
+
+    setTimeout(function(){
+      ps.style.setProperty('--ps2', '0%');
+    }, tim1 + 500)
   }
-  if (fatic == 0 && count >= 2.4){
+
+  if (fatic == 0 && parseInt(count) >= 6){
+    count = 4.8;
+    flex.style.setProperty('--count', count)
+    fatic = 1;
+  }
+  else if (fatic == 0 && parseInt(count) >= 2){
     count -= 1.2;
     flex.style.setProperty('--count', count)
     fatic = 1;
@@ -114,7 +136,7 @@ function knockback(){
   console.log("c = ",count)
   // flex.style.setProperty('--speed', speed)
   temp = setInterval(kapib, 200)
-  setTimeout(res, 1000)
+  setTimeout(res, 3000)
 }
 
 function res(){
@@ -131,23 +153,6 @@ function res(){
       flex.style.setProperty('--count', count)
       fatic = 0;
   }
-
-  // let v = 0;
-  // setInterval(function(){
-  //   if (fatic == 1){
-  //     v += 1;
-  //     console.log('v',v);
-  //     if (v <= 12){
-  //       count += 0.1;
-  //       flex.style.setProperty('--count', count)
-  //       console.log("c = ", count);
-  //     }
-  //     else{
-  //       fatic = 0;
-  //       v = 0;
-  //     }
-  //   }
-  // }, 1000)
 
 }
 
@@ -180,6 +185,7 @@ function check(){
 
 function pass(){
   let box = document.querySelectorAll(".po");
+  
   for (let i of box){
     let i_r = parseInt(i.getBoundingClientRect().right);
     if (i_r <= p_l && i.dataset.pass == 0){
@@ -239,6 +245,7 @@ function gameOver(e) {
   clearInterval(e);
   isover = 1;
   count = 0;
+  player.style.setProperty('--poy', 70 + '%');
   let flex = document.querySelector(".flex");
   flex.style.setProperty('--count', 0)
   flex.style.setProperty('--speed', "0")
@@ -248,10 +255,10 @@ function gameOver(e) {
 
 // show character when end game is over 
 function showCharacter(score) {
-  if (score > 1500) {
+  if (score > 3000) {
     document.getElementById("content1").style.visibility = "visible";
   }
-  else if (score > 1000) {
+  else if (score > 1500) {
     document.getElementById("content2").style.visibility = "visible";
   }
   else {
