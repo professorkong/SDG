@@ -3,6 +3,7 @@ let poy = 0;
 let player = document.querySelector('.player');
 
 
+
 //disble long touch
 
 window.oncontextmenu = function(event) {
