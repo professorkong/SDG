@@ -39,6 +39,7 @@ body{
     width: 100%;
     background-color: black;
     touch-action: manipulation;
+    overflow: hidden;
 }
 
 .background{
