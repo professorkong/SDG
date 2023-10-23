@@ -11,10 +11,6 @@ window.oncontextmenu = function(event) {
   return false;
 };
 
-document.getElementById("test").addEventListener("touchmove", function (e) {
-  e.preventDefault();
-});
-
 document.addEventListener('touchmove', function (e) {
   e.preventDefault();
 });
