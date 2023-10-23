@@ -5,6 +5,9 @@
 
 body{
     overflow: hidden;
+    overflow-y: hidden;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
 }
 
 @font-face {
@@ -69,21 +72,23 @@ body{
 }
 
 #level_1{
-    width: calc(7164px / 2);
-    height: 847px;
-    background-image: url("BG/game-01.png");
-    background-color: blue;
+    width: calc(7166px / 2);
+    height: 834px;
+    background-image: url("BG/update-05.png");
+    background-color: rgb(255, 0, 0, 0);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-right: -1px;
     /* transform: translateX(0px); */
     /* animation: movebg 10s linear; */
 }
 
 #level_2{
-    width: calc(7557px / 2);
-    height: 847px;
-    background-image: url("BG/game-02.png");
-    background-color: blue;
+    width: calc(7500px / 2);
+    height: 834px;
+    background-image: url("BG/lastupdate-03.png");
+    background-color: rgb(255, 0, 0, 0);
+    margin-right: -2px;
     background-size: cover;
     background-repeat: repeat-x;
     /* transform: translateX(calc(7164px / 2)); */
