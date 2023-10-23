@@ -12,9 +12,9 @@
 html {
     scroll-behavior: smooth;
   }
-/* body{
+body{
     overflow: hidden;
-} */
+}
 
 body{
     position: absolute;

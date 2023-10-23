@@ -14,7 +14,7 @@ html {
   }
 body{
     position: absolute;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100%;
 
     --greenH1: #336666;
@@ -27,7 +27,7 @@ body{
     height: 834px;
     margin: auto;
 
-    /* overflow: hidden; */
+    overflow: hidden;
 
     background-position: center;
     background-size: cover;
