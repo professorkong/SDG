@@ -32,7 +32,7 @@ function scrollY(pageid){
         }
         if(pageid == '#page6'){
           let sand = document.querySelector('.sand')
-          let back_coral_3 = document.querySelector('.back_coral_3')
+          let frontback = document.querySelector('.back_coral_3')
           let back_coral_2 = document.querySelector('.back_coral_2')
           let back_coral_1 = document.querySelector('.back_coral_1')
           let back_kelp_3 = document.querySelector('.back_kelp_3')
@@ -48,6 +48,12 @@ function scrollY(pageid){
             back_kelp_1.style.setProperty('bottom', 150+'px')
           }
           
+        }
+        if(pageid == '.scene-8'){
+          let frontback = document.querySelector('.frontback')
+          frontback.style.setProperty('bottom', 0+'px')
+          let boulder = document.querySelector('.boulder')
+          boulder.style.setProperty('bottom', 0+'px')
         }
       }
     }

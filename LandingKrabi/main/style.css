@@ -307,11 +307,13 @@ button{
 
 .boulder{
     right: 0;
-    bottom: 0;
+    bottom: -300px;
+    transition: 2s;
 }
 
 .frontback{
-    bottom: 0;
+    bottom: -250px;
+    transition: 2s;
 }
 
 .mountain{
