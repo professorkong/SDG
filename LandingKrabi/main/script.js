@@ -292,3 +292,15 @@ function scrollY(pageid){
     let between = document.querySelector(".p5");
     between.style.top = "-60%";
   }
+
+  document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
+  
+  document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+  });
+  
+  document.addEventListener('gestureend', function (e) {
+    e.preventDefault();
+  });

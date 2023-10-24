@@ -6,6 +6,18 @@ function setBodyScrollPosition() {
   console.log(window.scrollY);
 }
 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function (e) {
+  e.preventDefault();
+});
+
 function setElementMove() {
   // document.body.dataset.h = window.innerHeight;
   let y = document.body.dataset.y;
