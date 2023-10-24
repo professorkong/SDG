@@ -525,7 +525,7 @@
     0%{transform: translateX(0%) translateY(100%) scale(0.3);
         opacity: 0;}
     50%{transform: translateX(0%) translateY(50%) scale(0.3);
-            opacity: 1;}
+            opacity: 0.7;}
     100%{transform: translateX(0%) translateY(0%) scale(0.3);
         opacity: 0;}
 }
@@ -540,10 +540,92 @@
     0%{transform: translateX(0%) translateY(80%) scale(0.2);
         opacity: 0;}
     50%{transform: translateX(0%) translateY(40%) scale(0.2);
-            opacity: 1;}
+            opacity: 0.8;}
     100%{transform: translateX(0%) translateY(0%) scale(0.2);
         opacity: 0;}
 }
+
+.b3{
+    animation: b_3 20s infinite linear;
+    left: 1500px;
+    top: 0%;
+    opacity: 1;
+}
+@keyframes b_3{
+    0%{transform: translateX(0%) translateY(100%) scale(0.2);
+        opacity: 0;}
+    50%{transform: translateX(0%) translateY(50%) scale(0.2);
+            opacity: 0.6;}
+    100%{transform: translateX(0%) translateY(0%) scale(0.2);
+        opacity: 0;}
+}
+
+.b4{
+    animation: b_4 40s infinite linear;
+    left: 2000px;
+    top: 0%;
+    opacity: 1;
+}
+@keyframes b_4{
+    0%{transform: translateX(0%) translateY(100%) scale(0.2);
+        opacity: 0;}
+    50%{transform: translateX(0%) translateY(50%) scale(0.2);
+            opacity: 0.5;}
+    100%{transform: translateX(0%) translateY(0%) scale(0.2);
+        opacity: 0;}
+}
+
+
+.b5{
+    animation: b_4 20s infinite linear;
+    left: 3500px;
+    top: 10%;
+    opacity: 1;
+}
+.b6{
+    animation: b_4 30s infinite linear;
+    left: 4500px;
+    top: 20%;
+    opacity: 1;
+}
+.b7{
+    animation: b_4 20s infinite linear;
+    left: 5000px;
+    top: 10%;
+    opacity: 1;
+}
+.b8{
+    animation: b_4 10s infinite linear;
+    left: 5500px;
+    top: 0%;
+    opacity: 1;
+}
+.b9{
+    animation: b_4 20s infinite linear;
+    left: 6500px;
+    top: 0%;
+    opacity: 1;
+}
+.b10{
+    animation: b_4 30s infinite linear;
+    left: 7500px;
+    top: 0%;
+    opacity: 1;
+}
+.b11{
+    animation: b_4 30s infinite linear;
+    left: 8200px;
+    top: 10%;
+    opacity: 1;
+}
+.b12{
+    animation: b_4 40s infinite linear;
+    left: 9500px;
+    top: 20%;
+    opacity: 1;
+}
+
+
 
 .light1{
     position: absolute;
@@ -567,24 +649,24 @@
 }
 @keyframes l_1{
     0%{transform: translateX(0%) translateY(0%) scale(1);
-        opacity: 0;}
+        opacity: 1;}
     50%{transform: translateX(0%) translateY(0%) scale(1);
-            opacity: 1;}
+            opacity: 0;}
     100%{transform: translateX(0%) translateY(0%) scale(1);
-        opacity: 0;}
+        opacity: 1;}
 }
 
 .l2{
-    animation: l_2 20s infinite linear;
+    animation: l_2 40s infinite linear;
     left: 1000px;
     top: -40%;
     opacity: 1;
 }
 @keyframes l_2{
     0%{transform: translateX(0%) translateY(0%) scale(1);
-        opacity: 1;}
+        opacity: 0;}
     50%{transform: translateX(0%) translateY(0%) scale(1);
-            opacity: 0;}
+            opacity: 1;}
     100%{transform: translateX(0%) translateY(0%) scale(1);
-        opacity: 1;}
+        opacity: 0;}
 }
