@@ -57,9 +57,9 @@ let isover = 0;
 
 
 let p_l = parseInt(player.getBoundingClientRect().left)
-console.log(p_l)
+
 let p_r = parseInt(player.getBoundingClientRect().right)
-console.log(p_r)
+
 
 function rock(p_t){
 
@@ -89,7 +89,6 @@ function coral(p_b){
     let b_r = parseInt(b.getBoundingClientRect().right);
     let b_t = parseInt(b.getBoundingClientRect().top);
     if (p_r >= b_l && p_l <= b_r && p_b >= b_t && ishit == 0 && isover == 0){
-        console.log(b)
         // b.style.setProperty('--co', 'red');
         // player.style.setProperty('--cor', 'red');
         ishit = 1;
@@ -177,8 +176,6 @@ function check(){
       count += 1.2;
       map += 1;
       flex.style.setProperty('--count', count)
-      console.log("Check");
-      console.log(count);
     }
   }
 }
@@ -189,7 +186,6 @@ function pass(){
   for (let i of box){
     let i_r = parseInt(i.getBoundingClientRect().right);
     if (i_r <= p_l && i.dataset.pass == 0){
-      console.log("Pass");
       i.dataset.pass = 1;
       point += 100;
       document.getElementById("point").innerHTML = point;
@@ -200,9 +196,8 @@ function pass(){
 
 function game(){
   let p_t = parseInt(player.getBoundingClientRect().top)
-  // console.log(p_t)
+
   let p_b = parseInt(player.getBoundingClientRect().bottom)
-  // console.log(p_b)
   //collision check
 
   // rock5(p_t, p_b)
@@ -238,7 +233,6 @@ function start() {
   
   let flex = document.querySelector(".flex");
   flex.style.setProperty('--count', 1.2)
-  console.log(count)
 }
 
 function gameOver(e) {
@@ -269,6 +263,7 @@ function showCharacter(score) {
 function reset(){
   point = 0;
   time = 60;
+  count = 0;
   document.querySelector(".menu").style.visibility = 'visible';
   document.getElementById("point").innerHTML = point;
   document.getElementById("game_over").style.visibility = "hidden";
