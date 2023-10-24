@@ -1,6 +1,18 @@
 // Get the root element
 var r = document.querySelector(':root');
 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function (e) {
+  e.preventDefault();
+});
+
 
 var point = 0;
 // var time = 59; // for testing purposes
