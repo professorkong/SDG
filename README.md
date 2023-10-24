@@ -13,7 +13,9 @@ Screen viewport 1194 x 834 px only
 |64070157|Tanadech Zheng |[Mokmun](https://github.com/TANADECHZHENG)|-|
 
 ## Web Designer
-coming soon
-
-
-
+|Student ID|Name - Surname|Instagram|
+|---|---|---|
+|64020054|Chanikarn Ampaitanakorn|[mndchx](https://www.instagram.com/mndchx/)|
+|64020055|Chanita Potiket|[faychanita](https://www.instagram.com/faychanita/)|
+|64020241|Puttimart Poonpitayatorn|[pt.ptyt](https://www.instagram.com/pt.ptyt/)|
+|64020319|Waankaew Meesuwan|[babiefacesavage](https://www.instagram.com/babiefacesavage/)|
