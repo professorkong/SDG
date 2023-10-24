@@ -36,6 +36,18 @@ const fishs = [
   },
 ];
 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function (e) {
+  e.preventDefault();
+});
+
 // show buble fish
 const bubbles = document.querySelectorAll(".fish");
 let text = "";
