@@ -97,6 +97,20 @@
       </div>
       <div class="asset lighte" style=" z-index: 0;"></div>
       <div class="asset lighte" style="animation-delay: 3s; z-index: 0; left: -1000px;"></div>
+      <script>
+
+      document.addEventListener('gesturestart', function (e) {
+          e.preventDefault();
+        });
       
+      document.addEventListener('gesturechange', function (e) {
+        e.preventDefault();
+      });
+      
+      document.addEventListener('gestureend', function (e) {
+        e.preventDefault();
+      });
+
+      </script>
   </body>
 </html>
