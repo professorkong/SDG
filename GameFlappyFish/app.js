@@ -128,8 +128,8 @@ function knockback(){
     flex.style.setProperty('--count', count)
     fatic = 1;
   }
-  else if (fatic == 0 && parseInt(count) >= 2){
-    count -= 1.2;
+  else if (fatic == 0 && parseInt(count) >= 3){
+    count = 2.4;
     flex.style.setProperty('--count', count)
     fatic = 1;
   }
